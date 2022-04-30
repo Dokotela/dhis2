@@ -1,0 +1,21 @@
+name: dhis2
+description: DHIS2 library, written in pure dart, to allow the benefits of Dart & Flutter while working with DHIS2 data.
+version: 0.0.1
+repository: https://github.com/Dokotela/dhis2
+
+environment:
+  sdk: '>=2.16.0 <3.0.0'
+
+dependencies:
+  fhir_yaml: ^0.6.1
+  freezed_annotation: ^1.1.0
+  json_annotation: ^4.4.0
+  uuid: ^3.0.6
+  yaml: ^3.1.0
+
+dev_dependencies:
+  import_sorter: ^4.6.0
+  json_serializable: ^6.1.5
+  build_runner: ^2.1.8
+  freezed: ^1.1.1
+  test: ^1.20.2
