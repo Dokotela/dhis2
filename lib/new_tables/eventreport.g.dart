@@ -1,0 +1,136 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'eventreport.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Eventreport _$$_EventreportFromJson(Map<String, dynamic> json) =>
+    _$_Eventreport(
+      name: json['name'] as String,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      eventstatus: json['eventstatus'] as String?,
+      publicaccess: json['publicaccess'] as String?,
+      userorgunittype: json['userorgunittype'] as String?,
+      enddate: json['enddate'] == null
+          ? null
+          : DateTime.parse(json['enddate'] as String),
+      sortorder: json['sortorder'] as int?,
+      favorites: json['favorites'],
+      outputtype: json['outputtype'] as String?,
+      subscribers: json['subscribers'],
+      subtotals: json['subtotals'] as bool?,
+      colsubtotals: json['colsubtotals'] as bool?,
+      programstageid: json['programstageid'] as int?,
+      relativeperiodsid: json['relativeperiodsid'] as int?,
+      userorganisationunit: json['userorganisationunit'] as bool?,
+      aggregationtype: json['aggregationtype'] as String?,
+      programid: json['programid'] as int,
+      hidetitle: json['hidetitle'] as bool?,
+      rowsubtotals: json['rowsubtotals'] as bool?,
+      displaydensity: json['displaydensity'] as String?,
+      timefield: json['timefield'] as String?,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      toplimit: json['toplimit'] as int?,
+      code: json['code'] as String?,
+      eventreportid: json['eventreportid'] as int,
+      coltotals: json['coltotals'] as bool?,
+      showhierarchy: json['showhierarchy'] as bool?,
+      digitgroupseparator: json['digitgroupseparator'] as String?,
+      programstatus: json['programstatus'] as String?,
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
+      simpledimensions: json['simpledimensions'],
+      startdate: json['startdate'] == null
+          ? null
+          : DateTime.parse(json['startdate'] as String),
+      userorganisationunitchildren:
+          json['userorganisationunitchildren'] as bool?,
+      completedonly: json['completedonly'] as bool?,
+      subtitle: json['subtitle'] as String?,
+      collapsedatadimensions: json['collapsedatadimensions'] as bool?,
+      translations: json['translations'],
+      orgunitfield: json['orgunitfield'] as String?,
+      hideemptyrows: json['hideemptyrows'] as bool?,
+      sharing: json['sharing'],
+      userid: json['userid'] as int?,
+      fontsize: json['fontsize'] as String?,
+      attributevalues: json['attributevalues'],
+      rowtotals: json['rowtotals'] as bool?,
+      hidenadata: json['hidenadata'] as bool?,
+      showdimensionlabels: json['showdimensionlabels'] as bool?,
+      externalaccess: json['externalaccess'] as bool?,
+      uid: json['uid'] as String?,
+      attributevaluedimensionid: json['attributevaluedimensionid'] as int?,
+      userorganisationunitgrandchildren:
+          json['userorganisationunitgrandchildren'] as bool?,
+      hidesubtitle: json['hidesubtitle'] as bool?,
+      datatype: json['datatype'] as String,
+      dataelementvaluedimensionid: json['dataelementvaluedimensionid'] as int?,
+    );
+
+Map<String, dynamic> _$$_EventreportToJson(_$_Eventreport instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'lastupdatedby': instance.lastupdatedby,
+      'title': instance.title,
+      'description': instance.description,
+      'eventstatus': instance.eventstatus,
+      'publicaccess': instance.publicaccess,
+      'userorgunittype': instance.userorgunittype,
+      'enddate': instance.enddate?.toIso8601String(),
+      'sortorder': instance.sortorder,
+      'favorites': instance.favorites,
+      'outputtype': instance.outputtype,
+      'subscribers': instance.subscribers,
+      'subtotals': instance.subtotals,
+      'colsubtotals': instance.colsubtotals,
+      'programstageid': instance.programstageid,
+      'relativeperiodsid': instance.relativeperiodsid,
+      'userorganisationunit': instance.userorganisationunit,
+      'aggregationtype': instance.aggregationtype,
+      'programid': instance.programid,
+      'hidetitle': instance.hidetitle,
+      'rowsubtotals': instance.rowsubtotals,
+      'displaydensity': instance.displaydensity,
+      'timefield': instance.timefield,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'toplimit': instance.toplimit,
+      'code': instance.code,
+      'eventreportid': instance.eventreportid,
+      'coltotals': instance.coltotals,
+      'showhierarchy': instance.showhierarchy,
+      'digitgroupseparator': instance.digitgroupseparator,
+      'programstatus': instance.programstatus,
+      'created': instance.created?.toIso8601String(),
+      'simpledimensions': instance.simpledimensions,
+      'startdate': instance.startdate?.toIso8601String(),
+      'userorganisationunitchildren': instance.userorganisationunitchildren,
+      'completedonly': instance.completedonly,
+      'subtitle': instance.subtitle,
+      'collapsedatadimensions': instance.collapsedatadimensions,
+      'translations': instance.translations,
+      'orgunitfield': instance.orgunitfield,
+      'hideemptyrows': instance.hideemptyrows,
+      'sharing': instance.sharing,
+      'userid': instance.userid,
+      'fontsize': instance.fontsize,
+      'attributevalues': instance.attributevalues,
+      'rowtotals': instance.rowtotals,
+      'hidenadata': instance.hidenadata,
+      'showdimensionlabels': instance.showdimensionlabels,
+      'externalaccess': instance.externalaccess,
+      'uid': instance.uid,
+      'attributevaluedimensionid': instance.attributevaluedimensionid,
+      'userorganisationunitgrandchildren':
+          instance.userorganisationunitgrandchildren,
+      'hidesubtitle': instance.hidesubtitle,
+      'datatype': instance.datatype,
+      'dataelementvaluedimensionid': instance.dataelementvaluedimensionid,
+    };

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-class Map {
-  const Map({
+class Dhis2Map {
+  const Dhis2Map({
     this.userid,
     this.lastupdated,
     this.externalaccess,
@@ -25,8 +25,8 @@ class Map {
     this.subscribers,
   });
 
-  factory Map.fromMap(Map<String, dynamic> map) {
-    return Map(
+  factory Dhis2Map.fromDhis2Map(Map<String, dynamic> map) {
+    return Dhis2Map(
       userid: int.tryParse(map['userid']),
       lastupdated: DateTime.tryParse(map['lastupdated']),
       externalaccess: map['externalaccess'],
@@ -51,7 +51,7 @@ class Map {
     );
   }
 
-  factory Map.fromJson(String source) => Map.fromMap(json.decode(source));
+  factory Dhis2Map.fromJson(String source) => Dhis2Map.fromDhis2Map(json.decode(source));
 
   final int? userid;
 
@@ -95,7 +95,7 @@ class Map {
 
   final Object? subscribers;
 
-  Map copyWith({
+  Dhis2Map copyWith({
     int? userid,
     DateTime? lastupdated,
     bool? externalaccess,
@@ -118,7 +118,7 @@ class Map {
     String? basemap,
     Object? subscribers,
   }) {
-    return Map(
+    return Dhis2Map(
       userid: userid ?? this.userid,
       lastupdated: lastupdated ?? this.lastupdated,
       externalaccess: externalaccess ?? this.externalaccess,
@@ -143,7 +143,7 @@ class Map {
     );
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toDhis2Map() {
     return {
       'userid': userid,
       'lastupdated': lastupdated,
@@ -169,12 +169,12 @@ class Map {
     };
   }
 
-  String toJson() => json.encode(toMap());
+  String toJson() => json.encode(toDhis2Map());
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Map &&
+    return other is Dhis2Map &&
         other.userid == userid &&
         other.lastupdated == lastupdated &&
         other.externalaccess == externalaccess &&
@@ -225,6 +225,6 @@ class Map {
 
   @override
   String toString() {
-    return 'Map(userid: $userid, lastupdated: $lastupdated, externalaccess: $externalaccess, latitude: $latitude, translations: $translations, longitude: $longitude, zoom: $zoom, publicaccess: $publicaccess, lastupdatedby: $lastupdatedby, description: $description, code: $code, favorites: $favorites, created: $created, title: $title, name: $name, attributevalues: $attributevalues, uid: $uid, sharing: $sharing, mapid: $mapid, basemap: $basemap, subscribers: $subscribers)';
+    return 'Dhis2Map(userid: $userid, lastupdated: $lastupdated, externalaccess: $externalaccess, latitude: $latitude, translations: $translations, longitude: $longitude, zoom: $zoom, publicaccess: $publicaccess, lastupdatedby: $lastupdatedby, description: $description, code: $code, favorites: $favorites, created: $created, title: $title, name: $name, attributevalues: $attributevalues, uid: $uid, sharing: $sharing, mapid: $mapid, basemap: $basemap, subscribers: $subscribers)';
   }
 }
