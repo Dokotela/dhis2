@@ -1,59 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class DatasetnotificationDatasets {
-  const DatasetnotificationDatasets({
-    required this.datasetnotificationtemplateid,
-    required this.datasetid,
-  });
+part of 'datasetnotification_datasets.dart';
 
-  factory DatasetnotificationDatasets.fromMap(Map<String, dynamic> map) {
-    return DatasetnotificationDatasets(
-      datasetnotificationtemplateid: int.parse(map['datasetnotificationtemplateid']),
-      datasetid: int.parse(map['datasetid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_DatasetnotificationDatasets _$$_DatasetnotificationDatasetsFromJson(
+        Map<String, dynamic> json) =>
+    _$_DatasetnotificationDatasets(
+      datasetnotificationtemplateid:
+          json['datasetnotificationtemplateid'] as int,
+      datasetid: json['datasetid'] as int,
     );
-  }
 
-  factory DatasetnotificationDatasets.fromJson(String source) =>
-      DatasetnotificationDatasets.fromMap(json.decode(source));
-
-  final int datasetnotificationtemplateid;
-
-  final int datasetid;
-
-  DatasetnotificationDatasets copyWith({
-    int? datasetnotificationtemplateid,
-    int? datasetid,
-  }) {
-    return DatasetnotificationDatasets(
-      datasetnotificationtemplateid: datasetnotificationtemplateid ?? this.datasetnotificationtemplateid,
-      datasetid: datasetid ?? this.datasetid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datasetnotificationtemplateid': datasetnotificationtemplateid,
-      'datasetid': datasetid,
+Map<String, dynamic> _$$_DatasetnotificationDatasetsToJson(
+        _$_DatasetnotificationDatasets instance) =>
+    <String, dynamic>{
+      'datasetnotificationtemplateid': instance.datasetnotificationtemplateid,
+      'datasetid': instance.datasetid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is DatasetnotificationDatasets &&
-        other.datasetnotificationtemplateid == datasetnotificationtemplateid &&
-        other.datasetid == datasetid;
-  }
-
-  @override
-  int get hashCode {
-    return datasetnotificationtemplateid.hashCode ^ datasetid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'DatasetnotificationDatasets(datasetnotificationtemplateid: $datasetnotificationtemplateid, datasetid: $datasetid)';
-  }
-}

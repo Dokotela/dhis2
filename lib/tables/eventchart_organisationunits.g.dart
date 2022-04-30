@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventchartOrganisationunits {
-  const EventchartOrganisationunits({
-    required this.sortOrder,
-    required this.eventchartid,
-    required this.organisationunitid,
-  });
+part of 'eventchart_organisationunits.dart';
 
-  factory EventchartOrganisationunits.fromMap(Map<String, dynamic> map) {
-    return EventchartOrganisationunits(
-      sortOrder: int.parse(map['sort_order']),
-      eventchartid: int.parse(map['eventchartid']),
-      organisationunitid: int.parse(map['organisationunitid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_EventchartOrganisationunits _$$_EventchartOrganisationunitsFromJson(
+        Map<String, dynamic> json) =>
+    _$_EventchartOrganisationunits(
+      sortOrder: json['sortOrder'] as int,
+      eventchartid: json['eventchartid'] as int,
+      organisationunitid: json['organisationunitid'] as int,
     );
-  }
 
-  factory EventchartOrganisationunits.fromJson(String source) =>
-      EventchartOrganisationunits.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int eventchartid;
-
-  final int organisationunitid;
-
-  EventchartOrganisationunits copyWith({
-    int? sortOrder,
-    int? eventchartid,
-    int? organisationunitid,
-  }) {
-    return EventchartOrganisationunits(
-      sortOrder: sortOrder ?? this.sortOrder,
-      eventchartid: eventchartid ?? this.eventchartid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'eventchartid': eventchartid,
-      'organisationunitid': organisationunitid,
+Map<String, dynamic> _$$_EventchartOrganisationunitsToJson(
+        _$_EventchartOrganisationunits instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'eventchartid': instance.eventchartid,
+      'organisationunitid': instance.organisationunitid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventchartOrganisationunits &&
-        other.sortOrder == sortOrder &&
-        other.eventchartid == eventchartid &&
-        other.organisationunitid == organisationunitid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ eventchartid.hashCode ^ organisationunitid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventchartOrganisationunits(sortOrder: $sortOrder, eventchartid: $eventchartid, organisationunitid: $organisationunitid)';
-  }
-}

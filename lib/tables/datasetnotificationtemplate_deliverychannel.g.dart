@@ -1,59 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class DatasetnotificationtemplateDeliverychannel {
-  const DatasetnotificationtemplateDeliverychannel({
-    this.deliverychannel,
-    required this.datasetnotificationtemplateid,
-  });
+part of 'datasetnotificationtemplate_deliverychannel.dart';
 
-  factory DatasetnotificationtemplateDeliverychannel.fromMap(Map<String, dynamic> map) {
-    return DatasetnotificationtemplateDeliverychannel(
-      deliverychannel: map['deliverychannel'],
-      datasetnotificationtemplateid: int.parse(map['datasetnotificationtemplateid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory DatasetnotificationtemplateDeliverychannel.fromJson(String source) =>
-      DatasetnotificationtemplateDeliverychannel.fromMap(json.decode(source));
+_$_DatasetnotificationtemplateDeliverychannel
+    _$$_DatasetnotificationtemplateDeliverychannelFromJson(
+            Map<String, dynamic> json) =>
+        _$_DatasetnotificationtemplateDeliverychannel(
+          deliverychannel: json['deliverychannel'] as String?,
+          datasetnotificationtemplateid:
+              json['datasetnotificationtemplateid'] as int,
+        );
 
-  final String? deliverychannel;
-
-  final int datasetnotificationtemplateid;
-
-  DatasetnotificationtemplateDeliverychannel copyWith({
-    String? deliverychannel,
-    int? datasetnotificationtemplateid,
-  }) {
-    return DatasetnotificationtemplateDeliverychannel(
-      deliverychannel: deliverychannel ?? this.deliverychannel,
-      datasetnotificationtemplateid: datasetnotificationtemplateid ?? this.datasetnotificationtemplateid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'deliverychannel': deliverychannel,
-      'datasetnotificationtemplateid': datasetnotificationtemplateid,
+Map<String, dynamic> _$$_DatasetnotificationtemplateDeliverychannelToJson(
+        _$_DatasetnotificationtemplateDeliverychannel instance) =>
+    <String, dynamic>{
+      'deliverychannel': instance.deliverychannel,
+      'datasetnotificationtemplateid': instance.datasetnotificationtemplateid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is DatasetnotificationtemplateDeliverychannel &&
-        other.deliverychannel == deliverychannel &&
-        other.datasetnotificationtemplateid == datasetnotificationtemplateid;
-  }
-
-  @override
-  int get hashCode {
-    return deliverychannel.hashCode ^ datasetnotificationtemplateid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'DatasetnotificationtemplateDeliverychannel(deliverychannel: $deliverychannel, datasetnotificationtemplateid: $datasetnotificationtemplateid)';
-  }
-}

@@ -1,67 +1,24 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventreportOrgunitgroupsetdimensions {
-  const EventreportOrgunitgroupsetdimensions({
-    required this.eventreportid,
-    required this.orgunitgroupsetdimensionid,
-    required this.sortOrder,
-  });
+part of 'eventreport_orgunitgroupsetdimensions.dart';
 
-  factory EventreportOrgunitgroupsetdimensions.fromMap(Map<String, dynamic> map) {
-    return EventreportOrgunitgroupsetdimensions(
-      eventreportid: int.parse(map['eventreportid']),
-      orgunitgroupsetdimensionid: int.parse(map['orgunitgroupsetdimensionid']),
-      sortOrder: int.parse(map['sort_order']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory EventreportOrgunitgroupsetdimensions.fromJson(String source) =>
-      EventreportOrgunitgroupsetdimensions.fromMap(json.decode(source));
+_$_EventreportOrgunitgroupsetdimensions
+    _$$_EventreportOrgunitgroupsetdimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_EventreportOrgunitgroupsetdimensions(
+          eventreportid: json['eventreportid'] as int,
+          orgunitgroupsetdimensionid: json['orgunitgroupsetdimensionid'] as int,
+          sortOrder: json['sortOrder'] as int,
+        );
 
-  final int eventreportid;
-
-  final int orgunitgroupsetdimensionid;
-
-  final int sortOrder;
-
-  EventreportOrgunitgroupsetdimensions copyWith({
-    int? eventreportid,
-    int? orgunitgroupsetdimensionid,
-    int? sortOrder,
-  }) {
-    return EventreportOrgunitgroupsetdimensions(
-      eventreportid: eventreportid ?? this.eventreportid,
-      orgunitgroupsetdimensionid: orgunitgroupsetdimensionid ?? this.orgunitgroupsetdimensionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'eventreportid': eventreportid,
-      'orgunitgroupsetdimensionid': orgunitgroupsetdimensionid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_EventreportOrgunitgroupsetdimensionsToJson(
+        _$_EventreportOrgunitgroupsetdimensions instance) =>
+    <String, dynamic>{
+      'eventreportid': instance.eventreportid,
+      'orgunitgroupsetdimensionid': instance.orgunitgroupsetdimensionid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventreportOrgunitgroupsetdimensions &&
-        other.eventreportid == eventreportid &&
-        other.orgunitgroupsetdimensionid == orgunitgroupsetdimensionid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return eventreportid.hashCode ^ orgunitgroupsetdimensionid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventreportOrgunitgroupsetdimensions(eventreportid: $eventreportid, orgunitgroupsetdimensionid: $orgunitgroupsetdimensionid, sortOrder: $sortOrder)';
-  }
-}

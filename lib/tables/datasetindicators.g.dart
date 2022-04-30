@@ -1,56 +1,20 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datasetindicators {
-  const Datasetindicators({
-    required this.indicatorid,
-    required this.datasetid,
-  });
+part of 'datasetindicators.dart';
 
-  factory Datasetindicators.fromMap(Map<String, dynamic> map) {
-    return Datasetindicators(
-      indicatorid: int.parse(map['indicatorid']),
-      datasetid: int.parse(map['datasetid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datasetindicators _$$_DatasetindicatorsFromJson(Map<String, dynamic> json) =>
+    _$_Datasetindicators(
+      indicatorid: json['indicatorid'] as int,
+      datasetid: json['datasetid'] as int,
     );
-  }
 
-  factory Datasetindicators.fromJson(String source) => Datasetindicators.fromMap(json.decode(source));
-
-  final int indicatorid;
-
-  final int datasetid;
-
-  Datasetindicators copyWith({
-    int? indicatorid,
-    int? datasetid,
-  }) {
-    return Datasetindicators(
-      indicatorid: indicatorid ?? this.indicatorid,
-      datasetid: datasetid ?? this.datasetid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'indicatorid': indicatorid,
-      'datasetid': datasetid,
+Map<String, dynamic> _$$_DatasetindicatorsToJson(
+        _$_Datasetindicators instance) =>
+    <String, dynamic>{
+      'indicatorid': instance.indicatorid,
+      'datasetid': instance.datasetid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datasetindicators && other.indicatorid == indicatorid && other.datasetid == datasetid;
-  }
-
-  @override
-  int get hashCode {
-    return indicatorid.hashCode ^ datasetid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datasetindicators(indicatorid: $indicatorid, datasetid: $datasetid)';
-  }
-}

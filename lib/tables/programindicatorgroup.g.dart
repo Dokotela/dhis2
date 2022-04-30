@@ -1,149 +1,41 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programindicatorgroup {
-  const Programindicatorgroup({
-    required this.name,
-    this.translations,
-    this.userid,
-    required this.programindicatorgroupid,
-    this.publicaccess,
-    this.lastupdatedby,
-    required this.uid,
-    required this.lastupdated,
-    required this.created,
-    this.sharing,
-    this.code,
-    this.description,
-  });
+part of 'programindicatorgroup.dart';
 
-  factory Programindicatorgroup.fromMap(Map<String, dynamic> map) {
-    return Programindicatorgroup(
-      name: map['name'],
-      translations: map['translations'],
-      userid: int.tryParse(map['userid']),
-      programindicatorgroupid: int.parse(map['programindicatorgroupid']),
-      publicaccess: map['publicaccess'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      uid: map['uid'],
-      lastupdated: DateTime.parse(map['lastupdated']),
-      created: DateTime.parse(map['created']),
-      sharing: map['sharing'],
-      code: map['code'],
-      description: map['description'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programindicatorgroup _$$_ProgramindicatorgroupFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programindicatorgroup(
+      name: json['name'] as String,
+      translations: json['translations'],
+      userid: json['userid'] as int?,
+      programindicatorgroupid: json['programindicatorgroupid'] as int,
+      publicaccess: json['publicaccess'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      uid: json['uid'] as String,
+      lastupdated: DateTime.parse(json['lastupdated'] as String),
+      created: DateTime.parse(json['created'] as String),
+      sharing: json['sharing'],
+      code: json['code'] as String?,
+      description: json['description'] as String?,
     );
-  }
 
-  factory Programindicatorgroup.fromJson(String source) => Programindicatorgroup.fromMap(json.decode(source));
-
-  final String name;
-
-  final Object? translations;
-
-  final int? userid;
-
-  final int programindicatorgroupid;
-
-  final String? publicaccess;
-
-  final int? lastupdatedby;
-
-  final String uid;
-
-  final DateTime lastupdated;
-
-  final DateTime created;
-
-  final Object? sharing;
-
-  final String? code;
-
-  final String? description;
-
-  Programindicatorgroup copyWith({
-    String? name,
-    Object? translations,
-    int? userid,
-    int? programindicatorgroupid,
-    String? publicaccess,
-    int? lastupdatedby,
-    String? uid,
-    DateTime? lastupdated,
-    DateTime? created,
-    Object? sharing,
-    String? code,
-    String? description,
-  }) {
-    return Programindicatorgroup(
-      name: name ?? this.name,
-      translations: translations ?? this.translations,
-      userid: userid ?? this.userid,
-      programindicatorgroupid: programindicatorgroupid ?? this.programindicatorgroupid,
-      publicaccess: publicaccess ?? this.publicaccess,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      uid: uid ?? this.uid,
-      lastupdated: lastupdated ?? this.lastupdated,
-      created: created ?? this.created,
-      sharing: sharing ?? this.sharing,
-      code: code ?? this.code,
-      description: description ?? this.description,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'translations': translations,
-      'userid': userid,
-      'programindicatorgroupid': programindicatorgroupid,
-      'publicaccess': publicaccess,
-      'lastupdatedby': lastupdatedby,
-      'uid': uid,
-      'lastupdated': lastupdated.toUtc().toIso8601String(),
-      'created': created.toUtc().toIso8601String(),
-      'sharing': sharing,
-      'code': code,
-      'description': description,
+Map<String, dynamic> _$$_ProgramindicatorgroupToJson(
+        _$_Programindicatorgroup instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'translations': instance.translations,
+      'userid': instance.userid,
+      'programindicatorgroupid': instance.programindicatorgroupid,
+      'publicaccess': instance.publicaccess,
+      'lastupdatedby': instance.lastupdatedby,
+      'uid': instance.uid,
+      'lastupdated': instance.lastupdated.toIso8601String(),
+      'created': instance.created.toIso8601String(),
+      'sharing': instance.sharing,
+      'code': instance.code,
+      'description': instance.description,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programindicatorgroup &&
-        other.name == name &&
-        other.translations == translations &&
-        other.userid == userid &&
-        other.programindicatorgroupid == programindicatorgroupid &&
-        other.publicaccess == publicaccess &&
-        other.lastupdatedby == lastupdatedby &&
-        other.uid == uid &&
-        other.lastupdated == lastupdated &&
-        other.created == created &&
-        other.sharing == sharing &&
-        other.code == code &&
-        other.description == description;
-  }
-
-  @override
-  int get hashCode {
-    return name.hashCode ^
-        translations.hashCode ^
-        userid.hashCode ^
-        programindicatorgroupid.hashCode ^
-        publicaccess.hashCode ^
-        lastupdatedby.hashCode ^
-        uid.hashCode ^
-        lastupdated.hashCode ^
-        created.hashCode ^
-        sharing.hashCode ^
-        code.hashCode ^
-        description.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programindicatorgroup(name: $name, translations: $translations, userid: $userid, programindicatorgroupid: $programindicatorgroupid, publicaccess: $publicaccess, lastupdatedby: $lastupdatedby, uid: $uid, lastupdated: $lastupdated, created: $created, sharing: $sharing, code: $code, description: $description)';
-  }
-}

@@ -1,56 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Userroleauthorities {
-  const Userroleauthorities({
-    this.authority,
-    required this.userroleid,
-  });
+part of 'userroleauthorities.dart';
 
-  factory Userroleauthorities.fromMap(Map<String, dynamic> map) {
-    return Userroleauthorities(
-      authority: map['authority'],
-      userroleid: int.parse(map['userroleid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Userroleauthorities _$$_UserroleauthoritiesFromJson(
+        Map<String, dynamic> json) =>
+    _$_Userroleauthorities(
+      authority: json['authority'] as String?,
+      userroleid: json['userroleid'] as int,
     );
-  }
 
-  factory Userroleauthorities.fromJson(String source) => Userroleauthorities.fromMap(json.decode(source));
-
-  final String? authority;
-
-  final int userroleid;
-
-  Userroleauthorities copyWith({
-    String? authority,
-    int? userroleid,
-  }) {
-    return Userroleauthorities(
-      authority: authority ?? this.authority,
-      userroleid: userroleid ?? this.userroleid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'authority': authority,
-      'userroleid': userroleid,
+Map<String, dynamic> _$$_UserroleauthoritiesToJson(
+        _$_Userroleauthorities instance) =>
+    <String, dynamic>{
+      'authority': instance.authority,
+      'userroleid': instance.userroleid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Userroleauthorities && other.authority == authority && other.userroleid == userroleid;
-  }
-
-  @override
-  int get hashCode {
-    return authority.hashCode ^ userroleid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Userroleauthorities(authority: $authority, userroleid: $userroleid)';
-  }
-}

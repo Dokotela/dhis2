@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventvisualizationRows {
-  const EventvisualizationRows({
-    required this.sortOrder,
-    this.dimension,
-    required this.eventvisualizationid,
-  });
+part of 'eventvisualization_rows.dart';
 
-  factory EventvisualizationRows.fromMap(Map<String, dynamic> map) {
-    return EventvisualizationRows(
-      sortOrder: int.parse(map['sort_order']),
-      dimension: map['dimension'],
-      eventvisualizationid: int.parse(map['eventvisualizationid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_EventvisualizationRows _$$_EventvisualizationRowsFromJson(
+        Map<String, dynamic> json) =>
+    _$_EventvisualizationRows(
+      sortOrder: json['sortOrder'] as int,
+      dimension: json['dimension'] as String?,
+      eventvisualizationid: json['eventvisualizationid'] as int,
     );
-  }
 
-  factory EventvisualizationRows.fromJson(String source) => EventvisualizationRows.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final String? dimension;
-
-  final int eventvisualizationid;
-
-  EventvisualizationRows copyWith({
-    int? sortOrder,
-    String? dimension,
-    int? eventvisualizationid,
-  }) {
-    return EventvisualizationRows(
-      sortOrder: sortOrder ?? this.sortOrder,
-      dimension: dimension ?? this.dimension,
-      eventvisualizationid: eventvisualizationid ?? this.eventvisualizationid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'dimension': dimension,
-      'eventvisualizationid': eventvisualizationid,
+Map<String, dynamic> _$$_EventvisualizationRowsToJson(
+        _$_EventvisualizationRows instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'dimension': instance.dimension,
+      'eventvisualizationid': instance.eventvisualizationid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventvisualizationRows &&
-        other.sortOrder == sortOrder &&
-        other.dimension == dimension &&
-        other.eventvisualizationid == eventvisualizationid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ dimension.hashCode ^ eventvisualizationid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventvisualizationRows(sortOrder: $sortOrder, dimension: $dimension, eventvisualizationid: $eventvisualizationid)';
-  }
-}

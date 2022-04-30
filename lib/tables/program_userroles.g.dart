@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramUserroles {
-  const ProgramUserroles({
-    required this.userroleid,
-    required this.programid,
-  });
+part of 'program_userroles.dart';
 
-  factory ProgramUserroles.fromMap(Map<String, dynamic> map) {
-    return ProgramUserroles(
-      userroleid: int.parse(map['userroleid']),
-      programid: int.parse(map['programid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgramUserroles _$$_ProgramUserrolesFromJson(Map<String, dynamic> json) =>
+    _$_ProgramUserroles(
+      userroleid: json['userroleid'] as int,
+      programid: json['programid'] as int,
     );
-  }
 
-  factory ProgramUserroles.fromJson(String source) => ProgramUserroles.fromMap(json.decode(source));
-
-  final int userroleid;
-
-  final int programid;
-
-  ProgramUserroles copyWith({
-    int? userroleid,
-    int? programid,
-  }) {
-    return ProgramUserroles(
-      userroleid: userroleid ?? this.userroleid,
-      programid: programid ?? this.programid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userroleid': userroleid,
-      'programid': programid,
+Map<String, dynamic> _$$_ProgramUserrolesToJson(_$_ProgramUserroles instance) =>
+    <String, dynamic>{
+      'userroleid': instance.userroleid,
+      'programid': instance.programid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramUserroles && other.userroleid == userroleid && other.programid == programid;
-  }
-
-  @override
-  int get hashCode {
-    return userroleid.hashCode ^ programid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramUserroles(userroleid: $userroleid, programid: $programid)';
-  }
-}

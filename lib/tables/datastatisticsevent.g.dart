@@ -1,82 +1,29 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datastatisticsevent {
-  const Datastatisticsevent({
-    this.favoriteuid,
-    this.timestamp,
-    this.eventtype,
-    required this.eventid,
-    this.username,
-  });
+part of 'datastatisticsevent.dart';
 
-  factory Datastatisticsevent.fromMap(Map<String, dynamic> map) {
-    return Datastatisticsevent(
-      favoriteuid: map['favoriteuid'],
-      timestamp: DateTime.tryParse(map['timestamp']),
-      eventtype: map['eventtype'],
-      eventid: int.parse(map['eventid']),
-      username: map['username'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datastatisticsevent _$$_DatastatisticseventFromJson(
+        Map<String, dynamic> json) =>
+    _$_Datastatisticsevent(
+      favoriteuid: json['favoriteuid'] as String?,
+      timestamp: json['timestamp'] == null
+          ? null
+          : DateTime.parse(json['timestamp'] as String),
+      eventtype: json['eventtype'] as String?,
+      eventid: json['eventid'] as int,
+      username: json['username'] as String?,
     );
-  }
 
-  factory Datastatisticsevent.fromJson(String source) => Datastatisticsevent.fromMap(json.decode(source));
-
-  final String? favoriteuid;
-
-  final DateTime? timestamp;
-
-  final String? eventtype;
-
-  final int eventid;
-
-  final String? username;
-
-  Datastatisticsevent copyWith({
-    String? favoriteuid,
-    DateTime? timestamp,
-    String? eventtype,
-    int? eventid,
-    String? username,
-  }) {
-    return Datastatisticsevent(
-      favoriteuid: favoriteuid ?? this.favoriteuid,
-      timestamp: timestamp ?? this.timestamp,
-      eventtype: eventtype ?? this.eventtype,
-      eventid: eventid ?? this.eventid,
-      username: username ?? this.username,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'favoriteuid': favoriteuid,
-      'timestamp': timestamp,
-      'eventtype': eventtype,
-      'eventid': eventid,
-      'username': username,
+Map<String, dynamic> _$$_DatastatisticseventToJson(
+        _$_Datastatisticsevent instance) =>
+    <String, dynamic>{
+      'favoriteuid': instance.favoriteuid,
+      'timestamp': instance.timestamp?.toIso8601String(),
+      'eventtype': instance.eventtype,
+      'eventid': instance.eventid,
+      'username': instance.username,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datastatisticsevent &&
-        other.favoriteuid == favoriteuid &&
-        other.timestamp == timestamp &&
-        other.eventtype == eventtype &&
-        other.eventid == eventid &&
-        other.username == username;
-  }
-
-  @override
-  int get hashCode {
-    return favoriteuid.hashCode ^ timestamp.hashCode ^ eventtype.hashCode ^ eventid.hashCode ^ username.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datastatisticsevent(favoriteuid: $favoriteuid, timestamp: $timestamp, eventtype: $eventtype, eventid: $eventid, username: $username)';
-  }
-}

@@ -1,158 +1,40 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ApiToken {
-  const ApiToken({
-    required this.expire,
-    required this.created,
-    this.attributes,
-    required this.key,
-    required this.version,
-    required this.apitokenid,
-    this.sharing,
-    required this.uid,
-    required this.createdby,
-    required this.lastupdated,
-    this.code,
-    required this.lastupdatedby,
-    required this.type,
-  });
+part of 'api_token.dart';
 
-  factory ApiToken.fromMap(Map<String, dynamic> map) {
-    return ApiToken(
-      expire: int.parse(map['expire']),
-      created: DateTime.parse(map['created']),
-      attributes: map['attributes'],
-      key: map['key'],
-      version: int.parse(map['version']),
-      apitokenid: int.parse(map['apitokenid']),
-      sharing: map['sharing'],
-      uid: map['uid'],
-      createdby: int.parse(map['createdby']),
-      lastupdated: DateTime.parse(map['lastupdated']),
-      code: map['code'],
-      lastupdatedby: int.parse(map['lastupdatedby']),
-      type: map['type'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ApiToken _$$_ApiTokenFromJson(Map<String, dynamic> json) => _$_ApiToken(
+      expire: json['expire'] as int,
+      created: DateTime.parse(json['created'] as String),
+      attributes: json['attributes'],
+      key: json['key'] as String,
+      version: json['version'] as int,
+      apitokenid: json['apitokenid'] as int,
+      sharing: json['sharing'],
+      uid: json['uid'] as String,
+      createdby: json['createdby'] as int,
+      lastupdated: DateTime.parse(json['lastupdated'] as String),
+      code: json['code'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int,
+      type: json['type'] as String,
     );
-  }
 
-  factory ApiToken.fromJson(String source) => ApiToken.fromMap(json.decode(source));
-
-  final int expire;
-
-  final DateTime created;
-
-  final Object? attributes;
-
-  final String key;
-
-  final int version;
-
-  final int apitokenid;
-
-  final Object? sharing;
-
-  final String uid;
-
-  final int createdby;
-
-  final DateTime lastupdated;
-
-  final String? code;
-
-  final int lastupdatedby;
-
-  final String type;
-
-  ApiToken copyWith({
-    int? expire,
-    DateTime? created,
-    Object? attributes,
-    String? key,
-    int? version,
-    int? apitokenid,
-    Object? sharing,
-    String? uid,
-    int? createdby,
-    DateTime? lastupdated,
-    String? code,
-    int? lastupdatedby,
-    String? type,
-  }) {
-    return ApiToken(
-      expire: expire ?? this.expire,
-      created: created ?? this.created,
-      attributes: attributes ?? this.attributes,
-      key: key ?? this.key,
-      version: version ?? this.version,
-      apitokenid: apitokenid ?? this.apitokenid,
-      sharing: sharing ?? this.sharing,
-      uid: uid ?? this.uid,
-      createdby: createdby ?? this.createdby,
-      lastupdated: lastupdated ?? this.lastupdated,
-      code: code ?? this.code,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      type: type ?? this.type,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'expire': expire,
-      'created': created.toUtc().toIso8601String(),
-      'attributes': attributes,
-      'key': key,
-      'version': version,
-      'apitokenid': apitokenid,
-      'sharing': sharing,
-      'uid': uid,
-      'createdby': createdby,
-      'lastupdated': lastupdated.toUtc().toIso8601String(),
-      'code': code,
-      'lastupdatedby': lastupdatedby,
-      'type': type,
+Map<String, dynamic> _$$_ApiTokenToJson(_$_ApiToken instance) =>
+    <String, dynamic>{
+      'expire': instance.expire,
+      'created': instance.created.toIso8601String(),
+      'attributes': instance.attributes,
+      'key': instance.key,
+      'version': instance.version,
+      'apitokenid': instance.apitokenid,
+      'sharing': instance.sharing,
+      'uid': instance.uid,
+      'createdby': instance.createdby,
+      'lastupdated': instance.lastupdated.toIso8601String(),
+      'code': instance.code,
+      'lastupdatedby': instance.lastupdatedby,
+      'type': instance.type,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ApiToken &&
-        other.expire == expire &&
-        other.created == created &&
-        other.attributes == attributes &&
-        other.key == key &&
-        other.version == version &&
-        other.apitokenid == apitokenid &&
-        other.sharing == sharing &&
-        other.uid == uid &&
-        other.createdby == createdby &&
-        other.lastupdated == lastupdated &&
-        other.code == code &&
-        other.lastupdatedby == lastupdatedby &&
-        other.type == type;
-  }
-
-  @override
-  int get hashCode {
-    return expire.hashCode ^
-        created.hashCode ^
-        attributes.hashCode ^
-        key.hashCode ^
-        version.hashCode ^
-        apitokenid.hashCode ^
-        sharing.hashCode ^
-        uid.hashCode ^
-        createdby.hashCode ^
-        lastupdated.hashCode ^
-        code.hashCode ^
-        lastupdatedby.hashCode ^
-        type.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ApiToken(expire: $expire, created: $created, attributes: $attributes, key: $key, version: $version, apitokenid: $apitokenid, sharing: $sharing, uid: $uid, createdby: $createdby, lastupdated: $lastupdated, code: $code, lastupdatedby: $lastupdatedby, type: $type)';
-  }
-}

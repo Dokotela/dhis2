@@ -1,158 +1,45 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Optionvalue {
-  const Optionvalue({
-    this.description,
-    this.sortOrder,
-    required this.name,
-    this.lastupdated,
-    required this.optionvalueid,
-    this.attributevalues,
-    this.code,
-    this.uid,
-    this.style,
-    this.formname,
-    this.optionsetid,
-    this.translations,
-    this.created,
-  });
+part of 'optionvalue.dart';
 
-  factory Optionvalue.fromMap(Map<String, dynamic> map) {
-    return Optionvalue(
-      description: map['description'],
-      sortOrder: int.tryParse(map['sort_order']),
-      name: map['name'],
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      optionvalueid: int.parse(map['optionvalueid']),
-      attributevalues: map['attributevalues'],
-      code: map['code'],
-      uid: map['uid'],
-      style: map['style'],
-      formname: map['formname'],
-      optionsetid: int.tryParse(map['optionsetid']),
-      translations: map['translations'],
-      created: DateTime.tryParse(map['created']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Optionvalue _$$_OptionvalueFromJson(Map<String, dynamic> json) =>
+    _$_Optionvalue(
+      description: json['description'] as String?,
+      sortOrder: json['sortOrder'] as int?,
+      name: json['name'] as String,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      optionvalueid: json['optionvalueid'] as int,
+      attributevalues: json['attributevalues'],
+      code: json['code'] as String?,
+      uid: json['uid'] as String?,
+      style: json['style'],
+      formname: json['formname'] as String?,
+      optionsetid: json['optionsetid'] as int?,
+      translations: json['translations'],
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
     );
-  }
 
-  factory Optionvalue.fromJson(String source) => Optionvalue.fromMap(json.decode(source));
-
-  final String? description;
-
-  final int? sortOrder;
-
-  final String name;
-
-  final DateTime? lastupdated;
-
-  final int optionvalueid;
-
-  final Object? attributevalues;
-
-  final String? code;
-
-  final String? uid;
-
-  final Object? style;
-
-  final String? formname;
-
-  final int? optionsetid;
-
-  final Object? translations;
-
-  final DateTime? created;
-
-  Optionvalue copyWith({
-    String? description,
-    int? sortOrder,
-    String? name,
-    DateTime? lastupdated,
-    int? optionvalueid,
-    Object? attributevalues,
-    String? code,
-    String? uid,
-    Object? style,
-    String? formname,
-    int? optionsetid,
-    Object? translations,
-    DateTime? created,
-  }) {
-    return Optionvalue(
-      description: description ?? this.description,
-      sortOrder: sortOrder ?? this.sortOrder,
-      name: name ?? this.name,
-      lastupdated: lastupdated ?? this.lastupdated,
-      optionvalueid: optionvalueid ?? this.optionvalueid,
-      attributevalues: attributevalues ?? this.attributevalues,
-      code: code ?? this.code,
-      uid: uid ?? this.uid,
-      style: style ?? this.style,
-      formname: formname ?? this.formname,
-      optionsetid: optionsetid ?? this.optionsetid,
-      translations: translations ?? this.translations,
-      created: created ?? this.created,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'description': description,
-      'sort_order': sortOrder,
-      'name': name,
-      'lastupdated': lastupdated,
-      'optionvalueid': optionvalueid,
-      'attributevalues': attributevalues,
-      'code': code,
-      'uid': uid,
-      'style': style,
-      'formname': formname,
-      'optionsetid': optionsetid,
-      'translations': translations,
-      'created': created,
+Map<String, dynamic> _$$_OptionvalueToJson(_$_Optionvalue instance) =>
+    <String, dynamic>{
+      'description': instance.description,
+      'sortOrder': instance.sortOrder,
+      'name': instance.name,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'optionvalueid': instance.optionvalueid,
+      'attributevalues': instance.attributevalues,
+      'code': instance.code,
+      'uid': instance.uid,
+      'style': instance.style,
+      'formname': instance.formname,
+      'optionsetid': instance.optionsetid,
+      'translations': instance.translations,
+      'created': instance.created?.toIso8601String(),
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Optionvalue &&
-        other.description == description &&
-        other.sortOrder == sortOrder &&
-        other.name == name &&
-        other.lastupdated == lastupdated &&
-        other.optionvalueid == optionvalueid &&
-        other.attributevalues == attributevalues &&
-        other.code == code &&
-        other.uid == uid &&
-        other.style == style &&
-        other.formname == formname &&
-        other.optionsetid == optionsetid &&
-        other.translations == translations &&
-        other.created == created;
-  }
-
-  @override
-  int get hashCode {
-    return description.hashCode ^
-        sortOrder.hashCode ^
-        name.hashCode ^
-        lastupdated.hashCode ^
-        optionvalueid.hashCode ^
-        attributevalues.hashCode ^
-        code.hashCode ^
-        uid.hashCode ^
-        style.hashCode ^
-        formname.hashCode ^
-        optionsetid.hashCode ^
-        translations.hashCode ^
-        created.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Optionvalue(description: $description, sortOrder: $sortOrder, name: $name, lastupdated: $lastupdated, optionvalueid: $optionvalueid, attributevalues: $attributevalues, code: $code, uid: $uid, style: $style, formname: $formname, optionsetid: $optionsetid, translations: $translations, created: $created)';
-  }
-}

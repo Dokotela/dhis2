@@ -1,56 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class IntepretationLikedby {
-  const IntepretationLikedby({
-    required this.userid,
-    required this.interpretationid,
-  });
+part of 'intepretation_likedby.dart';
 
-  factory IntepretationLikedby.fromMap(Map<String, dynamic> map) {
-    return IntepretationLikedby(
-      userid: int.parse(map['userid']),
-      interpretationid: int.parse(map['interpretationid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_IntepretationLikedby _$$_IntepretationLikedbyFromJson(
+        Map<String, dynamic> json) =>
+    _$_IntepretationLikedby(
+      userid: json['userid'] as int,
+      interpretationid: json['interpretationid'] as int,
     );
-  }
 
-  factory IntepretationLikedby.fromJson(String source) => IntepretationLikedby.fromMap(json.decode(source));
-
-  final int userid;
-
-  final int interpretationid;
-
-  IntepretationLikedby copyWith({
-    int? userid,
-    int? interpretationid,
-  }) {
-    return IntepretationLikedby(
-      userid: userid ?? this.userid,
-      interpretationid: interpretationid ?? this.interpretationid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userid': userid,
-      'interpretationid': interpretationid,
+Map<String, dynamic> _$$_IntepretationLikedbyToJson(
+        _$_IntepretationLikedby instance) =>
+    <String, dynamic>{
+      'userid': instance.userid,
+      'interpretationid': instance.interpretationid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is IntepretationLikedby && other.userid == userid && other.interpretationid == interpretationid;
-  }
-
-  @override
-  int get hashCode {
-    return userid.hashCode ^ interpretationid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'IntepretationLikedby(userid: $userid, interpretationid: $interpretationid)';
-  }
-}

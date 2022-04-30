@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Optiongroupsetmembers {
-  const Optiongroupsetmembers({
-    required this.optiongroupsetid,
-    required this.optiongroupid,
-    required this.sortOrder,
-  });
+part of 'optiongroupsetmembers.dart';
 
-  factory Optiongroupsetmembers.fromMap(Map<String, dynamic> map) {
-    return Optiongroupsetmembers(
-      optiongroupsetid: int.parse(map['optiongroupsetid']),
-      optiongroupid: int.parse(map['optiongroupid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Optiongroupsetmembers _$$_OptiongroupsetmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Optiongroupsetmembers(
+      optiongroupsetid: json['optiongroupsetid'] as int,
+      optiongroupid: json['optiongroupid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory Optiongroupsetmembers.fromJson(String source) => Optiongroupsetmembers.fromMap(json.decode(source));
-
-  final int optiongroupsetid;
-
-  final int optiongroupid;
-
-  final int sortOrder;
-
-  Optiongroupsetmembers copyWith({
-    int? optiongroupsetid,
-    int? optiongroupid,
-    int? sortOrder,
-  }) {
-    return Optiongroupsetmembers(
-      optiongroupsetid: optiongroupsetid ?? this.optiongroupsetid,
-      optiongroupid: optiongroupid ?? this.optiongroupid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'optiongroupsetid': optiongroupsetid,
-      'optiongroupid': optiongroupid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_OptiongroupsetmembersToJson(
+        _$_Optiongroupsetmembers instance) =>
+    <String, dynamic>{
+      'optiongroupsetid': instance.optiongroupsetid,
+      'optiongroupid': instance.optiongroupid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Optiongroupsetmembers &&
-        other.optiongroupsetid == optiongroupsetid &&
-        other.optiongroupid == optiongroupid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return optiongroupsetid.hashCode ^ optiongroupid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Optiongroupsetmembers(optiongroupsetid: $optiongroupsetid, optiongroupid: $optiongroupid, sortOrder: $sortOrder)';
-  }
-}

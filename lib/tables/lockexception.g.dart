@@ -1,74 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Lockexception {
-  const Lockexception({
-    this.datasetid,
-    this.organisationunitid,
-    this.periodid,
-    required this.lockexceptionid,
-  });
+part of 'lockexception.dart';
 
-  factory Lockexception.fromMap(Map<String, dynamic> map) {
-    return Lockexception(
-      datasetid: int.tryParse(map['datasetid']),
-      organisationunitid: int.tryParse(map['organisationunitid']),
-      periodid: int.tryParse(map['periodid']),
-      lockexceptionid: int.parse(map['lockexceptionid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Lockexception _$$_LockexceptionFromJson(Map<String, dynamic> json) =>
+    _$_Lockexception(
+      datasetid: json['datasetid'] as int?,
+      organisationunitid: json['organisationunitid'] as int?,
+      periodid: json['periodid'] as int?,
+      lockexceptionid: json['lockexceptionid'] as int,
     );
-  }
 
-  factory Lockexception.fromJson(String source) => Lockexception.fromMap(json.decode(source));
-
-  final int? datasetid;
-
-  final int? organisationunitid;
-
-  final int? periodid;
-
-  final int lockexceptionid;
-
-  Lockexception copyWith({
-    int? datasetid,
-    int? organisationunitid,
-    int? periodid,
-    int? lockexceptionid,
-  }) {
-    return Lockexception(
-      datasetid: datasetid ?? this.datasetid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-      periodid: periodid ?? this.periodid,
-      lockexceptionid: lockexceptionid ?? this.lockexceptionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datasetid': datasetid,
-      'organisationunitid': organisationunitid,
-      'periodid': periodid,
-      'lockexceptionid': lockexceptionid,
+Map<String, dynamic> _$$_LockexceptionToJson(_$_Lockexception instance) =>
+    <String, dynamic>{
+      'datasetid': instance.datasetid,
+      'organisationunitid': instance.organisationunitid,
+      'periodid': instance.periodid,
+      'lockexceptionid': instance.lockexceptionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Lockexception &&
-        other.datasetid == datasetid &&
-        other.organisationunitid == organisationunitid &&
-        other.periodid == periodid &&
-        other.lockexceptionid == lockexceptionid;
-  }
-
-  @override
-  int get hashCode {
-    return datasetid.hashCode ^ organisationunitid.hashCode ^ periodid.hashCode ^ lockexceptionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Lockexception(datasetid: $datasetid, organisationunitid: $organisationunitid, periodid: $periodid, lockexceptionid: $lockexceptionid)';
-  }
-}

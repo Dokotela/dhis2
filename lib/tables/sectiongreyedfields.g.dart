@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Sectiongreyedfields {
-  const Sectiongreyedfields({
-    required this.sectionid,
-    required this.dataelementoperandid,
-  });
+part of 'sectiongreyedfields.dart';
 
-  factory Sectiongreyedfields.fromMap(Map<String, dynamic> map) {
-    return Sectiongreyedfields(
-      sectionid: int.parse(map['sectionid']),
-      dataelementoperandid: int.parse(map['dataelementoperandid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Sectiongreyedfields _$$_SectiongreyedfieldsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Sectiongreyedfields(
+      sectionid: json['sectionid'] as int,
+      dataelementoperandid: json['dataelementoperandid'] as int,
     );
-  }
 
-  factory Sectiongreyedfields.fromJson(String source) => Sectiongreyedfields.fromMap(json.decode(source));
-
-  final int sectionid;
-
-  final int dataelementoperandid;
-
-  Sectiongreyedfields copyWith({
-    int? sectionid,
-    int? dataelementoperandid,
-  }) {
-    return Sectiongreyedfields(
-      sectionid: sectionid ?? this.sectionid,
-      dataelementoperandid: dataelementoperandid ?? this.dataelementoperandid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sectionid': sectionid,
-      'dataelementoperandid': dataelementoperandid,
+Map<String, dynamic> _$$_SectiongreyedfieldsToJson(
+        _$_Sectiongreyedfields instance) =>
+    <String, dynamic>{
+      'sectionid': instance.sectionid,
+      'dataelementoperandid': instance.dataelementoperandid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Sectiongreyedfields &&
-        other.sectionid == sectionid &&
-        other.dataelementoperandid == dataelementoperandid;
-  }
-
-  @override
-  int get hashCode {
-    return sectionid.hashCode ^ dataelementoperandid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Sectiongreyedfields(sectionid: $sectionid, dataelementoperandid: $dataelementoperandid)';
-  }
-}

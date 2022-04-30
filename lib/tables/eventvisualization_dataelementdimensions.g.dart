@@ -1,68 +1,26 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventvisualizationDataelementdimensions {
-  const EventvisualizationDataelementdimensions({
-    required this.eventvisualizationid,
-    required this.trackedentitydataelementdimensionid,
-    required this.sortOrder,
-  });
+part of 'eventvisualization_dataelementdimensions.dart';
 
-  factory EventvisualizationDataelementdimensions.fromMap(Map<String, dynamic> map) {
-    return EventvisualizationDataelementdimensions(
-      eventvisualizationid: int.parse(map['eventvisualizationid']),
-      trackedentitydataelementdimensionid: int.parse(map['trackedentitydataelementdimensionid']),
-      sortOrder: int.parse(map['sort_order']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory EventvisualizationDataelementdimensions.fromJson(String source) =>
-      EventvisualizationDataelementdimensions.fromMap(json.decode(source));
+_$_EventvisualizationDataelementdimensions
+    _$$_EventvisualizationDataelementdimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_EventvisualizationDataelementdimensions(
+          eventvisualizationid: json['eventvisualizationid'] as int,
+          trackedentitydataelementdimensionid:
+              json['trackedentitydataelementdimensionid'] as int,
+          sortOrder: json['sortOrder'] as int,
+        );
 
-  final int eventvisualizationid;
-
-  final int trackedentitydataelementdimensionid;
-
-  final int sortOrder;
-
-  EventvisualizationDataelementdimensions copyWith({
-    int? eventvisualizationid,
-    int? trackedentitydataelementdimensionid,
-    int? sortOrder,
-  }) {
-    return EventvisualizationDataelementdimensions(
-      eventvisualizationid: eventvisualizationid ?? this.eventvisualizationid,
-      trackedentitydataelementdimensionid:
-          trackedentitydataelementdimensionid ?? this.trackedentitydataelementdimensionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'eventvisualizationid': eventvisualizationid,
-      'trackedentitydataelementdimensionid': trackedentitydataelementdimensionid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_EventvisualizationDataelementdimensionsToJson(
+        _$_EventvisualizationDataelementdimensions instance) =>
+    <String, dynamic>{
+      'eventvisualizationid': instance.eventvisualizationid,
+      'trackedentitydataelementdimensionid':
+          instance.trackedentitydataelementdimensionid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventvisualizationDataelementdimensions &&
-        other.eventvisualizationid == eventvisualizationid &&
-        other.trackedentitydataelementdimensionid == trackedentitydataelementdimensionid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return eventvisualizationid.hashCode ^ trackedentitydataelementdimensionid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventvisualizationDataelementdimensions(eventvisualizationid: $eventvisualizationid, trackedentitydataelementdimensionid: $trackedentitydataelementdimensionid, sortOrder: $sortOrder)';
-  }
-}

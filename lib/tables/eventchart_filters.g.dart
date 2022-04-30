@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventchartFilters {
-  const EventchartFilters({
-    required this.eventchartid,
-    required this.sortOrder,
-    this.dimension,
-  });
+part of 'eventchart_filters.dart';
 
-  factory EventchartFilters.fromMap(Map<String, dynamic> map) {
-    return EventchartFilters(
-      eventchartid: int.parse(map['eventchartid']),
-      sortOrder: int.parse(map['sort_order']),
-      dimension: map['dimension'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_EventchartFilters _$$_EventchartFiltersFromJson(Map<String, dynamic> json) =>
+    _$_EventchartFilters(
+      eventchartid: json['eventchartid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      dimension: json['dimension'] as String?,
     );
-  }
 
-  factory EventchartFilters.fromJson(String source) => EventchartFilters.fromMap(json.decode(source));
-
-  final int eventchartid;
-
-  final int sortOrder;
-
-  final String? dimension;
-
-  EventchartFilters copyWith({
-    int? eventchartid,
-    int? sortOrder,
-    String? dimension,
-  }) {
-    return EventchartFilters(
-      eventchartid: eventchartid ?? this.eventchartid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      dimension: dimension ?? this.dimension,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'eventchartid': eventchartid,
-      'sort_order': sortOrder,
-      'dimension': dimension,
+Map<String, dynamic> _$$_EventchartFiltersToJson(
+        _$_EventchartFilters instance) =>
+    <String, dynamic>{
+      'eventchartid': instance.eventchartid,
+      'sortOrder': instance.sortOrder,
+      'dimension': instance.dimension,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventchartFilters &&
-        other.eventchartid == eventchartid &&
-        other.sortOrder == sortOrder &&
-        other.dimension == dimension;
-  }
-
-  @override
-  int get hashCode {
-    return eventchartid.hashCode ^ sortOrder.hashCode ^ dimension.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventchartFilters(eventchartid: $eventchartid, sortOrder: $sortOrder, dimension: $dimension)';
-  }
-}

@@ -1,59 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Dataelementgroupsetdimension {
-  const Dataelementgroupsetdimension({
-    required this.dataelementgroupsetdimensionid,
-    this.dataelementgroupsetid,
-  });
+part of 'dataelementgroupsetdimension.dart';
 
-  factory Dataelementgroupsetdimension.fromMap(Map<String, dynamic> map) {
-    return Dataelementgroupsetdimension(
-      dataelementgroupsetdimensionid: int.parse(map['dataelementgroupsetdimensionid']),
-      dataelementgroupsetid: int.tryParse(map['dataelementgroupsetid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Dataelementgroupsetdimension _$$_DataelementgroupsetdimensionFromJson(
+        Map<String, dynamic> json) =>
+    _$_Dataelementgroupsetdimension(
+      dataelementgroupsetdimensionid:
+          json['dataelementgroupsetdimensionid'] as int,
+      dataelementgroupsetid: json['dataelementgroupsetid'] as int?,
     );
-  }
 
-  factory Dataelementgroupsetdimension.fromJson(String source) =>
-      Dataelementgroupsetdimension.fromMap(json.decode(source));
-
-  final int dataelementgroupsetdimensionid;
-
-  final int? dataelementgroupsetid;
-
-  Dataelementgroupsetdimension copyWith({
-    int? dataelementgroupsetdimensionid,
-    int? dataelementgroupsetid,
-  }) {
-    return Dataelementgroupsetdimension(
-      dataelementgroupsetdimensionid: dataelementgroupsetdimensionid ?? this.dataelementgroupsetdimensionid,
-      dataelementgroupsetid: dataelementgroupsetid ?? this.dataelementgroupsetid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'dataelementgroupsetdimensionid': dataelementgroupsetdimensionid,
-      'dataelementgroupsetid': dataelementgroupsetid,
+Map<String, dynamic> _$$_DataelementgroupsetdimensionToJson(
+        _$_Dataelementgroupsetdimension instance) =>
+    <String, dynamic>{
+      'dataelementgroupsetdimensionid': instance.dataelementgroupsetdimensionid,
+      'dataelementgroupsetid': instance.dataelementgroupsetid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Dataelementgroupsetdimension &&
-        other.dataelementgroupsetdimensionid == dataelementgroupsetdimensionid &&
-        other.dataelementgroupsetid == dataelementgroupsetid;
-  }
-
-  @override
-  int get hashCode {
-    return dataelementgroupsetdimensionid.hashCode ^ dataelementgroupsetid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Dataelementgroupsetdimension(dataelementgroupsetdimensionid: $dataelementgroupsetdimensionid, dataelementgroupsetid: $dataelementgroupsetid)';
-  }
-}

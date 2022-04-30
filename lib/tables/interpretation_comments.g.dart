@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class InterpretationComments {
-  const InterpretationComments({
-    required this.interpretationcommentid,
-    required this.sortOrder,
-    required this.interpretationid,
-  });
+part of 'interpretation_comments.dart';
 
-  factory InterpretationComments.fromMap(Map<String, dynamic> map) {
-    return InterpretationComments(
-      interpretationcommentid: int.parse(map['interpretationcommentid']),
-      sortOrder: int.parse(map['sort_order']),
-      interpretationid: int.parse(map['interpretationid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_InterpretationComments _$$_InterpretationCommentsFromJson(
+        Map<String, dynamic> json) =>
+    _$_InterpretationComments(
+      interpretationcommentid: json['interpretationcommentid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      interpretationid: json['interpretationid'] as int,
     );
-  }
 
-  factory InterpretationComments.fromJson(String source) => InterpretationComments.fromMap(json.decode(source));
-
-  final int interpretationcommentid;
-
-  final int sortOrder;
-
-  final int interpretationid;
-
-  InterpretationComments copyWith({
-    int? interpretationcommentid,
-    int? sortOrder,
-    int? interpretationid,
-  }) {
-    return InterpretationComments(
-      interpretationcommentid: interpretationcommentid ?? this.interpretationcommentid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      interpretationid: interpretationid ?? this.interpretationid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'interpretationcommentid': interpretationcommentid,
-      'sort_order': sortOrder,
-      'interpretationid': interpretationid,
+Map<String, dynamic> _$$_InterpretationCommentsToJson(
+        _$_InterpretationComments instance) =>
+    <String, dynamic>{
+      'interpretationcommentid': instance.interpretationcommentid,
+      'sortOrder': instance.sortOrder,
+      'interpretationid': instance.interpretationid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is InterpretationComments &&
-        other.interpretationcommentid == interpretationcommentid &&
-        other.sortOrder == sortOrder &&
-        other.interpretationid == interpretationid;
-  }
-
-  @override
-  int get hashCode {
-    return interpretationcommentid.hashCode ^ sortOrder.hashCode ^ interpretationid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'InterpretationComments(interpretationcommentid: $interpretationcommentid, sortOrder: $sortOrder, interpretationid: $interpretationid)';
-  }
-}

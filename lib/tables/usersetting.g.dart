@@ -1,63 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Usersetting {
-  const Usersetting({
-    required this.userinfoid,
-    required this.name,
-    this.value,
-  });
+part of 'usersetting.dart';
 
-  factory Usersetting.fromMap(Map<String, dynamic> map) {
-    return Usersetting(
-      userinfoid: int.parse(map['userinfoid']),
-      name: map['name'],
-      value: map['value'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Usersetting _$$_UsersettingFromJson(Map<String, dynamic> json) =>
+    _$_Usersetting(
+      userinfoid: json['userinfoid'] as int,
+      name: json['name'] as String,
+      value: json['value'] as String?,
     );
-  }
 
-  factory Usersetting.fromJson(String source) => Usersetting.fromMap(json.decode(source));
-
-  final int userinfoid;
-
-  final String name;
-
-  final String? value;
-
-  Usersetting copyWith({
-    int? userinfoid,
-    String? name,
-    String? value,
-  }) {
-    return Usersetting(
-      userinfoid: userinfoid ?? this.userinfoid,
-      name: name ?? this.name,
-      value: value ?? this.value,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userinfoid': userinfoid,
-      'name': name,
-      'value': value,
+Map<String, dynamic> _$$_UsersettingToJson(_$_Usersetting instance) =>
+    <String, dynamic>{
+      'userinfoid': instance.userinfoid,
+      'name': instance.name,
+      'value': instance.value,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Usersetting && other.userinfoid == userinfoid && other.name == name && other.value == value;
-  }
-
-  @override
-  int get hashCode {
-    return userinfoid.hashCode ^ name.hashCode ^ value.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Usersetting(userinfoid: $userinfoid, name: $name, value: $value)';
-  }
-}

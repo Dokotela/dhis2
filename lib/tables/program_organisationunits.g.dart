@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramOrganisationunits {
-  const ProgramOrganisationunits({
-    required this.programid,
-    required this.organisationunitid,
-  });
+part of 'program_organisationunits.dart';
 
-  factory ProgramOrganisationunits.fromMap(Map<String, dynamic> map) {
-    return ProgramOrganisationunits(
-      programid: int.parse(map['programid']),
-      organisationunitid: int.parse(map['organisationunitid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgramOrganisationunits _$$_ProgramOrganisationunitsFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProgramOrganisationunits(
+      programid: json['programid'] as int,
+      organisationunitid: json['organisationunitid'] as int,
     );
-  }
 
-  factory ProgramOrganisationunits.fromJson(String source) => ProgramOrganisationunits.fromMap(json.decode(source));
-
-  final int programid;
-
-  final int organisationunitid;
-
-  ProgramOrganisationunits copyWith({
-    int? programid,
-    int? organisationunitid,
-  }) {
-    return ProgramOrganisationunits(
-      programid: programid ?? this.programid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programid': programid,
-      'organisationunitid': organisationunitid,
+Map<String, dynamic> _$$_ProgramOrganisationunitsToJson(
+        _$_ProgramOrganisationunits instance) =>
+    <String, dynamic>{
+      'programid': instance.programid,
+      'organisationunitid': instance.organisationunitid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramOrganisationunits &&
-        other.programid == programid &&
-        other.organisationunitid == organisationunitid;
-  }
-
-  @override
-  int get hashCode {
-    return programid.hashCode ^ organisationunitid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramOrganisationunits(programid: $programid, organisationunitid: $organisationunitid)';
-  }
-}

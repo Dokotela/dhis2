@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Usergroupmembers {
-  const Usergroupmembers({
-    required this.userid,
-    required this.usergroupid,
-  });
+part of 'usergroupmembers.dart';
 
-  factory Usergroupmembers.fromMap(Map<String, dynamic> map) {
-    return Usergroupmembers(
-      userid: int.parse(map['userid']),
-      usergroupid: int.parse(map['usergroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Usergroupmembers _$$_UsergroupmembersFromJson(Map<String, dynamic> json) =>
+    _$_Usergroupmembers(
+      userid: json['userid'] as int,
+      usergroupid: json['usergroupid'] as int,
     );
-  }
 
-  factory Usergroupmembers.fromJson(String source) => Usergroupmembers.fromMap(json.decode(source));
-
-  final int userid;
-
-  final int usergroupid;
-
-  Usergroupmembers copyWith({
-    int? userid,
-    int? usergroupid,
-  }) {
-    return Usergroupmembers(
-      userid: userid ?? this.userid,
-      usergroupid: usergroupid ?? this.usergroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userid': userid,
-      'usergroupid': usergroupid,
+Map<String, dynamic> _$$_UsergroupmembersToJson(_$_Usergroupmembers instance) =>
+    <String, dynamic>{
+      'userid': instance.userid,
+      'usergroupid': instance.usergroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Usergroupmembers && other.userid == userid && other.usergroupid == usergroupid;
-  }
-
-  @override
-  int get hashCode {
-    return userid.hashCode ^ usergroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Usergroupmembers(userid: $userid, usergroupid: $usergroupid)';
-  }
-}

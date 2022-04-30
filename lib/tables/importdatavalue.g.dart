@@ -1,122 +1,35 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Importdatavalue {
-  const Importdatavalue({
-    required this.categoryoptioncomboid,
-    this.storedby,
-    this.lastupdated,
-    required this.periodid,
-    this.value,
-    this.comment,
-    required this.sourceid,
-    required this.dataelementid,
-    this.status,
-  });
+part of 'importdatavalue.dart';
 
-  factory Importdatavalue.fromMap(Map<String, dynamic> map) {
-    return Importdatavalue(
-      categoryoptioncomboid: int.parse(map['categoryoptioncomboid']),
-      storedby: map['storedby'],
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      periodid: int.parse(map['periodid']),
-      value: map['value'],
-      comment: map['comment'],
-      sourceid: int.parse(map['sourceid']),
-      dataelementid: int.parse(map['dataelementid']),
-      status: map['status'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Importdatavalue _$$_ImportdatavalueFromJson(Map<String, dynamic> json) =>
+    _$_Importdatavalue(
+      categoryoptioncomboid: json['categoryoptioncomboid'] as int,
+      storedby: json['storedby'] as String?,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      periodid: json['periodid'] as int,
+      value: json['value'] as String?,
+      comment: json['comment'] as String?,
+      sourceid: json['sourceid'] as int,
+      dataelementid: json['dataelementid'] as int,
+      status: json['status'] as String?,
     );
-  }
 
-  factory Importdatavalue.fromJson(String source) => Importdatavalue.fromMap(json.decode(source));
-
-  final int categoryoptioncomboid;
-
-  final String? storedby;
-
-  final DateTime? lastupdated;
-
-  final int periodid;
-
-  final String? value;
-
-  final String? comment;
-
-  final int sourceid;
-
-  final int dataelementid;
-
-  final String? status;
-
-  Importdatavalue copyWith({
-    int? categoryoptioncomboid,
-    String? storedby,
-    DateTime? lastupdated,
-    int? periodid,
-    String? value,
-    String? comment,
-    int? sourceid,
-    int? dataelementid,
-    String? status,
-  }) {
-    return Importdatavalue(
-      categoryoptioncomboid: categoryoptioncomboid ?? this.categoryoptioncomboid,
-      storedby: storedby ?? this.storedby,
-      lastupdated: lastupdated ?? this.lastupdated,
-      periodid: periodid ?? this.periodid,
-      value: value ?? this.value,
-      comment: comment ?? this.comment,
-      sourceid: sourceid ?? this.sourceid,
-      dataelementid: dataelementid ?? this.dataelementid,
-      status: status ?? this.status,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'categoryoptioncomboid': categoryoptioncomboid,
-      'storedby': storedby,
-      'lastupdated': lastupdated,
-      'periodid': periodid,
-      'value': value,
-      'comment': comment,
-      'sourceid': sourceid,
-      'dataelementid': dataelementid,
-      'status': status,
+Map<String, dynamic> _$$_ImportdatavalueToJson(_$_Importdatavalue instance) =>
+    <String, dynamic>{
+      'categoryoptioncomboid': instance.categoryoptioncomboid,
+      'storedby': instance.storedby,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'periodid': instance.periodid,
+      'value': instance.value,
+      'comment': instance.comment,
+      'sourceid': instance.sourceid,
+      'dataelementid': instance.dataelementid,
+      'status': instance.status,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Importdatavalue &&
-        other.categoryoptioncomboid == categoryoptioncomboid &&
-        other.storedby == storedby &&
-        other.lastupdated == lastupdated &&
-        other.periodid == periodid &&
-        other.value == value &&
-        other.comment == comment &&
-        other.sourceid == sourceid &&
-        other.dataelementid == dataelementid &&
-        other.status == status;
-  }
-
-  @override
-  int get hashCode {
-    return categoryoptioncomboid.hashCode ^
-        storedby.hashCode ^
-        lastupdated.hashCode ^
-        periodid.hashCode ^
-        value.hashCode ^
-        comment.hashCode ^
-        sourceid.hashCode ^
-        dataelementid.hashCode ^
-        status.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Importdatavalue(categoryoptioncomboid: $categoryoptioncomboid, storedby: $storedby, lastupdated: $lastupdated, periodid: $periodid, value: $value, comment: $comment, sourceid: $sourceid, dataelementid: $dataelementid, status: $status)';
-  }
-}

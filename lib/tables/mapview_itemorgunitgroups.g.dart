@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MapviewItemorgunitgroups {
-  const MapviewItemorgunitgroups({
-    required this.mapviewid,
-    required this.sortOrder,
-    required this.orgunitgroupid,
-  });
+part of 'mapview_itemorgunitgroups.dart';
 
-  factory MapviewItemorgunitgroups.fromMap(Map<String, dynamic> map) {
-    return MapviewItemorgunitgroups(
-      mapviewid: int.parse(map['mapviewid']),
-      sortOrder: int.parse(map['sort_order']),
-      orgunitgroupid: int.parse(map['orgunitgroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MapviewItemorgunitgroups _$$_MapviewItemorgunitgroupsFromJson(
+        Map<String, dynamic> json) =>
+    _$_MapviewItemorgunitgroups(
+      mapviewid: json['mapviewid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      orgunitgroupid: json['orgunitgroupid'] as int,
     );
-  }
 
-  factory MapviewItemorgunitgroups.fromJson(String source) => MapviewItemorgunitgroups.fromMap(json.decode(source));
-
-  final int mapviewid;
-
-  final int sortOrder;
-
-  final int orgunitgroupid;
-
-  MapviewItemorgunitgroups copyWith({
-    int? mapviewid,
-    int? sortOrder,
-    int? orgunitgroupid,
-  }) {
-    return MapviewItemorgunitgroups(
-      mapviewid: mapviewid ?? this.mapviewid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      orgunitgroupid: orgunitgroupid ?? this.orgunitgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'mapviewid': mapviewid,
-      'sort_order': sortOrder,
-      'orgunitgroupid': orgunitgroupid,
+Map<String, dynamic> _$$_MapviewItemorgunitgroupsToJson(
+        _$_MapviewItemorgunitgroups instance) =>
+    <String, dynamic>{
+      'mapviewid': instance.mapviewid,
+      'sortOrder': instance.sortOrder,
+      'orgunitgroupid': instance.orgunitgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MapviewItemorgunitgroups &&
-        other.mapviewid == mapviewid &&
-        other.sortOrder == sortOrder &&
-        other.orgunitgroupid == orgunitgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return mapviewid.hashCode ^ sortOrder.hashCode ^ orgunitgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MapviewItemorgunitgroups(mapviewid: $mapviewid, sortOrder: $sortOrder, orgunitgroupid: $orgunitgroupid)';
-  }
-}

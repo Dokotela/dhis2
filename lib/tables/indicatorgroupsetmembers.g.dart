@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Indicatorgroupsetmembers {
-  const Indicatorgroupsetmembers({
-    required this.indicatorgroupsetid,
-    required this.sortOrder,
-    required this.indicatorgroupid,
-  });
+part of 'indicatorgroupsetmembers.dart';
 
-  factory Indicatorgroupsetmembers.fromMap(Map<String, dynamic> map) {
-    return Indicatorgroupsetmembers(
-      indicatorgroupsetid: int.parse(map['indicatorgroupsetid']),
-      sortOrder: int.parse(map['sort_order']),
-      indicatorgroupid: int.parse(map['indicatorgroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Indicatorgroupsetmembers _$$_IndicatorgroupsetmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Indicatorgroupsetmembers(
+      indicatorgroupsetid: json['indicatorgroupsetid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      indicatorgroupid: json['indicatorgroupid'] as int,
     );
-  }
 
-  factory Indicatorgroupsetmembers.fromJson(String source) => Indicatorgroupsetmembers.fromMap(json.decode(source));
-
-  final int indicatorgroupsetid;
-
-  final int sortOrder;
-
-  final int indicatorgroupid;
-
-  Indicatorgroupsetmembers copyWith({
-    int? indicatorgroupsetid,
-    int? sortOrder,
-    int? indicatorgroupid,
-  }) {
-    return Indicatorgroupsetmembers(
-      indicatorgroupsetid: indicatorgroupsetid ?? this.indicatorgroupsetid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      indicatorgroupid: indicatorgroupid ?? this.indicatorgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'indicatorgroupsetid': indicatorgroupsetid,
-      'sort_order': sortOrder,
-      'indicatorgroupid': indicatorgroupid,
+Map<String, dynamic> _$$_IndicatorgroupsetmembersToJson(
+        _$_Indicatorgroupsetmembers instance) =>
+    <String, dynamic>{
+      'indicatorgroupsetid': instance.indicatorgroupsetid,
+      'sortOrder': instance.sortOrder,
+      'indicatorgroupid': instance.indicatorgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Indicatorgroupsetmembers &&
-        other.indicatorgroupsetid == indicatorgroupsetid &&
-        other.sortOrder == sortOrder &&
-        other.indicatorgroupid == indicatorgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return indicatorgroupsetid.hashCode ^ sortOrder.hashCode ^ indicatorgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Indicatorgroupsetmembers(indicatorgroupsetid: $indicatorgroupsetid, sortOrder: $sortOrder, indicatorgroupid: $indicatorgroupid)';
-  }
-}

@@ -1,66 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MapviewPeriods {
-  const MapviewPeriods({
-    required this.periodid,
-    required this.mapviewid,
-    required this.sortOrder,
-  });
+part of 'mapview_periods.dart';
 
-  factory MapviewPeriods.fromMap(Map<String, dynamic> map) {
-    return MapviewPeriods(
-      periodid: int.parse(map['periodid']),
-      mapviewid: int.parse(map['mapviewid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MapviewPeriods _$$_MapviewPeriodsFromJson(Map<String, dynamic> json) =>
+    _$_MapviewPeriods(
+      periodid: json['periodid'] as int,
+      mapviewid: json['mapviewid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory MapviewPeriods.fromJson(String source) => MapviewPeriods.fromMap(json.decode(source));
-
-  final int periodid;
-
-  final int mapviewid;
-
-  final int sortOrder;
-
-  MapviewPeriods copyWith({
-    int? periodid,
-    int? mapviewid,
-    int? sortOrder,
-  }) {
-    return MapviewPeriods(
-      periodid: periodid ?? this.periodid,
-      mapviewid: mapviewid ?? this.mapviewid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'periodid': periodid,
-      'mapviewid': mapviewid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_MapviewPeriodsToJson(_$_MapviewPeriods instance) =>
+    <String, dynamic>{
+      'periodid': instance.periodid,
+      'mapviewid': instance.mapviewid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MapviewPeriods &&
-        other.periodid == periodid &&
-        other.mapviewid == mapviewid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return periodid.hashCode ^ mapviewid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MapviewPeriods(periodid: $periodid, mapviewid: $mapviewid, sortOrder: $sortOrder)';
-  }
-}

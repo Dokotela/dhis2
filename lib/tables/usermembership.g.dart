@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Usermembership {
-  const Usermembership({
-    required this.organisationunitid,
-    required this.userinfoid,
-  });
+part of 'usermembership.dart';
 
-  factory Usermembership.fromMap(Map<String, dynamic> map) {
-    return Usermembership(
-      organisationunitid: int.parse(map['organisationunitid']),
-      userinfoid: int.parse(map['userinfoid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Usermembership _$$_UsermembershipFromJson(Map<String, dynamic> json) =>
+    _$_Usermembership(
+      organisationunitid: json['organisationunitid'] as int,
+      userinfoid: json['userinfoid'] as int,
     );
-  }
 
-  factory Usermembership.fromJson(String source) => Usermembership.fromMap(json.decode(source));
-
-  final int organisationunitid;
-
-  final int userinfoid;
-
-  Usermembership copyWith({
-    int? organisationunitid,
-    int? userinfoid,
-  }) {
-    return Usermembership(
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-      userinfoid: userinfoid ?? this.userinfoid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'organisationunitid': organisationunitid,
-      'userinfoid': userinfoid,
+Map<String, dynamic> _$$_UsermembershipToJson(_$_Usermembership instance) =>
+    <String, dynamic>{
+      'organisationunitid': instance.organisationunitid,
+      'userinfoid': instance.userinfoid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Usermembership && other.organisationunitid == organisationunitid && other.userinfoid == userinfoid;
-  }
-
-  @override
-  int get hashCode {
-    return organisationunitid.hashCode ^ userinfoid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Usermembership(organisationunitid: $organisationunitid, userinfoid: $userinfoid)';
-  }
-}

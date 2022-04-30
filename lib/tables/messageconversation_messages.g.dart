@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MessageconversationMessages {
-  const MessageconversationMessages({
-    required this.sortOrder,
-    required this.messageconversationid,
-    required this.messageid,
-  });
+part of 'messageconversation_messages.dart';
 
-  factory MessageconversationMessages.fromMap(Map<String, dynamic> map) {
-    return MessageconversationMessages(
-      sortOrder: int.parse(map['sort_order']),
-      messageconversationid: int.parse(map['messageconversationid']),
-      messageid: int.parse(map['messageid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MessageconversationMessages _$$_MessageconversationMessagesFromJson(
+        Map<String, dynamic> json) =>
+    _$_MessageconversationMessages(
+      sortOrder: json['sortOrder'] as int,
+      messageconversationid: json['messageconversationid'] as int,
+      messageid: json['messageid'] as int,
     );
-  }
 
-  factory MessageconversationMessages.fromJson(String source) =>
-      MessageconversationMessages.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int messageconversationid;
-
-  final int messageid;
-
-  MessageconversationMessages copyWith({
-    int? sortOrder,
-    int? messageconversationid,
-    int? messageid,
-  }) {
-    return MessageconversationMessages(
-      sortOrder: sortOrder ?? this.sortOrder,
-      messageconversationid: messageconversationid ?? this.messageconversationid,
-      messageid: messageid ?? this.messageid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'messageconversationid': messageconversationid,
-      'messageid': messageid,
+Map<String, dynamic> _$$_MessageconversationMessagesToJson(
+        _$_MessageconversationMessages instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'messageconversationid': instance.messageconversationid,
+      'messageid': instance.messageid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MessageconversationMessages &&
-        other.sortOrder == sortOrder &&
-        other.messageconversationid == messageconversationid &&
-        other.messageid == messageid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ messageconversationid.hashCode ^ messageid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MessageconversationMessages(sortOrder: $sortOrder, messageconversationid: $messageconversationid, messageid: $messageid)';
-  }
-}

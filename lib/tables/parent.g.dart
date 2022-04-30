@@ -1,49 +1,15 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Parent {
-  const Parent({
-    required this.id,
-  });
+part of 'parent.dart';
 
-  factory Parent.fromMap(Map<String, dynamic> map) {
-    return Parent(
-      id: int.parse(map['id']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Parent _$$_ParentFromJson(Map<String, dynamic> json) => _$_Parent(
+      id: json['id'] as int,
     );
-  }
 
-  factory Parent.fromJson(String source) => Parent.fromMap(json.decode(source));
-
-  final int id;
-
-  Parent copyWith({
-    int? id,
-  }) {
-    return Parent(
-      id: id ?? this.id,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
+Map<String, dynamic> _$$_ParentToJson(_$_Parent instance) => <String, dynamic>{
+      'id': instance.id,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Parent && other.id == id;
-  }
-
-  @override
-  int get hashCode {
-    return id.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Parent(id: $id)';
-  }
-}

@@ -1,86 +1,25 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Relationshipitem {
-  const Relationshipitem({
-    this.programinstanceid,
-    required this.relationshipitemid,
-    this.trackedentityinstanceid,
-    this.relationshipid,
-    this.programstageinstanceid,
-  });
+part of 'relationshipitem.dart';
 
-  factory Relationshipitem.fromMap(Map<String, dynamic> map) {
-    return Relationshipitem(
-      programinstanceid: int.tryParse(map['programinstanceid']),
-      relationshipitemid: int.parse(map['relationshipitemid']),
-      trackedentityinstanceid: int.tryParse(map['trackedentityinstanceid']),
-      relationshipid: int.tryParse(map['relationshipid']),
-      programstageinstanceid: int.tryParse(map['programstageinstanceid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Relationshipitem _$$_RelationshipitemFromJson(Map<String, dynamic> json) =>
+    _$_Relationshipitem(
+      programinstanceid: json['programinstanceid'] as int?,
+      relationshipitemid: json['relationshipitemid'] as int,
+      trackedentityinstanceid: json['trackedentityinstanceid'] as int?,
+      relationshipid: json['relationshipid'] as int?,
+      programstageinstanceid: json['programstageinstanceid'] as int?,
     );
-  }
 
-  factory Relationshipitem.fromJson(String source) => Relationshipitem.fromMap(json.decode(source));
-
-  final int? programinstanceid;
-
-  final int relationshipitemid;
-
-  final int? trackedentityinstanceid;
-
-  final int? relationshipid;
-
-  final int? programstageinstanceid;
-
-  Relationshipitem copyWith({
-    int? programinstanceid,
-    int? relationshipitemid,
-    int? trackedentityinstanceid,
-    int? relationshipid,
-    int? programstageinstanceid,
-  }) {
-    return Relationshipitem(
-      programinstanceid: programinstanceid ?? this.programinstanceid,
-      relationshipitemid: relationshipitemid ?? this.relationshipitemid,
-      trackedentityinstanceid: trackedentityinstanceid ?? this.trackedentityinstanceid,
-      relationshipid: relationshipid ?? this.relationshipid,
-      programstageinstanceid: programstageinstanceid ?? this.programstageinstanceid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programinstanceid': programinstanceid,
-      'relationshipitemid': relationshipitemid,
-      'trackedentityinstanceid': trackedentityinstanceid,
-      'relationshipid': relationshipid,
-      'programstageinstanceid': programstageinstanceid,
+Map<String, dynamic> _$$_RelationshipitemToJson(_$_Relationshipitem instance) =>
+    <String, dynamic>{
+      'programinstanceid': instance.programinstanceid,
+      'relationshipitemid': instance.relationshipitemid,
+      'trackedentityinstanceid': instance.trackedentityinstanceid,
+      'relationshipid': instance.relationshipid,
+      'programstageinstanceid': instance.programstageinstanceid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Relationshipitem &&
-        other.programinstanceid == programinstanceid &&
-        other.relationshipitemid == relationshipitemid &&
-        other.trackedentityinstanceid == trackedentityinstanceid &&
-        other.relationshipid == relationshipid &&
-        other.programstageinstanceid == programstageinstanceid;
-  }
-
-  @override
-  int get hashCode {
-    return programinstanceid.hashCode ^
-        relationshipitemid.hashCode ^
-        trackedentityinstanceid.hashCode ^
-        relationshipid.hashCode ^
-        programstageinstanceid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Relationshipitem(programinstanceid: $programinstanceid, relationshipitemid: $relationshipitemid, trackedentityinstanceid: $trackedentityinstanceid, relationshipid: $relationshipid, programstageinstanceid: $programstageinstanceid)';
-  }
-}

@@ -1,56 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Compulsorydatasetmembers {
-  const Compulsorydatasetmembers({
-    required this.dataelementid,
-    required this.datasetid,
-  });
+part of 'compulsorydatasetmembers.dart';
 
-  factory Compulsorydatasetmembers.fromMap(Map<String, dynamic> map) {
-    return Compulsorydatasetmembers(
-      dataelementid: int.parse(map['dataelementid']),
-      datasetid: int.parse(map['datasetid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Compulsorydatasetmembers _$$_CompulsorydatasetmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Compulsorydatasetmembers(
+      dataelementid: json['dataelementid'] as int,
+      datasetid: json['datasetid'] as int,
     );
-  }
 
-  factory Compulsorydatasetmembers.fromJson(String source) => Compulsorydatasetmembers.fromMap(json.decode(source));
-
-  final int dataelementid;
-
-  final int datasetid;
-
-  Compulsorydatasetmembers copyWith({
-    int? dataelementid,
-    int? datasetid,
-  }) {
-    return Compulsorydatasetmembers(
-      dataelementid: dataelementid ?? this.dataelementid,
-      datasetid: datasetid ?? this.datasetid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'dataelementid': dataelementid,
-      'datasetid': datasetid,
+Map<String, dynamic> _$$_CompulsorydatasetmembersToJson(
+        _$_Compulsorydatasetmembers instance) =>
+    <String, dynamic>{
+      'dataelementid': instance.dataelementid,
+      'datasetid': instance.datasetid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Compulsorydatasetmembers && other.dataelementid == dataelementid && other.datasetid == datasetid;
-  }
-
-  @override
-  int get hashCode {
-    return dataelementid.hashCode ^ datasetid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Compulsorydatasetmembers(dataelementid: $dataelementid, datasetid: $datasetid)';
-  }
-}

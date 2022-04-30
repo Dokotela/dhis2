@@ -1,56 +1,18 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class OauthCode {
-  const OauthCode({
-    this.authentication,
-    this.code,
-  });
+part of 'oauth_code.dart';
 
-  factory OauthCode.fromMap(Map<String, dynamic> map) {
-    return OauthCode(
-      authentication: map['authentication'],
-      code: map['code'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_OauthCode _$$_OauthCodeFromJson(Map<String, dynamic> json) => _$_OauthCode(
+      authentication: json['authentication'] as String?,
+      code: json['code'] as String?,
     );
-  }
 
-  factory OauthCode.fromJson(String source) => OauthCode.fromMap(json.decode(source));
-
-  final String? authentication;
-
-  final String? code;
-
-  OauthCode copyWith({
-    String? authentication,
-    String? code,
-  }) {
-    return OauthCode(
-      authentication: authentication ?? this.authentication,
-      code: code ?? this.code,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'authentication': authentication,
-      'code': code,
+Map<String, dynamic> _$$_OauthCodeToJson(_$_OauthCode instance) =>
+    <String, dynamic>{
+      'authentication': instance.authentication,
+      'code': instance.code,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is OauthCode && other.authentication == authentication && other.code == code;
-  }
-
-  @override
-  int get hashCode {
-    return authentication.hashCode ^ code.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'OauthCode(authentication: $authentication, code: $code)';
-  }
-}

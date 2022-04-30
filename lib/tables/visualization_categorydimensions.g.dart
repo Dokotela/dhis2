@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationCategorydimensions {
-  const VisualizationCategorydimensions({
-    required this.sortOrder,
-    required this.visualizationid,
-    required this.categorydimensionid,
-  });
+part of 'visualization_categorydimensions.dart';
 
-  factory VisualizationCategorydimensions.fromMap(Map<String, dynamic> map) {
-    return VisualizationCategorydimensions(
-      sortOrder: int.parse(map['sort_order']),
-      visualizationid: int.parse(map['visualizationid']),
-      categorydimensionid: int.parse(map['categorydimensionid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationCategorydimensions _$$_VisualizationCategorydimensionsFromJson(
+        Map<String, dynamic> json) =>
+    _$_VisualizationCategorydimensions(
+      sortOrder: json['sortOrder'] as int,
+      visualizationid: json['visualizationid'] as int,
+      categorydimensionid: json['categorydimensionid'] as int,
     );
-  }
 
-  factory VisualizationCategorydimensions.fromJson(String source) =>
-      VisualizationCategorydimensions.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int visualizationid;
-
-  final int categorydimensionid;
-
-  VisualizationCategorydimensions copyWith({
-    int? sortOrder,
-    int? visualizationid,
-    int? categorydimensionid,
-  }) {
-    return VisualizationCategorydimensions(
-      sortOrder: sortOrder ?? this.sortOrder,
-      visualizationid: visualizationid ?? this.visualizationid,
-      categorydimensionid: categorydimensionid ?? this.categorydimensionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'visualizationid': visualizationid,
-      'categorydimensionid': categorydimensionid,
+Map<String, dynamic> _$$_VisualizationCategorydimensionsToJson(
+        _$_VisualizationCategorydimensions instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'visualizationid': instance.visualizationid,
+      'categorydimensionid': instance.categorydimensionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationCategorydimensions &&
-        other.sortOrder == sortOrder &&
-        other.visualizationid == visualizationid &&
-        other.categorydimensionid == categorydimensionid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ visualizationid.hashCode ^ categorydimensionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationCategorydimensions(sortOrder: $sortOrder, visualizationid: $visualizationid, categorydimensionid: $categorydimensionid)';
-  }
-}

@@ -1,74 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datasetelement {
-  const Datasetelement({
-    this.datasetid,
-    this.categorycomboid,
-    required this.dataelementid,
-    required this.datasetelementid,
-  });
+part of 'datasetelement.dart';
 
-  factory Datasetelement.fromMap(Map<String, dynamic> map) {
-    return Datasetelement(
-      datasetid: int.tryParse(map['datasetid']),
-      categorycomboid: int.tryParse(map['categorycomboid']),
-      dataelementid: int.parse(map['dataelementid']),
-      datasetelementid: int.parse(map['datasetelementid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datasetelement _$$_DatasetelementFromJson(Map<String, dynamic> json) =>
+    _$_Datasetelement(
+      datasetid: json['datasetid'] as int?,
+      categorycomboid: json['categorycomboid'] as int?,
+      dataelementid: json['dataelementid'] as int,
+      datasetelementid: json['datasetelementid'] as int,
     );
-  }
 
-  factory Datasetelement.fromJson(String source) => Datasetelement.fromMap(json.decode(source));
-
-  final int? datasetid;
-
-  final int? categorycomboid;
-
-  final int dataelementid;
-
-  final int datasetelementid;
-
-  Datasetelement copyWith({
-    int? datasetid,
-    int? categorycomboid,
-    int? dataelementid,
-    int? datasetelementid,
-  }) {
-    return Datasetelement(
-      datasetid: datasetid ?? this.datasetid,
-      categorycomboid: categorycomboid ?? this.categorycomboid,
-      dataelementid: dataelementid ?? this.dataelementid,
-      datasetelementid: datasetelementid ?? this.datasetelementid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datasetid': datasetid,
-      'categorycomboid': categorycomboid,
-      'dataelementid': dataelementid,
-      'datasetelementid': datasetelementid,
+Map<String, dynamic> _$$_DatasetelementToJson(_$_Datasetelement instance) =>
+    <String, dynamic>{
+      'datasetid': instance.datasetid,
+      'categorycomboid': instance.categorycomboid,
+      'dataelementid': instance.dataelementid,
+      'datasetelementid': instance.datasetelementid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datasetelement &&
-        other.datasetid == datasetid &&
-        other.categorycomboid == categorycomboid &&
-        other.dataelementid == dataelementid &&
-        other.datasetelementid == datasetelementid;
-  }
-
-  @override
-  int get hashCode {
-    return datasetid.hashCode ^ categorycomboid.hashCode ^ dataelementid.hashCode ^ datasetelementid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datasetelement(datasetid: $datasetid, categorycomboid: $categorycomboid, dataelementid: $dataelementid, datasetelementid: $datasetelementid)';
-  }
-}

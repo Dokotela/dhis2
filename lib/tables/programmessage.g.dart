@@ -1,185 +1,53 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programmessage {
-  const Programmessage({
-    this.lastupdated,
-    this.organisationunitid,
-    this.programinstanceid,
-    this.trackedentityinstanceid,
-    this.programstageinstanceid,
-    this.code,
-    this.lastupdatedby,
-    required this.id,
-    required this.uid,
-    this.messagestatus,
-    this.processeddate,
-    this.notificationtemplate,
-    this.created,
-    this.translations,
-    required this.text,
-    this.subject,
-  });
+part of 'programmessage.dart';
 
-  factory Programmessage.fromMap(Map<String, dynamic> map) {
-    return Programmessage(
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      organisationunitid: int.tryParse(map['organisationunitid']),
-      programinstanceid: int.tryParse(map['programinstanceid']),
-      trackedentityinstanceid: int.tryParse(map['trackedentityinstanceid']),
-      programstageinstanceid: int.tryParse(map['programstageinstanceid']),
-      code: map['code'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      id: int.parse(map['id']),
-      uid: map['uid'],
-      messagestatus: map['messagestatus'],
-      processeddate: DateTime.tryParse(map['processeddate']),
-      notificationtemplate: map['notificationtemplate'],
-      created: DateTime.tryParse(map['created']),
-      translations: map['translations'],
-      text: map['text'],
-      subject: map['subject'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programmessage _$$_ProgrammessageFromJson(Map<String, dynamic> json) =>
+    _$_Programmessage(
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      organisationunitid: json['organisationunitid'] as int?,
+      programinstanceid: json['programinstanceid'] as int?,
+      trackedentityinstanceid: json['trackedentityinstanceid'] as int?,
+      programstageinstanceid: json['programstageinstanceid'] as int?,
+      code: json['code'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      id: json['id'] as int,
+      uid: json['uid'] as String,
+      messagestatus: json['messagestatus'] as String?,
+      processeddate: json['processeddate'] == null
+          ? null
+          : DateTime.parse(json['processeddate'] as String),
+      notificationtemplate: json['notificationtemplate'] as String?,
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
+      translations: json['translations'],
+      text: json['text'] as String,
+      subject: json['subject'] as String?,
     );
-  }
 
-  factory Programmessage.fromJson(String source) => Programmessage.fromMap(json.decode(source));
-
-  final DateTime? lastupdated;
-
-  final int? organisationunitid;
-
-  final int? programinstanceid;
-
-  final int? trackedentityinstanceid;
-
-  final int? programstageinstanceid;
-
-  final String? code;
-
-  final int? lastupdatedby;
-
-  final int id;
-
-  final String uid;
-
-  final String? messagestatus;
-
-  final DateTime? processeddate;
-
-  final String? notificationtemplate;
-
-  final DateTime? created;
-
-  final Object? translations;
-
-  final String text;
-
-  final String? subject;
-
-  Programmessage copyWith({
-    DateTime? lastupdated,
-    int? organisationunitid,
-    int? programinstanceid,
-    int? trackedentityinstanceid,
-    int? programstageinstanceid,
-    String? code,
-    int? lastupdatedby,
-    int? id,
-    String? uid,
-    String? messagestatus,
-    DateTime? processeddate,
-    String? notificationtemplate,
-    DateTime? created,
-    Object? translations,
-    String? text,
-    String? subject,
-  }) {
-    return Programmessage(
-      lastupdated: lastupdated ?? this.lastupdated,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-      programinstanceid: programinstanceid ?? this.programinstanceid,
-      trackedentityinstanceid: trackedentityinstanceid ?? this.trackedentityinstanceid,
-      programstageinstanceid: programstageinstanceid ?? this.programstageinstanceid,
-      code: code ?? this.code,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      id: id ?? this.id,
-      uid: uid ?? this.uid,
-      messagestatus: messagestatus ?? this.messagestatus,
-      processeddate: processeddate ?? this.processeddate,
-      notificationtemplate: notificationtemplate ?? this.notificationtemplate,
-      created: created ?? this.created,
-      translations: translations ?? this.translations,
-      text: text ?? this.text,
-      subject: subject ?? this.subject,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'lastupdated': lastupdated,
-      'organisationunitid': organisationunitid,
-      'programinstanceid': programinstanceid,
-      'trackedentityinstanceid': trackedentityinstanceid,
-      'programstageinstanceid': programstageinstanceid,
-      'code': code,
-      'lastupdatedby': lastupdatedby,
-      'id': id,
-      'uid': uid,
-      'messagestatus': messagestatus,
-      'processeddate': processeddate,
-      'notificationtemplate': notificationtemplate,
-      'created': created,
-      'translations': translations,
-      'text': text,
-      'subject': subject,
+Map<String, dynamic> _$$_ProgrammessageToJson(_$_Programmessage instance) =>
+    <String, dynamic>{
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'organisationunitid': instance.organisationunitid,
+      'programinstanceid': instance.programinstanceid,
+      'trackedentityinstanceid': instance.trackedentityinstanceid,
+      'programstageinstanceid': instance.programstageinstanceid,
+      'code': instance.code,
+      'lastupdatedby': instance.lastupdatedby,
+      'id': instance.id,
+      'uid': instance.uid,
+      'messagestatus': instance.messagestatus,
+      'processeddate': instance.processeddate?.toIso8601String(),
+      'notificationtemplate': instance.notificationtemplate,
+      'created': instance.created?.toIso8601String(),
+      'translations': instance.translations,
+      'text': instance.text,
+      'subject': instance.subject,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programmessage &&
-        other.lastupdated == lastupdated &&
-        other.organisationunitid == organisationunitid &&
-        other.programinstanceid == programinstanceid &&
-        other.trackedentityinstanceid == trackedentityinstanceid &&
-        other.programstageinstanceid == programstageinstanceid &&
-        other.code == code &&
-        other.lastupdatedby == lastupdatedby &&
-        other.id == id &&
-        other.uid == uid &&
-        other.messagestatus == messagestatus &&
-        other.processeddate == processeddate &&
-        other.notificationtemplate == notificationtemplate &&
-        other.created == created &&
-        other.translations == translations &&
-        other.text == text &&
-        other.subject == subject;
-  }
-
-  @override
-  int get hashCode {
-    return lastupdated.hashCode ^
-        organisationunitid.hashCode ^
-        programinstanceid.hashCode ^
-        trackedentityinstanceid.hashCode ^
-        programstageinstanceid.hashCode ^
-        code.hashCode ^
-        lastupdatedby.hashCode ^
-        id.hashCode ^
-        uid.hashCode ^
-        messagestatus.hashCode ^
-        processeddate.hashCode ^
-        notificationtemplate.hashCode ^
-        created.hashCode ^
-        translations.hashCode ^
-        text.hashCode ^
-        subject.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programmessage(lastupdated: $lastupdated, organisationunitid: $organisationunitid, programinstanceid: $programinstanceid, trackedentityinstanceid: $trackedentityinstanceid, programstageinstanceid: $programstageinstanceid, code: $code, lastupdatedby: $lastupdatedby, id: $id, uid: $uid, messagestatus: $messagestatus, processeddate: $processeddate, notificationtemplate: $notificationtemplate, created: $created, translations: $translations, text: $text, subject: $subject)';
-  }
-}

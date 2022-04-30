@@ -1,95 +1,27 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Expression {
-  const Expression({
-    required this.missingvaluestrategy,
-    this.translations,
-    required this.expressionid,
-    this.description,
-    this.slidingwindow,
-    this.expression,
-  });
+part of 'expression.dart';
 
-  factory Expression.fromMap(Map<String, dynamic> map) {
-    return Expression(
-      missingvaluestrategy: map['missingvaluestrategy'],
-      translations: map['translations'],
-      expressionid: int.parse(map['expressionid']),
-      description: map['description'],
-      slidingwindow: map['slidingwindow'],
-      expression: map['expression'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
+    _$_Expression(
+      missingvaluestrategy: json['missingvaluestrategy'] as String,
+      translations: json['translations'],
+      expressionid: json['expressionid'] as int,
+      description: json['description'] as String?,
+      slidingwindow: json['slidingwindow'] as bool?,
+      expression: json['expression'] as String?,
     );
-  }
 
-  factory Expression.fromJson(String source) => Expression.fromMap(json.decode(source));
-
-  final String missingvaluestrategy;
-
-  final Object? translations;
-
-  final int expressionid;
-
-  final String? description;
-
-  final bool? slidingwindow;
-
-  final String? expression;
-
-  Expression copyWith({
-    String? missingvaluestrategy,
-    Object? translations,
-    int? expressionid,
-    String? description,
-    bool? slidingwindow,
-    String? expression,
-  }) {
-    return Expression(
-      missingvaluestrategy: missingvaluestrategy ?? this.missingvaluestrategy,
-      translations: translations ?? this.translations,
-      expressionid: expressionid ?? this.expressionid,
-      description: description ?? this.description,
-      slidingwindow: slidingwindow ?? this.slidingwindow,
-      expression: expression ?? this.expression,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'missingvaluestrategy': missingvaluestrategy,
-      'translations': translations,
-      'expressionid': expressionid,
-      'description': description,
-      'slidingwindow': slidingwindow,
-      'expression': expression,
+Map<String, dynamic> _$$_ExpressionToJson(_$_Expression instance) =>
+    <String, dynamic>{
+      'missingvaluestrategy': instance.missingvaluestrategy,
+      'translations': instance.translations,
+      'expressionid': instance.expressionid,
+      'description': instance.description,
+      'slidingwindow': instance.slidingwindow,
+      'expression': instance.expression,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Expression &&
-        other.missingvaluestrategy == missingvaluestrategy &&
-        other.translations == translations &&
-        other.expressionid == expressionid &&
-        other.description == description &&
-        other.slidingwindow == slidingwindow &&
-        other.expression == expression;
-  }
-
-  @override
-  int get hashCode {
-    return missingvaluestrategy.hashCode ^
-        translations.hashCode ^
-        expressionid.hashCode ^
-        description.hashCode ^
-        slidingwindow.hashCode ^
-        expression.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Expression(missingvaluestrategy: $missingvaluestrategy, translations: $translations, expressionid: $expressionid, description: $description, slidingwindow: $slidingwindow, expression: $expression)';
-  }
-}

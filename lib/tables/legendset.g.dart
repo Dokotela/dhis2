@@ -1,56 +1,18 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Legendset {
-  const Legendset({
-    required this.legendsetid,
-    required this.name,
-  });
+part of 'legendset.dart';
 
-  factory Legendset.fromMap(Map<String, dynamic> map) {
-    return Legendset(
-      legendsetid: int.parse(map['legendsetid']),
-      name: map['name'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Legendset _$$_LegendsetFromJson(Map<String, dynamic> json) => _$_Legendset(
+      legendsetid: json['legendsetid'] as int,
+      name: json['name'] as String,
     );
-  }
 
-  factory Legendset.fromJson(String source) => Legendset.fromMap(json.decode(source));
-
-  final int legendsetid;
-
-  final String name;
-
-  Legendset copyWith({
-    int? legendsetid,
-    String? name,
-  }) {
-    return Legendset(
-      legendsetid: legendsetid ?? this.legendsetid,
-      name: name ?? this.name,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'legendsetid': legendsetid,
-      'name': name,
+Map<String, dynamic> _$$_LegendsetToJson(_$_Legendset instance) =>
+    <String, dynamic>{
+      'legendsetid': instance.legendsetid,
+      'name': instance.name,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Legendset && other.legendsetid == legendsetid && other.name == name;
-  }
-
-  @override
-  int get hashCode {
-    return legendsetid.hashCode ^ name.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Legendset(legendsetid: $legendsetid, name: $name)';
-  }
-}

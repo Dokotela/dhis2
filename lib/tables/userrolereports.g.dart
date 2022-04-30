@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Userrolereports {
-  const Userrolereports({
-    required this.reportid,
-    required this.userroleid,
-  });
+part of 'userrolereports.dart';
 
-  factory Userrolereports.fromMap(Map<String, dynamic> map) {
-    return Userrolereports(
-      reportid: int.parse(map['reportid']),
-      userroleid: int.parse(map['userroleid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Userrolereports _$$_UserrolereportsFromJson(Map<String, dynamic> json) =>
+    _$_Userrolereports(
+      reportid: json['reportid'] as int,
+      userroleid: json['userroleid'] as int,
     );
-  }
 
-  factory Userrolereports.fromJson(String source) => Userrolereports.fromMap(json.decode(source));
-
-  final int reportid;
-
-  final int userroleid;
-
-  Userrolereports copyWith({
-    int? reportid,
-    int? userroleid,
-  }) {
-    return Userrolereports(
-      reportid: reportid ?? this.reportid,
-      userroleid: userroleid ?? this.userroleid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'reportid': reportid,
-      'userroleid': userroleid,
+Map<String, dynamic> _$$_UserrolereportsToJson(_$_Userrolereports instance) =>
+    <String, dynamic>{
+      'reportid': instance.reportid,
+      'userroleid': instance.userroleid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Userrolereports && other.reportid == reportid && other.userroleid == userroleid;
-  }
-
-  @override
-  int get hashCode {
-    return reportid.hashCode ^ userroleid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Userrolereports(reportid: $reportid, userroleid: $userroleid)';
-  }
-}

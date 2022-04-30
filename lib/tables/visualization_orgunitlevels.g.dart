@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationOrgunitlevels {
-  const VisualizationOrgunitlevels({
-    required this.visualizationid,
-    this.orgunitlevel,
-    required this.sortOrder,
-  });
+part of 'visualization_orgunitlevels.dart';
 
-  factory VisualizationOrgunitlevels.fromMap(Map<String, dynamic> map) {
-    return VisualizationOrgunitlevels(
-      visualizationid: int.parse(map['visualizationid']),
-      orgunitlevel: int.tryParse(map['orgunitlevel']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationOrgunitlevels _$$_VisualizationOrgunitlevelsFromJson(
+        Map<String, dynamic> json) =>
+    _$_VisualizationOrgunitlevels(
+      visualizationid: json['visualizationid'] as int,
+      orgunitlevel: json['orgunitlevel'] as int?,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory VisualizationOrgunitlevels.fromJson(String source) => VisualizationOrgunitlevels.fromMap(json.decode(source));
-
-  final int visualizationid;
-
-  final int? orgunitlevel;
-
-  final int sortOrder;
-
-  VisualizationOrgunitlevels copyWith({
-    int? visualizationid,
-    int? orgunitlevel,
-    int? sortOrder,
-  }) {
-    return VisualizationOrgunitlevels(
-      visualizationid: visualizationid ?? this.visualizationid,
-      orgunitlevel: orgunitlevel ?? this.orgunitlevel,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'visualizationid': visualizationid,
-      'orgunitlevel': orgunitlevel,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_VisualizationOrgunitlevelsToJson(
+        _$_VisualizationOrgunitlevels instance) =>
+    <String, dynamic>{
+      'visualizationid': instance.visualizationid,
+      'orgunitlevel': instance.orgunitlevel,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationOrgunitlevels &&
-        other.visualizationid == visualizationid &&
-        other.orgunitlevel == orgunitlevel &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return visualizationid.hashCode ^ orgunitlevel.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationOrgunitlevels(visualizationid: $visualizationid, orgunitlevel: $orgunitlevel, sortOrder: $sortOrder)';
-  }
-}

@@ -1,59 +1,25 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ValidationnotificationtemplateRecipientusergroups {
-  const ValidationnotificationtemplateRecipientusergroups({
-    required this.usergroupid,
-    required this.validationnotificationtemplateid,
-  });
+part of 'validationnotificationtemplate_recipientusergroups.dart';
 
-  factory ValidationnotificationtemplateRecipientusergroups.fromMap(Map<String, dynamic> map) {
-    return ValidationnotificationtemplateRecipientusergroups(
-      usergroupid: int.parse(map['usergroupid']),
-      validationnotificationtemplateid: int.parse(map['validationnotificationtemplateid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory ValidationnotificationtemplateRecipientusergroups.fromJson(String source) =>
-      ValidationnotificationtemplateRecipientusergroups.fromMap(json.decode(source));
+_$_ValidationnotificationtemplateRecipientusergroups
+    _$$_ValidationnotificationtemplateRecipientusergroupsFromJson(
+            Map<String, dynamic> json) =>
+        _$_ValidationnotificationtemplateRecipientusergroups(
+          usergroupid: json['usergroupid'] as int,
+          validationnotificationtemplateid:
+              json['validationnotificationtemplateid'] as int,
+        );
 
-  final int usergroupid;
-
-  final int validationnotificationtemplateid;
-
-  ValidationnotificationtemplateRecipientusergroups copyWith({
-    int? usergroupid,
-    int? validationnotificationtemplateid,
-  }) {
-    return ValidationnotificationtemplateRecipientusergroups(
-      usergroupid: usergroupid ?? this.usergroupid,
-      validationnotificationtemplateid: validationnotificationtemplateid ?? this.validationnotificationtemplateid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'usergroupid': usergroupid,
-      'validationnotificationtemplateid': validationnotificationtemplateid,
-    };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ValidationnotificationtemplateRecipientusergroups &&
-        other.usergroupid == usergroupid &&
-        other.validationnotificationtemplateid == validationnotificationtemplateid;
-  }
-
-  @override
-  int get hashCode {
-    return usergroupid.hashCode ^ validationnotificationtemplateid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ValidationnotificationtemplateRecipientusergroups(usergroupid: $usergroupid, validationnotificationtemplateid: $validationnotificationtemplateid)';
-  }
-}
+Map<String, dynamic>
+    _$$_ValidationnotificationtemplateRecipientusergroupsToJson(
+            _$_ValidationnotificationtemplateRecipientusergroups instance) =>
+        <String, dynamic>{
+          'usergroupid': instance.usergroupid,
+          'validationnotificationtemplateid':
+              instance.validationnotificationtemplateid,
+        };

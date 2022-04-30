@@ -1,122 +1,37 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Oauth2client {
-  const Oauth2client({
-    this.code,
-    required this.secret,
-    required this.oauth2clientid,
-    this.uid,
-    required this.name,
-    this.lastupdatedby,
-    required this.cid,
-    this.lastupdated,
-    this.created,
-  });
+part of 'oauth2client.dart';
 
-  factory Oauth2client.fromMap(Map<String, dynamic> map) {
-    return Oauth2client(
-      code: map['code'],
-      secret: map['secret'],
-      oauth2clientid: int.parse(map['oauth2clientid']),
-      uid: map['uid'],
-      name: map['name'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      cid: map['cid'],
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      created: DateTime.tryParse(map['created']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Oauth2client _$$_Oauth2clientFromJson(Map<String, dynamic> json) =>
+    _$_Oauth2client(
+      code: json['code'] as String?,
+      secret: json['secret'] as String,
+      oauth2clientid: json['oauth2clientid'] as int,
+      uid: json['uid'] as String?,
+      name: json['name'] as String,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      cid: json['cid'] as String,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
     );
-  }
 
-  factory Oauth2client.fromJson(String source) => Oauth2client.fromMap(json.decode(source));
-
-  final String? code;
-
-  final String secret;
-
-  final int oauth2clientid;
-
-  final String? uid;
-
-  final String name;
-
-  final int? lastupdatedby;
-
-  final String cid;
-
-  final DateTime? lastupdated;
-
-  final DateTime? created;
-
-  Oauth2client copyWith({
-    String? code,
-    String? secret,
-    int? oauth2clientid,
-    String? uid,
-    String? name,
-    int? lastupdatedby,
-    String? cid,
-    DateTime? lastupdated,
-    DateTime? created,
-  }) {
-    return Oauth2client(
-      code: code ?? this.code,
-      secret: secret ?? this.secret,
-      oauth2clientid: oauth2clientid ?? this.oauth2clientid,
-      uid: uid ?? this.uid,
-      name: name ?? this.name,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      cid: cid ?? this.cid,
-      lastupdated: lastupdated ?? this.lastupdated,
-      created: created ?? this.created,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'code': code,
-      'secret': secret,
-      'oauth2clientid': oauth2clientid,
-      'uid': uid,
-      'name': name,
-      'lastupdatedby': lastupdatedby,
-      'cid': cid,
-      'lastupdated': lastupdated,
-      'created': created,
+Map<String, dynamic> _$$_Oauth2clientToJson(_$_Oauth2client instance) =>
+    <String, dynamic>{
+      'code': instance.code,
+      'secret': instance.secret,
+      'oauth2clientid': instance.oauth2clientid,
+      'uid': instance.uid,
+      'name': instance.name,
+      'lastupdatedby': instance.lastupdatedby,
+      'cid': instance.cid,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'created': instance.created?.toIso8601String(),
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Oauth2client &&
-        other.code == code &&
-        other.secret == secret &&
-        other.oauth2clientid == oauth2clientid &&
-        other.uid == uid &&
-        other.name == name &&
-        other.lastupdatedby == lastupdatedby &&
-        other.cid == cid &&
-        other.lastupdated == lastupdated &&
-        other.created == created;
-  }
-
-  @override
-  int get hashCode {
-    return code.hashCode ^
-        secret.hashCode ^
-        oauth2clientid.hashCode ^
-        uid.hashCode ^
-        name.hashCode ^
-        lastupdatedby.hashCode ^
-        cid.hashCode ^
-        lastupdated.hashCode ^
-        created.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Oauth2client(code: $code, secret: $secret, oauth2clientid: $oauth2clientid, uid: $uid, name: $name, lastupdatedby: $lastupdatedby, cid: $cid, lastupdated: $lastupdated, created: $created)';
-  }
-}

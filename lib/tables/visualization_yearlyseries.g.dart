@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationYearlyseries {
-  const VisualizationYearlyseries({
-    required this.visualizationid,
-    required this.sortOrder,
-    this.yearlyseries,
-  });
+part of 'visualization_yearlyseries.dart';
 
-  factory VisualizationYearlyseries.fromMap(Map<String, dynamic> map) {
-    return VisualizationYearlyseries(
-      visualizationid: int.parse(map['visualizationid']),
-      sortOrder: int.parse(map['sort_order']),
-      yearlyseries: map['yearlyseries'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationYearlyseries _$$_VisualizationYearlyseriesFromJson(
+        Map<String, dynamic> json) =>
+    _$_VisualizationYearlyseries(
+      visualizationid: json['visualizationid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      yearlyseries: json['yearlyseries'] as String?,
     );
-  }
 
-  factory VisualizationYearlyseries.fromJson(String source) => VisualizationYearlyseries.fromMap(json.decode(source));
-
-  final int visualizationid;
-
-  final int sortOrder;
-
-  final String? yearlyseries;
-
-  VisualizationYearlyseries copyWith({
-    int? visualizationid,
-    int? sortOrder,
-    String? yearlyseries,
-  }) {
-    return VisualizationYearlyseries(
-      visualizationid: visualizationid ?? this.visualizationid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      yearlyseries: yearlyseries ?? this.yearlyseries,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'visualizationid': visualizationid,
-      'sort_order': sortOrder,
-      'yearlyseries': yearlyseries,
+Map<String, dynamic> _$$_VisualizationYearlyseriesToJson(
+        _$_VisualizationYearlyseries instance) =>
+    <String, dynamic>{
+      'visualizationid': instance.visualizationid,
+      'sortOrder': instance.sortOrder,
+      'yearlyseries': instance.yearlyseries,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationYearlyseries &&
-        other.visualizationid == visualizationid &&
-        other.sortOrder == sortOrder &&
-        other.yearlyseries == yearlyseries;
-  }
-
-  @override
-  int get hashCode {
-    return visualizationid.hashCode ^ sortOrder.hashCode ^ yearlyseries.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationYearlyseries(visualizationid: $visualizationid, sortOrder: $sortOrder, yearlyseries: $yearlyseries)';
-  }
-}

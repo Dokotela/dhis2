@@ -1,74 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Dataentrystatus {
-  const Dataentrystatus({
-    this.periodtype,
-    this.datasetid,
-    required this.datastatusid,
-    this.makedefault,
-  });
+part of 'dataentrystatus.dart';
 
-  factory Dataentrystatus.fromMap(Map<String, dynamic> map) {
-    return Dataentrystatus(
-      periodtype: int.tryParse(map['periodtype']),
-      datasetid: int.tryParse(map['datasetid']),
-      datastatusid: int.parse(map['datastatusid']),
-      makedefault: map['makedefault'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Dataentrystatus _$$_DataentrystatusFromJson(Map<String, dynamic> json) =>
+    _$_Dataentrystatus(
+      periodtype: json['periodtype'] as int?,
+      datasetid: json['datasetid'] as int?,
+      datastatusid: json['datastatusid'] as int,
+      makedefault: json['makedefault'] as bool?,
     );
-  }
 
-  factory Dataentrystatus.fromJson(String source) => Dataentrystatus.fromMap(json.decode(source));
-
-  final int? periodtype;
-
-  final int? datasetid;
-
-  final int datastatusid;
-
-  final bool? makedefault;
-
-  Dataentrystatus copyWith({
-    int? periodtype,
-    int? datasetid,
-    int? datastatusid,
-    bool? makedefault,
-  }) {
-    return Dataentrystatus(
-      periodtype: periodtype ?? this.periodtype,
-      datasetid: datasetid ?? this.datasetid,
-      datastatusid: datastatusid ?? this.datastatusid,
-      makedefault: makedefault ?? this.makedefault,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'periodtype': periodtype,
-      'datasetid': datasetid,
-      'datastatusid': datastatusid,
-      'makedefault': makedefault,
+Map<String, dynamic> _$$_DataentrystatusToJson(_$_Dataentrystatus instance) =>
+    <String, dynamic>{
+      'periodtype': instance.periodtype,
+      'datasetid': instance.datasetid,
+      'datastatusid': instance.datastatusid,
+      'makedefault': instance.makedefault,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Dataentrystatus &&
-        other.periodtype == periodtype &&
-        other.datasetid == datasetid &&
-        other.datastatusid == datastatusid &&
-        other.makedefault == makedefault;
-  }
-
-  @override
-  int get hashCode {
-    return periodtype.hashCode ^ datasetid.hashCode ^ datastatusid.hashCode ^ makedefault.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Dataentrystatus(periodtype: $periodtype, datasetid: $datasetid, datastatusid: $datastatusid, makedefault: $makedefault)';
-  }
-}

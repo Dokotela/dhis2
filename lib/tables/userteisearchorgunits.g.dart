@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Userteisearchorgunits {
-  const Userteisearchorgunits({
-    required this.userinfoid,
-    required this.organisationunitid,
-  });
+part of 'userteisearchorgunits.dart';
 
-  factory Userteisearchorgunits.fromMap(Map<String, dynamic> map) {
-    return Userteisearchorgunits(
-      userinfoid: int.parse(map['userinfoid']),
-      organisationunitid: int.parse(map['organisationunitid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Userteisearchorgunits _$$_UserteisearchorgunitsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Userteisearchorgunits(
+      userinfoid: json['userinfoid'] as int,
+      organisationunitid: json['organisationunitid'] as int,
     );
-  }
 
-  factory Userteisearchorgunits.fromJson(String source) => Userteisearchorgunits.fromMap(json.decode(source));
-
-  final int userinfoid;
-
-  final int organisationunitid;
-
-  Userteisearchorgunits copyWith({
-    int? userinfoid,
-    int? organisationunitid,
-  }) {
-    return Userteisearchorgunits(
-      userinfoid: userinfoid ?? this.userinfoid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userinfoid': userinfoid,
-      'organisationunitid': organisationunitid,
+Map<String, dynamic> _$$_UserteisearchorgunitsToJson(
+        _$_Userteisearchorgunits instance) =>
+    <String, dynamic>{
+      'userinfoid': instance.userinfoid,
+      'organisationunitid': instance.organisationunitid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Userteisearchorgunits &&
-        other.userinfoid == userinfoid &&
-        other.organisationunitid == organisationunitid;
-  }
-
-  @override
-  int get hashCode {
-    return userinfoid.hashCode ^ organisationunitid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Userteisearchorgunits(userinfoid: $userinfoid, organisationunitid: $organisationunitid)';
-  }
-}

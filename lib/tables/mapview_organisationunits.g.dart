@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MapviewOrganisationunits {
-  const MapviewOrganisationunits({
-    required this.sortOrder,
-    required this.organisationunitid,
-    required this.mapviewid,
-  });
+part of 'mapview_organisationunits.dart';
 
-  factory MapviewOrganisationunits.fromMap(Map<String, dynamic> map) {
-    return MapviewOrganisationunits(
-      sortOrder: int.parse(map['sort_order']),
-      organisationunitid: int.parse(map['organisationunitid']),
-      mapviewid: int.parse(map['mapviewid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MapviewOrganisationunits _$$_MapviewOrganisationunitsFromJson(
+        Map<String, dynamic> json) =>
+    _$_MapviewOrganisationunits(
+      sortOrder: json['sortOrder'] as int,
+      organisationunitid: json['organisationunitid'] as int,
+      mapviewid: json['mapviewid'] as int,
     );
-  }
 
-  factory MapviewOrganisationunits.fromJson(String source) => MapviewOrganisationunits.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int organisationunitid;
-
-  final int mapviewid;
-
-  MapviewOrganisationunits copyWith({
-    int? sortOrder,
-    int? organisationunitid,
-    int? mapviewid,
-  }) {
-    return MapviewOrganisationunits(
-      sortOrder: sortOrder ?? this.sortOrder,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-      mapviewid: mapviewid ?? this.mapviewid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'organisationunitid': organisationunitid,
-      'mapviewid': mapviewid,
+Map<String, dynamic> _$$_MapviewOrganisationunitsToJson(
+        _$_MapviewOrganisationunits instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'organisationunitid': instance.organisationunitid,
+      'mapviewid': instance.mapviewid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MapviewOrganisationunits &&
-        other.sortOrder == sortOrder &&
-        other.organisationunitid == organisationunitid &&
-        other.mapviewid == mapviewid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ organisationunitid.hashCode ^ mapviewid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MapviewOrganisationunits(sortOrder: $sortOrder, organisationunitid: $organisationunitid, mapviewid: $mapviewid)';
-  }
-}

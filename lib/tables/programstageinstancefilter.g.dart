@@ -1,167 +1,45 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programstageinstancefilter {
-  const Programstageinstancefilter({
-    required this.created,
-    this.lastupdatedby,
-    this.userid,
-    this.publicaccess,
-    required this.programstageinstancefilterid,
-    this.translations,
-    this.eventquerycriteria,
-    required this.lastupdated,
-    required this.name,
-    this.description,
-    this.sharing,
-    required this.program,
-    this.programstage,
-    required this.uid,
-  });
+part of 'programstageinstancefilter.dart';
 
-  factory Programstageinstancefilter.fromMap(Map<String, dynamic> map) {
-    return Programstageinstancefilter(
-      created: DateTime.parse(map['created']),
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      userid: int.tryParse(map['userid']),
-      publicaccess: map['publicaccess'],
-      programstageinstancefilterid: int.parse(map['programstageinstancefilterid']),
-      translations: map['translations'],
-      eventquerycriteria: map['eventquerycriteria'],
-      lastupdated: DateTime.parse(map['lastupdated']),
-      name: map['name'],
-      description: map['description'],
-      sharing: map['sharing'],
-      program: map['program'],
-      programstage: map['programstage'],
-      uid: map['uid'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programstageinstancefilter _$$_ProgramstageinstancefilterFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programstageinstancefilter(
+      created: DateTime.parse(json['created'] as String),
+      lastupdatedby: json['lastupdatedby'] as int?,
+      userid: json['userid'] as int?,
+      publicaccess: json['publicaccess'] as String?,
+      programstageinstancefilterid: json['programstageinstancefilterid'] as int,
+      translations: json['translations'],
+      eventquerycriteria: json['eventquerycriteria'],
+      lastupdated: DateTime.parse(json['lastupdated'] as String),
+      name: json['name'] as String,
+      description: json['description'] as String?,
+      sharing: json['sharing'],
+      program: json['program'] as String,
+      programstage: json['programstage'] as String?,
+      uid: json['uid'] as String,
     );
-  }
 
-  factory Programstageinstancefilter.fromJson(String source) => Programstageinstancefilter.fromMap(json.decode(source));
-
-  final DateTime created;
-
-  final int? lastupdatedby;
-
-  final int? userid;
-
-  final String? publicaccess;
-
-  final int programstageinstancefilterid;
-
-  final Object? translations;
-
-  final Object? eventquerycriteria;
-
-  final DateTime lastupdated;
-
-  final String name;
-
-  final String? description;
-
-  final Object? sharing;
-
-  final String program;
-
-  final String? programstage;
-
-  final String uid;
-
-  Programstageinstancefilter copyWith({
-    DateTime? created,
-    int? lastupdatedby,
-    int? userid,
-    String? publicaccess,
-    int? programstageinstancefilterid,
-    Object? translations,
-    Object? eventquerycriteria,
-    DateTime? lastupdated,
-    String? name,
-    String? description,
-    Object? sharing,
-    String? program,
-    String? programstage,
-    String? uid,
-  }) {
-    return Programstageinstancefilter(
-      created: created ?? this.created,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      userid: userid ?? this.userid,
-      publicaccess: publicaccess ?? this.publicaccess,
-      programstageinstancefilterid: programstageinstancefilterid ?? this.programstageinstancefilterid,
-      translations: translations ?? this.translations,
-      eventquerycriteria: eventquerycriteria ?? this.eventquerycriteria,
-      lastupdated: lastupdated ?? this.lastupdated,
-      name: name ?? this.name,
-      description: description ?? this.description,
-      sharing: sharing ?? this.sharing,
-      program: program ?? this.program,
-      programstage: programstage ?? this.programstage,
-      uid: uid ?? this.uid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'created': created.toUtc().toIso8601String(),
-      'lastupdatedby': lastupdatedby,
-      'userid': userid,
-      'publicaccess': publicaccess,
-      'programstageinstancefilterid': programstageinstancefilterid,
-      'translations': translations,
-      'eventquerycriteria': eventquerycriteria,
-      'lastupdated': lastupdated.toUtc().toIso8601String(),
-      'name': name,
-      'description': description,
-      'sharing': sharing,
-      'program': program,
-      'programstage': programstage,
-      'uid': uid,
+Map<String, dynamic> _$$_ProgramstageinstancefilterToJson(
+        _$_Programstageinstancefilter instance) =>
+    <String, dynamic>{
+      'created': instance.created.toIso8601String(),
+      'lastupdatedby': instance.lastupdatedby,
+      'userid': instance.userid,
+      'publicaccess': instance.publicaccess,
+      'programstageinstancefilterid': instance.programstageinstancefilterid,
+      'translations': instance.translations,
+      'eventquerycriteria': instance.eventquerycriteria,
+      'lastupdated': instance.lastupdated.toIso8601String(),
+      'name': instance.name,
+      'description': instance.description,
+      'sharing': instance.sharing,
+      'program': instance.program,
+      'programstage': instance.programstage,
+      'uid': instance.uid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programstageinstancefilter &&
-        other.created == created &&
-        other.lastupdatedby == lastupdatedby &&
-        other.userid == userid &&
-        other.publicaccess == publicaccess &&
-        other.programstageinstancefilterid == programstageinstancefilterid &&
-        other.translations == translations &&
-        other.eventquerycriteria == eventquerycriteria &&
-        other.lastupdated == lastupdated &&
-        other.name == name &&
-        other.description == description &&
-        other.sharing == sharing &&
-        other.program == program &&
-        other.programstage == programstage &&
-        other.uid == uid;
-  }
-
-  @override
-  int get hashCode {
-    return created.hashCode ^
-        lastupdatedby.hashCode ^
-        userid.hashCode ^
-        publicaccess.hashCode ^
-        programstageinstancefilterid.hashCode ^
-        translations.hashCode ^
-        eventquerycriteria.hashCode ^
-        lastupdated.hashCode ^
-        name.hashCode ^
-        description.hashCode ^
-        sharing.hashCode ^
-        program.hashCode ^
-        programstage.hashCode ^
-        uid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programstageinstancefilter(created: $created, lastupdatedby: $lastupdatedby, userid: $userid, publicaccess: $publicaccess, programstageinstancefilterid: $programstageinstancefilterid, translations: $translations, eventquerycriteria: $eventquerycriteria, lastupdated: $lastupdated, name: $name, description: $description, sharing: $sharing, program: $program, programstage: $programstage, uid: $uid)';
-  }
-}

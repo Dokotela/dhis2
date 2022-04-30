@@ -1,67 +1,24 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramstagesectionProgramindicators {
-  const ProgramstagesectionProgramindicators({
-    required this.programstagesectionid,
-    required this.sortOrder,
-    required this.programindicatorid,
-  });
+part of 'programstagesection_programindicators.dart';
 
-  factory ProgramstagesectionProgramindicators.fromMap(Map<String, dynamic> map) {
-    return ProgramstagesectionProgramindicators(
-      programstagesectionid: int.parse(map['programstagesectionid']),
-      sortOrder: int.parse(map['sort_order']),
-      programindicatorid: int.parse(map['programindicatorid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory ProgramstagesectionProgramindicators.fromJson(String source) =>
-      ProgramstagesectionProgramindicators.fromMap(json.decode(source));
+_$_ProgramstagesectionProgramindicators
+    _$$_ProgramstagesectionProgramindicatorsFromJson(
+            Map<String, dynamic> json) =>
+        _$_ProgramstagesectionProgramindicators(
+          programstagesectionid: json['programstagesectionid'] as int,
+          sortOrder: json['sortOrder'] as int,
+          programindicatorid: json['programindicatorid'] as int,
+        );
 
-  final int programstagesectionid;
-
-  final int sortOrder;
-
-  final int programindicatorid;
-
-  ProgramstagesectionProgramindicators copyWith({
-    int? programstagesectionid,
-    int? sortOrder,
-    int? programindicatorid,
-  }) {
-    return ProgramstagesectionProgramindicators(
-      programstagesectionid: programstagesectionid ?? this.programstagesectionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      programindicatorid: programindicatorid ?? this.programindicatorid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programstagesectionid': programstagesectionid,
-      'sort_order': sortOrder,
-      'programindicatorid': programindicatorid,
+Map<String, dynamic> _$$_ProgramstagesectionProgramindicatorsToJson(
+        _$_ProgramstagesectionProgramindicators instance) =>
+    <String, dynamic>{
+      'programstagesectionid': instance.programstagesectionid,
+      'sortOrder': instance.sortOrder,
+      'programindicatorid': instance.programindicatorid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramstagesectionProgramindicators &&
-        other.programstagesectionid == programstagesectionid &&
-        other.sortOrder == sortOrder &&
-        other.programindicatorid == programindicatorid;
-  }
-
-  @override
-  int get hashCode {
-    return programstagesectionid.hashCode ^ sortOrder.hashCode ^ programindicatorid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramstagesectionProgramindicators(programstagesectionid: $programstagesectionid, sortOrder: $sortOrder, programindicatorid: $programindicatorid)';
-  }
-}

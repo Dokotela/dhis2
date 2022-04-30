@@ -1,66 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MapviewFilters {
-  const MapviewFilters({
-    required this.sortOrder,
-    required this.mapviewid,
-    this.dimension,
-  });
+part of 'mapview_filters.dart';
 
-  factory MapviewFilters.fromMap(Map<String, dynamic> map) {
-    return MapviewFilters(
-      sortOrder: int.parse(map['sort_order']),
-      mapviewid: int.parse(map['mapviewid']),
-      dimension: map['dimension'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MapviewFilters _$$_MapviewFiltersFromJson(Map<String, dynamic> json) =>
+    _$_MapviewFilters(
+      sortOrder: json['sortOrder'] as int,
+      mapviewid: json['mapviewid'] as int,
+      dimension: json['dimension'] as String?,
     );
-  }
 
-  factory MapviewFilters.fromJson(String source) => MapviewFilters.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int mapviewid;
-
-  final String? dimension;
-
-  MapviewFilters copyWith({
-    int? sortOrder,
-    int? mapviewid,
-    String? dimension,
-  }) {
-    return MapviewFilters(
-      sortOrder: sortOrder ?? this.sortOrder,
-      mapviewid: mapviewid ?? this.mapviewid,
-      dimension: dimension ?? this.dimension,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'mapviewid': mapviewid,
-      'dimension': dimension,
+Map<String, dynamic> _$$_MapviewFiltersToJson(_$_MapviewFilters instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'mapviewid': instance.mapviewid,
+      'dimension': instance.dimension,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MapviewFilters &&
-        other.sortOrder == sortOrder &&
-        other.mapviewid == mapviewid &&
-        other.dimension == dimension;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ mapviewid.hashCode ^ dimension.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MapviewFilters(sortOrder: $sortOrder, mapviewid: $mapviewid, dimension: $dimension)';
-  }
-}

@@ -1,67 +1,25 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationDataelementgroupsetdimensions {
-  const VisualizationDataelementgroupsetdimensions({
-    required this.dataelementgroupsetdimensionid,
-    required this.visualizationid,
-    required this.sortOrder,
-  });
+part of 'visualization_dataelementgroupsetdimensions.dart';
 
-  factory VisualizationDataelementgroupsetdimensions.fromMap(Map<String, dynamic> map) {
-    return VisualizationDataelementgroupsetdimensions(
-      dataelementgroupsetdimensionid: int.parse(map['dataelementgroupsetdimensionid']),
-      visualizationid: int.parse(map['visualizationid']),
-      sortOrder: int.parse(map['sort_order']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory VisualizationDataelementgroupsetdimensions.fromJson(String source) =>
-      VisualizationDataelementgroupsetdimensions.fromMap(json.decode(source));
+_$_VisualizationDataelementgroupsetdimensions
+    _$$_VisualizationDataelementgroupsetdimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_VisualizationDataelementgroupsetdimensions(
+          dataelementgroupsetdimensionid:
+              json['dataelementgroupsetdimensionid'] as int,
+          visualizationid: json['visualizationid'] as int,
+          sortOrder: json['sortOrder'] as int,
+        );
 
-  final int dataelementgroupsetdimensionid;
-
-  final int visualizationid;
-
-  final int sortOrder;
-
-  VisualizationDataelementgroupsetdimensions copyWith({
-    int? dataelementgroupsetdimensionid,
-    int? visualizationid,
-    int? sortOrder,
-  }) {
-    return VisualizationDataelementgroupsetdimensions(
-      dataelementgroupsetdimensionid: dataelementgroupsetdimensionid ?? this.dataelementgroupsetdimensionid,
-      visualizationid: visualizationid ?? this.visualizationid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'dataelementgroupsetdimensionid': dataelementgroupsetdimensionid,
-      'visualizationid': visualizationid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_VisualizationDataelementgroupsetdimensionsToJson(
+        _$_VisualizationDataelementgroupsetdimensions instance) =>
+    <String, dynamic>{
+      'dataelementgroupsetdimensionid': instance.dataelementgroupsetdimensionid,
+      'visualizationid': instance.visualizationid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationDataelementgroupsetdimensions &&
-        other.dataelementgroupsetdimensionid == dataelementgroupsetdimensionid &&
-        other.visualizationid == visualizationid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return dataelementgroupsetdimensionid.hashCode ^ visualizationid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationDataelementgroupsetdimensions(dataelementgroupsetdimensionid: $dataelementgroupsetdimensionid, visualizationid: $visualizationid, sortOrder: $sortOrder)';
-  }
-}

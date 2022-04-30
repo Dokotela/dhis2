@@ -1,59 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Validationruleorganisationunitlevels {
-  const Validationruleorganisationunitlevels({
-    required this.validationruleid,
-    this.organisationunitlevel,
-  });
+part of 'validationruleorganisationunitlevels.dart';
 
-  factory Validationruleorganisationunitlevels.fromMap(Map<String, dynamic> map) {
-    return Validationruleorganisationunitlevels(
-      validationruleid: int.parse(map['validationruleid']),
-      organisationunitlevel: int.tryParse(map['organisationunitlevel']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory Validationruleorganisationunitlevels.fromJson(String source) =>
-      Validationruleorganisationunitlevels.fromMap(json.decode(source));
+_$_Validationruleorganisationunitlevels
+    _$$_ValidationruleorganisationunitlevelsFromJson(
+            Map<String, dynamic> json) =>
+        _$_Validationruleorganisationunitlevels(
+          validationruleid: json['validationruleid'] as int,
+          organisationunitlevel: json['organisationunitlevel'] as int?,
+        );
 
-  final int validationruleid;
-
-  final int? organisationunitlevel;
-
-  Validationruleorganisationunitlevels copyWith({
-    int? validationruleid,
-    int? organisationunitlevel,
-  }) {
-    return Validationruleorganisationunitlevels(
-      validationruleid: validationruleid ?? this.validationruleid,
-      organisationunitlevel: organisationunitlevel ?? this.organisationunitlevel,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'validationruleid': validationruleid,
-      'organisationunitlevel': organisationunitlevel,
+Map<String, dynamic> _$$_ValidationruleorganisationunitlevelsToJson(
+        _$_Validationruleorganisationunitlevels instance) =>
+    <String, dynamic>{
+      'validationruleid': instance.validationruleid,
+      'organisationunitlevel': instance.organisationunitlevel,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Validationruleorganisationunitlevels &&
-        other.validationruleid == validationruleid &&
-        other.organisationunitlevel == organisationunitlevel;
-  }
-
-  @override
-  int get hashCode {
-    return validationruleid.hashCode ^ organisationunitlevel.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Validationruleorganisationunitlevels(validationruleid: $validationruleid, organisationunitlevel: $organisationunitlevel)';
-  }
-}

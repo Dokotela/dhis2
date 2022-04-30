@@ -1,57 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Pushanalysisrecipientusergroups {
-  const Pushanalysisrecipientusergroups({
-    required this.usergroupid,
-    required this.elt,
-  });
+part of 'pushanalysisrecipientusergroups.dart';
 
-  factory Pushanalysisrecipientusergroups.fromMap(Map<String, dynamic> map) {
-    return Pushanalysisrecipientusergroups(
-      usergroupid: int.parse(map['usergroupid']),
-      elt: int.parse(map['elt']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Pushanalysisrecipientusergroups _$$_PushanalysisrecipientusergroupsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Pushanalysisrecipientusergroups(
+      usergroupid: json['usergroupid'] as int,
+      elt: json['elt'] as int,
     );
-  }
 
-  factory Pushanalysisrecipientusergroups.fromJson(String source) =>
-      Pushanalysisrecipientusergroups.fromMap(json.decode(source));
-
-  final int usergroupid;
-
-  final int elt;
-
-  Pushanalysisrecipientusergroups copyWith({
-    int? usergroupid,
-    int? elt,
-  }) {
-    return Pushanalysisrecipientusergroups(
-      usergroupid: usergroupid ?? this.usergroupid,
-      elt: elt ?? this.elt,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'usergroupid': usergroupid,
-      'elt': elt,
+Map<String, dynamic> _$$_PushanalysisrecipientusergroupsToJson(
+        _$_Pushanalysisrecipientusergroups instance) =>
+    <String, dynamic>{
+      'usergroupid': instance.usergroupid,
+      'elt': instance.elt,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Pushanalysisrecipientusergroups && other.usergroupid == usergroupid && other.elt == elt;
-  }
-
-  @override
-  int get hashCode {
-    return usergroupid.hashCode ^ elt.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Pushanalysisrecipientusergroups(usergroupid: $usergroupid, elt: $elt)';
-  }
-}

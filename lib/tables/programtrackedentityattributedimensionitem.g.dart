@@ -1,70 +1,26 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programtrackedentityattributedimensionitem {
-  const Programtrackedentityattributedimensionitem({
-    required this.trackedentityattributeid,
-    required this.programid,
-    required this.programtrackedentityattributedimensionitemid,
-  });
+part of 'programtrackedentityattributedimensionitem.dart';
 
-  factory Programtrackedentityattributedimensionitem.fromMap(Map<String, dynamic> map) {
-    return Programtrackedentityattributedimensionitem(
-      trackedentityattributeid: int.parse(map['trackedentityattributeid']),
-      programid: int.parse(map['programid']),
-      programtrackedentityattributedimensionitemid: int.parse(map['programtrackedentityattributedimensionitemid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory Programtrackedentityattributedimensionitem.fromJson(String source) =>
-      Programtrackedentityattributedimensionitem.fromMap(json.decode(source));
+_$_Programtrackedentityattributedimensionitem
+    _$$_ProgramtrackedentityattributedimensionitemFromJson(
+            Map<String, dynamic> json) =>
+        _$_Programtrackedentityattributedimensionitem(
+          trackedentityattributeid: json['trackedentityattributeid'] as int,
+          programid: json['programid'] as int,
+          programtrackedentityattributedimensionitemid:
+              json['programtrackedentityattributedimensionitemid'] as int,
+        );
 
-  final int trackedentityattributeid;
-
-  final int programid;
-
-  final int programtrackedentityattributedimensionitemid;
-
-  Programtrackedentityattributedimensionitem copyWith({
-    int? trackedentityattributeid,
-    int? programid,
-    int? programtrackedentityattributedimensionitemid,
-  }) {
-    return Programtrackedentityattributedimensionitem(
-      trackedentityattributeid: trackedentityattributeid ?? this.trackedentityattributeid,
-      programid: programid ?? this.programid,
-      programtrackedentityattributedimensionitemid:
-          programtrackedentityattributedimensionitemid ?? this.programtrackedentityattributedimensionitemid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'trackedentityattributeid': trackedentityattributeid,
-      'programid': programid,
-      'programtrackedentityattributedimensionitemid': programtrackedentityattributedimensionitemid,
+Map<String, dynamic> _$$_ProgramtrackedentityattributedimensionitemToJson(
+        _$_Programtrackedentityattributedimensionitem instance) =>
+    <String, dynamic>{
+      'trackedentityattributeid': instance.trackedentityattributeid,
+      'programid': instance.programid,
+      'programtrackedentityattributedimensionitemid':
+          instance.programtrackedentityattributedimensionitemid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programtrackedentityattributedimensionitem &&
-        other.trackedentityattributeid == trackedentityattributeid &&
-        other.programid == programid &&
-        other.programtrackedentityattributedimensionitemid == programtrackedentityattributedimensionitemid;
-  }
-
-  @override
-  int get hashCode {
-    return trackedentityattributeid.hashCode ^
-        programid.hashCode ^
-        programtrackedentityattributedimensionitemid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programtrackedentityattributedimensionitem(trackedentityattributeid: $trackedentityattributeid, programid: $programid, programtrackedentityattributedimensionitemid: $programtrackedentityattributedimensionitemid)';
-  }
-}

@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datasetlegendsets {
-  const Datasetlegendsets({
-    required this.legendsetid,
-    required this.datasetid,
-    required this.sortOrder,
-  });
+part of 'datasetlegendsets.dart';
 
-  factory Datasetlegendsets.fromMap(Map<String, dynamic> map) {
-    return Datasetlegendsets(
-      legendsetid: int.parse(map['legendsetid']),
-      datasetid: int.parse(map['datasetid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datasetlegendsets _$$_DatasetlegendsetsFromJson(Map<String, dynamic> json) =>
+    _$_Datasetlegendsets(
+      legendsetid: json['legendsetid'] as int,
+      datasetid: json['datasetid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory Datasetlegendsets.fromJson(String source) => Datasetlegendsets.fromMap(json.decode(source));
-
-  final int legendsetid;
-
-  final int datasetid;
-
-  final int sortOrder;
-
-  Datasetlegendsets copyWith({
-    int? legendsetid,
-    int? datasetid,
-    int? sortOrder,
-  }) {
-    return Datasetlegendsets(
-      legendsetid: legendsetid ?? this.legendsetid,
-      datasetid: datasetid ?? this.datasetid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'legendsetid': legendsetid,
-      'datasetid': datasetid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_DatasetlegendsetsToJson(
+        _$_Datasetlegendsets instance) =>
+    <String, dynamic>{
+      'legendsetid': instance.legendsetid,
+      'datasetid': instance.datasetid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datasetlegendsets &&
-        other.legendsetid == legendsetid &&
-        other.datasetid == datasetid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return legendsetid.hashCode ^ datasetid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datasetlegendsets(legendsetid: $legendsetid, datasetid: $datasetid, sortOrder: $sortOrder)';
-  }
-}

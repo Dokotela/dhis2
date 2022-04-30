@@ -1,59 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class CategoryoptioncombosCategoryoptions {
-  const CategoryoptioncombosCategoryoptions({
-    required this.categoryoptionid,
-    required this.categoryoptioncomboid,
-  });
+part of 'categoryoptioncombos_categoryoptions.dart';
 
-  factory CategoryoptioncombosCategoryoptions.fromMap(Map<String, dynamic> map) {
-    return CategoryoptioncombosCategoryoptions(
-      categoryoptionid: int.parse(map['categoryoptionid']),
-      categoryoptioncomboid: int.parse(map['categoryoptioncomboid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory CategoryoptioncombosCategoryoptions.fromJson(String source) =>
-      CategoryoptioncombosCategoryoptions.fromMap(json.decode(source));
+_$_CategoryoptioncombosCategoryoptions
+    _$$_CategoryoptioncombosCategoryoptionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_CategoryoptioncombosCategoryoptions(
+          categoryoptionid: json['categoryoptionid'] as int,
+          categoryoptioncomboid: json['categoryoptioncomboid'] as int,
+        );
 
-  final int categoryoptionid;
-
-  final int categoryoptioncomboid;
-
-  CategoryoptioncombosCategoryoptions copyWith({
-    int? categoryoptionid,
-    int? categoryoptioncomboid,
-  }) {
-    return CategoryoptioncombosCategoryoptions(
-      categoryoptionid: categoryoptionid ?? this.categoryoptionid,
-      categoryoptioncomboid: categoryoptioncomboid ?? this.categoryoptioncomboid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'categoryoptionid': categoryoptionid,
-      'categoryoptioncomboid': categoryoptioncomboid,
+Map<String, dynamic> _$$_CategoryoptioncombosCategoryoptionsToJson(
+        _$_CategoryoptioncombosCategoryoptions instance) =>
+    <String, dynamic>{
+      'categoryoptionid': instance.categoryoptionid,
+      'categoryoptioncomboid': instance.categoryoptioncomboid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is CategoryoptioncombosCategoryoptions &&
-        other.categoryoptionid == categoryoptionid &&
-        other.categoryoptioncomboid == categoryoptioncomboid;
-  }
-
-  @override
-  int get hashCode {
-    return categoryoptionid.hashCode ^ categoryoptioncomboid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'CategoryoptioncombosCategoryoptions(categoryoptionid: $categoryoptionid, categoryoptioncomboid: $categoryoptioncomboid)';
-  }
-}

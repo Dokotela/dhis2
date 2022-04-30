@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramstagesectionDataelements {
-  const ProgramstagesectionDataelements({
-    required this.sortOrder,
-    required this.dataelementid,
-    required this.programstagesectionid,
-  });
+part of 'programstagesection_dataelements.dart';
 
-  factory ProgramstagesectionDataelements.fromMap(Map<String, dynamic> map) {
-    return ProgramstagesectionDataelements(
-      sortOrder: int.parse(map['sort_order']),
-      dataelementid: int.parse(map['dataelementid']),
-      programstagesectionid: int.parse(map['programstagesectionid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgramstagesectionDataelements _$$_ProgramstagesectionDataelementsFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProgramstagesectionDataelements(
+      sortOrder: json['sortOrder'] as int,
+      dataelementid: json['dataelementid'] as int,
+      programstagesectionid: json['programstagesectionid'] as int,
     );
-  }
 
-  factory ProgramstagesectionDataelements.fromJson(String source) =>
-      ProgramstagesectionDataelements.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int dataelementid;
-
-  final int programstagesectionid;
-
-  ProgramstagesectionDataelements copyWith({
-    int? sortOrder,
-    int? dataelementid,
-    int? programstagesectionid,
-  }) {
-    return ProgramstagesectionDataelements(
-      sortOrder: sortOrder ?? this.sortOrder,
-      dataelementid: dataelementid ?? this.dataelementid,
-      programstagesectionid: programstagesectionid ?? this.programstagesectionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'dataelementid': dataelementid,
-      'programstagesectionid': programstagesectionid,
+Map<String, dynamic> _$$_ProgramstagesectionDataelementsToJson(
+        _$_ProgramstagesectionDataelements instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'dataelementid': instance.dataelementid,
+      'programstagesectionid': instance.programstagesectionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramstagesectionDataelements &&
-        other.sortOrder == sortOrder &&
-        other.dataelementid == dataelementid &&
-        other.programstagesectionid == programstagesectionid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ dataelementid.hashCode ^ programstagesectionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramstagesectionDataelements(sortOrder: $sortOrder, dataelementid: $dataelementid, programstagesectionid: $programstagesectionid)';
-  }
-}

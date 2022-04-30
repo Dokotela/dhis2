@@ -1,90 +1,27 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class OutboundSms {
-  const OutboundSms({
-    required this.id,
-    this.message,
-    this.sender,
-    required this.date,
-    this.uid,
-    required this.status,
-  });
+part of 'outbound_sms.dart';
 
-  factory OutboundSms.fromMap(Map<String, dynamic> map) {
-    return OutboundSms(
-      id: int.parse(map['id']),
-      message: map['message'],
-      sender: map['sender'],
-      date: DateTime.parse(map['date']),
-      uid: map['uid'],
-      status: int.parse(map['status']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_OutboundSms _$$_OutboundSmsFromJson(Map<String, dynamic> json) =>
+    _$_OutboundSms(
+      id: json['id'] as int,
+      message: json['message'] as String?,
+      sender: json['sender'] as String?,
+      date: DateTime.parse(json['date'] as String),
+      uid: json['uid'] as String?,
+      status: json['status'] as int,
     );
-  }
 
-  factory OutboundSms.fromJson(String source) => OutboundSms.fromMap(json.decode(source));
-
-  final int id;
-
-  final String? message;
-
-  final String? sender;
-
-  final DateTime date;
-
-  final String? uid;
-
-  final int status;
-
-  OutboundSms copyWith({
-    int? id,
-    String? message,
-    String? sender,
-    DateTime? date,
-    String? uid,
-    int? status,
-  }) {
-    return OutboundSms(
-      id: id ?? this.id,
-      message: message ?? this.message,
-      sender: sender ?? this.sender,
-      date: date ?? this.date,
-      uid: uid ?? this.uid,
-      status: status ?? this.status,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'message': message,
-      'sender': sender,
-      'date': date.toUtc().toIso8601String(),
-      'uid': uid,
-      'status': status,
+Map<String, dynamic> _$$_OutboundSmsToJson(_$_OutboundSms instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'message': instance.message,
+      'sender': instance.sender,
+      'date': instance.date.toIso8601String(),
+      'uid': instance.uid,
+      'status': instance.status,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is OutboundSms &&
-        other.id == id &&
-        other.message == message &&
-        other.sender == sender &&
-        other.date == date &&
-        other.uid == uid &&
-        other.status == status;
-  }
-
-  @override
-  int get hashCode {
-    return id.hashCode ^ message.hashCode ^ sender.hashCode ^ date.hashCode ^ uid.hashCode ^ status.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'OutboundSms(id: $id, message: $message, sender: $sender, date: $date, uid: $uid, status: $status)';
-  }
-}

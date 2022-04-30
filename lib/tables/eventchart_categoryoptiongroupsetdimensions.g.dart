@@ -1,67 +1,26 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventchartCategoryoptiongroupsetdimensions {
-  const EventchartCategoryoptiongroupsetdimensions({
-    required this.sortOrder,
-    required this.categoryoptiongroupsetdimensionid,
-    required this.eventchartid,
-  });
+part of 'eventchart_categoryoptiongroupsetdimensions.dart';
 
-  factory EventchartCategoryoptiongroupsetdimensions.fromMap(Map<String, dynamic> map) {
-    return EventchartCategoryoptiongroupsetdimensions(
-      sortOrder: int.parse(map['sort_order']),
-      categoryoptiongroupsetdimensionid: int.parse(map['categoryoptiongroupsetdimensionid']),
-      eventchartid: int.parse(map['eventchartid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory EventchartCategoryoptiongroupsetdimensions.fromJson(String source) =>
-      EventchartCategoryoptiongroupsetdimensions.fromMap(json.decode(source));
+_$_EventchartCategoryoptiongroupsetdimensions
+    _$$_EventchartCategoryoptiongroupsetdimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_EventchartCategoryoptiongroupsetdimensions(
+          sortOrder: json['sortOrder'] as int,
+          categoryoptiongroupsetdimensionid:
+              json['categoryoptiongroupsetdimensionid'] as int,
+          eventchartid: json['eventchartid'] as int,
+        );
 
-  final int sortOrder;
-
-  final int categoryoptiongroupsetdimensionid;
-
-  final int eventchartid;
-
-  EventchartCategoryoptiongroupsetdimensions copyWith({
-    int? sortOrder,
-    int? categoryoptiongroupsetdimensionid,
-    int? eventchartid,
-  }) {
-    return EventchartCategoryoptiongroupsetdimensions(
-      sortOrder: sortOrder ?? this.sortOrder,
-      categoryoptiongroupsetdimensionid: categoryoptiongroupsetdimensionid ?? this.categoryoptiongroupsetdimensionid,
-      eventchartid: eventchartid ?? this.eventchartid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'categoryoptiongroupsetdimensionid': categoryoptiongroupsetdimensionid,
-      'eventchartid': eventchartid,
+Map<String, dynamic> _$$_EventchartCategoryoptiongroupsetdimensionsToJson(
+        _$_EventchartCategoryoptiongroupsetdimensions instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'categoryoptiongroupsetdimensionid':
+          instance.categoryoptiongroupsetdimensionid,
+      'eventchartid': instance.eventchartid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventchartCategoryoptiongroupsetdimensions &&
-        other.sortOrder == sortOrder &&
-        other.categoryoptiongroupsetdimensionid == categoryoptiongroupsetdimensionid &&
-        other.eventchartid == eventchartid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ categoryoptiongroupsetdimensionid.hashCode ^ eventchartid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventchartCategoryoptiongroupsetdimensions(sortOrder: $sortOrder, categoryoptiongroupsetdimensionid: $categoryoptiongroupsetdimensionid, eventchartid: $eventchartid)';
-  }
-}

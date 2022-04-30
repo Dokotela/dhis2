@@ -1,176 +1,48 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Section {
-  const Section({
-    this.translations,
-    this.sortorder,
-    this.disabledataelementautogroup,
-    required this.name,
-    this.attributevalues,
-    this.uid,
-    this.description,
-    this.lastupdatedby,
-    this.code,
-    this.created,
-    this.showcolumntotals,
-    required this.datasetid,
-    this.lastupdated,
-    required this.sectionid,
-    this.showrowtotals,
-  });
+part of 'section.dart';
 
-  factory Section.fromMap(Map<String, dynamic> map) {
-    return Section(
-      translations: map['translations'],
-      sortorder: int.tryParse(map['sortorder']),
-      disabledataelementautogroup: map['disabledataelementautogroup'],
-      name: map['name'],
-      attributevalues: map['attributevalues'],
-      uid: map['uid'],
-      description: map['description'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      code: map['code'],
-      created: DateTime.tryParse(map['created']),
-      showcolumntotals: map['showcolumntotals'],
-      datasetid: int.parse(map['datasetid']),
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      sectionid: int.parse(map['sectionid']),
-      showrowtotals: map['showrowtotals'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Section _$$_SectionFromJson(Map<String, dynamic> json) => _$_Section(
+      translations: json['translations'],
+      sortorder: json['sortorder'] as int?,
+      disabledataelementautogroup: json['disabledataelementautogroup'] as bool?,
+      name: json['name'] as String,
+      attributevalues: json['attributevalues'],
+      uid: json['uid'] as String?,
+      description: json['description'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      code: json['code'] as String?,
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
+      showcolumntotals: json['showcolumntotals'] as bool?,
+      datasetid: json['datasetid'] as int,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      sectionid: json['sectionid'] as int,
+      showrowtotals: json['showrowtotals'] as bool?,
     );
-  }
 
-  factory Section.fromJson(String source) => Section.fromMap(json.decode(source));
-
-  final Object? translations;
-
-  final int? sortorder;
-
-  final bool? disabledataelementautogroup;
-
-  final String name;
-
-  final Object? attributevalues;
-
-  final String? uid;
-
-  final String? description;
-
-  final int? lastupdatedby;
-
-  final String? code;
-
-  final DateTime? created;
-
-  final bool? showcolumntotals;
-
-  final int datasetid;
-
-  final DateTime? lastupdated;
-
-  final int sectionid;
-
-  final bool? showrowtotals;
-
-  Section copyWith({
-    Object? translations,
-    int? sortorder,
-    bool? disabledataelementautogroup,
-    String? name,
-    Object? attributevalues,
-    String? uid,
-    String? description,
-    int? lastupdatedby,
-    String? code,
-    DateTime? created,
-    bool? showcolumntotals,
-    int? datasetid,
-    DateTime? lastupdated,
-    int? sectionid,
-    bool? showrowtotals,
-  }) {
-    return Section(
-      translations: translations ?? this.translations,
-      sortorder: sortorder ?? this.sortorder,
-      disabledataelementautogroup: disabledataelementautogroup ?? this.disabledataelementautogroup,
-      name: name ?? this.name,
-      attributevalues: attributevalues ?? this.attributevalues,
-      uid: uid ?? this.uid,
-      description: description ?? this.description,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      code: code ?? this.code,
-      created: created ?? this.created,
-      showcolumntotals: showcolumntotals ?? this.showcolumntotals,
-      datasetid: datasetid ?? this.datasetid,
-      lastupdated: lastupdated ?? this.lastupdated,
-      sectionid: sectionid ?? this.sectionid,
-      showrowtotals: showrowtotals ?? this.showrowtotals,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'translations': translations,
-      'sortorder': sortorder,
-      'disabledataelementautogroup': disabledataelementautogroup,
-      'name': name,
-      'attributevalues': attributevalues,
-      'uid': uid,
-      'description': description,
-      'lastupdatedby': lastupdatedby,
-      'code': code,
-      'created': created,
-      'showcolumntotals': showcolumntotals,
-      'datasetid': datasetid,
-      'lastupdated': lastupdated,
-      'sectionid': sectionid,
-      'showrowtotals': showrowtotals,
+Map<String, dynamic> _$$_SectionToJson(_$_Section instance) =>
+    <String, dynamic>{
+      'translations': instance.translations,
+      'sortorder': instance.sortorder,
+      'disabledataelementautogroup': instance.disabledataelementautogroup,
+      'name': instance.name,
+      'attributevalues': instance.attributevalues,
+      'uid': instance.uid,
+      'description': instance.description,
+      'lastupdatedby': instance.lastupdatedby,
+      'code': instance.code,
+      'created': instance.created?.toIso8601String(),
+      'showcolumntotals': instance.showcolumntotals,
+      'datasetid': instance.datasetid,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'sectionid': instance.sectionid,
+      'showrowtotals': instance.showrowtotals,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Section &&
-        other.translations == translations &&
-        other.sortorder == sortorder &&
-        other.disabledataelementautogroup == disabledataelementautogroup &&
-        other.name == name &&
-        other.attributevalues == attributevalues &&
-        other.uid == uid &&
-        other.description == description &&
-        other.lastupdatedby == lastupdatedby &&
-        other.code == code &&
-        other.created == created &&
-        other.showcolumntotals == showcolumntotals &&
-        other.datasetid == datasetid &&
-        other.lastupdated == lastupdated &&
-        other.sectionid == sectionid &&
-        other.showrowtotals == showrowtotals;
-  }
-
-  @override
-  int get hashCode {
-    return translations.hashCode ^
-        sortorder.hashCode ^
-        disabledataelementautogroup.hashCode ^
-        name.hashCode ^
-        attributevalues.hashCode ^
-        uid.hashCode ^
-        description.hashCode ^
-        lastupdatedby.hashCode ^
-        code.hashCode ^
-        created.hashCode ^
-        showcolumntotals.hashCode ^
-        datasetid.hashCode ^
-        lastupdated.hashCode ^
-        sectionid.hashCode ^
-        showrowtotals.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Section(translations: $translations, sortorder: $sortorder, disabledataelementautogroup: $disabledataelementautogroup, name: $name, attributevalues: $attributevalues, uid: $uid, description: $description, lastupdatedby: $lastupdatedby, code: $code, created: $created, showcolumntotals: $showcolumntotals, datasetid: $datasetid, lastupdated: $lastupdated, sectionid: $sectionid, showrowtotals: $showrowtotals)';
-  }
-}

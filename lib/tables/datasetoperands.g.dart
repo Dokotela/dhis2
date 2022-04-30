@@ -1,58 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datasetoperands {
-  const Datasetoperands({
-    required this.datasetid,
-    required this.dataelementoperandid,
-  });
+part of 'datasetoperands.dart';
 
-  factory Datasetoperands.fromMap(Map<String, dynamic> map) {
-    return Datasetoperands(
-      datasetid: int.parse(map['datasetid']),
-      dataelementoperandid: int.parse(map['dataelementoperandid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datasetoperands _$$_DatasetoperandsFromJson(Map<String, dynamic> json) =>
+    _$_Datasetoperands(
+      datasetid: json['datasetid'] as int,
+      dataelementoperandid: json['dataelementoperandid'] as int,
     );
-  }
 
-  factory Datasetoperands.fromJson(String source) => Datasetoperands.fromMap(json.decode(source));
-
-  final int datasetid;
-
-  final int dataelementoperandid;
-
-  Datasetoperands copyWith({
-    int? datasetid,
-    int? dataelementoperandid,
-  }) {
-    return Datasetoperands(
-      datasetid: datasetid ?? this.datasetid,
-      dataelementoperandid: dataelementoperandid ?? this.dataelementoperandid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datasetid': datasetid,
-      'dataelementoperandid': dataelementoperandid,
+Map<String, dynamic> _$$_DatasetoperandsToJson(_$_Datasetoperands instance) =>
+    <String, dynamic>{
+      'datasetid': instance.datasetid,
+      'dataelementoperandid': instance.dataelementoperandid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datasetoperands &&
-        other.datasetid == datasetid &&
-        other.dataelementoperandid == dataelementoperandid;
-  }
-
-  @override
-  int get hashCode {
-    return datasetid.hashCode ^ dataelementoperandid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datasetoperands(datasetid: $datasetid, dataelementoperandid: $dataelementoperandid)';
-  }
-}

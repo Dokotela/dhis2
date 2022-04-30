@@ -1,230 +1,60 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Dhis2Map {
-  const Dhis2Map({
-    this.userid,
-    this.lastupdated,
-    this.externalaccess,
-    this.latitude,
-    this.translations,
-    this.longitude,
-    this.zoom,
-    this.publicaccess,
-    this.lastupdatedby,
-    this.description,
-    this.code,
-    this.favorites,
-    this.created,
-    this.title,
-    required this.name,
-    this.attributevalues,
-    this.uid,
-    this.sharing,
-    required this.mapid,
-    this.basemap,
-    this.subscribers,
-  });
+part of 'map.dart';
 
-  factory Dhis2Map.fromDhis2Map(Map<String, dynamic> map) {
-    return Dhis2Map(
-      userid: int.tryParse(map['userid']),
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      externalaccess: map['externalaccess'],
-      latitude: double.tryParse(map['latitude']),
-      translations: map['translations'],
-      longitude: double.tryParse(map['longitude']),
-      zoom: int.tryParse(map['zoom']),
-      publicaccess: map['publicaccess'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      description: map['description'],
-      code: map['code'],
-      favorites: map['favorites'],
-      created: DateTime.tryParse(map['created']),
-      title: map['title'],
-      name: map['name'],
-      attributevalues: map['attributevalues'],
-      uid: map['uid'],
-      sharing: map['sharing'],
-      mapid: int.parse(map['mapid']),
-      basemap: map['basemap'],
-      subscribers: map['subscribers'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Dhis2Map _$$_Dhis2MapFromJson(Map<String, dynamic> json) => _$_Dhis2Map(
+      userid: json['userid'] as int?,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      externalaccess: json['externalaccess'] as bool?,
+      latitude: (json['latitude'] as num?)?.toDouble(),
+      translations: json['translations'],
+      longitude: (json['longitude'] as num?)?.toDouble(),
+      zoom: json['zoom'] as int?,
+      publicaccess: json['publicaccess'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      description: json['description'] as String?,
+      code: json['code'] as String?,
+      favorites: json['favorites'],
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
+      title: json['title'] as String?,
+      name: json['name'] as String,
+      attributevalues: json['attributevalues'],
+      uid: json['uid'] as String?,
+      sharing: json['sharing'],
+      mapid: json['mapid'] as int,
+      basemap: json['basemap'] as String?,
+      subscribers: json['subscribers'],
     );
-  }
 
-  factory Dhis2Map.fromJson(String source) => Dhis2Map.fromDhis2Map(json.decode(source));
-
-  final int? userid;
-
-  final DateTime? lastupdated;
-
-  final bool? externalaccess;
-
-  final double? latitude;
-
-  final Object? translations;
-
-  final double? longitude;
-
-  final int? zoom;
-
-  final String? publicaccess;
-
-  final int? lastupdatedby;
-
-  final String? description;
-
-  final String? code;
-
-  final Object? favorites;
-
-  final DateTime? created;
-
-  final String? title;
-
-  final String name;
-
-  final Object? attributevalues;
-
-  final String? uid;
-
-  final Object? sharing;
-
-  final int mapid;
-
-  final String? basemap;
-
-  final Object? subscribers;
-
-  Dhis2Map copyWith({
-    int? userid,
-    DateTime? lastupdated,
-    bool? externalaccess,
-    double? latitude,
-    Object? translations,
-    double? longitude,
-    int? zoom,
-    String? publicaccess,
-    int? lastupdatedby,
-    String? description,
-    String? code,
-    Object? favorites,
-    DateTime? created,
-    String? title,
-    String? name,
-    Object? attributevalues,
-    String? uid,
-    Object? sharing,
-    int? mapid,
-    String? basemap,
-    Object? subscribers,
-  }) {
-    return Dhis2Map(
-      userid: userid ?? this.userid,
-      lastupdated: lastupdated ?? this.lastupdated,
-      externalaccess: externalaccess ?? this.externalaccess,
-      latitude: latitude ?? this.latitude,
-      translations: translations ?? this.translations,
-      longitude: longitude ?? this.longitude,
-      zoom: zoom ?? this.zoom,
-      publicaccess: publicaccess ?? this.publicaccess,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      description: description ?? this.description,
-      code: code ?? this.code,
-      favorites: favorites ?? this.favorites,
-      created: created ?? this.created,
-      title: title ?? this.title,
-      name: name ?? this.name,
-      attributevalues: attributevalues ?? this.attributevalues,
-      uid: uid ?? this.uid,
-      sharing: sharing ?? this.sharing,
-      mapid: mapid ?? this.mapid,
-      basemap: basemap ?? this.basemap,
-      subscribers: subscribers ?? this.subscribers,
-    );
-  }
-
-  Map<String, dynamic> toDhis2Map() {
-    return {
-      'userid': userid,
-      'lastupdated': lastupdated,
-      'externalaccess': externalaccess,
-      'latitude': latitude,
-      'translations': translations,
-      'longitude': longitude,
-      'zoom': zoom,
-      'publicaccess': publicaccess,
-      'lastupdatedby': lastupdatedby,
-      'description': description,
-      'code': code,
-      'favorites': favorites,
-      'created': created,
-      'title': title,
-      'name': name,
-      'attributevalues': attributevalues,
-      'uid': uid,
-      'sharing': sharing,
-      'mapid': mapid,
-      'basemap': basemap,
-      'subscribers': subscribers,
+Map<String, dynamic> _$$_Dhis2MapToJson(_$_Dhis2Map instance) =>
+    <String, dynamic>{
+      'userid': instance.userid,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'externalaccess': instance.externalaccess,
+      'latitude': instance.latitude,
+      'translations': instance.translations,
+      'longitude': instance.longitude,
+      'zoom': instance.zoom,
+      'publicaccess': instance.publicaccess,
+      'lastupdatedby': instance.lastupdatedby,
+      'description': instance.description,
+      'code': instance.code,
+      'favorites': instance.favorites,
+      'created': instance.created?.toIso8601String(),
+      'title': instance.title,
+      'name': instance.name,
+      'attributevalues': instance.attributevalues,
+      'uid': instance.uid,
+      'sharing': instance.sharing,
+      'mapid': instance.mapid,
+      'basemap': instance.basemap,
+      'subscribers': instance.subscribers,
     };
-  }
-
-  String toJson() => json.encode(toDhis2Map());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Dhis2Map &&
-        other.userid == userid &&
-        other.lastupdated == lastupdated &&
-        other.externalaccess == externalaccess &&
-        other.latitude == latitude &&
-        other.translations == translations &&
-        other.longitude == longitude &&
-        other.zoom == zoom &&
-        other.publicaccess == publicaccess &&
-        other.lastupdatedby == lastupdatedby &&
-        other.description == description &&
-        other.code == code &&
-        other.favorites == favorites &&
-        other.created == created &&
-        other.title == title &&
-        other.name == name &&
-        other.attributevalues == attributevalues &&
-        other.uid == uid &&
-        other.sharing == sharing &&
-        other.mapid == mapid &&
-        other.basemap == basemap &&
-        other.subscribers == subscribers;
-  }
-
-  @override
-  int get hashCode {
-    return userid.hashCode ^
-        lastupdated.hashCode ^
-        externalaccess.hashCode ^
-        latitude.hashCode ^
-        translations.hashCode ^
-        longitude.hashCode ^
-        zoom.hashCode ^
-        publicaccess.hashCode ^
-        lastupdatedby.hashCode ^
-        description.hashCode ^
-        code.hashCode ^
-        favorites.hashCode ^
-        created.hashCode ^
-        title.hashCode ^
-        name.hashCode ^
-        attributevalues.hashCode ^
-        uid.hashCode ^
-        sharing.hashCode ^
-        mapid.hashCode ^
-        basemap.hashCode ^
-        subscribers.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Dhis2Map(userid: $userid, lastupdated: $lastupdated, externalaccess: $externalaccess, latitude: $latitude, translations: $translations, longitude: $longitude, zoom: $zoom, publicaccess: $publicaccess, lastupdatedby: $lastupdatedby, description: $description, code: $code, favorites: $favorites, created: $created, title: $title, name: $name, attributevalues: $attributevalues, uid: $uid, sharing: $sharing, mapid: $mapid, basemap: $basemap, subscribers: $subscribers)';
-  }
-}

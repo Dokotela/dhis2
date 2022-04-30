@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationAxis {
-  const VisualizationAxis({
-    required this.sortOrder,
-    required this.visualizationid,
-    required this.axisid,
-  });
+part of 'visualization_axis.dart';
 
-  factory VisualizationAxis.fromMap(Map<String, dynamic> map) {
-    return VisualizationAxis(
-      sortOrder: int.parse(map['sort_order']),
-      visualizationid: int.parse(map['visualizationid']),
-      axisid: int.parse(map['axisid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationAxis _$$_VisualizationAxisFromJson(Map<String, dynamic> json) =>
+    _$_VisualizationAxis(
+      sortOrder: json['sortOrder'] as int,
+      visualizationid: json['visualizationid'] as int,
+      axisid: json['axisid'] as int,
     );
-  }
 
-  factory VisualizationAxis.fromJson(String source) => VisualizationAxis.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int visualizationid;
-
-  final int axisid;
-
-  VisualizationAxis copyWith({
-    int? sortOrder,
-    int? visualizationid,
-    int? axisid,
-  }) {
-    return VisualizationAxis(
-      sortOrder: sortOrder ?? this.sortOrder,
-      visualizationid: visualizationid ?? this.visualizationid,
-      axisid: axisid ?? this.axisid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'visualizationid': visualizationid,
-      'axisid': axisid,
+Map<String, dynamic> _$$_VisualizationAxisToJson(
+        _$_VisualizationAxis instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'visualizationid': instance.visualizationid,
+      'axisid': instance.axisid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationAxis &&
-        other.sortOrder == sortOrder &&
-        other.visualizationid == visualizationid &&
-        other.axisid == axisid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ visualizationid.hashCode ^ axisid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationAxis(sortOrder: $sortOrder, visualizationid: $visualizationid, axisid: $axisid)';
-  }
-}

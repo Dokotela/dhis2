@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Orgunitgroupsetmembers {
-  const Orgunitgroupsetmembers({
-    required this.orgunitgroupsetid,
-    required this.orgunitgroupid,
-  });
+part of 'orgunitgroupsetmembers.dart';
 
-  factory Orgunitgroupsetmembers.fromMap(Map<String, dynamic> map) {
-    return Orgunitgroupsetmembers(
-      orgunitgroupsetid: int.parse(map['orgunitgroupsetid']),
-      orgunitgroupid: int.parse(map['orgunitgroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Orgunitgroupsetmembers _$$_OrgunitgroupsetmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Orgunitgroupsetmembers(
+      orgunitgroupsetid: json['orgunitgroupsetid'] as int,
+      orgunitgroupid: json['orgunitgroupid'] as int,
     );
-  }
 
-  factory Orgunitgroupsetmembers.fromJson(String source) => Orgunitgroupsetmembers.fromMap(json.decode(source));
-
-  final int orgunitgroupsetid;
-
-  final int orgunitgroupid;
-
-  Orgunitgroupsetmembers copyWith({
-    int? orgunitgroupsetid,
-    int? orgunitgroupid,
-  }) {
-    return Orgunitgroupsetmembers(
-      orgunitgroupsetid: orgunitgroupsetid ?? this.orgunitgroupsetid,
-      orgunitgroupid: orgunitgroupid ?? this.orgunitgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'orgunitgroupsetid': orgunitgroupsetid,
-      'orgunitgroupid': orgunitgroupid,
+Map<String, dynamic> _$$_OrgunitgroupsetmembersToJson(
+        _$_Orgunitgroupsetmembers instance) =>
+    <String, dynamic>{
+      'orgunitgroupsetid': instance.orgunitgroupsetid,
+      'orgunitgroupid': instance.orgunitgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Orgunitgroupsetmembers &&
-        other.orgunitgroupsetid == orgunitgroupsetid &&
-        other.orgunitgroupid == orgunitgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return orgunitgroupsetid.hashCode ^ orgunitgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Orgunitgroupsetmembers(orgunitgroupsetid: $orgunitgroupsetid, orgunitgroupid: $orgunitgroupid)';
-  }
-}

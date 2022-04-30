@@ -1,59 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programindicatorgroupmembers {
-  const Programindicatorgroupmembers({
-    required this.programindicatorid,
-    required this.programindicatorgroupid,
-  });
+part of 'programindicatorgroupmembers.dart';
 
-  factory Programindicatorgroupmembers.fromMap(Map<String, dynamic> map) {
-    return Programindicatorgroupmembers(
-      programindicatorid: int.parse(map['programindicatorid']),
-      programindicatorgroupid: int.parse(map['programindicatorgroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programindicatorgroupmembers _$$_ProgramindicatorgroupmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programindicatorgroupmembers(
+      programindicatorid: json['programindicatorid'] as int,
+      programindicatorgroupid: json['programindicatorgroupid'] as int,
     );
-  }
 
-  factory Programindicatorgroupmembers.fromJson(String source) =>
-      Programindicatorgroupmembers.fromMap(json.decode(source));
-
-  final int programindicatorid;
-
-  final int programindicatorgroupid;
-
-  Programindicatorgroupmembers copyWith({
-    int? programindicatorid,
-    int? programindicatorgroupid,
-  }) {
-    return Programindicatorgroupmembers(
-      programindicatorid: programindicatorid ?? this.programindicatorid,
-      programindicatorgroupid: programindicatorgroupid ?? this.programindicatorgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programindicatorid': programindicatorid,
-      'programindicatorgroupid': programindicatorgroupid,
+Map<String, dynamic> _$$_ProgramindicatorgroupmembersToJson(
+        _$_Programindicatorgroupmembers instance) =>
+    <String, dynamic>{
+      'programindicatorid': instance.programindicatorid,
+      'programindicatorgroupid': instance.programindicatorgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programindicatorgroupmembers &&
-        other.programindicatorid == programindicatorid &&
-        other.programindicatorgroupid == programindicatorgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return programindicatorid.hashCode ^ programindicatorgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programindicatorgroupmembers(programindicatorid: $programindicatorid, programindicatorgroupid: $programindicatorgroupid)';
-  }
-}

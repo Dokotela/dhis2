@@ -1,67 +1,24 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class DataelementgroupsetdimensionItems {
-  const DataelementgroupsetdimensionItems({
-    required this.dataelementgroupid,
-    required this.sortOrder,
-    required this.dataelementgroupsetdimensionid,
-  });
+part of 'dataelementgroupsetdimension_items.dart';
 
-  factory DataelementgroupsetdimensionItems.fromMap(Map<String, dynamic> map) {
-    return DataelementgroupsetdimensionItems(
-      dataelementgroupid: int.parse(map['dataelementgroupid']),
-      sortOrder: int.parse(map['sort_order']),
-      dataelementgroupsetdimensionid: int.parse(map['dataelementgroupsetdimensionid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory DataelementgroupsetdimensionItems.fromJson(String source) =>
-      DataelementgroupsetdimensionItems.fromMap(json.decode(source));
+_$_DataelementgroupsetdimensionItems
+    _$$_DataelementgroupsetdimensionItemsFromJson(Map<String, dynamic> json) =>
+        _$_DataelementgroupsetdimensionItems(
+          dataelementgroupid: json['dataelementgroupid'] as int,
+          sortOrder: json['sortOrder'] as int,
+          dataelementgroupsetdimensionid:
+              json['dataelementgroupsetdimensionid'] as int,
+        );
 
-  final int dataelementgroupid;
-
-  final int sortOrder;
-
-  final int dataelementgroupsetdimensionid;
-
-  DataelementgroupsetdimensionItems copyWith({
-    int? dataelementgroupid,
-    int? sortOrder,
-    int? dataelementgroupsetdimensionid,
-  }) {
-    return DataelementgroupsetdimensionItems(
-      dataelementgroupid: dataelementgroupid ?? this.dataelementgroupid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      dataelementgroupsetdimensionid: dataelementgroupsetdimensionid ?? this.dataelementgroupsetdimensionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'dataelementgroupid': dataelementgroupid,
-      'sort_order': sortOrder,
-      'dataelementgroupsetdimensionid': dataelementgroupsetdimensionid,
+Map<String, dynamic> _$$_DataelementgroupsetdimensionItemsToJson(
+        _$_DataelementgroupsetdimensionItems instance) =>
+    <String, dynamic>{
+      'dataelementgroupid': instance.dataelementgroupid,
+      'sortOrder': instance.sortOrder,
+      'dataelementgroupsetdimensionid': instance.dataelementgroupsetdimensionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is DataelementgroupsetdimensionItems &&
-        other.dataelementgroupid == dataelementgroupid &&
-        other.sortOrder == sortOrder &&
-        other.dataelementgroupsetdimensionid == dataelementgroupsetdimensionid;
-  }
-
-  @override
-  int get hashCode {
-    return dataelementgroupid.hashCode ^ sortOrder.hashCode ^ dataelementgroupsetdimensionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'DataelementgroupsetdimensionItems(dataelementgroupid: $dataelementgroupid, sortOrder: $sortOrder, dataelementgroupsetdimensionid: $dataelementgroupsetdimensionid)';
-  }
-}

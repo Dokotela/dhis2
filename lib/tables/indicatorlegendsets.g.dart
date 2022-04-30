@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Indicatorlegendsets {
-  const Indicatorlegendsets({
-    required this.legendsetid,
-    required this.indicatorid,
-    required this.sortOrder,
-  });
+part of 'indicatorlegendsets.dart';
 
-  factory Indicatorlegendsets.fromMap(Map<String, dynamic> map) {
-    return Indicatorlegendsets(
-      legendsetid: int.parse(map['legendsetid']),
-      indicatorid: int.parse(map['indicatorid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Indicatorlegendsets _$$_IndicatorlegendsetsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Indicatorlegendsets(
+      legendsetid: json['legendsetid'] as int,
+      indicatorid: json['indicatorid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory Indicatorlegendsets.fromJson(String source) => Indicatorlegendsets.fromMap(json.decode(source));
-
-  final int legendsetid;
-
-  final int indicatorid;
-
-  final int sortOrder;
-
-  Indicatorlegendsets copyWith({
-    int? legendsetid,
-    int? indicatorid,
-    int? sortOrder,
-  }) {
-    return Indicatorlegendsets(
-      legendsetid: legendsetid ?? this.legendsetid,
-      indicatorid: indicatorid ?? this.indicatorid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'legendsetid': legendsetid,
-      'indicatorid': indicatorid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_IndicatorlegendsetsToJson(
+        _$_Indicatorlegendsets instance) =>
+    <String, dynamic>{
+      'legendsetid': instance.legendsetid,
+      'indicatorid': instance.indicatorid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Indicatorlegendsets &&
-        other.legendsetid == legendsetid &&
-        other.indicatorid == indicatorid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return legendsetid.hashCode ^ indicatorid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Indicatorlegendsets(legendsetid: $legendsetid, indicatorid: $indicatorid, sortOrder: $sortOrder)';
-  }
-}

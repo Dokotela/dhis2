@@ -1,56 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Optiongroupmembers {
-  const Optiongroupmembers({
-    required this.optionid,
-    required this.optiongroupid,
-  });
+part of 'optiongroupmembers.dart';
 
-  factory Optiongroupmembers.fromMap(Map<String, dynamic> map) {
-    return Optiongroupmembers(
-      optionid: int.parse(map['optionid']),
-      optiongroupid: int.parse(map['optiongroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Optiongroupmembers _$$_OptiongroupmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Optiongroupmembers(
+      optionid: json['optionid'] as int,
+      optiongroupid: json['optiongroupid'] as int,
     );
-  }
 
-  factory Optiongroupmembers.fromJson(String source) => Optiongroupmembers.fromMap(json.decode(source));
-
-  final int optionid;
-
-  final int optiongroupid;
-
-  Optiongroupmembers copyWith({
-    int? optionid,
-    int? optiongroupid,
-  }) {
-    return Optiongroupmembers(
-      optionid: optionid ?? this.optionid,
-      optiongroupid: optiongroupid ?? this.optiongroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'optionid': optionid,
-      'optiongroupid': optiongroupid,
+Map<String, dynamic> _$$_OptiongroupmembersToJson(
+        _$_Optiongroupmembers instance) =>
+    <String, dynamic>{
+      'optionid': instance.optionid,
+      'optiongroupid': instance.optiongroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Optiongroupmembers && other.optionid == optionid && other.optiongroupid == optiongroupid;
-  }
-
-  @override
-  int get hashCode {
-    return optionid.hashCode ^ optiongroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Optiongroupmembers(optionid: $optionid, optiongroupid: $optiongroupid)';
-  }
-}

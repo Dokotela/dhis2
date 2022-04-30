@@ -1,78 +1,27 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Trackedentityattributedimension {
-  const Trackedentityattributedimension({
-    this.filter,
-    required this.trackedentityattributedimensionid,
-    this.legendsetid,
-    this.trackedentityattributeid,
-  });
+part of 'trackedentityattributedimension.dart';
 
-  factory Trackedentityattributedimension.fromMap(Map<String, dynamic> map) {
-    return Trackedentityattributedimension(
-      filter: map['filter'],
-      trackedentityattributedimensionid: int.parse(map['trackedentityattributedimensionid']),
-      legendsetid: int.tryParse(map['legendsetid']),
-      trackedentityattributeid: int.tryParse(map['trackedentityattributeid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Trackedentityattributedimension _$$_TrackedentityattributedimensionFromJson(
+        Map<String, dynamic> json) =>
+    _$_Trackedentityattributedimension(
+      filter: json['filter'] as String?,
+      trackedentityattributedimensionid:
+          json['trackedentityattributedimensionid'] as int,
+      legendsetid: json['legendsetid'] as int?,
+      trackedentityattributeid: json['trackedentityattributeid'] as int?,
     );
-  }
 
-  factory Trackedentityattributedimension.fromJson(String source) =>
-      Trackedentityattributedimension.fromMap(json.decode(source));
-
-  final String? filter;
-
-  final int trackedentityattributedimensionid;
-
-  final int? legendsetid;
-
-  final int? trackedentityattributeid;
-
-  Trackedentityattributedimension copyWith({
-    String? filter,
-    int? trackedentityattributedimensionid,
-    int? legendsetid,
-    int? trackedentityattributeid,
-  }) {
-    return Trackedentityattributedimension(
-      filter: filter ?? this.filter,
-      trackedentityattributedimensionid: trackedentityattributedimensionid ?? this.trackedentityattributedimensionid,
-      legendsetid: legendsetid ?? this.legendsetid,
-      trackedentityattributeid: trackedentityattributeid ?? this.trackedentityattributeid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'filter': filter,
-      'trackedentityattributedimensionid': trackedentityattributedimensionid,
-      'legendsetid': legendsetid,
-      'trackedentityattributeid': trackedentityattributeid,
+Map<String, dynamic> _$$_TrackedentityattributedimensionToJson(
+        _$_Trackedentityattributedimension instance) =>
+    <String, dynamic>{
+      'filter': instance.filter,
+      'trackedentityattributedimensionid':
+          instance.trackedentityattributedimensionid,
+      'legendsetid': instance.legendsetid,
+      'trackedentityattributeid': instance.trackedentityattributeid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Trackedentityattributedimension &&
-        other.filter == filter &&
-        other.trackedentityattributedimensionid == trackedentityattributedimensionid &&
-        other.legendsetid == legendsetid &&
-        other.trackedentityattributeid == trackedentityattributeid;
-  }
-
-  @override
-  int get hashCode {
-    return filter.hashCode ^
-        trackedentityattributedimensionid.hashCode ^
-        legendsetid.hashCode ^
-        trackedentityattributeid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Trackedentityattributedimension(filter: $filter, trackedentityattributedimensionid: $trackedentityattributedimensionid, legendsetid: $legendsetid, trackedentityattributeid: $trackedentityattributeid)';
-  }
-}

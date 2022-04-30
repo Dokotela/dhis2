@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class CategoriesCategoryoptions {
-  const CategoriesCategoryoptions({
-    required this.categoryid,
-    required this.categoryoptionid,
-    required this.sortOrder,
-  });
+part of 'categories_categoryoptions.dart';
 
-  factory CategoriesCategoryoptions.fromMap(Map<String, dynamic> map) {
-    return CategoriesCategoryoptions(
-      categoryid: int.parse(map['categoryid']),
-      categoryoptionid: int.parse(map['categoryoptionid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_CategoriesCategoryoptions _$$_CategoriesCategoryoptionsFromJson(
+        Map<String, dynamic> json) =>
+    _$_CategoriesCategoryoptions(
+      categoryid: json['categoryid'] as int,
+      categoryoptionid: json['categoryoptionid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory CategoriesCategoryoptions.fromJson(String source) => CategoriesCategoryoptions.fromMap(json.decode(source));
-
-  final int categoryid;
-
-  final int categoryoptionid;
-
-  final int sortOrder;
-
-  CategoriesCategoryoptions copyWith({
-    int? categoryid,
-    int? categoryoptionid,
-    int? sortOrder,
-  }) {
-    return CategoriesCategoryoptions(
-      categoryid: categoryid ?? this.categoryid,
-      categoryoptionid: categoryoptionid ?? this.categoryoptionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'categoryid': categoryid,
-      'categoryoptionid': categoryoptionid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_CategoriesCategoryoptionsToJson(
+        _$_CategoriesCategoryoptions instance) =>
+    <String, dynamic>{
+      'categoryid': instance.categoryid,
+      'categoryoptionid': instance.categoryoptionid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is CategoriesCategoryoptions &&
-        other.categoryid == categoryid &&
-        other.categoryoptionid == categoryoptionid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return categoryid.hashCode ^ categoryoptionid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'CategoriesCategoryoptions(categoryid: $categoryid, categoryoptionid: $categoryoptionid, sortOrder: $sortOrder)';
-  }
-}

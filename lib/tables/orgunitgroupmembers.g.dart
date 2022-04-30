@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Orgunitgroupmembers {
-  const Orgunitgroupmembers({
-    required this.orgunitgroupid,
-    required this.organisationunitid,
-  });
+part of 'orgunitgroupmembers.dart';
 
-  factory Orgunitgroupmembers.fromMap(Map<String, dynamic> map) {
-    return Orgunitgroupmembers(
-      orgunitgroupid: int.parse(map['orgunitgroupid']),
-      organisationunitid: int.parse(map['organisationunitid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Orgunitgroupmembers _$$_OrgunitgroupmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Orgunitgroupmembers(
+      orgunitgroupid: json['orgunitgroupid'] as int,
+      organisationunitid: json['organisationunitid'] as int,
     );
-  }
 
-  factory Orgunitgroupmembers.fromJson(String source) => Orgunitgroupmembers.fromMap(json.decode(source));
-
-  final int orgunitgroupid;
-
-  final int organisationunitid;
-
-  Orgunitgroupmembers copyWith({
-    int? orgunitgroupid,
-    int? organisationunitid,
-  }) {
-    return Orgunitgroupmembers(
-      orgunitgroupid: orgunitgroupid ?? this.orgunitgroupid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'orgunitgroupid': orgunitgroupid,
-      'organisationunitid': organisationunitid,
+Map<String, dynamic> _$$_OrgunitgroupmembersToJson(
+        _$_Orgunitgroupmembers instance) =>
+    <String, dynamic>{
+      'orgunitgroupid': instance.orgunitgroupid,
+      'organisationunitid': instance.organisationunitid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Orgunitgroupmembers &&
-        other.orgunitgroupid == orgunitgroupid &&
-        other.organisationunitid == organisationunitid;
-  }
-
-  @override
-  int get hashCode {
-    return orgunitgroupid.hashCode ^ organisationunitid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Orgunitgroupmembers(orgunitgroupid: $orgunitgroupid, organisationunitid: $organisationunitid)';
-  }
-}

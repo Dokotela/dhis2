@@ -1,68 +1,25 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventreportDataelementdimensions {
-  const EventreportDataelementdimensions({
-    required this.sortOrder,
-    required this.eventreportid,
-    required this.trackedentitydataelementdimensionid,
-  });
+part of 'eventreport_dataelementdimensions.dart';
 
-  factory EventreportDataelementdimensions.fromMap(Map<String, dynamic> map) {
-    return EventreportDataelementdimensions(
-      sortOrder: int.parse(map['sort_order']),
-      eventreportid: int.parse(map['eventreportid']),
-      trackedentitydataelementdimensionid: int.parse(map['trackedentitydataelementdimensionid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory EventreportDataelementdimensions.fromJson(String source) =>
-      EventreportDataelementdimensions.fromMap(json.decode(source));
+_$_EventreportDataelementdimensions
+    _$$_EventreportDataelementdimensionsFromJson(Map<String, dynamic> json) =>
+        _$_EventreportDataelementdimensions(
+          sortOrder: json['sortOrder'] as int,
+          eventreportid: json['eventreportid'] as int,
+          trackedentitydataelementdimensionid:
+              json['trackedentitydataelementdimensionid'] as int,
+        );
 
-  final int sortOrder;
-
-  final int eventreportid;
-
-  final int trackedentitydataelementdimensionid;
-
-  EventreportDataelementdimensions copyWith({
-    int? sortOrder,
-    int? eventreportid,
-    int? trackedentitydataelementdimensionid,
-  }) {
-    return EventreportDataelementdimensions(
-      sortOrder: sortOrder ?? this.sortOrder,
-      eventreportid: eventreportid ?? this.eventreportid,
-      trackedentitydataelementdimensionid:
-          trackedentitydataelementdimensionid ?? this.trackedentitydataelementdimensionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'eventreportid': eventreportid,
-      'trackedentitydataelementdimensionid': trackedentitydataelementdimensionid,
+Map<String, dynamic> _$$_EventreportDataelementdimensionsToJson(
+        _$_EventreportDataelementdimensions instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'eventreportid': instance.eventreportid,
+      'trackedentitydataelementdimensionid':
+          instance.trackedentitydataelementdimensionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventreportDataelementdimensions &&
-        other.sortOrder == sortOrder &&
-        other.eventreportid == eventreportid &&
-        other.trackedentitydataelementdimensionid == trackedentitydataelementdimensionid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ eventreportid.hashCode ^ trackedentitydataelementdimensionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventreportDataelementdimensions(sortOrder: $sortOrder, eventreportid: $eventreportid, trackedentitydataelementdimensionid: $trackedentitydataelementdimensionid)';
-  }
-}

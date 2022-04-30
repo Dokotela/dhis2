@@ -1,186 +1,50 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Trackedentityinstancefilter {
-  const Trackedentityinstancefilter({
-    required this.programid,
-    this.translations,
-    this.code,
-    this.style,
-    this.eventfilters,
-    required this.trackedentityinstancefilterid,
-    this.sortorder,
-    this.description,
-    this.lastupdatedby,
-    required this.created,
-    required this.uid,
-    required this.name,
-    this.entityquerycriteria,
-    required this.lastupdated,
-    this.sharing,
-    this.userid,
-  });
+part of 'trackedentityinstancefilter.dart';
 
-  factory Trackedentityinstancefilter.fromMap(Map<String, dynamic> map) {
-    return Trackedentityinstancefilter(
-      programid: int.parse(map['programid']),
-      translations: map['translations'],
-      code: map['code'],
-      style: map['style'],
-      eventfilters: map['eventfilters'],
-      trackedentityinstancefilterid: int.parse(map['trackedentityinstancefilterid']),
-      sortorder: int.tryParse(map['sortorder']),
-      description: map['description'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      created: DateTime.parse(map['created']),
-      uid: map['uid'],
-      name: map['name'],
-      entityquerycriteria: map['entityquerycriteria'],
-      lastupdated: DateTime.parse(map['lastupdated']),
-      sharing: map['sharing'],
-      userid: int.tryParse(map['userid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Trackedentityinstancefilter _$$_TrackedentityinstancefilterFromJson(
+        Map<String, dynamic> json) =>
+    _$_Trackedentityinstancefilter(
+      programid: json['programid'] as int,
+      translations: json['translations'],
+      code: json['code'] as String?,
+      style: json['style'],
+      eventfilters: json['eventfilters'],
+      trackedentityinstancefilterid:
+          json['trackedentityinstancefilterid'] as int,
+      sortorder: json['sortorder'] as int?,
+      description: json['description'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      created: DateTime.parse(json['created'] as String),
+      uid: json['uid'] as String,
+      name: json['name'] as String,
+      entityquerycriteria: json['entityquerycriteria'],
+      lastupdated: DateTime.parse(json['lastupdated'] as String),
+      sharing: json['sharing'],
+      userid: json['userid'] as int?,
     );
-  }
 
-  factory Trackedentityinstancefilter.fromJson(String source) =>
-      Trackedentityinstancefilter.fromMap(json.decode(source));
-
-  final int programid;
-
-  final Object? translations;
-
-  final String? code;
-
-  final Object? style;
-
-  final Object? eventfilters;
-
-  final int trackedentityinstancefilterid;
-
-  final int? sortorder;
-
-  final String? description;
-
-  final int? lastupdatedby;
-
-  final DateTime created;
-
-  final String uid;
-
-  final String name;
-
-  final Object? entityquerycriteria;
-
-  final DateTime lastupdated;
-
-  final Object? sharing;
-
-  final int? userid;
-
-  Trackedentityinstancefilter copyWith({
-    int? programid,
-    Object? translations,
-    String? code,
-    Object? style,
-    Object? eventfilters,
-    int? trackedentityinstancefilterid,
-    int? sortorder,
-    String? description,
-    int? lastupdatedby,
-    DateTime? created,
-    String? uid,
-    String? name,
-    Object? entityquerycriteria,
-    DateTime? lastupdated,
-    Object? sharing,
-    int? userid,
-  }) {
-    return Trackedentityinstancefilter(
-      programid: programid ?? this.programid,
-      translations: translations ?? this.translations,
-      code: code ?? this.code,
-      style: style ?? this.style,
-      eventfilters: eventfilters ?? this.eventfilters,
-      trackedentityinstancefilterid: trackedentityinstancefilterid ?? this.trackedentityinstancefilterid,
-      sortorder: sortorder ?? this.sortorder,
-      description: description ?? this.description,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      created: created ?? this.created,
-      uid: uid ?? this.uid,
-      name: name ?? this.name,
-      entityquerycriteria: entityquerycriteria ?? this.entityquerycriteria,
-      lastupdated: lastupdated ?? this.lastupdated,
-      sharing: sharing ?? this.sharing,
-      userid: userid ?? this.userid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programid': programid,
-      'translations': translations,
-      'code': code,
-      'style': style,
-      'eventfilters': eventfilters,
-      'trackedentityinstancefilterid': trackedentityinstancefilterid,
-      'sortorder': sortorder,
-      'description': description,
-      'lastupdatedby': lastupdatedby,
-      'created': created.toUtc().toIso8601String(),
-      'uid': uid,
-      'name': name,
-      'entityquerycriteria': entityquerycriteria,
-      'lastupdated': lastupdated.toUtc().toIso8601String(),
-      'sharing': sharing,
-      'userid': userid,
+Map<String, dynamic> _$$_TrackedentityinstancefilterToJson(
+        _$_Trackedentityinstancefilter instance) =>
+    <String, dynamic>{
+      'programid': instance.programid,
+      'translations': instance.translations,
+      'code': instance.code,
+      'style': instance.style,
+      'eventfilters': instance.eventfilters,
+      'trackedentityinstancefilterid': instance.trackedentityinstancefilterid,
+      'sortorder': instance.sortorder,
+      'description': instance.description,
+      'lastupdatedby': instance.lastupdatedby,
+      'created': instance.created.toIso8601String(),
+      'uid': instance.uid,
+      'name': instance.name,
+      'entityquerycriteria': instance.entityquerycriteria,
+      'lastupdated': instance.lastupdated.toIso8601String(),
+      'sharing': instance.sharing,
+      'userid': instance.userid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Trackedentityinstancefilter &&
-        other.programid == programid &&
-        other.translations == translations &&
-        other.code == code &&
-        other.style == style &&
-        other.eventfilters == eventfilters &&
-        other.trackedentityinstancefilterid == trackedentityinstancefilterid &&
-        other.sortorder == sortorder &&
-        other.description == description &&
-        other.lastupdatedby == lastupdatedby &&
-        other.created == created &&
-        other.uid == uid &&
-        other.name == name &&
-        other.entityquerycriteria == entityquerycriteria &&
-        other.lastupdated == lastupdated &&
-        other.sharing == sharing &&
-        other.userid == userid;
-  }
-
-  @override
-  int get hashCode {
-    return programid.hashCode ^
-        translations.hashCode ^
-        code.hashCode ^
-        style.hashCode ^
-        eventfilters.hashCode ^
-        trackedentityinstancefilterid.hashCode ^
-        sortorder.hashCode ^
-        description.hashCode ^
-        lastupdatedby.hashCode ^
-        created.hashCode ^
-        uid.hashCode ^
-        name.hashCode ^
-        entityquerycriteria.hashCode ^
-        lastupdated.hashCode ^
-        sharing.hashCode ^
-        userid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Trackedentityinstancefilter(programid: $programid, translations: $translations, code: $code, style: $style, eventfilters: $eventfilters, trackedentityinstancefilterid: $trackedentityinstancefilterid, sortorder: $sortorder, description: $description, lastupdatedby: $lastupdatedby, created: $created, uid: $uid, name: $name, entityquerycriteria: $entityquerycriteria, lastupdated: $lastupdated, sharing: $sharing, userid: $userid)';
-  }
-}

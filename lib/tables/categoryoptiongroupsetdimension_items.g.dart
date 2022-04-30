@@ -1,67 +1,26 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class CategoryoptiongroupsetdimensionItems {
-  const CategoryoptiongroupsetdimensionItems({
-    required this.categoryoptiongroupsetdimensionid,
-    required this.sortOrder,
-    required this.categoryoptiongroupid,
-  });
+part of 'categoryoptiongroupsetdimension_items.dart';
 
-  factory CategoryoptiongroupsetdimensionItems.fromMap(Map<String, dynamic> map) {
-    return CategoryoptiongroupsetdimensionItems(
-      categoryoptiongroupsetdimensionid: int.parse(map['categoryoptiongroupsetdimensionid']),
-      sortOrder: int.parse(map['sort_order']),
-      categoryoptiongroupid: int.parse(map['categoryoptiongroupid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory CategoryoptiongroupsetdimensionItems.fromJson(String source) =>
-      CategoryoptiongroupsetdimensionItems.fromMap(json.decode(source));
+_$_CategoryoptiongroupsetdimensionItems
+    _$$_CategoryoptiongroupsetdimensionItemsFromJson(
+            Map<String, dynamic> json) =>
+        _$_CategoryoptiongroupsetdimensionItems(
+          categoryoptiongroupsetdimensionid:
+              json['categoryoptiongroupsetdimensionid'] as int,
+          sortOrder: json['sortOrder'] as int,
+          categoryoptiongroupid: json['categoryoptiongroupid'] as int,
+        );
 
-  final int categoryoptiongroupsetdimensionid;
-
-  final int sortOrder;
-
-  final int categoryoptiongroupid;
-
-  CategoryoptiongroupsetdimensionItems copyWith({
-    int? categoryoptiongroupsetdimensionid,
-    int? sortOrder,
-    int? categoryoptiongroupid,
-  }) {
-    return CategoryoptiongroupsetdimensionItems(
-      categoryoptiongroupsetdimensionid: categoryoptiongroupsetdimensionid ?? this.categoryoptiongroupsetdimensionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      categoryoptiongroupid: categoryoptiongroupid ?? this.categoryoptiongroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'categoryoptiongroupsetdimensionid': categoryoptiongroupsetdimensionid,
-      'sort_order': sortOrder,
-      'categoryoptiongroupid': categoryoptiongroupid,
+Map<String, dynamic> _$$_CategoryoptiongroupsetdimensionItemsToJson(
+        _$_CategoryoptiongroupsetdimensionItems instance) =>
+    <String, dynamic>{
+      'categoryoptiongroupsetdimensionid':
+          instance.categoryoptiongroupsetdimensionid,
+      'sortOrder': instance.sortOrder,
+      'categoryoptiongroupid': instance.categoryoptiongroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is CategoryoptiongroupsetdimensionItems &&
-        other.categoryoptiongroupsetdimensionid == categoryoptiongroupsetdimensionid &&
-        other.sortOrder == sortOrder &&
-        other.categoryoptiongroupid == categoryoptiongroupid;
-  }
-
-  @override
-  int get hashCode {
-    return categoryoptiongroupsetdimensionid.hashCode ^ sortOrder.hashCode ^ categoryoptiongroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'CategoryoptiongroupsetdimensionItems(categoryoptiongroupsetdimensionid: $categoryoptiongroupsetdimensionid, sortOrder: $sortOrder, categoryoptiongroupid: $categoryoptiongroupid)';
-  }
-}

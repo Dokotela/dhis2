@@ -1,68 +1,26 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class EventchartProgramindicatordimensions {
-  const EventchartProgramindicatordimensions({
-    required this.trackedentityprogramindicatordimensionid,
-    required this.sortOrder,
-    required this.eventchartid,
-  });
+part of 'eventchart_programindicatordimensions.dart';
 
-  factory EventchartProgramindicatordimensions.fromMap(Map<String, dynamic> map) {
-    return EventchartProgramindicatordimensions(
-      trackedentityprogramindicatordimensionid: int.parse(map['trackedentityprogramindicatordimensionid']),
-      sortOrder: int.parse(map['sort_order']),
-      eventchartid: int.parse(map['eventchartid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory EventchartProgramindicatordimensions.fromJson(String source) =>
-      EventchartProgramindicatordimensions.fromMap(json.decode(source));
+_$_EventchartProgramindicatordimensions
+    _$$_EventchartProgramindicatordimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_EventchartProgramindicatordimensions(
+          trackedentityprogramindicatordimensionid:
+              json['trackedentityprogramindicatordimensionid'] as int,
+          sortOrder: json['sortOrder'] as int,
+          eventchartid: json['eventchartid'] as int,
+        );
 
-  final int trackedentityprogramindicatordimensionid;
-
-  final int sortOrder;
-
-  final int eventchartid;
-
-  EventchartProgramindicatordimensions copyWith({
-    int? trackedentityprogramindicatordimensionid,
-    int? sortOrder,
-    int? eventchartid,
-  }) {
-    return EventchartProgramindicatordimensions(
-      trackedentityprogramindicatordimensionid:
-          trackedentityprogramindicatordimensionid ?? this.trackedentityprogramindicatordimensionid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      eventchartid: eventchartid ?? this.eventchartid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'trackedentityprogramindicatordimensionid': trackedentityprogramindicatordimensionid,
-      'sort_order': sortOrder,
-      'eventchartid': eventchartid,
+Map<String, dynamic> _$$_EventchartProgramindicatordimensionsToJson(
+        _$_EventchartProgramindicatordimensions instance) =>
+    <String, dynamic>{
+      'trackedentityprogramindicatordimensionid':
+          instance.trackedentityprogramindicatordimensionid,
+      'sortOrder': instance.sortOrder,
+      'eventchartid': instance.eventchartid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is EventchartProgramindicatordimensions &&
-        other.trackedentityprogramindicatordimensionid == trackedentityprogramindicatordimensionid &&
-        other.sortOrder == sortOrder &&
-        other.eventchartid == eventchartid;
-  }
-
-  @override
-  int get hashCode {
-    return trackedentityprogramindicatordimensionid.hashCode ^ sortOrder.hashCode ^ eventchartid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'EventchartProgramindicatordimensions(trackedentityprogramindicatordimensionid: $trackedentityprogramindicatordimensionid, sortOrder: $sortOrder, eventchartid: $eventchartid)';
-  }
-}

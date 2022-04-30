@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Oauth2clientgranttypes {
-  const Oauth2clientgranttypes({
-    required this.sortOrder,
-    this.granttype,
-    required this.oauth2clientid,
-  });
+part of 'oauth2clientgranttypes.dart';
 
-  factory Oauth2clientgranttypes.fromMap(Map<String, dynamic> map) {
-    return Oauth2clientgranttypes(
-      sortOrder: int.parse(map['sort_order']),
-      granttype: map['granttype'],
-      oauth2clientid: int.parse(map['oauth2clientid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Oauth2clientgranttypes _$$_Oauth2clientgranttypesFromJson(
+        Map<String, dynamic> json) =>
+    _$_Oauth2clientgranttypes(
+      sortOrder: json['sortOrder'] as int,
+      granttype: json['granttype'] as String?,
+      oauth2clientid: json['oauth2clientid'] as int,
     );
-  }
 
-  factory Oauth2clientgranttypes.fromJson(String source) => Oauth2clientgranttypes.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final String? granttype;
-
-  final int oauth2clientid;
-
-  Oauth2clientgranttypes copyWith({
-    int? sortOrder,
-    String? granttype,
-    int? oauth2clientid,
-  }) {
-    return Oauth2clientgranttypes(
-      sortOrder: sortOrder ?? this.sortOrder,
-      granttype: granttype ?? this.granttype,
-      oauth2clientid: oauth2clientid ?? this.oauth2clientid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'granttype': granttype,
-      'oauth2clientid': oauth2clientid,
+Map<String, dynamic> _$$_Oauth2clientgranttypesToJson(
+        _$_Oauth2clientgranttypes instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'granttype': instance.granttype,
+      'oauth2clientid': instance.oauth2clientid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Oauth2clientgranttypes &&
-        other.sortOrder == sortOrder &&
-        other.granttype == granttype &&
-        other.oauth2clientid == oauth2clientid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ granttype.hashCode ^ oauth2clientid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Oauth2clientgranttypes(sortOrder: $sortOrder, granttype: $granttype, oauth2clientid: $oauth2clientid)';
-  }
-}

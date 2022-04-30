@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Dataelementlegendsets {
-  const Dataelementlegendsets({
-    required this.legendsetid,
-    required this.sortOrder,
-    required this.dataelementid,
-  });
+part of 'dataelementlegendsets.dart';
 
-  factory Dataelementlegendsets.fromMap(Map<String, dynamic> map) {
-    return Dataelementlegendsets(
-      legendsetid: int.parse(map['legendsetid']),
-      sortOrder: int.parse(map['sort_order']),
-      dataelementid: int.parse(map['dataelementid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Dataelementlegendsets _$$_DataelementlegendsetsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Dataelementlegendsets(
+      legendsetid: json['legendsetid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      dataelementid: json['dataelementid'] as int,
     );
-  }
 
-  factory Dataelementlegendsets.fromJson(String source) => Dataelementlegendsets.fromMap(json.decode(source));
-
-  final int legendsetid;
-
-  final int sortOrder;
-
-  final int dataelementid;
-
-  Dataelementlegendsets copyWith({
-    int? legendsetid,
-    int? sortOrder,
-    int? dataelementid,
-  }) {
-    return Dataelementlegendsets(
-      legendsetid: legendsetid ?? this.legendsetid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      dataelementid: dataelementid ?? this.dataelementid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'legendsetid': legendsetid,
-      'sort_order': sortOrder,
-      'dataelementid': dataelementid,
+Map<String, dynamic> _$$_DataelementlegendsetsToJson(
+        _$_Dataelementlegendsets instance) =>
+    <String, dynamic>{
+      'legendsetid': instance.legendsetid,
+      'sortOrder': instance.sortOrder,
+      'dataelementid': instance.dataelementid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Dataelementlegendsets &&
-        other.legendsetid == legendsetid &&
-        other.sortOrder == sortOrder &&
-        other.dataelementid == dataelementid;
-  }
-
-  @override
-  int get hashCode {
-    return legendsetid.hashCode ^ sortOrder.hashCode ^ dataelementid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Dataelementlegendsets(legendsetid: $legendsetid, sortOrder: $sortOrder, dataelementid: $dataelementid)';
-  }
-}

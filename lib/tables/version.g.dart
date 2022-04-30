@@ -1,66 +1,20 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Version {
-  const Version({
-    required this.versionid,
-    this.versionvalue,
-    required this.versionkey,
-  });
+part of 'version.dart';
 
-  factory Version.fromMap(Map<String, dynamic> map) {
-    return Version(
-      versionid: int.parse(map['versionid']),
-      versionvalue: map['versionvalue'],
-      versionkey: map['versionkey'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Version _$$_VersionFromJson(Map<String, dynamic> json) => _$_Version(
+      versionid: json['versionid'] as int,
+      versionvalue: json['versionvalue'] as String?,
+      versionkey: json['versionkey'] as String,
     );
-  }
 
-  factory Version.fromJson(String source) => Version.fromMap(json.decode(source));
-
-  final int versionid;
-
-  final String? versionvalue;
-
-  final String versionkey;
-
-  Version copyWith({
-    int? versionid,
-    String? versionvalue,
-    String? versionkey,
-  }) {
-    return Version(
-      versionid: versionid ?? this.versionid,
-      versionvalue: versionvalue ?? this.versionvalue,
-      versionkey: versionkey ?? this.versionkey,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'versionid': versionid,
-      'versionvalue': versionvalue,
-      'versionkey': versionkey,
+Map<String, dynamic> _$$_VersionToJson(_$_Version instance) =>
+    <String, dynamic>{
+      'versionid': instance.versionid,
+      'versionvalue': instance.versionvalue,
+      'versionkey': instance.versionkey,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Version &&
-        other.versionid == versionid &&
-        other.versionvalue == versionvalue &&
-        other.versionkey == versionkey;
-  }
-
-  @override
-  int get hashCode {
-    return versionid.hashCode ^ versionvalue.hashCode ^ versionkey.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Version(versionid: $versionid, versionvalue: $versionvalue, versionkey: $versionkey)';
-  }
-}

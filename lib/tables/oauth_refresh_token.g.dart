@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class OauthRefreshToken {
-  const OauthRefreshToken({
-    this.authentication,
-    this.token,
-    this.tokenId,
-  });
+part of 'oauth_refresh_token.dart';
 
-  factory OauthRefreshToken.fromMap(Map<String, dynamic> map) {
-    return OauthRefreshToken(
-      authentication: map['authentication'],
-      token: map['token'],
-      tokenId: map['token_id'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_OauthRefreshToken _$$_OauthRefreshTokenFromJson(Map<String, dynamic> json) =>
+    _$_OauthRefreshToken(
+      authentication: json['authentication'] as String?,
+      token: json['token'] as String?,
+      tokenId: json['tokenId'] as String?,
     );
-  }
 
-  factory OauthRefreshToken.fromJson(String source) => OauthRefreshToken.fromMap(json.decode(source));
-
-  final String? authentication;
-
-  final String? token;
-
-  final String? tokenId;
-
-  OauthRefreshToken copyWith({
-    String? authentication,
-    String? token,
-    String? tokenId,
-  }) {
-    return OauthRefreshToken(
-      authentication: authentication ?? this.authentication,
-      token: token ?? this.token,
-      tokenId: tokenId ?? this.tokenId,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'authentication': authentication,
-      'token': token,
-      'token_id': tokenId,
+Map<String, dynamic> _$$_OauthRefreshTokenToJson(
+        _$_OauthRefreshToken instance) =>
+    <String, dynamic>{
+      'authentication': instance.authentication,
+      'token': instance.token,
+      'tokenId': instance.tokenId,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is OauthRefreshToken &&
-        other.authentication == authentication &&
-        other.token == token &&
-        other.tokenId == tokenId;
-  }
-
-  @override
-  int get hashCode {
-    return authentication.hashCode ^ token.hashCode ^ tokenId.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'OauthRefreshToken(authentication: $authentication, token: $token, tokenId: $tokenId)';
-  }
-}

@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programinstancecomments {
-  const Programinstancecomments({
-    required this.sortOrder,
-    required this.programinstanceid,
-    required this.trackedentitycommentid,
-  });
+part of 'programinstancecomments.dart';
 
-  factory Programinstancecomments.fromMap(Map<String, dynamic> map) {
-    return Programinstancecomments(
-      sortOrder: int.parse(map['sort_order']),
-      programinstanceid: int.parse(map['programinstanceid']),
-      trackedentitycommentid: int.parse(map['trackedentitycommentid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programinstancecomments _$$_PrograminstancecommentsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programinstancecomments(
+      sortOrder: json['sortOrder'] as int,
+      programinstanceid: json['programinstanceid'] as int,
+      trackedentitycommentid: json['trackedentitycommentid'] as int,
     );
-  }
 
-  factory Programinstancecomments.fromJson(String source) => Programinstancecomments.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int programinstanceid;
-
-  final int trackedentitycommentid;
-
-  Programinstancecomments copyWith({
-    int? sortOrder,
-    int? programinstanceid,
-    int? trackedentitycommentid,
-  }) {
-    return Programinstancecomments(
-      sortOrder: sortOrder ?? this.sortOrder,
-      programinstanceid: programinstanceid ?? this.programinstanceid,
-      trackedentitycommentid: trackedentitycommentid ?? this.trackedentitycommentid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'programinstanceid': programinstanceid,
-      'trackedentitycommentid': trackedentitycommentid,
+Map<String, dynamic> _$$_PrograminstancecommentsToJson(
+        _$_Programinstancecomments instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'programinstanceid': instance.programinstanceid,
+      'trackedentitycommentid': instance.trackedentitycommentid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programinstancecomments &&
-        other.sortOrder == sortOrder &&
-        other.programinstanceid == programinstanceid &&
-        other.trackedentitycommentid == trackedentitycommentid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ programinstanceid.hashCode ^ trackedentitycommentid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programinstancecomments(sortOrder: $sortOrder, programinstanceid: $programinstanceid, trackedentitycommentid: $trackedentitycommentid)';
-  }
-}

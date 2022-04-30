@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Datasetsource {
-  const Datasetsource({
-    required this.datasetid,
-    required this.sourceid,
-  });
+part of 'datasetsource.dart';
 
-  factory Datasetsource.fromMap(Map<String, dynamic> map) {
-    return Datasetsource(
-      datasetid: int.parse(map['datasetid']),
-      sourceid: int.parse(map['sourceid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Datasetsource _$$_DatasetsourceFromJson(Map<String, dynamic> json) =>
+    _$_Datasetsource(
+      datasetid: json['datasetid'] as int,
+      sourceid: json['sourceid'] as int,
     );
-  }
 
-  factory Datasetsource.fromJson(String source) => Datasetsource.fromMap(json.decode(source));
-
-  final int datasetid;
-
-  final int sourceid;
-
-  Datasetsource copyWith({
-    int? datasetid,
-    int? sourceid,
-  }) {
-    return Datasetsource(
-      datasetid: datasetid ?? this.datasetid,
-      sourceid: sourceid ?? this.sourceid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datasetid': datasetid,
-      'sourceid': sourceid,
+Map<String, dynamic> _$$_DatasetsourceToJson(_$_Datasetsource instance) =>
+    <String, dynamic>{
+      'datasetid': instance.datasetid,
+      'sourceid': instance.sourceid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Datasetsource && other.datasetid == datasetid && other.sourceid == sourceid;
-  }
-
-  @override
-  int get hashCode {
-    return datasetid.hashCode ^ sourceid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Datasetsource(datasetid: $datasetid, sourceid: $sourceid)';
-  }
-}

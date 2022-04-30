@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class MapviewDatadimensionitems {
-  const MapviewDatadimensionitems({
-    required this.datadimensionitemid,
-    required this.sortOrder,
-    required this.mapviewid,
-  });
+part of 'mapview_datadimensionitems.dart';
 
-  factory MapviewDatadimensionitems.fromMap(Map<String, dynamic> map) {
-    return MapviewDatadimensionitems(
-      datadimensionitemid: int.parse(map['datadimensionitemid']),
-      sortOrder: int.parse(map['sort_order']),
-      mapviewid: int.parse(map['mapviewid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_MapviewDatadimensionitems _$$_MapviewDatadimensionitemsFromJson(
+        Map<String, dynamic> json) =>
+    _$_MapviewDatadimensionitems(
+      datadimensionitemid: json['datadimensionitemid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      mapviewid: json['mapviewid'] as int,
     );
-  }
 
-  factory MapviewDatadimensionitems.fromJson(String source) => MapviewDatadimensionitems.fromMap(json.decode(source));
-
-  final int datadimensionitemid;
-
-  final int sortOrder;
-
-  final int mapviewid;
-
-  MapviewDatadimensionitems copyWith({
-    int? datadimensionitemid,
-    int? sortOrder,
-    int? mapviewid,
-  }) {
-    return MapviewDatadimensionitems(
-      datadimensionitemid: datadimensionitemid ?? this.datadimensionitemid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      mapviewid: mapviewid ?? this.mapviewid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'datadimensionitemid': datadimensionitemid,
-      'sort_order': sortOrder,
-      'mapviewid': mapviewid,
+Map<String, dynamic> _$$_MapviewDatadimensionitemsToJson(
+        _$_MapviewDatadimensionitems instance) =>
+    <String, dynamic>{
+      'datadimensionitemid': instance.datadimensionitemid,
+      'sortOrder': instance.sortOrder,
+      'mapviewid': instance.mapviewid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is MapviewDatadimensionitems &&
-        other.datadimensionitemid == datadimensionitemid &&
-        other.sortOrder == sortOrder &&
-        other.mapviewid == mapviewid;
-  }
-
-  @override
-  int get hashCode {
-    return datadimensionitemid.hashCode ^ sortOrder.hashCode ^ mapviewid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'MapviewDatadimensionitems(datadimensionitemid: $datadimensionitemid, sortOrder: $sortOrder, mapviewid: $mapviewid)';
-  }
-}

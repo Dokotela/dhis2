@@ -1,60 +1,24 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramnotificationtemplateDeliverychannel {
-  const ProgramnotificationtemplateDeliverychannel({
-    required this.programnotificationtemplatedeliverychannelid,
-    this.deliverychannel,
-  });
+part of 'programnotificationtemplate_deliverychannel.dart';
 
-  factory ProgramnotificationtemplateDeliverychannel.fromMap(Map<String, dynamic> map) {
-    return ProgramnotificationtemplateDeliverychannel(
-      programnotificationtemplatedeliverychannelid: int.parse(map['programnotificationtemplatedeliverychannelid']),
-      deliverychannel: map['deliverychannel'],
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory ProgramnotificationtemplateDeliverychannel.fromJson(String source) =>
-      ProgramnotificationtemplateDeliverychannel.fromMap(json.decode(source));
+_$_ProgramnotificationtemplateDeliverychannel
+    _$$_ProgramnotificationtemplateDeliverychannelFromJson(
+            Map<String, dynamic> json) =>
+        _$_ProgramnotificationtemplateDeliverychannel(
+          programnotificationtemplatedeliverychannelid:
+              json['programnotificationtemplatedeliverychannelid'] as int,
+          deliverychannel: json['deliverychannel'] as String?,
+        );
 
-  final int programnotificationtemplatedeliverychannelid;
-
-  final String? deliverychannel;
-
-  ProgramnotificationtemplateDeliverychannel copyWith({
-    int? programnotificationtemplatedeliverychannelid,
-    String? deliverychannel,
-  }) {
-    return ProgramnotificationtemplateDeliverychannel(
-      programnotificationtemplatedeliverychannelid:
-          programnotificationtemplatedeliverychannelid ?? this.programnotificationtemplatedeliverychannelid,
-      deliverychannel: deliverychannel ?? this.deliverychannel,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programnotificationtemplatedeliverychannelid': programnotificationtemplatedeliverychannelid,
-      'deliverychannel': deliverychannel,
+Map<String, dynamic> _$$_ProgramnotificationtemplateDeliverychannelToJson(
+        _$_ProgramnotificationtemplateDeliverychannel instance) =>
+    <String, dynamic>{
+      'programnotificationtemplatedeliverychannelid':
+          instance.programnotificationtemplatedeliverychannelid,
+      'deliverychannel': instance.deliverychannel,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramnotificationtemplateDeliverychannel &&
-        other.programnotificationtemplatedeliverychannelid == programnotificationtemplatedeliverychannelid &&
-        other.deliverychannel == deliverychannel;
-  }
-
-  @override
-  int get hashCode {
-    return programnotificationtemplatedeliverychannelid.hashCode ^ deliverychannel.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramnotificationtemplateDeliverychannel(programnotificationtemplatedeliverychannelid: $programnotificationtemplatedeliverychannelid, deliverychannel: $deliverychannel)';
-  }
-}

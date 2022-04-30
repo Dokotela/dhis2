@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationRows {
-  const VisualizationRows({
-    required this.sortOrder,
-    this.dimension,
-    required this.visualizationid,
-  });
+part of 'visualization_rows.dart';
 
-  factory VisualizationRows.fromMap(Map<String, dynamic> map) {
-    return VisualizationRows(
-      sortOrder: int.parse(map['sort_order']),
-      dimension: map['dimension'],
-      visualizationid: int.parse(map['visualizationid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationRows _$$_VisualizationRowsFromJson(Map<String, dynamic> json) =>
+    _$_VisualizationRows(
+      sortOrder: json['sortOrder'] as int,
+      dimension: json['dimension'] as String?,
+      visualizationid: json['visualizationid'] as int,
     );
-  }
 
-  factory VisualizationRows.fromJson(String source) => VisualizationRows.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final String? dimension;
-
-  final int visualizationid;
-
-  VisualizationRows copyWith({
-    int? sortOrder,
-    String? dimension,
-    int? visualizationid,
-  }) {
-    return VisualizationRows(
-      sortOrder: sortOrder ?? this.sortOrder,
-      dimension: dimension ?? this.dimension,
-      visualizationid: visualizationid ?? this.visualizationid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'dimension': dimension,
-      'visualizationid': visualizationid,
+Map<String, dynamic> _$$_VisualizationRowsToJson(
+        _$_VisualizationRows instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'dimension': instance.dimension,
+      'visualizationid': instance.visualizationid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationRows &&
-        other.sortOrder == sortOrder &&
-        other.dimension == dimension &&
-        other.visualizationid == visualizationid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ dimension.hashCode ^ visualizationid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationRows(sortOrder: $sortOrder, dimension: $dimension, visualizationid: $visualizationid)';
-  }
-}

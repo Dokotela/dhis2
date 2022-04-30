@@ -1,104 +1,35 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programownershiphistory {
-  const Programownershiphistory({
-    this.organisationunitid,
-    this.programid,
-    this.trackedentityinstanceid,
-    required this.programownershiphistoryid,
-    this.createdby,
-    this.enddate,
-    this.startdate,
-  });
+part of 'programownershiphistory.dart';
 
-  factory Programownershiphistory.fromMap(Map<String, dynamic> map) {
-    return Programownershiphistory(
-      organisationunitid: int.tryParse(map['organisationunitid']),
-      programid: int.tryParse(map['programid']),
-      trackedentityinstanceid: int.tryParse(map['trackedentityinstanceid']),
-      programownershiphistoryid: int.parse(map['programownershiphistoryid']),
-      createdby: map['createdby'],
-      enddate: DateTime.tryParse(map['enddate']),
-      startdate: DateTime.tryParse(map['startdate']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programownershiphistory _$$_ProgramownershiphistoryFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programownershiphistory(
+      organisationunitid: json['organisationunitid'] as int?,
+      programid: json['programid'] as int?,
+      trackedentityinstanceid: json['trackedentityinstanceid'] as int?,
+      programownershiphistoryid: json['programownershiphistoryid'] as int,
+      createdby: json['createdby'] as String?,
+      enddate: json['enddate'] == null
+          ? null
+          : DateTime.parse(json['enddate'] as String),
+      startdate: json['startdate'] == null
+          ? null
+          : DateTime.parse(json['startdate'] as String),
     );
-  }
 
-  factory Programownershiphistory.fromJson(String source) => Programownershiphistory.fromMap(json.decode(source));
-
-  final int? organisationunitid;
-
-  final int? programid;
-
-  final int? trackedentityinstanceid;
-
-  final int programownershiphistoryid;
-
-  final String? createdby;
-
-  final DateTime? enddate;
-
-  final DateTime? startdate;
-
-  Programownershiphistory copyWith({
-    int? organisationunitid,
-    int? programid,
-    int? trackedentityinstanceid,
-    int? programownershiphistoryid,
-    String? createdby,
-    DateTime? enddate,
-    DateTime? startdate,
-  }) {
-    return Programownershiphistory(
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-      programid: programid ?? this.programid,
-      trackedentityinstanceid: trackedentityinstanceid ?? this.trackedentityinstanceid,
-      programownershiphistoryid: programownershiphistoryid ?? this.programownershiphistoryid,
-      createdby: createdby ?? this.createdby,
-      enddate: enddate ?? this.enddate,
-      startdate: startdate ?? this.startdate,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'organisationunitid': organisationunitid,
-      'programid': programid,
-      'trackedentityinstanceid': trackedentityinstanceid,
-      'programownershiphistoryid': programownershiphistoryid,
-      'createdby': createdby,
-      'enddate': enddate,
-      'startdate': startdate,
+Map<String, dynamic> _$$_ProgramownershiphistoryToJson(
+        _$_Programownershiphistory instance) =>
+    <String, dynamic>{
+      'organisationunitid': instance.organisationunitid,
+      'programid': instance.programid,
+      'trackedentityinstanceid': instance.trackedentityinstanceid,
+      'programownershiphistoryid': instance.programownershiphistoryid,
+      'createdby': instance.createdby,
+      'enddate': instance.enddate?.toIso8601String(),
+      'startdate': instance.startdate?.toIso8601String(),
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programownershiphistory &&
-        other.organisationunitid == organisationunitid &&
-        other.programid == programid &&
-        other.trackedentityinstanceid == trackedentityinstanceid &&
-        other.programownershiphistoryid == programownershiphistoryid &&
-        other.createdby == createdby &&
-        other.enddate == enddate &&
-        other.startdate == startdate;
-  }
-
-  @override
-  int get hashCode {
-    return organisationunitid.hashCode ^
-        programid.hashCode ^
-        trackedentityinstanceid.hashCode ^
-        programownershiphistoryid.hashCode ^
-        createdby.hashCode ^
-        enddate.hashCode ^
-        startdate.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programownershiphistory(organisationunitid: $organisationunitid, programid: $programid, trackedentityinstanceid: $trackedentityinstanceid, programownershiphistoryid: $programownershiphistoryid, createdby: $createdby, enddate: $enddate, startdate: $startdate)';
-  }
-}

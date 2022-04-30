@@ -1,95 +1,29 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programtempowner {
-  const Programtempowner({
-    this.userid,
-    this.reason,
-    this.validtill,
-    this.programid,
-    this.trackedentityinstanceid,
-    required this.programtempownerid,
-  });
+part of 'programtempowner.dart';
 
-  factory Programtempowner.fromMap(Map<String, dynamic> map) {
-    return Programtempowner(
-      userid: int.tryParse(map['userid']),
-      reason: map['reason'],
-      validtill: DateTime.tryParse(map['validtill']),
-      programid: int.tryParse(map['programid']),
-      trackedentityinstanceid: int.tryParse(map['trackedentityinstanceid']),
-      programtempownerid: int.parse(map['programtempownerid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programtempowner _$$_ProgramtempownerFromJson(Map<String, dynamic> json) =>
+    _$_Programtempowner(
+      userid: json['userid'] as int?,
+      reason: json['reason'] as String?,
+      validtill: json['validtill'] == null
+          ? null
+          : DateTime.parse(json['validtill'] as String),
+      programid: json['programid'] as int?,
+      trackedentityinstanceid: json['trackedentityinstanceid'] as int?,
+      programtempownerid: json['programtempownerid'] as int,
     );
-  }
 
-  factory Programtempowner.fromJson(String source) => Programtempowner.fromMap(json.decode(source));
-
-  final int? userid;
-
-  final String? reason;
-
-  final DateTime? validtill;
-
-  final int? programid;
-
-  final int? trackedentityinstanceid;
-
-  final int programtempownerid;
-
-  Programtempowner copyWith({
-    int? userid,
-    String? reason,
-    DateTime? validtill,
-    int? programid,
-    int? trackedentityinstanceid,
-    int? programtempownerid,
-  }) {
-    return Programtempowner(
-      userid: userid ?? this.userid,
-      reason: reason ?? this.reason,
-      validtill: validtill ?? this.validtill,
-      programid: programid ?? this.programid,
-      trackedentityinstanceid: trackedentityinstanceid ?? this.trackedentityinstanceid,
-      programtempownerid: programtempownerid ?? this.programtempownerid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userid': userid,
-      'reason': reason,
-      'validtill': validtill,
-      'programid': programid,
-      'trackedentityinstanceid': trackedentityinstanceid,
-      'programtempownerid': programtempownerid,
+Map<String, dynamic> _$$_ProgramtempownerToJson(_$_Programtempowner instance) =>
+    <String, dynamic>{
+      'userid': instance.userid,
+      'reason': instance.reason,
+      'validtill': instance.validtill?.toIso8601String(),
+      'programid': instance.programid,
+      'trackedentityinstanceid': instance.trackedentityinstanceid,
+      'programtempownerid': instance.programtempownerid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programtempowner &&
-        other.userid == userid &&
-        other.reason == reason &&
-        other.validtill == validtill &&
-        other.programid == programid &&
-        other.trackedentityinstanceid == trackedentityinstanceid &&
-        other.programtempownerid == programtempownerid;
-  }
-
-  @override
-  int get hashCode {
-    return userid.hashCode ^
-        reason.hashCode ^
-        validtill.hashCode ^
-        programid.hashCode ^
-        trackedentityinstanceid.hashCode ^
-        programtempownerid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programtempowner(userid: $userid, reason: $reason, validtill: $validtill, programid: $programid, trackedentityinstanceid: $trackedentityinstanceid, programtempownerid: $programtempownerid)';
-  }
-}

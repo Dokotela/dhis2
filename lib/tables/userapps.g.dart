@@ -1,63 +1,20 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Userapps {
-  const Userapps({
-    required this.userinfoid,
-    this.app,
-    required this.sortOrder,
-  });
+part of 'userapps.dart';
 
-  factory Userapps.fromMap(Map<String, dynamic> map) {
-    return Userapps(
-      userinfoid: int.parse(map['userinfoid']),
-      app: map['app'],
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Userapps _$$_UserappsFromJson(Map<String, dynamic> json) => _$_Userapps(
+      userinfoid: json['userinfoid'] as int,
+      app: json['app'] as String?,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory Userapps.fromJson(String source) => Userapps.fromMap(json.decode(source));
-
-  final int userinfoid;
-
-  final String? app;
-
-  final int sortOrder;
-
-  Userapps copyWith({
-    int? userinfoid,
-    String? app,
-    int? sortOrder,
-  }) {
-    return Userapps(
-      userinfoid: userinfoid ?? this.userinfoid,
-      app: app ?? this.app,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userinfoid': userinfoid,
-      'app': app,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_UserappsToJson(_$_Userapps instance) =>
+    <String, dynamic>{
+      'userinfoid': instance.userinfoid,
+      'app': instance.app,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Userapps && other.userinfoid == userinfoid && other.app == app && other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return userinfoid.hashCode ^ app.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Userapps(userinfoid: $userinfoid, app: $app, sortOrder: $sortOrder)';
-  }
-}

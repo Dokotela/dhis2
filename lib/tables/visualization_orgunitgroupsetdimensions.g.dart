@@ -1,67 +1,24 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationOrgunitgroupsetdimensions {
-  const VisualizationOrgunitgroupsetdimensions({
-    required this.visualizationid,
-    required this.sortOrder,
-    required this.orgunitgroupsetdimensionid,
-  });
+part of 'visualization_orgunitgroupsetdimensions.dart';
 
-  factory VisualizationOrgunitgroupsetdimensions.fromMap(Map<String, dynamic> map) {
-    return VisualizationOrgunitgroupsetdimensions(
-      visualizationid: int.parse(map['visualizationid']),
-      sortOrder: int.parse(map['sort_order']),
-      orgunitgroupsetdimensionid: int.parse(map['orgunitgroupsetdimensionid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory VisualizationOrgunitgroupsetdimensions.fromJson(String source) =>
-      VisualizationOrgunitgroupsetdimensions.fromMap(json.decode(source));
+_$_VisualizationOrgunitgroupsetdimensions
+    _$$_VisualizationOrgunitgroupsetdimensionsFromJson(
+            Map<String, dynamic> json) =>
+        _$_VisualizationOrgunitgroupsetdimensions(
+          visualizationid: json['visualizationid'] as int,
+          sortOrder: json['sortOrder'] as int,
+          orgunitgroupsetdimensionid: json['orgunitgroupsetdimensionid'] as int,
+        );
 
-  final int visualizationid;
-
-  final int sortOrder;
-
-  final int orgunitgroupsetdimensionid;
-
-  VisualizationOrgunitgroupsetdimensions copyWith({
-    int? visualizationid,
-    int? sortOrder,
-    int? orgunitgroupsetdimensionid,
-  }) {
-    return VisualizationOrgunitgroupsetdimensions(
-      visualizationid: visualizationid ?? this.visualizationid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      orgunitgroupsetdimensionid: orgunitgroupsetdimensionid ?? this.orgunitgroupsetdimensionid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'visualizationid': visualizationid,
-      'sort_order': sortOrder,
-      'orgunitgroupsetdimensionid': orgunitgroupsetdimensionid,
+Map<String, dynamic> _$$_VisualizationOrgunitgroupsetdimensionsToJson(
+        _$_VisualizationOrgunitgroupsetdimensions instance) =>
+    <String, dynamic>{
+      'visualizationid': instance.visualizationid,
+      'sortOrder': instance.sortOrder,
+      'orgunitgroupsetdimensionid': instance.orgunitgroupsetdimensionid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationOrgunitgroupsetdimensions &&
-        other.visualizationid == visualizationid &&
-        other.sortOrder == sortOrder &&
-        other.orgunitgroupsetdimensionid == orgunitgroupsetdimensionid;
-  }
-
-  @override
-  int get hashCode {
-    return visualizationid.hashCode ^ sortOrder.hashCode ^ orgunitgroupsetdimensionid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationOrgunitgroupsetdimensions(visualizationid: $visualizationid, sortOrder: $sortOrder, orgunitgroupsetdimensionid: $orgunitgroupsetdimensionid)';
-  }
-}

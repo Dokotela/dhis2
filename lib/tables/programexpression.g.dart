@@ -1,66 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programexpression {
-  const Programexpression({
-    required this.programexpressionid,
-    this.expression,
-    this.description,
-  });
+part of 'programexpression.dart';
 
-  factory Programexpression.fromMap(Map<String, dynamic> map) {
-    return Programexpression(
-      programexpressionid: int.parse(map['programexpressionid']),
-      expression: map['expression'],
-      description: map['description'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programexpression _$$_ProgramexpressionFromJson(Map<String, dynamic> json) =>
+    _$_Programexpression(
+      programexpressionid: json['programexpressionid'] as int,
+      expression: json['expression'] as String?,
+      description: json['description'] as String?,
     );
-  }
 
-  factory Programexpression.fromJson(String source) => Programexpression.fromMap(json.decode(source));
-
-  final int programexpressionid;
-
-  final String? expression;
-
-  final String? description;
-
-  Programexpression copyWith({
-    int? programexpressionid,
-    String? expression,
-    String? description,
-  }) {
-    return Programexpression(
-      programexpressionid: programexpressionid ?? this.programexpressionid,
-      expression: expression ?? this.expression,
-      description: description ?? this.description,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programexpressionid': programexpressionid,
-      'expression': expression,
-      'description': description,
+Map<String, dynamic> _$$_ProgramexpressionToJson(
+        _$_Programexpression instance) =>
+    <String, dynamic>{
+      'programexpressionid': instance.programexpressionid,
+      'expression': instance.expression,
+      'description': instance.description,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programexpression &&
-        other.programexpressionid == programexpressionid &&
-        other.expression == expression &&
-        other.description == description;
-  }
-
-  @override
-  int get hashCode {
-    return programexpressionid.hashCode ^ expression.hashCode ^ description.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programexpression(programexpressionid: $programexpressionid, expression: $expression, description: $description)';
-  }
-}

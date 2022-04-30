@@ -1,176 +1,51 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Programrulevariable {
-  const Programrulevariable({
-    this.usecodeforoptionset,
-    this.programstageid,
-    required this.programrulevariableid,
-    this.trackedentityattributeid,
-    this.lastupdated,
-    this.dataelementid,
-    this.sourcetype,
-    this.programid,
-    required this.valuetype,
-    this.code,
-    this.uid,
-    this.translations,
-    this.name,
-    this.lastupdatedby,
-    this.created,
-  });
+part of 'programrulevariable.dart';
 
-  factory Programrulevariable.fromMap(Map<String, dynamic> map) {
-    return Programrulevariable(
-      usecodeforoptionset: map['usecodeforoptionset'],
-      programstageid: int.tryParse(map['programstageid']),
-      programrulevariableid: int.parse(map['programrulevariableid']),
-      trackedentityattributeid: int.tryParse(map['trackedentityattributeid']),
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      dataelementid: int.tryParse(map['dataelementid']),
-      sourcetype: map['sourcetype'],
-      programid: int.tryParse(map['programid']),
-      valuetype: map['valuetype'],
-      code: map['code'],
-      uid: map['uid'],
-      translations: map['translations'],
-      name: map['name'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      created: DateTime.tryParse(map['created']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Programrulevariable _$$_ProgramrulevariableFromJson(
+        Map<String, dynamic> json) =>
+    _$_Programrulevariable(
+      usecodeforoptionset: json['usecodeforoptionset'] as bool?,
+      programstageid: json['programstageid'] as int?,
+      programrulevariableid: json['programrulevariableid'] as int,
+      trackedentityattributeid: json['trackedentityattributeid'] as int?,
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      dataelementid: json['dataelementid'] as int?,
+      sourcetype: json['sourcetype'] as String?,
+      programid: json['programid'] as int?,
+      valuetype: json['valuetype'] as String,
+      code: json['code'] as String?,
+      uid: json['uid'] as String?,
+      translations: json['translations'],
+      name: json['name'] as String?,
+      lastupdatedby: json['lastupdatedby'] as int?,
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
     );
-  }
 
-  factory Programrulevariable.fromJson(String source) => Programrulevariable.fromMap(json.decode(source));
-
-  final bool? usecodeforoptionset;
-
-  final int? programstageid;
-
-  final int programrulevariableid;
-
-  final int? trackedentityattributeid;
-
-  final DateTime? lastupdated;
-
-  final int? dataelementid;
-
-  final String? sourcetype;
-
-  final int? programid;
-
-  final String valuetype;
-
-  final String? code;
-
-  final String? uid;
-
-  final Object? translations;
-
-  final String? name;
-
-  final int? lastupdatedby;
-
-  final DateTime? created;
-
-  Programrulevariable copyWith({
-    bool? usecodeforoptionset,
-    int? programstageid,
-    int? programrulevariableid,
-    int? trackedentityattributeid,
-    DateTime? lastupdated,
-    int? dataelementid,
-    String? sourcetype,
-    int? programid,
-    String? valuetype,
-    String? code,
-    String? uid,
-    Object? translations,
-    String? name,
-    int? lastupdatedby,
-    DateTime? created,
-  }) {
-    return Programrulevariable(
-      usecodeforoptionset: usecodeforoptionset ?? this.usecodeforoptionset,
-      programstageid: programstageid ?? this.programstageid,
-      programrulevariableid: programrulevariableid ?? this.programrulevariableid,
-      trackedentityattributeid: trackedentityattributeid ?? this.trackedentityattributeid,
-      lastupdated: lastupdated ?? this.lastupdated,
-      dataelementid: dataelementid ?? this.dataelementid,
-      sourcetype: sourcetype ?? this.sourcetype,
-      programid: programid ?? this.programid,
-      valuetype: valuetype ?? this.valuetype,
-      code: code ?? this.code,
-      uid: uid ?? this.uid,
-      translations: translations ?? this.translations,
-      name: name ?? this.name,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      created: created ?? this.created,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'usecodeforoptionset': usecodeforoptionset,
-      'programstageid': programstageid,
-      'programrulevariableid': programrulevariableid,
-      'trackedentityattributeid': trackedentityattributeid,
-      'lastupdated': lastupdated,
-      'dataelementid': dataelementid,
-      'sourcetype': sourcetype,
-      'programid': programid,
-      'valuetype': valuetype,
-      'code': code,
-      'uid': uid,
-      'translations': translations,
-      'name': name,
-      'lastupdatedby': lastupdatedby,
-      'created': created,
+Map<String, dynamic> _$$_ProgramrulevariableToJson(
+        _$_Programrulevariable instance) =>
+    <String, dynamic>{
+      'usecodeforoptionset': instance.usecodeforoptionset,
+      'programstageid': instance.programstageid,
+      'programrulevariableid': instance.programrulevariableid,
+      'trackedentityattributeid': instance.trackedentityattributeid,
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'dataelementid': instance.dataelementid,
+      'sourcetype': instance.sourcetype,
+      'programid': instance.programid,
+      'valuetype': instance.valuetype,
+      'code': instance.code,
+      'uid': instance.uid,
+      'translations': instance.translations,
+      'name': instance.name,
+      'lastupdatedby': instance.lastupdatedby,
+      'created': instance.created?.toIso8601String(),
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Programrulevariable &&
-        other.usecodeforoptionset == usecodeforoptionset &&
-        other.programstageid == programstageid &&
-        other.programrulevariableid == programrulevariableid &&
-        other.trackedentityattributeid == trackedentityattributeid &&
-        other.lastupdated == lastupdated &&
-        other.dataelementid == dataelementid &&
-        other.sourcetype == sourcetype &&
-        other.programid == programid &&
-        other.valuetype == valuetype &&
-        other.code == code &&
-        other.uid == uid &&
-        other.translations == translations &&
-        other.name == name &&
-        other.lastupdatedby == lastupdatedby &&
-        other.created == created;
-  }
-
-  @override
-  int get hashCode {
-    return usecodeforoptionset.hashCode ^
-        programstageid.hashCode ^
-        programrulevariableid.hashCode ^
-        trackedentityattributeid.hashCode ^
-        lastupdated.hashCode ^
-        dataelementid.hashCode ^
-        sourcetype.hashCode ^
-        programid.hashCode ^
-        valuetype.hashCode ^
-        code.hashCode ^
-        uid.hashCode ^
-        translations.hashCode ^
-        name.hashCode ^
-        lastupdatedby.hashCode ^
-        created.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Programrulevariable(usecodeforoptionset: $usecodeforoptionset, programstageid: $programstageid, programrulevariableid: $programrulevariableid, trackedentityattributeid: $trackedentityattributeid, lastupdated: $lastupdated, dataelementid: $dataelementid, sourcetype: $sourcetype, programid: $programid, valuetype: $valuetype, code: $code, uid: $uid, translations: $translations, name: $name, lastupdatedby: $lastupdatedby, created: $created)';
-  }
-}

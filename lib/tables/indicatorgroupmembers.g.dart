@@ -1,58 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Indicatorgroupmembers {
-  const Indicatorgroupmembers({
-    required this.indicatorid,
-    required this.indicatorgroupid,
-  });
+part of 'indicatorgroupmembers.dart';
 
-  factory Indicatorgroupmembers.fromMap(Map<String, dynamic> map) {
-    return Indicatorgroupmembers(
-      indicatorid: int.parse(map['indicatorid']),
-      indicatorgroupid: int.parse(map['indicatorgroupid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Indicatorgroupmembers _$$_IndicatorgroupmembersFromJson(
+        Map<String, dynamic> json) =>
+    _$_Indicatorgroupmembers(
+      indicatorid: json['indicatorid'] as int,
+      indicatorgroupid: json['indicatorgroupid'] as int,
     );
-  }
 
-  factory Indicatorgroupmembers.fromJson(String source) => Indicatorgroupmembers.fromMap(json.decode(source));
-
-  final int indicatorid;
-
-  final int indicatorgroupid;
-
-  Indicatorgroupmembers copyWith({
-    int? indicatorid,
-    int? indicatorgroupid,
-  }) {
-    return Indicatorgroupmembers(
-      indicatorid: indicatorid ?? this.indicatorid,
-      indicatorgroupid: indicatorgroupid ?? this.indicatorgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'indicatorid': indicatorid,
-      'indicatorgroupid': indicatorgroupid,
+Map<String, dynamic> _$$_IndicatorgroupmembersToJson(
+        _$_Indicatorgroupmembers instance) =>
+    <String, dynamic>{
+      'indicatorid': instance.indicatorid,
+      'indicatorgroupid': instance.indicatorgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Indicatorgroupmembers &&
-        other.indicatorid == indicatorid &&
-        other.indicatorgroupid == indicatorgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return indicatorid.hashCode ^ indicatorgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Indicatorgroupmembers(indicatorid: $indicatorid, indicatorgroupid: $indicatorgroupid)';
-  }
-}

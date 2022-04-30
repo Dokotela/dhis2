@@ -1,56 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Messageattachments {
-  const Messageattachments({
-    required this.messageid,
-    required this.fileresourceid,
-  });
+part of 'messageattachments.dart';
 
-  factory Messageattachments.fromMap(Map<String, dynamic> map) {
-    return Messageattachments(
-      messageid: int.parse(map['messageid']),
-      fileresourceid: int.parse(map['fileresourceid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Messageattachments _$$_MessageattachmentsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Messageattachments(
+      messageid: json['messageid'] as int,
+      fileresourceid: json['fileresourceid'] as int,
     );
-  }
 
-  factory Messageattachments.fromJson(String source) => Messageattachments.fromMap(json.decode(source));
-
-  final int messageid;
-
-  final int fileresourceid;
-
-  Messageattachments copyWith({
-    int? messageid,
-    int? fileresourceid,
-  }) {
-    return Messageattachments(
-      messageid: messageid ?? this.messageid,
-      fileresourceid: fileresourceid ?? this.fileresourceid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'messageid': messageid,
-      'fileresourceid': fileresourceid,
+Map<String, dynamic> _$$_MessageattachmentsToJson(
+        _$_Messageattachments instance) =>
+    <String, dynamic>{
+      'messageid': instance.messageid,
+      'fileresourceid': instance.fileresourceid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Messageattachments && other.messageid == messageid && other.fileresourceid == fileresourceid;
-  }
-
-  @override
-  int get hashCode {
-    return messageid.hashCode ^ fileresourceid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Messageattachments(messageid: $messageid, fileresourceid: $fileresourceid)';
-  }
-}

@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Periodtype {
-  const Periodtype({
-    required this.name,
-    required this.periodtypeid,
-  });
+part of 'periodtype.dart';
 
-  factory Periodtype.fromMap(Map<String, dynamic> map) {
-    return Periodtype(
-      name: map['name'],
-      periodtypeid: int.parse(map['periodtypeid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Periodtype _$$_PeriodtypeFromJson(Map<String, dynamic> json) =>
+    _$_Periodtype(
+      name: json['name'] as String,
+      periodtypeid: json['periodtypeid'] as int,
     );
-  }
 
-  factory Periodtype.fromJson(String source) => Periodtype.fromMap(json.decode(source));
-
-  final String name;
-
-  final int periodtypeid;
-
-  Periodtype copyWith({
-    String? name,
-    int? periodtypeid,
-  }) {
-    return Periodtype(
-      name: name ?? this.name,
-      periodtypeid: periodtypeid ?? this.periodtypeid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'periodtypeid': periodtypeid,
+Map<String, dynamic> _$$_PeriodtypeToJson(_$_Periodtype instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'periodtypeid': instance.periodtypeid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Periodtype && other.name == name && other.periodtypeid == periodtypeid;
-  }
-
-  @override
-  int get hashCode {
-    return name.hashCode ^ periodtypeid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Periodtype(name: $name, periodtypeid: $periodtypeid)';
-  }
-}

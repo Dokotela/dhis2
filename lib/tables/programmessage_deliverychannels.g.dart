@@ -1,59 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgrammessageDeliverychannels {
-  const ProgrammessageDeliverychannels({
-    this.deliverychannel,
-    required this.programmessagedeliverychannelsid,
-  });
+part of 'programmessage_deliverychannels.dart';
 
-  factory ProgrammessageDeliverychannels.fromMap(Map<String, dynamic> map) {
-    return ProgrammessageDeliverychannels(
-      deliverychannel: map['deliverychannel'],
-      programmessagedeliverychannelsid: int.parse(map['programmessagedeliverychannelsid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgrammessageDeliverychannels _$$_ProgrammessageDeliverychannelsFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProgrammessageDeliverychannels(
+      deliverychannel: json['deliverychannel'] as String?,
+      programmessagedeliverychannelsid:
+          json['programmessagedeliverychannelsid'] as int,
     );
-  }
 
-  factory ProgrammessageDeliverychannels.fromJson(String source) =>
-      ProgrammessageDeliverychannels.fromMap(json.decode(source));
-
-  final String? deliverychannel;
-
-  final int programmessagedeliverychannelsid;
-
-  ProgrammessageDeliverychannels copyWith({
-    String? deliverychannel,
-    int? programmessagedeliverychannelsid,
-  }) {
-    return ProgrammessageDeliverychannels(
-      deliverychannel: deliverychannel ?? this.deliverychannel,
-      programmessagedeliverychannelsid: programmessagedeliverychannelsid ?? this.programmessagedeliverychannelsid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'deliverychannel': deliverychannel,
-      'programmessagedeliverychannelsid': programmessagedeliverychannelsid,
+Map<String, dynamic> _$$_ProgrammessageDeliverychannelsToJson(
+        _$_ProgrammessageDeliverychannels instance) =>
+    <String, dynamic>{
+      'deliverychannel': instance.deliverychannel,
+      'programmessagedeliverychannelsid':
+          instance.programmessagedeliverychannelsid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgrammessageDeliverychannels &&
-        other.deliverychannel == deliverychannel &&
-        other.programmessagedeliverychannelsid == programmessagedeliverychannelsid;
-  }
-
-  @override
-  int get hashCode {
-    return deliverychannel.hashCode ^ programmessagedeliverychannelsid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgrammessageDeliverychannels(deliverychannel: $deliverychannel, programmessagedeliverychannelsid: $programmessagedeliverychannelsid)';
-  }
-}

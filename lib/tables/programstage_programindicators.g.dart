@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgramstageProgramindicators {
-  const ProgramstageProgramindicators({
-    required this.programindicatorid,
-    required this.programstageid,
-    required this.sortOrder,
-  });
+part of 'programstage_programindicators.dart';
 
-  factory ProgramstageProgramindicators.fromMap(Map<String, dynamic> map) {
-    return ProgramstageProgramindicators(
-      programindicatorid: int.parse(map['programindicatorid']),
-      programstageid: int.parse(map['programstageid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgramstageProgramindicators _$$_ProgramstageProgramindicatorsFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProgramstageProgramindicators(
+      programindicatorid: json['programindicatorid'] as int,
+      programstageid: json['programstageid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory ProgramstageProgramindicators.fromJson(String source) =>
-      ProgramstageProgramindicators.fromMap(json.decode(source));
-
-  final int programindicatorid;
-
-  final int programstageid;
-
-  final int sortOrder;
-
-  ProgramstageProgramindicators copyWith({
-    int? programindicatorid,
-    int? programstageid,
-    int? sortOrder,
-  }) {
-    return ProgramstageProgramindicators(
-      programindicatorid: programindicatorid ?? this.programindicatorid,
-      programstageid: programstageid ?? this.programstageid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'programindicatorid': programindicatorid,
-      'programstageid': programstageid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_ProgramstageProgramindicatorsToJson(
+        _$_ProgramstageProgramindicators instance) =>
+    <String, dynamic>{
+      'programindicatorid': instance.programindicatorid,
+      'programstageid': instance.programstageid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgramstageProgramindicators &&
-        other.programindicatorid == programindicatorid &&
-        other.programstageid == programstageid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return programindicatorid.hashCode ^ programstageid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgramstageProgramindicators(programindicatorid: $programindicatorid, programstageid: $programstageid, sortOrder: $sortOrder)';
-  }
-}

@@ -1,56 +1,19 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Lockedperiods {
-  const Lockedperiods({
-    required this.periodid,
-    required this.datasetid,
-  });
+part of 'lockedperiods.dart';
 
-  factory Lockedperiods.fromMap(Map<String, dynamic> map) {
-    return Lockedperiods(
-      periodid: int.parse(map['periodid']),
-      datasetid: int.parse(map['datasetid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Lockedperiods _$$_LockedperiodsFromJson(Map<String, dynamic> json) =>
+    _$_Lockedperiods(
+      periodid: json['periodid'] as int,
+      datasetid: json['datasetid'] as int,
     );
-  }
 
-  factory Lockedperiods.fromJson(String source) => Lockedperiods.fromMap(json.decode(source));
-
-  final int periodid;
-
-  final int datasetid;
-
-  Lockedperiods copyWith({
-    int? periodid,
-    int? datasetid,
-  }) {
-    return Lockedperiods(
-      periodid: periodid ?? this.periodid,
-      datasetid: datasetid ?? this.datasetid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'periodid': periodid,
-      'datasetid': datasetid,
+Map<String, dynamic> _$$_LockedperiodsToJson(_$_Lockedperiods instance) =>
+    <String, dynamic>{
+      'periodid': instance.periodid,
+      'datasetid': instance.datasetid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Lockedperiods && other.periodid == periodid && other.datasetid == datasetid;
-  }
-
-  @override
-  int get hashCode {
-    return periodid.hashCode ^ datasetid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Lockedperiods(periodid: $periodid, datasetid: $datasetid)';
-  }
-}

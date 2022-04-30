@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Dataelementaggregationlevels {
-  const Dataelementaggregationlevels({
-    required this.dataelementid,
-    required this.sortOrder,
-    this.aggregationlevel,
-  });
+part of 'dataelementaggregationlevels.dart';
 
-  factory Dataelementaggregationlevels.fromMap(Map<String, dynamic> map) {
-    return Dataelementaggregationlevels(
-      dataelementid: int.parse(map['dataelementid']),
-      sortOrder: int.parse(map['sort_order']),
-      aggregationlevel: int.tryParse(map['aggregationlevel']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Dataelementaggregationlevels _$$_DataelementaggregationlevelsFromJson(
+        Map<String, dynamic> json) =>
+    _$_Dataelementaggregationlevels(
+      dataelementid: json['dataelementid'] as int,
+      sortOrder: json['sortOrder'] as int,
+      aggregationlevel: json['aggregationlevel'] as int?,
     );
-  }
 
-  factory Dataelementaggregationlevels.fromJson(String source) =>
-      Dataelementaggregationlevels.fromMap(json.decode(source));
-
-  final int dataelementid;
-
-  final int sortOrder;
-
-  final int? aggregationlevel;
-
-  Dataelementaggregationlevels copyWith({
-    int? dataelementid,
-    int? sortOrder,
-    int? aggregationlevel,
-  }) {
-    return Dataelementaggregationlevels(
-      dataelementid: dataelementid ?? this.dataelementid,
-      sortOrder: sortOrder ?? this.sortOrder,
-      aggregationlevel: aggregationlevel ?? this.aggregationlevel,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'dataelementid': dataelementid,
-      'sort_order': sortOrder,
-      'aggregationlevel': aggregationlevel,
+Map<String, dynamic> _$$_DataelementaggregationlevelsToJson(
+        _$_Dataelementaggregationlevels instance) =>
+    <String, dynamic>{
+      'dataelementid': instance.dataelementid,
+      'sortOrder': instance.sortOrder,
+      'aggregationlevel': instance.aggregationlevel,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Dataelementaggregationlevels &&
-        other.dataelementid == dataelementid &&
-        other.sortOrder == sortOrder &&
-        other.aggregationlevel == aggregationlevel;
-  }
-
-  @override
-  int get hashCode {
-    return dataelementid.hashCode ^ sortOrder.hashCode ^ aggregationlevel.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Dataelementaggregationlevels(dataelementid: $dataelementid, sortOrder: $sortOrder, aggregationlevel: $aggregationlevel)';
-  }
-}

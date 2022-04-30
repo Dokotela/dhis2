@@ -1,212 +1,59 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Trackedentitytype {
-  const Trackedentitytype({
-    this.lastupdated,
-    this.attributevalues,
-    this.sharing,
-    this.lastupdatedby,
-    required this.name,
-    this.translations,
-    this.maxteicounttoreturn,
-    required this.trackedentitytypeid,
-    this.userid,
-    this.created,
-    this.code,
-    this.style,
-    this.publicaccess,
-    this.featuretype,
-    this.allowauditlog,
-    this.formname,
-    this.minattributesrequiredtosearch,
-    this.uid,
-    this.description,
-  });
+part of 'trackedentitytype.dart';
 
-  factory Trackedentitytype.fromMap(Map<String, dynamic> map) {
-    return Trackedentitytype(
-      lastupdated: DateTime.tryParse(map['lastupdated']),
-      attributevalues: map['attributevalues'],
-      sharing: map['sharing'],
-      lastupdatedby: int.tryParse(map['lastupdatedby']),
-      name: map['name'],
-      translations: map['translations'],
-      maxteicounttoreturn: int.tryParse(map['maxteicounttoreturn']),
-      trackedentitytypeid: int.parse(map['trackedentitytypeid']),
-      userid: int.tryParse(map['userid']),
-      created: DateTime.tryParse(map['created']),
-      code: map['code'],
-      style: map['style'],
-      publicaccess: map['publicaccess'],
-      featuretype: map['featuretype'],
-      allowauditlog: map['allowauditlog'],
-      formname: map['formname'],
-      minattributesrequiredtosearch: int.tryParse(map['minattributesrequiredtosearch']),
-      uid: map['uid'],
-      description: map['description'],
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Trackedentitytype _$$_TrackedentitytypeFromJson(Map<String, dynamic> json) =>
+    _$_Trackedentitytype(
+      lastupdated: json['lastupdated'] == null
+          ? null
+          : DateTime.parse(json['lastupdated'] as String),
+      attributevalues: json['attributevalues'],
+      sharing: json['sharing'],
+      lastupdatedby: json['lastupdatedby'] as int?,
+      name: json['name'] as String,
+      translations: json['translations'],
+      maxteicounttoreturn: json['maxteicounttoreturn'] as int?,
+      trackedentitytypeid: json['trackedentitytypeid'] as int,
+      userid: json['userid'] as int?,
+      created: json['created'] == null
+          ? null
+          : DateTime.parse(json['created'] as String),
+      code: json['code'] as String?,
+      style: json['style'],
+      publicaccess: json['publicaccess'] as String?,
+      featuretype: json['featuretype'] as String?,
+      allowauditlog: json['allowauditlog'] as bool?,
+      formname: json['formname'] as String?,
+      minattributesrequiredtosearch:
+          json['minattributesrequiredtosearch'] as int?,
+      uid: json['uid'] as String?,
+      description: json['description'] as String?,
     );
-  }
 
-  factory Trackedentitytype.fromJson(String source) => Trackedentitytype.fromMap(json.decode(source));
-
-  final DateTime? lastupdated;
-
-  final Object? attributevalues;
-
-  final Object? sharing;
-
-  final int? lastupdatedby;
-
-  final String name;
-
-  final Object? translations;
-
-  final int? maxteicounttoreturn;
-
-  final int trackedentitytypeid;
-
-  final int? userid;
-
-  final DateTime? created;
-
-  final String? code;
-
-  final Object? style;
-
-  final String? publicaccess;
-
-  final String? featuretype;
-
-  final bool? allowauditlog;
-
-  final String? formname;
-
-  final int? minattributesrequiredtosearch;
-
-  final String? uid;
-
-  final String? description;
-
-  Trackedentitytype copyWith({
-    DateTime? lastupdated,
-    Object? attributevalues,
-    Object? sharing,
-    int? lastupdatedby,
-    String? name,
-    Object? translations,
-    int? maxteicounttoreturn,
-    int? trackedentitytypeid,
-    int? userid,
-    DateTime? created,
-    String? code,
-    Object? style,
-    String? publicaccess,
-    String? featuretype,
-    bool? allowauditlog,
-    String? formname,
-    int? minattributesrequiredtosearch,
-    String? uid,
-    String? description,
-  }) {
-    return Trackedentitytype(
-      lastupdated: lastupdated ?? this.lastupdated,
-      attributevalues: attributevalues ?? this.attributevalues,
-      sharing: sharing ?? this.sharing,
-      lastupdatedby: lastupdatedby ?? this.lastupdatedby,
-      name: name ?? this.name,
-      translations: translations ?? this.translations,
-      maxteicounttoreturn: maxteicounttoreturn ?? this.maxteicounttoreturn,
-      trackedentitytypeid: trackedentitytypeid ?? this.trackedentitytypeid,
-      userid: userid ?? this.userid,
-      created: created ?? this.created,
-      code: code ?? this.code,
-      style: style ?? this.style,
-      publicaccess: publicaccess ?? this.publicaccess,
-      featuretype: featuretype ?? this.featuretype,
-      allowauditlog: allowauditlog ?? this.allowauditlog,
-      formname: formname ?? this.formname,
-      minattributesrequiredtosearch: minattributesrequiredtosearch ?? this.minattributesrequiredtosearch,
-      uid: uid ?? this.uid,
-      description: description ?? this.description,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'lastupdated': lastupdated,
-      'attributevalues': attributevalues,
-      'sharing': sharing,
-      'lastupdatedby': lastupdatedby,
-      'name': name,
-      'translations': translations,
-      'maxteicounttoreturn': maxteicounttoreturn,
-      'trackedentitytypeid': trackedentitytypeid,
-      'userid': userid,
-      'created': created,
-      'code': code,
-      'style': style,
-      'publicaccess': publicaccess,
-      'featuretype': featuretype,
-      'allowauditlog': allowauditlog,
-      'formname': formname,
-      'minattributesrequiredtosearch': minattributesrequiredtosearch,
-      'uid': uid,
-      'description': description,
+Map<String, dynamic> _$$_TrackedentitytypeToJson(
+        _$_Trackedentitytype instance) =>
+    <String, dynamic>{
+      'lastupdated': instance.lastupdated?.toIso8601String(),
+      'attributevalues': instance.attributevalues,
+      'sharing': instance.sharing,
+      'lastupdatedby': instance.lastupdatedby,
+      'name': instance.name,
+      'translations': instance.translations,
+      'maxteicounttoreturn': instance.maxteicounttoreturn,
+      'trackedentitytypeid': instance.trackedentitytypeid,
+      'userid': instance.userid,
+      'created': instance.created?.toIso8601String(),
+      'code': instance.code,
+      'style': instance.style,
+      'publicaccess': instance.publicaccess,
+      'featuretype': instance.featuretype,
+      'allowauditlog': instance.allowauditlog,
+      'formname': instance.formname,
+      'minattributesrequiredtosearch': instance.minattributesrequiredtosearch,
+      'uid': instance.uid,
+      'description': instance.description,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Trackedentitytype &&
-        other.lastupdated == lastupdated &&
-        other.attributevalues == attributevalues &&
-        other.sharing == sharing &&
-        other.lastupdatedby == lastupdatedby &&
-        other.name == name &&
-        other.translations == translations &&
-        other.maxteicounttoreturn == maxteicounttoreturn &&
-        other.trackedentitytypeid == trackedentitytypeid &&
-        other.userid == userid &&
-        other.created == created &&
-        other.code == code &&
-        other.style == style &&
-        other.publicaccess == publicaccess &&
-        other.featuretype == featuretype &&
-        other.allowauditlog == allowauditlog &&
-        other.formname == formname &&
-        other.minattributesrequiredtosearch == minattributesrequiredtosearch &&
-        other.uid == uid &&
-        other.description == description;
-  }
-
-  @override
-  int get hashCode {
-    return lastupdated.hashCode ^
-        attributevalues.hashCode ^
-        sharing.hashCode ^
-        lastupdatedby.hashCode ^
-        name.hashCode ^
-        translations.hashCode ^
-        maxteicounttoreturn.hashCode ^
-        trackedentitytypeid.hashCode ^
-        userid.hashCode ^
-        created.hashCode ^
-        code.hashCode ^
-        style.hashCode ^
-        publicaccess.hashCode ^
-        featuretype.hashCode ^
-        allowauditlog.hashCode ^
-        formname.hashCode ^
-        minattributesrequiredtosearch.hashCode ^
-        uid.hashCode ^
-        description.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Trackedentitytype(lastupdated: $lastupdated, attributevalues: $attributevalues, sharing: $sharing, lastupdatedby: $lastupdatedby, name: $name, translations: $translations, maxteicounttoreturn: $maxteicounttoreturn, trackedentitytypeid: $trackedentitytypeid, userid: $userid, created: $created, code: $code, style: $style, publicaccess: $publicaccess, featuretype: $featuretype, allowauditlog: $allowauditlog, formname: $formname, minattributesrequiredtosearch: $minattributesrequiredtosearch, uid: $uid, description: $description)';
-  }
-}

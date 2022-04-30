@@ -1,59 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class ProgrammessageEmailaddresses {
-  const ProgrammessageEmailaddresses({
-    this.email,
-    required this.programmessageemailaddressid,
-  });
+part of 'programmessage_emailaddresses.dart';
 
-  factory ProgrammessageEmailaddresses.fromMap(Map<String, dynamic> map) {
-    return ProgrammessageEmailaddresses(
-      email: map['email'],
-      programmessageemailaddressid: int.parse(map['programmessageemailaddressid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ProgrammessageEmailaddresses _$$_ProgrammessageEmailaddressesFromJson(
+        Map<String, dynamic> json) =>
+    _$_ProgrammessageEmailaddresses(
+      email: json['email'] as String?,
+      programmessageemailaddressid: json['programmessageemailaddressid'] as int,
     );
-  }
 
-  factory ProgrammessageEmailaddresses.fromJson(String source) =>
-      ProgrammessageEmailaddresses.fromMap(json.decode(source));
-
-  final String? email;
-
-  final int programmessageemailaddressid;
-
-  ProgrammessageEmailaddresses copyWith({
-    String? email,
-    int? programmessageemailaddressid,
-  }) {
-    return ProgrammessageEmailaddresses(
-      email: email ?? this.email,
-      programmessageemailaddressid: programmessageemailaddressid ?? this.programmessageemailaddressid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'email': email,
-      'programmessageemailaddressid': programmessageemailaddressid,
+Map<String, dynamic> _$$_ProgrammessageEmailaddressesToJson(
+        _$_ProgrammessageEmailaddresses instance) =>
+    <String, dynamic>{
+      'email': instance.email,
+      'programmessageemailaddressid': instance.programmessageemailaddressid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ProgrammessageEmailaddresses &&
-        other.email == email &&
-        other.programmessageemailaddressid == programmessageemailaddressid;
-  }
-
-  @override
-  int get hashCode {
-    return email.hashCode ^ programmessageemailaddressid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'ProgrammessageEmailaddresses(email: $email, programmessageemailaddressid: $programmessageemailaddressid)';
-  }
-}

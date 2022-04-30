@@ -1,63 +1,21 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Mapmapviews {
-  const Mapmapviews({
-    required this.mapviewid,
-    required this.mapid,
-    required this.sortOrder,
-  });
+part of 'mapmapviews.dart';
 
-  factory Mapmapviews.fromMap(Map<String, dynamic> map) {
-    return Mapmapviews(
-      mapviewid: int.parse(map['mapviewid']),
-      mapid: int.parse(map['mapid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Mapmapviews _$$_MapmapviewsFromJson(Map<String, dynamic> json) =>
+    _$_Mapmapviews(
+      mapviewid: json['mapviewid'] as int,
+      mapid: json['mapid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory Mapmapviews.fromJson(String source) => Mapmapviews.fromMap(json.decode(source));
-
-  final int mapviewid;
-
-  final int mapid;
-
-  final int sortOrder;
-
-  Mapmapviews copyWith({
-    int? mapviewid,
-    int? mapid,
-    int? sortOrder,
-  }) {
-    return Mapmapviews(
-      mapviewid: mapviewid ?? this.mapviewid,
-      mapid: mapid ?? this.mapid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'mapviewid': mapviewid,
-      'mapid': mapid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_MapmapviewsToJson(_$_Mapmapviews instance) =>
+    <String, dynamic>{
+      'mapviewid': instance.mapviewid,
+      'mapid': instance.mapid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Mapmapviews && other.mapviewid == mapviewid && other.mapid == mapid && other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return mapviewid.hashCode ^ mapid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Mapmapviews(mapviewid: $mapviewid, mapid: $mapid, sortOrder: $sortOrder)';
-  }
-}

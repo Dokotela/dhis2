@@ -1,67 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class VisualizationOrganisationunits {
-  const VisualizationOrganisationunits({
-    required this.sortOrder,
-    required this.visualizationid,
-    required this.organisationunitid,
-  });
+part of 'visualization_organisationunits.dart';
 
-  factory VisualizationOrganisationunits.fromMap(Map<String, dynamic> map) {
-    return VisualizationOrganisationunits(
-      sortOrder: int.parse(map['sort_order']),
-      visualizationid: int.parse(map['visualizationid']),
-      organisationunitid: int.parse(map['organisationunitid']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_VisualizationOrganisationunits _$$_VisualizationOrganisationunitsFromJson(
+        Map<String, dynamic> json) =>
+    _$_VisualizationOrganisationunits(
+      sortOrder: json['sortOrder'] as int,
+      visualizationid: json['visualizationid'] as int,
+      organisationunitid: json['organisationunitid'] as int,
     );
-  }
 
-  factory VisualizationOrganisationunits.fromJson(String source) =>
-      VisualizationOrganisationunits.fromMap(json.decode(source));
-
-  final int sortOrder;
-
-  final int visualizationid;
-
-  final int organisationunitid;
-
-  VisualizationOrganisationunits copyWith({
-    int? sortOrder,
-    int? visualizationid,
-    int? organisationunitid,
-  }) {
-    return VisualizationOrganisationunits(
-      sortOrder: sortOrder ?? this.sortOrder,
-      visualizationid: visualizationid ?? this.visualizationid,
-      organisationunitid: organisationunitid ?? this.organisationunitid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'sort_order': sortOrder,
-      'visualizationid': visualizationid,
-      'organisationunitid': organisationunitid,
+Map<String, dynamic> _$$_VisualizationOrganisationunitsToJson(
+        _$_VisualizationOrganisationunits instance) =>
+    <String, dynamic>{
+      'sortOrder': instance.sortOrder,
+      'visualizationid': instance.visualizationid,
+      'organisationunitid': instance.organisationunitid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is VisualizationOrganisationunits &&
-        other.sortOrder == sortOrder &&
-        other.visualizationid == visualizationid &&
-        other.organisationunitid == organisationunitid;
-  }
-
-  @override
-  int get hashCode {
-    return sortOrder.hashCode ^ visualizationid.hashCode ^ organisationunitid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'VisualizationOrganisationunits(sortOrder: $sortOrder, visualizationid: $visualizationid, organisationunitid: $organisationunitid)';
-  }
-}

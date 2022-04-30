@@ -1,66 +1,23 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class DashboarditemUsers {
-  const DashboarditemUsers({
-    required this.userid,
-    required this.dashboarditemid,
-    required this.sortOrder,
-  });
+part of 'dashboarditem_users.dart';
 
-  factory DashboarditemUsers.fromMap(Map<String, dynamic> map) {
-    return DashboarditemUsers(
-      userid: int.parse(map['userid']),
-      dashboarditemid: int.parse(map['dashboarditemid']),
-      sortOrder: int.parse(map['sort_order']),
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_DashboarditemUsers _$$_DashboarditemUsersFromJson(
+        Map<String, dynamic> json) =>
+    _$_DashboarditemUsers(
+      userid: json['userid'] as int,
+      dashboarditemid: json['dashboarditemid'] as int,
+      sortOrder: json['sortOrder'] as int,
     );
-  }
 
-  factory DashboarditemUsers.fromJson(String source) => DashboarditemUsers.fromMap(json.decode(source));
-
-  final int userid;
-
-  final int dashboarditemid;
-
-  final int sortOrder;
-
-  DashboarditemUsers copyWith({
-    int? userid,
-    int? dashboarditemid,
-    int? sortOrder,
-  }) {
-    return DashboarditemUsers(
-      userid: userid ?? this.userid,
-      dashboarditemid: dashboarditemid ?? this.dashboarditemid,
-      sortOrder: sortOrder ?? this.sortOrder,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'userid': userid,
-      'dashboarditemid': dashboarditemid,
-      'sort_order': sortOrder,
+Map<String, dynamic> _$$_DashboarditemUsersToJson(
+        _$_DashboarditemUsers instance) =>
+    <String, dynamic>{
+      'userid': instance.userid,
+      'dashboarditemid': instance.dashboarditemid,
+      'sortOrder': instance.sortOrder,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is DashboarditemUsers &&
-        other.userid == userid &&
-        other.dashboarditemid == dashboarditemid &&
-        other.sortOrder == sortOrder;
-  }
-
-  @override
-  int get hashCode {
-    return userid.hashCode ^ dashboarditemid.hashCode ^ sortOrder.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'DashboarditemUsers(userid: $userid, dashboarditemid: $dashboarditemid, sortOrder: $sortOrder)';
-  }
-}

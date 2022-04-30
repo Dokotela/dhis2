@@ -1,59 +1,22 @@
-import 'dart:convert';
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
-class Validationrulegroupusergroupstoalert {
-  const Validationrulegroupusergroupstoalert({
-    required this.usergroupid,
-    required this.validationgroupid,
-  });
+part of 'validationrulegroupusergroupstoalert.dart';
 
-  factory Validationrulegroupusergroupstoalert.fromMap(Map<String, dynamic> map) {
-    return Validationrulegroupusergroupstoalert(
-      usergroupid: int.parse(map['usergroupid']),
-      validationgroupid: int.parse(map['validationgroupid']),
-    );
-  }
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
-  factory Validationrulegroupusergroupstoalert.fromJson(String source) =>
-      Validationrulegroupusergroupstoalert.fromMap(json.decode(source));
+_$_Validationrulegroupusergroupstoalert
+    _$$_ValidationrulegroupusergroupstoalertFromJson(
+            Map<String, dynamic> json) =>
+        _$_Validationrulegroupusergroupstoalert(
+          usergroupid: json['usergroupid'] as int,
+          validationgroupid: json['validationgroupid'] as int,
+        );
 
-  final int usergroupid;
-
-  final int validationgroupid;
-
-  Validationrulegroupusergroupstoalert copyWith({
-    int? usergroupid,
-    int? validationgroupid,
-  }) {
-    return Validationrulegroupusergroupstoalert(
-      usergroupid: usergroupid ?? this.usergroupid,
-      validationgroupid: validationgroupid ?? this.validationgroupid,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'usergroupid': usergroupid,
-      'validationgroupid': validationgroupid,
+Map<String, dynamic> _$$_ValidationrulegroupusergroupstoalertToJson(
+        _$_Validationrulegroupusergroupstoalert instance) =>
+    <String, dynamic>{
+      'usergroupid': instance.usergroupid,
+      'validationgroupid': instance.validationgroupid,
     };
-  }
-
-  String toJson() => json.encode(toMap());
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is Validationrulegroupusergroupstoalert &&
-        other.usergroupid == usergroupid &&
-        other.validationgroupid == validationgroupid;
-  }
-
-  @override
-  int get hashCode {
-    return usergroupid.hashCode ^ validationgroupid.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'Validationrulegroupusergroupstoalert(usergroupid: $usergroupid, validationgroupid: $validationgroupid)';
-  }
-}
