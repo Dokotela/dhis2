@@ -11,11 +11,11 @@ part 'predictororgunitlevels.g.dart';
 
 @freezed
 class Predictororgunitlevels with _$Predictororgunitlevels {
- Predictororgunitlevels._();
-factory Predictororgunitlevels({
-required int orgunitlevelid,
-required int predictorid,
-}) = _Predictororgunitlevels;
+  Predictororgunitlevels._();
+  factory Predictororgunitlevels({
+    required int orgunitlevelid,
+    required int predictorid,
+  }) = _Predictororgunitlevels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int predictorid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

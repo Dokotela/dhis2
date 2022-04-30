@@ -11,27 +11,27 @@ part 'predictor.g.dart';
 
 @freezed
 class Predictor with _$Predictor {
- Predictor._();
-factory Predictor({
-Object? translations,
-int? lastupdatedby,
-required String name,
-int? annualsamplecount,
-DateTime? created,
-required int periodtypeid,
-required int predictorid,
-String? description,
-int? generatoroutput,
-String? organisationunitdescendants,
-int? sequentialsamplecount,
-String? code,
-int? skiptestexpressionid,
-int? generatoroutputcombo,
-required String uid,
-int? sequentialskipcount,
-DateTime? lastupdated,
-int? generatorexpressionid,
-}) = _Predictor;
+  Predictor._();
+  factory Predictor({
+    Object? translations,
+    int? lastupdatedby,
+    required String name,
+    int? annualsamplecount,
+    DateTime? created,
+    required int periodtypeid,
+    required int predictorid,
+    String? description,
+    int? generatoroutput,
+    String? organisationunitdescendants,
+    int? sequentialsamplecount,
+    String? code,
+    int? skiptestexpressionid,
+    int? generatoroutputcombo,
+    required String uid,
+    int? sequentialskipcount,
+    DateTime? lastupdated,
+    int? generatorexpressionid,
+  }) = _Predictor;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ int? generatorexpressionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

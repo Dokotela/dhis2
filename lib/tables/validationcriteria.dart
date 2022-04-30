@@ -11,20 +11,20 @@ part 'validationcriteria.g.dart';
 
 @freezed
 class Validationcriteria with _$Validationcriteria {
- Validationcriteria._();
-factory Validationcriteria({
-String? code,
-DateTime? created,
-int? lastupdatedby,
-String? value,
-required int operator,
-String? property,
-required String name,
-DateTime? lastupdated,
-String? description,
-required int validationcriteriaid,
-String? uid,
-}) = _Validationcriteria;
+  Validationcriteria._();
+  factory Validationcriteria({
+    String? code,
+    DateTime? created,
+    int? lastupdatedby,
+    String? value,
+    required int operator,
+    String? property,
+    required String name,
+    DateTime? lastupdated,
+    String? description,
+    required int validationcriteriaid,
+    String? uid,
+  }) = _Validationcriteria;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

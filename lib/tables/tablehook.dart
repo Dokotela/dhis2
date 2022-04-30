@@ -11,20 +11,20 @@ part 'tablehook.g.dart';
 
 @freezed
 class Tablehook with _$Tablehook {
- Tablehook._();
-factory Tablehook({
-required String uid,
-String? code,
-required String analyticstablephase,
-required DateTime lastupdated,
-int? lastupdatedby,
-required int analyticstablehookid,
-required String name,
-String? resourcetabletype,
-String? analyticstabletype,
-required String sql,
-required DateTime created,
-}) = _Tablehook;
+  Tablehook._();
+  factory Tablehook({
+    required String uid,
+    String? code,
+    required String analyticstablephase,
+    required DateTime lastupdated,
+    int? lastupdatedby,
+    required int analyticstablehookid,
+    required String name,
+    String? resourcetabletype,
+    String? analyticstabletype,
+    required String sql,
+    required DateTime created,
+  }) = _Tablehook;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ required DateTime created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

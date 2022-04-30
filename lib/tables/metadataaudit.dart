@@ -11,17 +11,17 @@ part 'metadataaudit.g.dart';
 
 @freezed
 class Metadataaudit with _$Metadataaudit {
- Metadataaudit._();
-factory Metadataaudit({
-required String klass,
-String? code,
-String? value,
-required DateTime createdAt,
-required String uid,
-required int metadataauditid,
-required String createdBy,
-required String type,
-}) = _Metadataaudit;
+  Metadataaudit._();
+  factory Metadataaudit({
+    required String klass,
+    String? code,
+    String? value,
+    required DateTime createdAt,
+    required String uid,
+    required int metadataauditid,
+    required String createdBy,
+    required String type,
+  }) = _Metadataaudit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ required String type,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

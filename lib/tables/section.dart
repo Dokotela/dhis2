@@ -11,24 +11,24 @@ part 'section.g.dart';
 
 @freezed
 class Section with _$Section {
- Section._();
-factory Section({
-Object? translations,
-int? sortorder,
-bool? disabledataelementautogroup,
-required String name,
-Object? attributevalues,
-String? uid,
-String? description,
-int? lastupdatedby,
-String? code,
-DateTime? created,
-bool? showcolumntotals,
-required int datasetid,
-DateTime? lastupdated,
-required int sectionid,
-bool? showrowtotals,
-}) = _Section;
+  Section._();
+  factory Section({
+    Object? translations,
+    int? sortorder,
+    bool? disabledataelementautogroup,
+    required String name,
+    Object? attributevalues,
+    String? uid,
+    String? description,
+    int? lastupdatedby,
+    String? code,
+    DateTime? created,
+    bool? showcolumntotals,
+    required int datasetid,
+    DateTime? lastupdated,
+    required int sectionid,
+    bool? showrowtotals,
+  }) = _Section;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ bool? showrowtotals,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

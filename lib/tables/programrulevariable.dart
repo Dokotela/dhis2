@@ -11,24 +11,24 @@ part 'programrulevariable.g.dart';
 
 @freezed
 class Programrulevariable with _$Programrulevariable {
- Programrulevariable._();
-factory Programrulevariable({
-bool? usecodeforoptionset,
-int? programstageid,
-required int programrulevariableid,
-int? trackedentityattributeid,
-DateTime? lastupdated,
-int? dataelementid,
-String? sourcetype,
-int? programid,
-required String valuetype,
-String? code,
-String? uid,
-Object? translations,
-String? name,
-int? lastupdatedby,
-DateTime? created,
-}) = _Programrulevariable;
+  Programrulevariable._();
+  factory Programrulevariable({
+    bool? usecodeforoptionset,
+    int? programstageid,
+    required int programrulevariableid,
+    int? trackedentityattributeid,
+    DateTime? lastupdated,
+    int? dataelementid,
+    String? sourcetype,
+    int? programid,
+    required String valuetype,
+    String? code,
+    String? uid,
+    Object? translations,
+    String? name,
+    int? lastupdatedby,
+    DateTime? created,
+  }) = _Programrulevariable;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ DateTime? created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

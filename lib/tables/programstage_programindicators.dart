@@ -11,12 +11,12 @@ part 'programstage_programindicators.g.dart';
 
 @freezed
 class ProgramstageProgramindicators with _$ProgramstageProgramindicators {
- ProgramstageProgramindicators._();
-factory ProgramstageProgramindicators({
-required int programindicatorid,
-required int programstageid,
-required int sortOrder,
-}) = _ProgramstageProgramindicators;
+  ProgramstageProgramindicators._();
+  factory ProgramstageProgramindicators({
+    required int programindicatorid,
+    required int programstageid,
+    required int sortOrder,
+  }) = _ProgramstageProgramindicators;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,30 +11,30 @@ part 'programnotificationtemplate.g.dart';
 
 @freezed
 class Programnotificationtemplate with _$Programnotificationtemplate {
- Programnotificationtemplate._();
-factory Programnotificationtemplate({
-bool? notifyusersinhierarchyonly,
-String? subjecttemplate,
-required String name,
-required String uid,
-bool? notifyparentorganisationunitonly,
-int? dataelementid,
-int? relativescheduleddays,
-int? lastupdatedby,
-required DateTime created,
-int? trackedentityattributeid,
-required bool sendrepeatable,
-required DateTime lastupdated,
-String? messagetemplate,
-int? usergroupid,
-int? programstageid,
-int? programid,
-String? code,
-String? notificationtrigger,
-String? notificationrecipienttype,
-required int programnotificationtemplateid,
-Object? translations,
-}) = _Programnotificationtemplate;
+  Programnotificationtemplate._();
+  factory Programnotificationtemplate({
+    bool? notifyusersinhierarchyonly,
+    String? subjecttemplate,
+    required String name,
+    required String uid,
+    bool? notifyparentorganisationunitonly,
+    int? dataelementid,
+    int? relativescheduleddays,
+    int? lastupdatedby,
+    required DateTime created,
+    int? trackedentityattributeid,
+    required bool sendrepeatable,
+    required DateTime lastupdated,
+    String? messagetemplate,
+    int? usergroupid,
+    int? programstageid,
+    int? programid,
+    String? code,
+    String? notificationtrigger,
+    String? notificationrecipienttype,
+    required int programnotificationtemplateid,
+    Object? translations,
+  }) = _Programnotificationtemplate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -64,4 +64,5 @@ Object? translations,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'legendset.g.dart';
 
 @freezed
 class Legendset with _$Legendset {
- Legendset._();
-factory Legendset({
-required int legendsetid,
-required String name,
-}) = _Legendset;
+  Legendset._();
+  factory Legendset({
+    required int legendsetid,
+    required String name,
+  }) = _Legendset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

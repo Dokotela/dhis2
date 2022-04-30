@@ -11,12 +11,12 @@ part 'axis.g.dart';
 
 @freezed
 class Axis with _$Axis {
- Axis._();
-factory Axis({
-required int axisid,
-required String dimensionalitem,
-required int axis,
-}) = _Axis;
+  Axis._();
+  factory Axis({
+    required int axisid,
+    required String dimensionalitem,
+    required int axis,
+  }) = _Axis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -26,15 +26,13 @@ required int axis,
       ? Axis.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Axis.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? Axis.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Axis cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Axis.fromJson(Map<String, dynamic> json) =>
-      _$AxisFromJson(json);
+  factory Axis.fromJson(Map<String, dynamic> json) => _$AxisFromJson(json);
 
   /// Acts like a constructor, returns a [Axis], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -46,4 +44,5 @@ required int axis,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

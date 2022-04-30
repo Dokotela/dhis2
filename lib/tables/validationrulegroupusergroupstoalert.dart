@@ -10,18 +10,20 @@ part 'validationrulegroupusergroupstoalert.freezed.dart';
 part 'validationrulegroupusergroupstoalert.g.dart';
 
 @freezed
-class Validationrulegroupusergroupstoalert with _$Validationrulegroupusergroupstoalert {
- Validationrulegroupusergroupstoalert._();
-factory Validationrulegroupusergroupstoalert({
-required int usergroupid,
-required int validationgroupid,
-}) = _Validationrulegroupusergroupstoalert;
+class Validationrulegroupusergroupstoalert
+    with _$Validationrulegroupusergroupstoalert {
+  Validationrulegroupusergroupstoalert._();
+  factory Validationrulegroupusergroupstoalert({
+    required int usergroupid,
+    required int validationgroupid,
+  }) = _Validationrulegroupusergroupstoalert;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Validationrulegroupusergroupstoalert.fromYaml(dynamic yaml) => yaml is String
+  factory Validationrulegroupusergroupstoalert.fromYaml(dynamic yaml) => yaml
+          is String
       ? Validationrulegroupusergroupstoalert.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -32,7 +34,8 @@ required int validationgroupid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Validationrulegroupusergroupstoalert.fromJson(Map<String, dynamic> json) =>
+  factory Validationrulegroupusergroupstoalert.fromJson(
+          Map<String, dynamic> json) =>
       _$ValidationrulegroupusergroupstoalertFromJson(json);
 
   /// Acts like a constructor, returns a [Validationrulegroupusergroupstoalert], accepts a
@@ -45,4 +48,5 @@ required int validationgroupid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

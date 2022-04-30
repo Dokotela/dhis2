@@ -11,11 +11,11 @@ part 'program_criteria.g.dart';
 
 @freezed
 class ProgramCriteria with _$ProgramCriteria {
- ProgramCriteria._();
-factory ProgramCriteria({
-required int programid,
-required int validationcriteriaid,
-}) = _ProgramCriteria;
+  ProgramCriteria._();
+  factory ProgramCriteria({
+    required int programid,
+    required int validationcriteriaid,
+  }) = _ProgramCriteria;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int validationcriteriaid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

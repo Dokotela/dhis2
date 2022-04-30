@@ -11,11 +11,11 @@ part 'programindicatorgroupmembers.g.dart';
 
 @freezed
 class Programindicatorgroupmembers with _$Programindicatorgroupmembers {
- Programindicatorgroupmembers._();
-factory Programindicatorgroupmembers({
-required int programindicatorid,
-required int programindicatorgroupid,
-}) = _Programindicatorgroupmembers;
+  Programindicatorgroupmembers._();
+  factory Programindicatorgroupmembers({
+    required int programindicatorid,
+    required int programindicatorgroupid,
+  }) = _Programindicatorgroupmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int programindicatorgroupid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

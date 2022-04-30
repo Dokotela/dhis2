@@ -10,19 +10,21 @@ part 'programinstance_messageconversation.freezed.dart';
 part 'programinstance_messageconversation.g.dart';
 
 @freezed
-class PrograminstanceMessageconversation with _$PrograminstanceMessageconversation {
- PrograminstanceMessageconversation._();
-factory PrograminstanceMessageconversation({
-required int sortOrder,
-required int programinstanceid,
-required int messageconversationid,
-}) = _PrograminstanceMessageconversation;
+class PrograminstanceMessageconversation
+    with _$PrograminstanceMessageconversation {
+  PrograminstanceMessageconversation._();
+  factory PrograminstanceMessageconversation({
+    required int sortOrder,
+    required int programinstanceid,
+    required int messageconversationid,
+  }) = _PrograminstanceMessageconversation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory PrograminstanceMessageconversation.fromYaml(dynamic yaml) => yaml is String
+  factory PrograminstanceMessageconversation.fromYaml(dynamic yaml) => yaml
+          is String
       ? PrograminstanceMessageconversation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int messageconversationid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PrograminstanceMessageconversation.fromJson(Map<String, dynamic> json) =>
+  factory PrograminstanceMessageconversation.fromJson(
+          Map<String, dynamic> json) =>
       _$PrograminstanceMessageconversationFromJson(json);
 
   /// Acts like a constructor, returns a [PrograminstanceMessageconversation], accepts a
@@ -46,4 +49,5 @@ required int messageconversationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

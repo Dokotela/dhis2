@@ -11,19 +11,20 @@ part 'trackedentityattributedimension.g.dart';
 
 @freezed
 class Trackedentityattributedimension with _$Trackedentityattributedimension {
- Trackedentityattributedimension._();
-factory Trackedentityattributedimension({
-String? filter,
-required int trackedentityattributedimensionid,
-int? legendsetid,
-int? trackedentityattributeid,
-}) = _Trackedentityattributedimension;
+  Trackedentityattributedimension._();
+  factory Trackedentityattributedimension({
+    String? filter,
+    required int trackedentityattributedimensionid,
+    int? legendsetid,
+    int? trackedentityattributeid,
+  }) = _Trackedentityattributedimension;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Trackedentityattributedimension.fromYaml(dynamic yaml) => yaml is String
+  factory Trackedentityattributedimension.fromYaml(dynamic yaml) => yaml
+          is String
       ? Trackedentityattributedimension.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -47,4 +48,5 @@ int? trackedentityattributeid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

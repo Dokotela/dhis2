@@ -11,19 +11,19 @@ part 'validationresult.g.dart';
 
 @freezed
 class Validationresult with _$Validationresult {
- Validationresult._();
-factory Validationresult({
-int? validationruleid,
-bool? notificationsent,
-int? dayinperiod,
-required DateTime created,
-double? leftsidevalue,
-int? organisationunitid,
-required int validationresultid,
-int? attributeoptioncomboid,
-double? rightsidevalue,
-int? periodid,
-}) = _Validationresult;
+  Validationresult._();
+  factory Validationresult({
+    int? validationruleid,
+    bool? notificationsent,
+    int? dayinperiod,
+    required DateTime created,
+    double? leftsidevalue,
+    int? organisationunitid,
+    required int validationresultid,
+    int? attributeoptioncomboid,
+    double? rightsidevalue,
+    int? periodid,
+  }) = _Validationresult;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ int? periodid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'oauth2clientredirecturis.g.dart';
 
 @freezed
 class Oauth2clientredirecturis with _$Oauth2clientredirecturis {
- Oauth2clientredirecturis._();
-factory Oauth2clientredirecturis({
-required int oauth2clientid,
-required int sortOrder,
-String? redirecturi,
-}) = _Oauth2clientredirecturis;
+  Oauth2clientredirecturis._();
+  factory Oauth2clientredirecturis({
+    required int oauth2clientid,
+    required int sortOrder,
+    String? redirecturi,
+  }) = _Oauth2clientredirecturis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? redirecturi,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

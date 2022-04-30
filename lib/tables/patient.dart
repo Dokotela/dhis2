@@ -11,26 +11,26 @@ part 'patient.g.dart';
 
 @freezed
 class Patient with _$Patient {
- Patient._();
-factory Patient({
-String? gender,
-required int patientid,
-int? healthworkerid,
-bool? underage,
-int? organisationunitid,
-String? dobtype,
-String? phonenumber,
-DateTime? lastupdated,
-DateTime? deathdate,
-DateTime? birthdate,
-String? code,
-DateTime? created,
-int? representativeid,
-required DateTime registrationdate,
-bool? isdead,
-String? name,
-String? uid,
-}) = _Patient;
+  Patient._();
+  factory Patient({
+    String? gender,
+    required int patientid,
+    int? healthworkerid,
+    bool? underage,
+    int? organisationunitid,
+    String? dobtype,
+    String? phonenumber,
+    DateTime? lastupdated,
+    DateTime? deathdate,
+    DateTime? birthdate,
+    String? code,
+    DateTime? created,
+    int? representativeid,
+    required DateTime registrationdate,
+    bool? isdead,
+    String? name,
+    String? uid,
+  }) = _Patient;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -60,4 +60,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

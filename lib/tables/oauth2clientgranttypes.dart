@@ -11,12 +11,12 @@ part 'oauth2clientgranttypes.g.dart';
 
 @freezed
 class Oauth2clientgranttypes with _$Oauth2clientgranttypes {
- Oauth2clientgranttypes._();
-factory Oauth2clientgranttypes({
-required int sortOrder,
-String? granttype,
-required int oauth2clientid,
-}) = _Oauth2clientgranttypes;
+  Oauth2clientgranttypes._();
+  factory Oauth2clientgranttypes({
+    required int sortOrder,
+    String? granttype,
+    required int oauth2clientid,
+  }) = _Oauth2clientgranttypes;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int oauth2clientid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

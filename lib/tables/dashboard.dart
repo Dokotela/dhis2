@@ -11,27 +11,27 @@ part 'dashboard.g.dart';
 
 @freezed
 class Dashboard with _$Dashboard {
- Dashboard._();
-factory Dashboard({
-Object? sharing,
-String? publicaccess,
-required int dashboardid,
-Object? allowedfilters,
-Object? translations,
-String? code,
-DateTime? lastupdated,
-int? lastupdatedby,
-DateTime? created,
-Object? itemconfig,
-Object? layout,
-String? description,
-String? uid,
-int? userid,
-Object? favorites,
-required bool restrictfilters,
-required String name,
-bool? externalaccess,
-}) = _Dashboard;
+  Dashboard._();
+  factory Dashboard({
+    Object? sharing,
+    String? publicaccess,
+    required int dashboardid,
+    Object? allowedfilters,
+    Object? translations,
+    String? code,
+    DateTime? lastupdated,
+    int? lastupdatedby,
+    DateTime? created,
+    Object? itemconfig,
+    Object? layout,
+    String? description,
+    String? uid,
+    int? userid,
+    Object? favorites,
+    required bool restrictfilters,
+    required String name,
+    bool? externalaccess,
+  }) = _Dashboard;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ bool? externalaccess,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

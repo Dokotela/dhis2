@@ -11,15 +11,15 @@ part 'importobject.g.dart';
 
 @freezed
 class Importobject with _$Importobject {
- Importobject._();
-factory Importobject({
-String? groupmembertype,
-String? classname,
-String? compareobject,
-String? status,
-required int importobjectid,
-String? object,
-}) = _Importobject;
+  Importobject._();
+  factory Importobject({
+    String? groupmembertype,
+    String? classname,
+    String? compareobject,
+    String? status,
+    required int importobjectid,
+    String? object,
+  }) = _Importobject;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ String? object,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

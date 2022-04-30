@@ -11,35 +11,35 @@ part 'indicator.g.dart';
 
 @freezed
 class Indicator with _$Indicator {
- Indicator._();
-factory Indicator({
-String? denominatordescription,
-String? description,
-String? formname,
-required String name,
-bool? annualized,
-Object? sharing,
-required int indicatorid,
-String? uid,
-int? decimals,
-DateTime? lastupdated,
-required String shortname,
-String? aggregateexportcategoryoptioncombo,
-String? publicaccess,
-String? code,
-String? numeratordescription,
-int? indicatortypeid,
-String? aggregateexportattributeoptioncombo,
-String? url,
-int? userid,
-Object? attributevalues,
-int? lastupdatedby,
-String? numerator,
-Object? translations,
-DateTime? created,
-String? denominator,
-Object? style,
-}) = _Indicator;
+  Indicator._();
+  factory Indicator({
+    String? denominatordescription,
+    String? description,
+    String? formname,
+    required String name,
+    bool? annualized,
+    Object? sharing,
+    required int indicatorid,
+    String? uid,
+    int? decimals,
+    DateTime? lastupdated,
+    required String shortname,
+    String? aggregateexportcategoryoptioncombo,
+    String? publicaccess,
+    String? code,
+    String? numeratordescription,
+    int? indicatortypeid,
+    String? aggregateexportattributeoptioncombo,
+    String? url,
+    int? userid,
+    Object? attributevalues,
+    int? lastupdatedby,
+    String? numerator,
+    Object? translations,
+    DateTime? created,
+    String? denominator,
+    Object? style,
+  }) = _Indicator;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -69,4 +69,5 @@ Object? style,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

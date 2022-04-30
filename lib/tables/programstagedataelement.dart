@@ -11,26 +11,26 @@ part 'programstagedataelement.g.dart';
 
 @freezed
 class Programstagedataelement with _$Programstagedataelement {
- Programstagedataelement._();
-factory Programstagedataelement({
-required int dataelementid,
-Object? rendertype,
-int? programstageid,
-bool? displayinreports,
-required bool skipanalytics,
-required bool compulsory,
-int? lastupdatedby,
-required int programstagedataelementid,
-bool? allowprovidedelsewhere,
-int? sortOrder,
-DateTime? created,
-bool? allowfuturedate,
-String? code,
-bool? renderoptionsasradio,
-DateTime? lastupdated,
-required bool skipsynchronization,
-String? uid,
-}) = _Programstagedataelement;
+  Programstagedataelement._();
+  factory Programstagedataelement({
+    required int dataelementid,
+    Object? rendertype,
+    int? programstageid,
+    bool? displayinreports,
+    required bool skipanalytics,
+    required bool compulsory,
+    int? lastupdatedby,
+    required int programstagedataelementid,
+    bool? allowprovidedelsewhere,
+    int? sortOrder,
+    DateTime? created,
+    bool? allowfuturedate,
+    String? code,
+    bool? renderoptionsasradio,
+    DateTime? lastupdated,
+    required bool skipsynchronization,
+    String? uid,
+  }) = _Programstagedataelement;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -60,4 +60,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

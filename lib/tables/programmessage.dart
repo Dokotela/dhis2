@@ -11,25 +11,25 @@ part 'programmessage.g.dart';
 
 @freezed
 class Programmessage with _$Programmessage {
- Programmessage._();
-factory Programmessage({
-DateTime? lastupdated,
-int? organisationunitid,
-int? programinstanceid,
-int? trackedentityinstanceid,
-int? programstageinstanceid,
-String? code,
-int? lastupdatedby,
-required int id,
-required String uid,
-String? messagestatus,
-DateTime? processeddate,
-String? notificationtemplate,
-DateTime? created,
-Object? translations,
-required String text,
-String? subject,
-}) = _Programmessage;
+  Programmessage._();
+  factory Programmessage({
+    DateTime? lastupdated,
+    int? organisationunitid,
+    int? programinstanceid,
+    int? trackedentityinstanceid,
+    int? programstageinstanceid,
+    String? code,
+    int? lastupdatedby,
+    required int id,
+    required String uid,
+    String? messagestatus,
+    DateTime? processeddate,
+    String? notificationtemplate,
+    DateTime? created,
+    Object? translations,
+    required String text,
+    String? subject,
+  }) = _Programmessage;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -59,4 +59,5 @@ String? subject,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

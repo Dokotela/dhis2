@@ -11,23 +11,23 @@ part 'validationrulegroup.g.dart';
 
 @freezed
 class Validationrulegroup with _$Validationrulegroup {
- Validationrulegroup._();
-factory Validationrulegroup({
-DateTime? created,
-String? publicaccess,
-bool? alertbyorgunits,
-String? description,
-int? userid,
-String? uid,
-Object? attributevalues,
-Object? sharing,
-String? code,
-Object? translations,
-int? lastupdatedby,
-required int validationrulegroupid,
-DateTime? lastupdated,
-required String name,
-}) = _Validationrulegroup;
+  Validationrulegroup._();
+  factory Validationrulegroup({
+    DateTime? created,
+    String? publicaccess,
+    bool? alertbyorgunits,
+    String? description,
+    int? userid,
+    String? uid,
+    Object? attributevalues,
+    Object? sharing,
+    String? code,
+    Object? translations,
+    int? lastupdatedby,
+    required int validationrulegroupid,
+    DateTime? lastupdated,
+    required String name,
+  }) = _Validationrulegroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

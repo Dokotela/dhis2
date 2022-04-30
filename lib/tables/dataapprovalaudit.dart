@@ -11,18 +11,18 @@ part 'dataapprovalaudit.g.dart';
 
 @freezed
 class Dataapprovalaudit with _$Dataapprovalaudit {
- Dataapprovalaudit._();
-factory Dataapprovalaudit({
-required int workflowid,
-required int periodid,
-required int dataapprovalauditid,
-required int attributeoptioncomboid,
-required int levelid,
-required String action,
-required int creator,
-required DateTime created,
-required int organisationunitid,
-}) = _Dataapprovalaudit;
+  Dataapprovalaudit._();
+  factory Dataapprovalaudit({
+    required int workflowid,
+    required int periodid,
+    required int dataapprovalauditid,
+    required int attributeoptioncomboid,
+    required int levelid,
+    required String action,
+    required int creator,
+    required DateTime created,
+    required int organisationunitid,
+  }) = _Dataapprovalaudit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ required int organisationunitid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

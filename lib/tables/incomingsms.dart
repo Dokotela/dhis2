@@ -11,21 +11,21 @@ part 'incomingsms.g.dart';
 
 @freezed
 class Incomingsms with _$Incomingsms {
- Incomingsms._();
-factory Incomingsms({
-required int encoding,
-int? userid,
-bool? parsed,
-required String gatewayid,
-required DateTime sentdate,
-required DateTime receiveddate,
-String? uid,
-required String originator,
-required int status,
-String? statusmessage,
-required int id,
-String? text,
-}) = _Incomingsms;
+  Incomingsms._();
+  factory Incomingsms({
+    required int encoding,
+    int? userid,
+    bool? parsed,
+    required String gatewayid,
+    required DateTime sentdate,
+    required DateTime receiveddate,
+    String? uid,
+    required String originator,
+    required int status,
+    String? statusmessage,
+    required int id,
+    String? text,
+  }) = _Incomingsms;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ String? text,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

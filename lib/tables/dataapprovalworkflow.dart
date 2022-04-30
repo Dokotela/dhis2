@@ -11,22 +11,22 @@ part 'dataapprovalworkflow.g.dart';
 
 @freezed
 class Dataapprovalworkflow with _$Dataapprovalworkflow {
- Dataapprovalworkflow._();
-factory Dataapprovalworkflow({
-required int workflowid,
-Object? sharing,
-String? uid,
-DateTime? created,
-int? categorycomboid,
-String? code,
-int? userid,
-String? publicaccess,
-int? lastupdatedby,
-required int periodtypeid,
-Object? translations,
-required String name,
-DateTime? lastupdated,
-}) = _Dataapprovalworkflow;
+  Dataapprovalworkflow._();
+  factory Dataapprovalworkflow({
+    required int workflowid,
+    Object? sharing,
+    String? uid,
+    DateTime? created,
+    int? categorycomboid,
+    String? code,
+    int? userid,
+    String? publicaccess,
+    int? lastupdatedby,
+    required int periodtypeid,
+    Object? translations,
+    required String name,
+    DateTime? lastupdated,
+  }) = _Dataapprovalworkflow;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

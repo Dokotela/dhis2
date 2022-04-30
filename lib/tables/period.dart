@@ -11,13 +11,13 @@ part 'period.g.dart';
 
 @freezed
 class Period with _$Period {
- Period._();
-factory Period({
-int? periodtypeid,
-required DateTime startdate,
-required DateTime enddate,
-required int periodid,
-}) = _Period;
+  Period._();
+  factory Period({
+    int? periodtypeid,
+    required DateTime startdate,
+    required DateTime enddate,
+    required int periodid,
+  }) = _Period;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -34,8 +34,7 @@ required int periodid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Period.fromJson(Map<String, dynamic> json) =>
-      _$PeriodFromJson(json);
+  factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
 
   /// Acts like a constructor, returns a [Period], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -47,4 +46,5 @@ required int periodid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

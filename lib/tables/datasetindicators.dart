@@ -11,11 +11,11 @@ part 'datasetindicators.g.dart';
 
 @freezed
 class Datasetindicators with _$Datasetindicators {
- Datasetindicators._();
-factory Datasetindicators({
-required int indicatorid,
-required int datasetid,
-}) = _Datasetindicators;
+  Datasetindicators._();
+  factory Datasetindicators({
+    required int indicatorid,
+    required int datasetid,
+  }) = _Datasetindicators;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

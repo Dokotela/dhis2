@@ -10,19 +10,21 @@ part 'eventvisualization_categorydimensions.freezed.dart';
 part 'eventvisualization_categorydimensions.g.dart';
 
 @freezed
-class EventvisualizationCategorydimensions with _$EventvisualizationCategorydimensions {
- EventvisualizationCategorydimensions._();
-factory EventvisualizationCategorydimensions({
-required int eventvisualizationid,
-required int sortOrder,
-required int categorydimensionid,
-}) = _EventvisualizationCategorydimensions;
+class EventvisualizationCategorydimensions
+    with _$EventvisualizationCategorydimensions {
+  EventvisualizationCategorydimensions._();
+  factory EventvisualizationCategorydimensions({
+    required int eventvisualizationid,
+    required int sortOrder,
+    required int categorydimensionid,
+  }) = _EventvisualizationCategorydimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventvisualizationCategorydimensions.fromYaml(dynamic yaml) => yaml is String
+  factory EventvisualizationCategorydimensions.fromYaml(dynamic yaml) => yaml
+          is String
       ? EventvisualizationCategorydimensions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int categorydimensionid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventvisualizationCategorydimensions.fromJson(Map<String, dynamic> json) =>
+  factory EventvisualizationCategorydimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$EventvisualizationCategorydimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [EventvisualizationCategorydimensions], accepts a
@@ -46,4 +49,5 @@ required int categorydimensionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,23 +11,23 @@ part 'categoryoptiongroup.g.dart';
 
 @freezed
 class Categoryoptiongroup with _$Categoryoptiongroup {
- Categoryoptiongroup._();
-factory Categoryoptiongroup({
-String? code,
-String? publicaccess,
-required String name,
-String? datadimensiontype,
-DateTime? lastupdated,
-required int categoryoptiongroupid,
-int? lastupdatedby,
-String? shortname,
-String? uid,
-Object? translations,
-Object? sharing,
-DateTime? created,
-Object? attributevalues,
-int? userid,
-}) = _Categoryoptiongroup;
+  Categoryoptiongroup._();
+  factory Categoryoptiongroup({
+    String? code,
+    String? publicaccess,
+    required String name,
+    String? datadimensiontype,
+    DateTime? lastupdated,
+    required int categoryoptiongroupid,
+    int? lastupdatedby,
+    String? shortname,
+    String? uid,
+    Object? translations,
+    Object? sharing,
+    DateTime? created,
+    Object? attributevalues,
+    int? userid,
+  }) = _Categoryoptiongroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ int? userid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

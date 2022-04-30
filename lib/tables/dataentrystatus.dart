@@ -11,13 +11,13 @@ part 'dataentrystatus.g.dart';
 
 @freezed
 class Dataentrystatus with _$Dataentrystatus {
- Dataentrystatus._();
-factory Dataentrystatus({
-int? periodtype,
-int? datasetid,
-required int datastatusid,
-bool? makedefault,
-}) = _Dataentrystatus;
+  Dataentrystatus._();
+  factory Dataentrystatus({
+    int? periodtype,
+    int? datasetid,
+    required int datastatusid,
+    bool? makedefault,
+  }) = _Dataentrystatus;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -47,4 +47,5 @@ bool? makedefault,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,24 +11,24 @@ part 'constant.g.dart';
 
 @freezed
 class Constant with _$Constant {
- Constant._();
-factory Constant({
-String? publicaccess,
-String? uid,
-Object? sharing,
-String? shortname,
-int? userid,
-Object? translations,
-Object? attributevalues,
-DateTime? created,
-double? value,
-String? description,
-required int constantid,
-int? lastupdatedby,
-String? code,
-DateTime? lastupdated,
-required String name,
-}) = _Constant;
+  Constant._();
+  factory Constant({
+    String? publicaccess,
+    String? uid,
+    Object? sharing,
+    String? shortname,
+    int? userid,
+    Object? translations,
+    Object? attributevalues,
+    DateTime? created,
+    double? value,
+    String? description,
+    required int constantid,
+    int? lastupdatedby,
+    String? code,
+    DateTime? lastupdated,
+    required String name,
+  }) = _Constant;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

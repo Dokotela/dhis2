@@ -11,11 +11,11 @@ part 'oauth_code.g.dart';
 
 @freezed
 class OauthCode with _$OauthCode {
- OauthCode._();
-factory OauthCode({
-String? authentication,
-String? code,
-}) = _OauthCode;
+  OauthCode._();
+  factory OauthCode({
+    String? authentication,
+    String? code,
+  }) = _OauthCode;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ String? code,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

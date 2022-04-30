@@ -11,31 +11,31 @@ part 'programruleaction.g.dart';
 
 @freezed
 class Programruleaction with _$Programruleaction {
- Programruleaction._();
-factory Programruleaction({
-int? optionid,
-String? data,
-int? dataelementid,
-int? trackedentityattributeid,
-Object? translations,
-int? lastupdatedby,
-String? uid,
-int? programruleid,
-int? optiongroupid,
-int? programstageid,
-String? templateuid,
-required int programruleactionid,
-String? code,
-String? actiontype,
-String? evaluationtime,
-DateTime? created,
-String? content,
-int? programindicatorid,
-Object? environments,
-String? location,
-int? programstagesectionid,
-DateTime? lastupdated,
-}) = _Programruleaction;
+  Programruleaction._();
+  factory Programruleaction({
+    int? optionid,
+    String? data,
+    int? dataelementid,
+    int? trackedentityattributeid,
+    Object? translations,
+    int? lastupdatedby,
+    String? uid,
+    int? programruleid,
+    int? optiongroupid,
+    int? programstageid,
+    String? templateuid,
+    required int programruleactionid,
+    String? code,
+    String? actiontype,
+    String? evaluationtime,
+    DateTime? created,
+    String? content,
+    int? programindicatorid,
+    Object? environments,
+    String? location,
+    int? programstagesectionid,
+    DateTime? lastupdated,
+  }) = _Programruleaction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -65,4 +65,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

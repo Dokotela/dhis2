@@ -11,11 +11,11 @@ part 'smscommandspecialcharacters.g.dart';
 
 @freezed
 class Smscommandspecialcharacters with _$Smscommandspecialcharacters {
- Smscommandspecialcharacters._();
-factory Smscommandspecialcharacters({
-required int smscommandid,
-required int specialcharacterid,
-}) = _Smscommandspecialcharacters;
+  Smscommandspecialcharacters._();
+  factory Smscommandspecialcharacters({
+    required int smscommandid,
+    required int specialcharacterid,
+  }) = _Smscommandspecialcharacters;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int specialcharacterid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

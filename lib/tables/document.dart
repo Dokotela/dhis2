@@ -11,27 +11,27 @@ part 'document.g.dart';
 
 @freezed
 class Document with _$Document {
- Document._();
-factory Document({
-Object? sharing,
-Object? attributevalues,
-bool? external,
-String? contenttype,
-required int documentid,
-bool? attachment,
-String? uid,
-DateTime? created,
-String? publicaccess,
-required String url,
-Object? translations,
-required String name,
-int? userid,
-int? fileresource,
-String? code,
-bool? externalaccess,
-int? lastupdatedby,
-DateTime? lastupdated,
-}) = _Document;
+  Document._();
+  factory Document({
+    Object? sharing,
+    Object? attributevalues,
+    bool? external,
+    String? contenttype,
+    required int documentid,
+    bool? attachment,
+    String? uid,
+    DateTime? created,
+    String? publicaccess,
+    required String url,
+    Object? translations,
+    required String name,
+    int? userid,
+    int? fileresource,
+    String? code,
+    bool? externalaccess,
+    int? lastupdatedby,
+    DateTime? lastupdated,
+  }) = _Document;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

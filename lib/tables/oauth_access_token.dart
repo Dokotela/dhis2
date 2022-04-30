@@ -11,16 +11,16 @@ part 'oauth_access_token.g.dart';
 
 @freezed
 class OauthAccessToken with _$OauthAccessToken {
- OauthAccessToken._();
-factory OauthAccessToken({
-String? clientId,
-String? authentication,
-String? refreshToken,
-required String authenticationId,
-String? tokenId,
-String? token,
-String? userName,
-}) = _OauthAccessToken;
+  OauthAccessToken._();
+  factory OauthAccessToken({
+    String? clientId,
+    String? authentication,
+    String? refreshToken,
+    required String authenticationId,
+    String? tokenId,
+    String? token,
+    String? userName,
+  }) = _OauthAccessToken;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ String? userName,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

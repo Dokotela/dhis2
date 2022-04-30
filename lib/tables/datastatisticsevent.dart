@@ -11,14 +11,14 @@ part 'datastatisticsevent.g.dart';
 
 @freezed
 class Datastatisticsevent with _$Datastatisticsevent {
- Datastatisticsevent._();
-factory Datastatisticsevent({
-String? favoriteuid,
-DateTime? timestamp,
-String? eventtype,
-required int eventid,
-String? username,
-}) = _Datastatisticsevent;
+  Datastatisticsevent._();
+  factory Datastatisticsevent({
+    String? favoriteuid,
+    DateTime? timestamp,
+    String? eventtype,
+    required int eventid,
+    String? username,
+  }) = _Datastatisticsevent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ String? username,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

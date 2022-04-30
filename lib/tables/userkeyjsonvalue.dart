@@ -11,21 +11,21 @@ part 'userkeyjsonvalue.g.dart';
 
 @freezed
 class Userkeyjsonvalue with _$Userkeyjsonvalue {
- Userkeyjsonvalue._();
-factory Userkeyjsonvalue({
-required String namespace,
-Object? jbvalue,
-int? lastupdatedby,
-required int userkeyjsonvalueid,
-required int userid,
-DateTime? created,
-bool? encrypted,
-String? uid,
-String? code,
-String? encryptedValue,
-DateTime? lastupdated,
-required String userkey,
-}) = _Userkeyjsonvalue;
+  Userkeyjsonvalue._();
+  factory Userkeyjsonvalue({
+    required String namespace,
+    Object? jbvalue,
+    int? lastupdatedby,
+    required int userkeyjsonvalueid,
+    required int userid,
+    DateTime? created,
+    bool? encrypted,
+    String? uid,
+    String? code,
+    String? encryptedValue,
+    DateTime? lastupdated,
+    required String userkey,
+  }) = _Userkeyjsonvalue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ required String userkey,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

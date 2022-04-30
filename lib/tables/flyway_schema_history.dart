@@ -11,19 +11,19 @@ part 'flyway_schema_history.g.dart';
 
 @freezed
 class FlywaySchemaHistory with _$FlywaySchemaHistory {
- FlywaySchemaHistory._();
-factory FlywaySchemaHistory({
-required String installedBy,
-required String description,
-required String type,
-String? version,
-required bool success,
-required int executionTime,
-required DateTime installedOn,
-required String script,
-int? checksum,
-required int installedRank,
-}) = _FlywaySchemaHistory;
+  FlywaySchemaHistory._();
+  factory FlywaySchemaHistory({
+    required String installedBy,
+    required String description,
+    required String type,
+    String? version,
+    required bool success,
+    required int executionTime,
+    required DateTime installedOn,
+    required String script,
+    int? checksum,
+    required int installedRank,
+  }) = _FlywaySchemaHistory;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ required int installedRank,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

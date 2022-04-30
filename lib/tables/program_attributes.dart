@@ -11,24 +11,24 @@ part 'program_attributes.g.dart';
 
 @freezed
 class ProgramAttributes with _$ProgramAttributes {
- ProgramAttributes._();
-factory ProgramAttributes({
-required int trackedentityattributeid,
-bool? mandatory,
-String? uid,
-bool? renderoptionsasradio,
-Object? rendertype,
-int? lastupdatedby,
-DateTime? created,
-bool? allowfuturedate,
-int? sortOrder,
-String? code,
-bool? searchable,
-required int programtrackedentityattributeid,
-int? programid,
-DateTime? lastupdated,
-bool? displayinlist,
-}) = _ProgramAttributes;
+  ProgramAttributes._();
+  factory ProgramAttributes({
+    required int trackedentityattributeid,
+    bool? mandatory,
+    String? uid,
+    bool? renderoptionsasradio,
+    Object? rendertype,
+    int? lastupdatedby,
+    DateTime? created,
+    bool? allowfuturedate,
+    int? sortOrder,
+    String? code,
+    bool? searchable,
+    required int programtrackedentityattributeid,
+    int? programid,
+    DateTime? lastupdated,
+    bool? displayinlist,
+  }) = _ProgramAttributes;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ bool? displayinlist,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

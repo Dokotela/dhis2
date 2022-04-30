@@ -11,12 +11,12 @@ part 'programexpression.g.dart';
 
 @freezed
 class Programexpression with _$Programexpression {
- Programexpression._();
-factory Programexpression({
-required int programexpressionid,
-String? expression,
-String? description,
-}) = _Programexpression;
+  Programexpression._();
+  factory Programexpression({
+    required int programexpressionid,
+    String? expression,
+    String? description,
+  }) = _Programexpression;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? description,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,19 +11,19 @@ part 'externalnotificationlogentry.g.dart';
 
 @freezed
 class Externalnotificationlogentry with _$Externalnotificationlogentry {
- Externalnotificationlogentry._();
-factory Externalnotificationlogentry({
-String? triggerby,
-required int externalnotificationlogentryid,
-int? retries,
-bool? allowmultiple,
-required DateTime created,
-required DateTime lastupdated,
-required String key,
-String? uid,
-required String templateuid,
-DateTime? lastsentat,
-}) = _Externalnotificationlogentry;
+  Externalnotificationlogentry._();
+  factory Externalnotificationlogentry({
+    String? triggerby,
+    required int externalnotificationlogentryid,
+    int? retries,
+    bool? allowmultiple,
+    required DateTime created,
+    required DateTime lastupdated,
+    required String key,
+    String? uid,
+    required String templateuid,
+    DateTime? lastsentat,
+  }) = _Externalnotificationlogentry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ DateTime? lastsentat,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

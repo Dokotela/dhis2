@@ -11,12 +11,12 @@ part 'eventreport_columns.g.dart';
 
 @freezed
 class EventreportColumns with _$EventreportColumns {
- EventreportColumns._();
-factory EventreportColumns({
-String? dimension,
-required int eventreportid,
-required int sortOrder,
-}) = _EventreportColumns;
+  EventreportColumns._();
+  factory EventreportColumns({
+    String? dimension,
+    required int eventreportid,
+    required int sortOrder,
+  }) = _EventreportColumns;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

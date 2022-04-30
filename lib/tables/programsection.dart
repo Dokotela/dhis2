@@ -11,23 +11,23 @@ part 'programsection.g.dart';
 
 @freezed
 class Programsection with _$Programsection {
- Programsection._();
-factory Programsection({
-required int programsectionid,
-String? formname,
-Object? rendertype,
-required DateTime lastupdated,
-Object? translations,
-String? code,
-int? lastupdatedby,
-required DateTime created,
-required String name,
-String? description,
-int? programid,
-required String uid,
-required int sortorder,
-Object? style,
-}) = _Programsection;
+  Programsection._();
+  factory Programsection({
+    required int programsectionid,
+    String? formname,
+    Object? rendertype,
+    required DateTime lastupdated,
+    Object? translations,
+    String? code,
+    int? lastupdatedby,
+    required DateTime created,
+    required String name,
+    String? description,
+    int? programid,
+    required String uid,
+    required int sortorder,
+    Object? style,
+  }) = _Programsection;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ Object? style,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

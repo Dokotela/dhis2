@@ -10,18 +10,20 @@ part 'categoryoptioncombos_categoryoptions.freezed.dart';
 part 'categoryoptioncombos_categoryoptions.g.dart';
 
 @freezed
-class CategoryoptioncombosCategoryoptions with _$CategoryoptioncombosCategoryoptions {
- CategoryoptioncombosCategoryoptions._();
-factory CategoryoptioncombosCategoryoptions({
-required int categoryoptionid,
-required int categoryoptioncomboid,
-}) = _CategoryoptioncombosCategoryoptions;
+class CategoryoptioncombosCategoryoptions
+    with _$CategoryoptioncombosCategoryoptions {
+  CategoryoptioncombosCategoryoptions._();
+  factory CategoryoptioncombosCategoryoptions({
+    required int categoryoptionid,
+    required int categoryoptioncomboid,
+  }) = _CategoryoptioncombosCategoryoptions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CategoryoptioncombosCategoryoptions.fromYaml(dynamic yaml) => yaml is String
+  factory CategoryoptioncombosCategoryoptions.fromYaml(dynamic yaml) => yaml
+          is String
       ? CategoryoptioncombosCategoryoptions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -32,7 +34,8 @@ required int categoryoptioncomboid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CategoryoptioncombosCategoryoptions.fromJson(Map<String, dynamic> json) =>
+  factory CategoryoptioncombosCategoryoptions.fromJson(
+          Map<String, dynamic> json) =>
       _$CategoryoptioncombosCategoryoptionsFromJson(json);
 
   /// Acts like a constructor, returns a [CategoryoptioncombosCategoryoptions], accepts a
@@ -45,4 +48,5 @@ required int categoryoptioncomboid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

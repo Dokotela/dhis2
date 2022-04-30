@@ -11,26 +11,26 @@ part 'dataelementcategoryoption.g.dart';
 
 @freezed
 class Dataelementcategoryoption with _$Dataelementcategoryoption {
- Dataelementcategoryoption._();
-factory Dataelementcategoryoption({
-int? userid,
-String? uid,
-String? code,
-required int categoryoptionid,
-Object? style,
-Object? attributevalues,
-String? publicaccess,
-String? formname,
-required String name,
-int? lastupdatedby,
-DateTime? startdate,
-String? shortname,
-Object? translations,
-DateTime? created,
-DateTime? lastupdated,
-DateTime? enddate,
-Object? sharing,
-}) = _Dataelementcategoryoption;
+  Dataelementcategoryoption._();
+  factory Dataelementcategoryoption({
+    int? userid,
+    String? uid,
+    String? code,
+    required int categoryoptionid,
+    Object? style,
+    Object? attributevalues,
+    String? publicaccess,
+    String? formname,
+    required String name,
+    int? lastupdatedby,
+    DateTime? startdate,
+    String? shortname,
+    Object? translations,
+    DateTime? created,
+    DateTime? lastupdated,
+    DateTime? enddate,
+    Object? sharing,
+  }) = _Dataelementcategoryoption;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -60,4 +60,5 @@ Object? sharing,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

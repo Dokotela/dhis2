@@ -11,11 +11,11 @@ part 'userroledataset.g.dart';
 
 @freezed
 class Userroledataset with _$Userroledataset {
- Userroledataset._();
-factory Userroledataset({
-required int userroleid,
-required int datasetid,
-}) = _Userroledataset;
+  Userroledataset._();
+  factory Userroledataset({
+    required int userroleid,
+    required int datasetid,
+  }) = _Userroledataset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

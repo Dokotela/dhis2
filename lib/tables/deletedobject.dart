@@ -11,15 +11,15 @@ part 'deletedobject.g.dart';
 
 @freezed
 class Deletedobject with _$Deletedobject {
- Deletedobject._();
-factory Deletedobject({
-String? code,
-required String uid,
-String? deletedBy,
-required DateTime deletedAt,
-required String klass,
-required int deletedobjectid,
-}) = _Deletedobject;
+  Deletedobject._();
+  factory Deletedobject({
+    String? code,
+    required String uid,
+    String? deletedBy,
+    required DateTime deletedAt,
+    required String klass,
+    required int deletedobjectid,
+  }) = _Deletedobject;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ required int deletedobjectid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

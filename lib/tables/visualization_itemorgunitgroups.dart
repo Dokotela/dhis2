@@ -11,18 +11,19 @@ part 'visualization_itemorgunitgroups.g.dart';
 
 @freezed
 class VisualizationItemorgunitgroups with _$VisualizationItemorgunitgroups {
- VisualizationItemorgunitgroups._();
-factory VisualizationItemorgunitgroups({
-required int sortOrder,
-required int orgunitgroupid,
-required int visualizationid,
-}) = _VisualizationItemorgunitgroups;
+  VisualizationItemorgunitgroups._();
+  factory VisualizationItemorgunitgroups({
+    required int sortOrder,
+    required int orgunitgroupid,
+    required int visualizationid,
+  }) = _VisualizationItemorgunitgroups;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory VisualizationItemorgunitgroups.fromYaml(dynamic yaml) => yaml is String
+  factory VisualizationItemorgunitgroups.fromYaml(dynamic yaml) => yaml
+          is String
       ? VisualizationItemorgunitgroups.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -46,4 +47,5 @@ required int visualizationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

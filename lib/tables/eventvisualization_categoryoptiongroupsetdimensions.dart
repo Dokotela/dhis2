@@ -10,35 +10,40 @@ part 'eventvisualization_categoryoptiongroupsetdimensions.freezed.dart';
 part 'eventvisualization_categoryoptiongroupsetdimensions.g.dart';
 
 @freezed
-class EventvisualizationCategoryoptiongroupsetdimensions with _$EventvisualizationCategoryoptiongroupsetdimensions {
- EventvisualizationCategoryoptiongroupsetdimensions._();
-factory EventvisualizationCategoryoptiongroupsetdimensions({
-required int sortOrder,
-required int eventvisualizationid,
-required int categoryoptiongroupsetdimensionid,
-}) = _EventvisualizationCategoryoptiongroupsetdimensions;
+class EventvisualizationCategoryoptiongroupsetdimensions
+    with _$EventvisualizationCategoryoptiongroupsetdimensions {
+  EventvisualizationCategoryoptiongroupsetdimensions._();
+  factory EventvisualizationCategoryoptiongroupsetdimensions({
+    required int sortOrder,
+    required int eventvisualizationid,
+    required int categoryoptiongroupsetdimensionid,
+  }) = _EventvisualizationCategoryoptiongroupsetdimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventvisualizationCategoryoptiongroupsetdimensions.fromYaml(dynamic yaml) => yaml is String
-      ? EventvisualizationCategoryoptiongroupsetdimensions.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
+  factory EventvisualizationCategoryoptiongroupsetdimensions.fromYaml(
+          dynamic yaml) =>
+      yaml is String
           ? EventvisualizationCategoryoptiongroupsetdimensions.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EventvisualizationCategoryoptiongroupsetdimensions cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+              jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          : yaml is YamlMap
+              ? EventvisualizationCategoryoptiongroupsetdimensions.fromJson(
+                  jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+              : throw ArgumentError(
+                  'EventvisualizationCategoryoptiongroupsetdimensions cannot be constructed from input provided,'
+                  ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventvisualizationCategoryoptiongroupsetdimensions.fromJson(Map<String, dynamic> json) =>
+  factory EventvisualizationCategoryoptiongroupsetdimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$EventvisualizationCategoryoptiongroupsetdimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [EventvisualizationCategoryoptiongroupsetdimensions], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory EventvisualizationCategoryoptiongroupsetdimensions.fromJsonString(String source) {
+  factory EventvisualizationCategoryoptiongroupsetdimensions.fromJsonString(
+      String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EventvisualizationCategoryoptiongroupsetdimensionsFromJson(json);
@@ -46,4 +51,5 @@ required int categoryoptiongroupsetdimensionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

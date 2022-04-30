@@ -11,23 +11,23 @@ part 'pushanalysis.g.dart';
 
 @freezed
 class Pushanalysis with _$Pushanalysis {
- Pushanalysis._();
-factory Pushanalysis({
-String? schedulingfrequency,
-required int dashboard,
-required int pushanalysisid,
-required DateTime created,
-int? lastupdatedby,
-String? message,
-required bool enabled,
-int? schedulingdayoffrequency,
-DateTime? lastrun,
-String? title,
-String? code,
-required String uid,
-required DateTime lastupdated,
-required String name,
-}) = _Pushanalysis;
+  Pushanalysis._();
+  factory Pushanalysis({
+    String? schedulingfrequency,
+    required int dashboard,
+    required int pushanalysisid,
+    required DateTime created,
+    int? lastupdatedby,
+    String? message,
+    required bool enabled,
+    int? schedulingdayoffrequency,
+    DateTime? lastrun,
+    String? title,
+    String? code,
+    required String uid,
+    required DateTime lastupdated,
+    required String name,
+  }) = _Pushanalysis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

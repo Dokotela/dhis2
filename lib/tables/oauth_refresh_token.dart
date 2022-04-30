@@ -11,12 +11,12 @@ part 'oauth_refresh_token.g.dart';
 
 @freezed
 class OauthRefreshToken with _$OauthRefreshToken {
- OauthRefreshToken._();
-factory OauthRefreshToken({
-String? authentication,
-String? token,
-String? tokenId,
-}) = _OauthRefreshToken;
+  OauthRefreshToken._();
+  factory OauthRefreshToken({
+    String? authentication,
+    String? token,
+    String? tokenId,
+  }) = _OauthRefreshToken;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? tokenId,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

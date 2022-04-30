@@ -11,17 +11,17 @@ part 'trackedentitycomment.g.dart';
 
 @freezed
 class Trackedentitycomment with _$Trackedentitycomment {
- Trackedentitycomment._();
-factory Trackedentitycomment({
-required int trackedentitycommentid,
-int? lastupdatedby,
-required DateTime created,
-required String uid,
-required DateTime lastupdated,
-String? creator,
-String? commenttext,
-String? code,
-}) = _Trackedentitycomment;
+  Trackedentitycomment._();
+  factory Trackedentitycomment({
+    required int trackedentitycommentid,
+    int? lastupdatedby,
+    required DateTime created,
+    required String uid,
+    required DateTime lastupdated,
+    String? creator,
+    String? commenttext,
+    String? code,
+  }) = _Trackedentitycomment;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ String? code,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

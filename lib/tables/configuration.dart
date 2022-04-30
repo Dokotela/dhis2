@@ -11,21 +11,21 @@ part 'configuration.g.dart';
 
 @freezed
 class Configuration with _$Configuration {
- Configuration._();
-factory Configuration({
-int? infrastructuraldataelementsid,
-int? selfregistrationorgunit,
-int? offlineorgunitlevelid,
-int? infrastructuralperiodtypeid,
-int? selfregistrationrole,
-int? infrastructuralindicatorsid,
-int? facilityorgunitlevel,
-int? facilityorgunitgroupset,
-required int configurationid,
-String? systemid,
-int? feedbackrecipientsid,
-int? systemupdatenotificationrecipientsid,
-}) = _Configuration;
+  Configuration._();
+  factory Configuration({
+    int? infrastructuraldataelementsid,
+    int? selfregistrationorgunit,
+    int? offlineorgunitlevelid,
+    int? infrastructuralperiodtypeid,
+    int? selfregistrationrole,
+    int? infrastructuralindicatorsid,
+    int? facilityorgunitlevel,
+    int? facilityorgunitgroupset,
+    required int configurationid,
+    String? systemid,
+    int? feedbackrecipientsid,
+    int? systemupdatenotificationrecipientsid,
+  }) = _Configuration;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ int? systemupdatenotificationrecipientsid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

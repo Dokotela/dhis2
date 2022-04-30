@@ -11,28 +11,28 @@ part 'interpretation.g.dart';
 
 @freezed
 class Interpretation with _$Interpretation {
- Interpretation._();
-factory Interpretation({
-int? organisationunitid,
-required int interpretationid,
-int? eventvisualizationid,
-required DateTime created,
-int? periodid,
-String? uid,
-int? mapviewid,
-DateTime? lastupdated,
-String? interpretationtext,
-int? visualizationid,
-int? likes,
-int? userid,
-String? publicaccess,
-Object? mentions,
-int? mapid,
-Object? sharing,
-int? eventchartid,
-int? eventreportid,
-int? datasetid,
-}) = _Interpretation;
+  Interpretation._();
+  factory Interpretation({
+    int? organisationunitid,
+    required int interpretationid,
+    int? eventvisualizationid,
+    required DateTime created,
+    int? periodid,
+    String? uid,
+    int? mapviewid,
+    DateTime? lastupdated,
+    String? interpretationtext,
+    int? visualizationid,
+    int? likes,
+    int? userid,
+    String? publicaccess,
+    Object? mentions,
+    int? mapid,
+    Object? sharing,
+    int? eventchartid,
+    int? eventreportid,
+    int? datasetid,
+  }) = _Interpretation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -62,4 +62,5 @@ int? datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

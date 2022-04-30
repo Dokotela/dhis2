@@ -11,14 +11,14 @@ part 'relationshipitem.g.dart';
 
 @freezed
 class Relationshipitem with _$Relationshipitem {
- Relationshipitem._();
-factory Relationshipitem({
-int? programinstanceid,
-required int relationshipitemid,
-int? trackedentityinstanceid,
-int? relationshipid,
-int? programstageinstanceid,
-}) = _Relationshipitem;
+  Relationshipitem._();
+  factory Relationshipitem({
+    int? programinstanceid,
+    required int relationshipitemid,
+    int? trackedentityinstanceid,
+    int? relationshipid,
+    int? programstageinstanceid,
+  }) = _Relationshipitem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ int? programstageinstanceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

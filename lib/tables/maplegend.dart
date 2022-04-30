@@ -11,22 +11,22 @@ part 'maplegend.g.dart';
 
 @freezed
 class Maplegend with _$Maplegend {
- Maplegend._();
-factory Maplegend({
-DateTime? lastupdated,
-String? color,
-String? name,
-double? endvalue,
-DateTime? created,
-int? lastupdatedby,
-double? startvalue,
-String? image,
-int? maplegendsetid,
-String? code,
-Object? translations,
-required int maplegendid,
-String? uid,
-}) = _Maplegend;
+  Maplegend._();
+  factory Maplegend({
+    DateTime? lastupdated,
+    String? color,
+    String? name,
+    double? endvalue,
+    DateTime? created,
+    int? lastupdatedby,
+    double? startvalue,
+    String? image,
+    int? maplegendsetid,
+    String? code,
+    Object? translations,
+    required int maplegendid,
+    String? uid,
+  }) = _Maplegend;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

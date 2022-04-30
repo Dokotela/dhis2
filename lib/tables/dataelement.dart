@@ -11,36 +11,36 @@ part 'dataelement.g.dart';
 
 @freezed
 class Dataelement with _$Dataelement {
- Dataelement._();
-factory Dataelement({
-String? fieldmask,
-required int categorycomboid,
-String? formname,
-int? lastupdatedby,
-required String domaintype,
-String? uid,
-required String shortname,
-String? description,
-required int dataelementid,
-Object? sharing,
-Object? style,
-Object? attributevalues,
-String? code,
-Object? translations,
-String? url,
-required String aggregationtype,
-int? commentoptionsetid,
-required String name,
-DateTime? created,
-int? userid,
-String? publicaccess,
-int? optionsetid,
-Object? valuetypeoptions,
-DateTime? lastupdated,
-int? parentid,
-required String valuetype,
-bool? zeroissignificant,
-}) = _Dataelement;
+  Dataelement._();
+  factory Dataelement({
+    String? fieldmask,
+    required int categorycomboid,
+    String? formname,
+    int? lastupdatedby,
+    required String domaintype,
+    String? uid,
+    required String shortname,
+    String? description,
+    required int dataelementid,
+    Object? sharing,
+    Object? style,
+    Object? attributevalues,
+    String? code,
+    Object? translations,
+    String? url,
+    required String aggregationtype,
+    int? commentoptionsetid,
+    required String name,
+    DateTime? created,
+    int? userid,
+    String? publicaccess,
+    int? optionsetid,
+    Object? valuetypeoptions,
+    DateTime? lastupdated,
+    int? parentid,
+    required String valuetype,
+    bool? zeroissignificant,
+  }) = _Dataelement;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -70,4 +70,5 @@ bool? zeroissignificant,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

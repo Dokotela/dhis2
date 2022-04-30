@@ -10,19 +10,21 @@ part 'eventvisualization_organisationunits.freezed.dart';
 part 'eventvisualization_organisationunits.g.dart';
 
 @freezed
-class EventvisualizationOrganisationunits with _$EventvisualizationOrganisationunits {
- EventvisualizationOrganisationunits._();
-factory EventvisualizationOrganisationunits({
-required int sortOrder,
-required int eventvisualizationid,
-required int organisationunitid,
-}) = _EventvisualizationOrganisationunits;
+class EventvisualizationOrganisationunits
+    with _$EventvisualizationOrganisationunits {
+  EventvisualizationOrganisationunits._();
+  factory EventvisualizationOrganisationunits({
+    required int sortOrder,
+    required int eventvisualizationid,
+    required int organisationunitid,
+  }) = _EventvisualizationOrganisationunits;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventvisualizationOrganisationunits.fromYaml(dynamic yaml) => yaml is String
+  factory EventvisualizationOrganisationunits.fromYaml(dynamic yaml) => yaml
+          is String
       ? EventvisualizationOrganisationunits.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int organisationunitid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventvisualizationOrganisationunits.fromJson(Map<String, dynamic> json) =>
+  factory EventvisualizationOrganisationunits.fromJson(
+          Map<String, dynamic> json) =>
       _$EventvisualizationOrganisationunitsFromJson(json);
 
   /// Acts like a constructor, returns a [EventvisualizationOrganisationunits], accepts a
@@ -46,4 +49,5 @@ required int organisationunitid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

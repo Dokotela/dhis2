@@ -11,16 +11,16 @@ part 'smscodes.g.dart';
 
 @freezed
 class Smscodes with _$Smscodes {
- Smscodes._();
-factory Smscodes({
-String? code,
-required int smscodeid,
-int? optionid,
-bool? compulsory,
-int? dataelementid,
-String? formula,
-int? trackedentityattributeid,
-}) = _Smscodes;
+  Smscodes._();
+  factory Smscodes({
+    String? code,
+    required int smscodeid,
+    int? optionid,
+    bool? compulsory,
+    int? dataelementid,
+    String? formula,
+    int? trackedentityattributeid,
+  }) = _Smscodes;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ int? trackedentityattributeid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'program_userroles.g.dart';
 
 @freezed
 class ProgramUserroles with _$ProgramUserroles {
- ProgramUserroles._();
-factory ProgramUserroles({
-required int userroleid,
-required int programid,
-}) = _ProgramUserroles;
+  ProgramUserroles._();
+  factory ProgramUserroles({
+    required int userroleid,
+    required int programid,
+  }) = _ProgramUserroles;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int programid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

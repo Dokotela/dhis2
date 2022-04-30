@@ -11,27 +11,27 @@ part 'datasetnotificationtemplate.g.dart';
 
 @freezed
 class Datasetnotificationtemplate with _$Datasetnotificationtemplate {
- Datasetnotificationtemplate._();
-factory Datasetnotificationtemplate({
-required int datasetnotificationtemplateid,
-bool? notifyparentorganisationunitonly,
-String? notificationrecipienttype,
-String? code,
-required DateTime lastupdated,
-required String uid,
-required String messagetemplate,
-int? lastupdatedby,
-String? subjecttemplate,
-required DateTime created,
-required String name,
-bool? notifyusersinhierarchyonly,
-String? notificationtrigger,
-int? relativescheduleddays,
-Object? translations,
-String? datasetnotificationtrigger,
-int? usergroupid,
-String? sendstrategy,
-}) = _Datasetnotificationtemplate;
+  Datasetnotificationtemplate._();
+  factory Datasetnotificationtemplate({
+    required int datasetnotificationtemplateid,
+    bool? notifyparentorganisationunitonly,
+    String? notificationrecipienttype,
+    String? code,
+    required DateTime lastupdated,
+    required String uid,
+    required String messagetemplate,
+    int? lastupdatedby,
+    String? subjecttemplate,
+    required DateTime created,
+    required String name,
+    bool? notifyusersinhierarchyonly,
+    String? notificationtrigger,
+    int? relativescheduleddays,
+    Object? translations,
+    String? datasetnotificationtrigger,
+    int? usergroupid,
+    String? sendstrategy,
+  }) = _Datasetnotificationtemplate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ String? sendstrategy,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

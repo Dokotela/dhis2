@@ -11,29 +11,29 @@ part 'dashboarditem.g.dart';
 
 @freezed
 class Dashboarditem with _$Dashboarditem {
- Dashboarditem._();
-factory Dashboarditem({
-int? mapid,
-int? visualizationid,
-String? textcontent,
-String? uid,
-Object? translations,
-DateTime? created,
-int? height,
-String? shape,
-int? x,
-String? code,
-required int dashboarditemid,
-int? lastupdatedby,
-String? appkey,
-int? y,
-int? eventchartid,
-int? eventvisualizationid,
-bool? messages,
-int? width,
-DateTime? lastupdated,
-int? eventreport,
-}) = _Dashboarditem;
+  Dashboarditem._();
+  factory Dashboarditem({
+    int? mapid,
+    int? visualizationid,
+    String? textcontent,
+    String? uid,
+    Object? translations,
+    DateTime? created,
+    int? height,
+    String? shape,
+    int? x,
+    String? code,
+    required int dashboarditemid,
+    int? lastupdatedby,
+    String? appkey,
+    int? y,
+    int? eventchartid,
+    int? eventvisualizationid,
+    bool? messages,
+    int? width,
+    DateTime? lastupdated,
+    int? eventreport,
+  }) = _Dashboarditem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -63,4 +63,5 @@ int? eventreport,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

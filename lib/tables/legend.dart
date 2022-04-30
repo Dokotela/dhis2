@@ -11,17 +11,17 @@ part 'legend.g.dart';
 
 @freezed
 class Legend with _$Legend {
- Legend._();
-factory Legend({
-required double max,
-int? autocreatemax,
-int? legendsetid,
-required String name,
-required String color,
-required double min,
-required int legendid,
-int? legendindex,
-}) = _Legend;
+  Legend._();
+  factory Legend({
+    required double max,
+    int? autocreatemax,
+    int? legendsetid,
+    required String name,
+    required String color,
+    required double min,
+    required int legendid,
+    int? legendindex,
+  }) = _Legend;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -38,8 +38,7 @@ int? legendindex,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Legend.fromJson(Map<String, dynamic> json) =>
-      _$LegendFromJson(json);
+  factory Legend.fromJson(Map<String, dynamic> json) => _$LegendFromJson(json);
 
   /// Acts like a constructor, returns a [Legend], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -51,4 +50,5 @@ int? legendindex,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

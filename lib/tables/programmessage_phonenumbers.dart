@@ -11,11 +11,11 @@ part 'programmessage_phonenumbers.g.dart';
 
 @freezed
 class ProgrammessagePhonenumbers with _$ProgrammessagePhonenumbers {
- ProgrammessagePhonenumbers._();
-factory ProgrammessagePhonenumbers({
-required int programmessagephonenumberid,
-String? phonenumber,
-}) = _ProgrammessagePhonenumbers;
+  ProgrammessagePhonenumbers._();
+  factory ProgrammessagePhonenumbers({
+    required int programmessagephonenumberid,
+    String? phonenumber,
+  }) = _ProgrammessagePhonenumbers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ String? phonenumber,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

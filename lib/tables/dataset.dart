@@ -11,45 +11,45 @@ part 'dataset.g.dart';
 
 @freezed
 class Dataset with _$Dataset {
- Dataset._();
-factory Dataset({
-Object? sharing,
-int? openperiodsaftercoenddate,
-bool? dataelementdecoration,
-DateTime? created,
-required int categorycomboid,
-String? publicaccess,
-bool? skipoffline,
-bool? novaluerequirescomment,
-bool? mobile,
-required int periodtypeid,
-required String name,
-bool? renderhorizontally,
-int? openfutureperiods,
-int? lastupdatedby,
-required bool? fieldcombinationrequired,
-bool? validcompleteonly,
-int? expirydays,
-Object? style,
-int? workflowid,
-int? dataentryform,
-String? formname,
-int? version,
-String? shortname,
-String? uid,
-bool? compulsoryfieldscompleteonly,
-int? timelydays,
-String? code,
-String? description,
-required int datasetid,
-int? userid,
-Object? translations,
-bool? renderastabs,
-DateTime? lastupdated,
-int? notificationrecipients,
-bool? notifycompletinguser,
-Object? attributevalues,
-}) = _Dataset;
+  Dataset._();
+  factory Dataset({
+    Object? sharing,
+    int? openperiodsaftercoenddate,
+    bool? dataelementdecoration,
+    DateTime? created,
+    required int categorycomboid,
+    String? publicaccess,
+    bool? skipoffline,
+    bool? novaluerequirescomment,
+    bool? mobile,
+    required int periodtypeid,
+    required String name,
+    bool? renderhorizontally,
+    int? openfutureperiods,
+    int? lastupdatedby,
+    required bool? fieldcombinationrequired,
+    bool? validcompleteonly,
+    int? expirydays,
+    Object? style,
+    int? workflowid,
+    int? dataentryform,
+    String? formname,
+    int? version,
+    String? shortname,
+    String? uid,
+    bool? compulsoryfieldscompleteonly,
+    int? timelydays,
+    String? code,
+    String? description,
+    required int datasetid,
+    int? userid,
+    Object? translations,
+    bool? renderastabs,
+    DateTime? lastupdated,
+    int? notificationrecipients,
+    bool? notifycompletinguser,
+    Object? attributevalues,
+  }) = _Dataset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -79,4 +79,5 @@ Object? attributevalues,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

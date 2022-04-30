@@ -11,11 +11,11 @@ part 'intepretation_likedby.g.dart';
 
 @freezed
 class IntepretationLikedby with _$IntepretationLikedby {
- IntepretationLikedby._();
-factory IntepretationLikedby({
-required int userid,
-required int interpretationid,
-}) = _IntepretationLikedby;
+  IntepretationLikedby._();
+  factory IntepretationLikedby({
+    required int userid,
+    required int interpretationid,
+  }) = _IntepretationLikedby;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int interpretationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

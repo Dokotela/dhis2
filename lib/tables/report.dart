@@ -11,29 +11,29 @@ part 'report.g.dart';
 
 @freezed
 class Report with _$Report {
- Report._();
-factory Report({
-String? code,
-String? design,
-int? relativeperiodsid,
-String? publicaccess,
-String? uid,
-int? visualizationid,
-bool? paramorganisationunit,
-int? lastupdatedby,
-Object? sharing,
-String? type,
-DateTime? lastupdated,
-required int reportid,
-String? designcontent,
-bool? externalaccess,
-String? cachestrategy,
-required String name,
-int? userid,
-Object? translations,
-bool? paramreportingmonth,
-DateTime? created,
-}) = _Report;
+  Report._();
+  factory Report({
+    String? code,
+    String? design,
+    int? relativeperiodsid,
+    String? publicaccess,
+    String? uid,
+    int? visualizationid,
+    bool? paramorganisationunit,
+    int? lastupdatedby,
+    Object? sharing,
+    String? type,
+    DateTime? lastupdated,
+    required int reportid,
+    String? designcontent,
+    bool? externalaccess,
+    String? cachestrategy,
+    required String name,
+    int? userid,
+    Object? translations,
+    bool? paramreportingmonth,
+    DateTime? created,
+  }) = _Report;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,8 +50,7 @@ DateTime? created,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Report.fromJson(Map<String, dynamic> json) =>
-      _$ReportFromJson(json);
+  factory Report.fromJson(Map<String, dynamic> json) => _$ReportFromJson(json);
 
   /// Acts like a constructor, returns a [Report], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -63,4 +62,5 @@ DateTime? created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

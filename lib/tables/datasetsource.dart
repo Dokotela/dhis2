@@ -11,11 +11,11 @@ part 'datasetsource.g.dart';
 
 @freezed
 class Datasetsource with _$Datasetsource {
- Datasetsource._();
-factory Datasetsource({
-required int datasetid,
-required int sourceid,
-}) = _Datasetsource;
+  Datasetsource._();
+  factory Datasetsource({
+    required int datasetid,
+    required int sourceid,
+  }) = _Datasetsource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int sourceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

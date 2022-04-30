@@ -11,20 +11,20 @@ part 'dataentryform.g.dart';
 
 @freezed
 class Dataentryform with _$Dataentryform {
- Dataentryform._();
-factory Dataentryform({
-int? lastupdatedby,
-required int dataentryformid,
-DateTime? created,
-int? format,
-String? style,
-required String name,
-DateTime? lastupdated,
-String? uid,
-String? htmlcode,
-String? code,
-Object? translations,
-}) = _Dataentryform;
+  Dataentryform._();
+  factory Dataentryform({
+    int? lastupdatedby,
+    required int dataentryformid,
+    DateTime? created,
+    int? format,
+    String? style,
+    required String name,
+    DateTime? lastupdated,
+    String? uid,
+    String? htmlcode,
+    String? code,
+    Object? translations,
+  }) = _Dataentryform;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ Object? translations,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

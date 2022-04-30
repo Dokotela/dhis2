@@ -11,12 +11,12 @@ part 'userapps.g.dart';
 
 @freezed
 class Userapps with _$Userapps {
- Userapps._();
-factory Userapps({
-required int userinfoid,
-String? app,
-required int sortOrder,
-}) = _Userapps;
+  Userapps._();
+  factory Userapps({
+    required int userinfoid,
+    String? app,
+    required int sortOrder,
+  }) = _Userapps;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

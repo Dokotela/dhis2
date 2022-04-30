@@ -11,12 +11,12 @@ part 'usersetting.g.dart';
 
 @freezed
 class Usersetting with _$Usersetting {
- Usersetting._();
-factory Usersetting({
-required int userinfoid,
-required String name,
-String? value,
-}) = _Usersetting;
+  Usersetting._();
+  factory Usersetting({
+    required int userinfoid,
+    required String name,
+    String? value,
+  }) = _Usersetting;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? value,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,37 +11,37 @@ part 'organisationunit.g.dart';
 
 @freezed
 class Organisationunit with _$Organisationunit {
- Organisationunit._();
-factory Organisationunit({
-Object? translations,
-DateTime? closeddate,
-int? image,
-String? comment,
-int? hierarchylevel,
-Object? geometry,
-required String shortname,
-String? email,
-int? lastupdatedby,
-String? address,
-int? userid,
-String? uid,
-String? contactperson,
-int? parentid,
-DateTime? openingdate,
-String? longitude,
-required String name,
-String? path,
-required int organisationunitid,
-String? latitude,
-String? phonenumber,
-String? url,
-String? type,
-DateTime? created,
-String? description,
-Object? attributevalues,
-String? code,
-DateTime? lastupdated,
-}) = _Organisationunit;
+  Organisationunit._();
+  factory Organisationunit({
+    Object? translations,
+    DateTime? closeddate,
+    int? image,
+    String? comment,
+    int? hierarchylevel,
+    Object? geometry,
+    required String shortname,
+    String? email,
+    int? lastupdatedby,
+    String? address,
+    int? userid,
+    String? uid,
+    String? contactperson,
+    int? parentid,
+    DateTime? openingdate,
+    String? longitude,
+    required String name,
+    String? path,
+    required int organisationunitid,
+    String? latitude,
+    String? phonenumber,
+    String? url,
+    String? type,
+    DateTime? created,
+    String? description,
+    Object? attributevalues,
+    String? code,
+    DateTime? lastupdated,
+  }) = _Organisationunit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -71,4 +71,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

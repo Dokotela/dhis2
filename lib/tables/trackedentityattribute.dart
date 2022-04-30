@@ -11,46 +11,46 @@ part 'trackedentityattribute.g.dart';
 
 @freezed
 class Trackedentityattribute with _$Trackedentityattribute {
- Trackedentityattribute._();
-factory Trackedentityattribute({
-String? pattern,
-Object? translations,
-int? sortorderinlistnoprogram,
-String? fieldmask,
-bool? inherit,
-bool? displayonvisitschedule,
-int? trackedentitymobilesettingid,
-String? description,
-Object? textpattern,
-int? sortOrderAttributename,
-required String name,
-Object? style,
-DateTime? lastupdated,
-String? code,
-bool? orgunitscope,
-Object? sharing,
-int? lastupdatedby,
-bool? uniquefield,
-required bool skipsynchronization,
-int? sortorderinvisitschedule,
-int? userid,
-required String shortname,
-required String valuetype,
-int? sortOrder,
-String? publicaccess,
-DateTime? created,
-Object? attributevalues,
-String? uid,
-String? expression,
-int? periodtypeid,
-bool? displayinlistnoprogram,
-String? formname,
-bool? confidential,
-required int trackedentityattributeid,
-required String aggregationtype,
-bool? generated,
-int? optionsetid,
-}) = _Trackedentityattribute;
+  Trackedentityattribute._();
+  factory Trackedentityattribute({
+    String? pattern,
+    Object? translations,
+    int? sortorderinlistnoprogram,
+    String? fieldmask,
+    bool? inherit,
+    bool? displayonvisitschedule,
+    int? trackedentitymobilesettingid,
+    String? description,
+    Object? textpattern,
+    int? sortOrderAttributename,
+    required String name,
+    Object? style,
+    DateTime? lastupdated,
+    String? code,
+    bool? orgunitscope,
+    Object? sharing,
+    int? lastupdatedby,
+    bool? uniquefield,
+    required bool skipsynchronization,
+    int? sortorderinvisitschedule,
+    int? userid,
+    required String shortname,
+    required String valuetype,
+    int? sortOrder,
+    String? publicaccess,
+    DateTime? created,
+    Object? attributevalues,
+    String? uid,
+    String? expression,
+    int? periodtypeid,
+    bool? displayinlistnoprogram,
+    String? formname,
+    bool? confidential,
+    required int trackedentityattributeid,
+    required String aggregationtype,
+    bool? generated,
+    int? optionsetid,
+  }) = _Trackedentityattribute;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -80,4 +80,5 @@ int? optionsetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'dataelementgroupmembers.g.dart';
 
 @freezed
 class Dataelementgroupmembers with _$Dataelementgroupmembers {
- Dataelementgroupmembers._();
-factory Dataelementgroupmembers({
-required int dataelementgroupid,
-required int dataelementid,
-}) = _Dataelementgroupmembers;
+  Dataelementgroupmembers._();
+  factory Dataelementgroupmembers({
+    required int dataelementgroupid,
+    required int dataelementid,
+  }) = _Dataelementgroupmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int dataelementid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

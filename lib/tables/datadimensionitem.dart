@@ -11,23 +11,23 @@ part 'datadimensionitem.g.dart';
 
 @freezed
 class Datadimensionitem with _$Datadimensionitem {
- Datadimensionitem._();
-factory Datadimensionitem({
-int? dataelementid,
-int? programattributeAttributeid,
-int? programdataelementProgramid,
-int? programattributeProgramid,
-int? programindicatorid,
-required int datadimensionitemid,
-int? datasetid,
-int? programattributedimensionitemid,
-int? indicatorid,
-int? dataelementoperandDataelementid,
-String? metric,
-int? dataelementoperandCategoryoptioncomboid,
-int? trackedentityattributeid,
-int? programdataelementDataelementid,
-}) = _Datadimensionitem;
+  Datadimensionitem._();
+  factory Datadimensionitem({
+    int? dataelementid,
+    int? programattributeAttributeid,
+    int? programdataelementProgramid,
+    int? programattributeProgramid,
+    int? programindicatorid,
+    required int datadimensionitemid,
+    int? datasetid,
+    int? programattributedimensionitemid,
+    int? indicatorid,
+    int? dataelementoperandDataelementid,
+    String? metric,
+    int? dataelementoperandCategoryoptioncomboid,
+    int? trackedentityattributeid,
+    int? programdataelementDataelementid,
+  }) = _Datadimensionitem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ int? programdataelementDataelementid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

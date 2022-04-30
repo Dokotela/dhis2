@@ -11,20 +11,20 @@ part 'periodboundary.g.dart';
 
 @freezed
 class Periodboundary with _$Periodboundary {
- Periodboundary._();
-factory Periodboundary({
-String? code,
-String? analyticsperiodboundarytype,
-int? offsetperiodtypeid,
-required int periodboundaryid,
-int? lastupdatedby,
-int? offsetperiods,
-required String uid,
-String? boundarytarget,
-required DateTime created,
-int? programindicatorid,
-required DateTime lastupdated,
-}) = _Periodboundary;
+  Periodboundary._();
+  factory Periodboundary({
+    String? code,
+    String? analyticsperiodboundarytype,
+    int? offsetperiodtypeid,
+    required int periodboundaryid,
+    int? lastupdatedby,
+    int? offsetperiods,
+    required String uid,
+    String? boundarytarget,
+    required DateTime created,
+    int? programindicatorid,
+    required DateTime lastupdated,
+  }) = _Periodboundary;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ required DateTime lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

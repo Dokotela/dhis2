@@ -11,23 +11,23 @@ part 'programstageinstancefilter.g.dart';
 
 @freezed
 class Programstageinstancefilter with _$Programstageinstancefilter {
- Programstageinstancefilter._();
-factory Programstageinstancefilter({
-required DateTime created,
-int? lastupdatedby,
-int? userid,
-String? publicaccess,
-required int programstageinstancefilterid,
-Object? translations,
-Object? eventquerycriteria,
-required DateTime lastupdated,
-required String name,
-String? description,
-Object? sharing,
-required String program,
-String? programstage,
-required String uid,
-}) = _Programstageinstancefilter;
+  Programstageinstancefilter._();
+  factory Programstageinstancefilter({
+    required DateTime created,
+    int? lastupdatedby,
+    int? userid,
+    String? publicaccess,
+    required int programstageinstancefilterid,
+    Object? translations,
+    Object? eventquerycriteria,
+    required DateTime lastupdated,
+    required String name,
+    String? description,
+    Object? sharing,
+    required String program,
+    String? programstage,
+    required String uid,
+  }) = _Programstageinstancefilter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ required String uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'users_catdimensionconstraints.g.dart';
 
 @freezed
 class UsersCatdimensionconstraints with _$UsersCatdimensionconstraints {
- UsersCatdimensionconstraints._();
-factory UsersCatdimensionconstraints({
-required int userid,
-required int dataelementcategoryid,
-}) = _UsersCatdimensionconstraints;
+  UsersCatdimensionconstraints._();
+  factory UsersCatdimensionconstraints({
+    required int userid,
+    required int dataelementcategoryid,
+  }) = _UsersCatdimensionconstraints;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int dataelementcategoryid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,22 +11,22 @@ part 'api_token.g.dart';
 
 @freezed
 class ApiToken with _$ApiToken {
- ApiToken._();
-factory ApiToken({
-required int expire,
-required DateTime created,
-Object? attributes,
-required String key,
-required int version,
-required int apitokenid,
-Object? sharing,
-required String uid,
-required int createdby,
-required DateTime lastupdated,
-String? code,
-required int lastupdatedby,
-required String type,
-}) = _ApiToken;
+  ApiToken._();
+  factory ApiToken({
+    required int expire,
+    required DateTime created,
+    Object? attributes,
+    required String key,
+    required int version,
+    required int apitokenid,
+    Object? sharing,
+    required String uid,
+    required int createdby,
+    required DateTime lastupdated,
+    String? code,
+    required int lastupdatedby,
+    required String type,
+  }) = _ApiToken;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ required String type,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

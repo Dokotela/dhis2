@@ -11,18 +11,19 @@ part 'trackedentityattributelegendsets.g.dart';
 
 @freezed
 class Trackedentityattributelegendsets with _$Trackedentityattributelegendsets {
- Trackedentityattributelegendsets._();
-factory Trackedentityattributelegendsets({
-required int legendsetid,
-required int trackedentityattributeid,
-required int sortOrder,
-}) = _Trackedentityattributelegendsets;
+  Trackedentityattributelegendsets._();
+  factory Trackedentityattributelegendsets({
+    required int legendsetid,
+    required int trackedentityattributeid,
+    required int sortOrder,
+  }) = _Trackedentityattributelegendsets;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Trackedentityattributelegendsets.fromYaml(dynamic yaml) => yaml is String
+  factory Trackedentityattributelegendsets.fromYaml(dynamic yaml) => yaml
+          is String
       ? Trackedentityattributelegendsets.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +34,8 @@ required int sortOrder,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Trackedentityattributelegendsets.fromJson(Map<String, dynamic> json) =>
+  factory Trackedentityattributelegendsets.fromJson(
+          Map<String, dynamic> json) =>
       _$TrackedentityattributelegendsetsFromJson(json);
 
   /// Acts like a constructor, returns a [Trackedentityattributelegendsets], accepts a
@@ -46,4 +48,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

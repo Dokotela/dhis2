@@ -11,21 +11,21 @@ part 'userrole.g.dart';
 
 @freezed
 class Userrole with _$Userrole {
- Userrole._();
-factory Userrole({
-required String name,
-Object? translations,
-required int userroleid,
-String? uid,
-int? lastupdatedby,
-DateTime? created,
-Object? sharing,
-String? code,
-String? description,
-DateTime? lastupdated,
-int? userid,
-String? publicaccess,
-}) = _Userrole;
+  Userrole._();
+  factory Userrole({
+    required String name,
+    Object? translations,
+    required int userroleid,
+    String? uid,
+    int? lastupdatedby,
+    DateTime? created,
+    Object? sharing,
+    String? code,
+    String? description,
+    DateTime? lastupdated,
+    int? userid,
+    String? publicaccess,
+  }) = _Userrole;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ String? publicaccess,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

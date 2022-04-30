@@ -11,12 +11,12 @@ part 'messageconversation_messages.g.dart';
 
 @freezed
 class MessageconversationMessages with _$MessageconversationMessages {
- MessageconversationMessages._();
-factory MessageconversationMessages({
-required int sortOrder,
-required int messageconversationid,
-required int messageid,
-}) = _MessageconversationMessages;
+  MessageconversationMessages._();
+  factory MessageconversationMessages({
+    required int sortOrder,
+    required int messageconversationid,
+    required int messageid,
+  }) = _MessageconversationMessages;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int messageid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

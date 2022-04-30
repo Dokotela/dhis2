@@ -11,12 +11,12 @@ part 'previouspasswords.g.dart';
 
 @freezed
 class Previouspasswords with _$Previouspasswords {
- Previouspasswords._();
-factory Previouspasswords({
-required int userid,
-required int listIndex,
-String? previouspassword,
-}) = _Previouspasswords;
+  Previouspasswords._();
+  factory Previouspasswords({
+    required int userid,
+    required int listIndex,
+    String? previouspassword,
+  }) = _Previouspasswords;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? previouspassword,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

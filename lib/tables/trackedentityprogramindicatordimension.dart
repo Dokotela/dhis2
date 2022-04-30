@@ -10,20 +10,22 @@ part 'trackedentityprogramindicatordimension.freezed.dart';
 part 'trackedentityprogramindicatordimension.g.dart';
 
 @freezed
-class Trackedentityprogramindicatordimension with _$Trackedentityprogramindicatordimension {
- Trackedentityprogramindicatordimension._();
-factory Trackedentityprogramindicatordimension({
-int? legendsetid,
-int? programindicatorid,
-required int trackedentityprogramindicatordimensionid,
-String? filter,
-}) = _Trackedentityprogramindicatordimension;
+class Trackedentityprogramindicatordimension
+    with _$Trackedentityprogramindicatordimension {
+  Trackedentityprogramindicatordimension._();
+  factory Trackedentityprogramindicatordimension({
+    int? legendsetid,
+    int? programindicatorid,
+    required int trackedentityprogramindicatordimensionid,
+    String? filter,
+  }) = _Trackedentityprogramindicatordimension;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Trackedentityprogramindicatordimension.fromYaml(dynamic yaml) => yaml is String
+  factory Trackedentityprogramindicatordimension.fromYaml(dynamic yaml) => yaml
+          is String
       ? Trackedentityprogramindicatordimension.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -34,7 +36,8 @@ String? filter,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Trackedentityprogramindicatordimension.fromJson(Map<String, dynamic> json) =>
+  factory Trackedentityprogramindicatordimension.fromJson(
+          Map<String, dynamic> json) =>
       _$TrackedentityprogramindicatordimensionFromJson(json);
 
   /// Acts like a constructor, returns a [Trackedentityprogramindicatordimension], accepts a
@@ -47,4 +50,5 @@ String? filter,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

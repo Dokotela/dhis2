@@ -11,11 +11,11 @@ part 'predictorgroupmembers.g.dart';
 
 @freezed
 class Predictorgroupmembers with _$Predictorgroupmembers {
- Predictorgroupmembers._();
-factory Predictorgroupmembers({
-required int predictorgroupid,
-required int predictorid,
-}) = _Predictorgroupmembers;
+  Predictorgroupmembers._();
+  factory Predictorgroupmembers({
+    required int predictorgroupid,
+    required int predictorid,
+  }) = _Predictorgroupmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int predictorid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

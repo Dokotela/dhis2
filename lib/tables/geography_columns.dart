@@ -11,16 +11,16 @@ part 'geography_columns.g.dart';
 
 @freezed
 class GeographyColumns with _$GeographyColumns {
- GeographyColumns._();
-factory GeographyColumns({
-String? fTableCatalog,
-String? type,
-String? fTableName,
-String? fTableSchema,
-int? srid,
-String? fGeographyColumn,
-int? coordDimension,
-}) = _GeographyColumns;
+  GeographyColumns._();
+  factory GeographyColumns({
+    String? fTableCatalog,
+    String? type,
+    String? fTableName,
+    String? fTableSchema,
+    int? srid,
+    String? fGeographyColumn,
+    int? coordDimension,
+  }) = _GeographyColumns;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ int? coordDimension,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

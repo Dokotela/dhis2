@@ -11,17 +11,17 @@ part 'metadatafilter.g.dart';
 
 @freezed
 class Metadatafilter with _$Metadatafilter {
- Metadatafilter._();
-factory Metadatafilter({
-String? code,
-String? description,
-DateTime? created,
-required String name,
-required int metadatafilterid,
-String? jsonfilter,
-DateTime? lastupdated,
-String? uid,
-}) = _Metadatafilter;
+  Metadatafilter._();
+  factory Metadatafilter({
+    String? code,
+    String? description,
+    DateTime? created,
+    required String name,
+    required int metadatafilterid,
+    String? jsonfilter,
+    DateTime? lastupdated,
+    String? uid,
+  }) = _Metadatafilter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

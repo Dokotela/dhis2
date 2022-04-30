@@ -11,29 +11,29 @@ part 'trackedentityinstance.g.dart';
 
 @freezed
 class Trackedentityinstance with _$Trackedentityinstance {
- Trackedentityinstance._();
-factory Trackedentityinstance({
-DateTime? created,
-int? trackedentitytypeid,
-Object? lastupdatedbyuserinfo,
-DateTime? lastupdated,
-required int organisationunitid,
-bool? potentialduplicate,
-bool? inactive,
-DateTime? lastupdatedatclient,
-String? code,
-required DateTime lastsynchronized,
-String? storedby,
-required bool deleted,
-String? featuretype,
-DateTime? createdatclient,
-Object? geometry,
-int? lastupdatedby,
-Object? createdbyuserinfo,
-String? uid,
-required int trackedentityinstanceid,
-String? coordinates,
-}) = _Trackedentityinstance;
+  Trackedentityinstance._();
+  factory Trackedentityinstance({
+    DateTime? created,
+    int? trackedentitytypeid,
+    Object? lastupdatedbyuserinfo,
+    DateTime? lastupdated,
+    required int organisationunitid,
+    bool? potentialduplicate,
+    bool? inactive,
+    DateTime? lastupdatedatclient,
+    String? code,
+    required DateTime lastsynchronized,
+    String? storedby,
+    required bool deleted,
+    String? featuretype,
+    DateTime? createdatclient,
+    Object? geometry,
+    int? lastupdatedby,
+    Object? createdbyuserinfo,
+    String? uid,
+    required int trackedentityinstanceid,
+    String? coordinates,
+  }) = _Trackedentityinstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -63,4 +63,5 @@ String? coordinates,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

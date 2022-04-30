@@ -11,29 +11,29 @@ part 'programinstance.g.dart';
 
 @freezed
 class Programinstance with _$Programinstance {
- Programinstance._();
-factory Programinstance({
-required bool deleted,
-required int programid,
-bool? followup,
-String? completedby,
-String? status,
-Object? createdbyuserinfo,
-int? trackedentityinstanceid,
-Object? lastupdatedbyuserinfo,
-String? uid,
-DateTime? lastupdatedatclient,
-DateTime? incidentdate,
-int? organisationunitid,
-DateTime? created,
-String? storedby,
-Object? geometry,
-required DateTime enrollmentdate,
-DateTime? lastupdated,
-DateTime? createdatclient,
-DateTime? enddate,
-required int programinstanceid,
-}) = _Programinstance;
+  Programinstance._();
+  factory Programinstance({
+    required bool deleted,
+    required int programid,
+    bool? followup,
+    String? completedby,
+    String? status,
+    Object? createdbyuserinfo,
+    int? trackedentityinstanceid,
+    Object? lastupdatedbyuserinfo,
+    String? uid,
+    DateTime? lastupdatedatclient,
+    DateTime? incidentdate,
+    int? organisationunitid,
+    DateTime? created,
+    String? storedby,
+    Object? geometry,
+    required DateTime enrollmentdate,
+    DateTime? lastupdated,
+    DateTime? createdatclient,
+    DateTime? enddate,
+    required int programinstanceid,
+  }) = _Programinstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -63,4 +63,5 @@ required int programinstanceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

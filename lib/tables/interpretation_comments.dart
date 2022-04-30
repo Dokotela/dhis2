@@ -11,12 +11,12 @@ part 'interpretation_comments.g.dart';
 
 @freezed
 class InterpretationComments with _$InterpretationComments {
- InterpretationComments._();
-factory InterpretationComments({
-required int interpretationcommentid,
-required int sortOrder,
-required int interpretationid,
-}) = _InterpretationComments;
+  InterpretationComments._();
+  factory InterpretationComments({
+    required int interpretationcommentid,
+    required int sortOrder,
+    required int interpretationid,
+  }) = _InterpretationComments;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int interpretationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

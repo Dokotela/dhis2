@@ -11,12 +11,12 @@ part 'eventvisualization_filters.g.dart';
 
 @freezed
 class EventvisualizationFilters with _$EventvisualizationFilters {
- EventvisualizationFilters._();
-factory EventvisualizationFilters({
-required int eventvisualizationid,
-required int sortOrder,
-String? dimension,
-}) = _EventvisualizationFilters;
+  EventvisualizationFilters._();
+  factory EventvisualizationFilters({
+    required int eventvisualizationid,
+    required int sortOrder,
+    String? dimension,
+  }) = _EventvisualizationFilters;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? dimension,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

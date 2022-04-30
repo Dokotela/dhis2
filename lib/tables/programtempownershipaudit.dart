@@ -11,15 +11,15 @@ part 'programtempownershipaudit.g.dart';
 
 @freezed
 class Programtempownershipaudit with _$Programtempownershipaudit {
- Programtempownershipaudit._();
-factory Programtempownershipaudit({
-String? accessedby,
-int? trackedentityinstanceid,
-int? programid,
-DateTime? created,
-String? reason,
-required int programtempownershipauditid,
-}) = _Programtempownershipaudit;
+  Programtempownershipaudit._();
+  factory Programtempownershipaudit({
+    String? accessedby,
+    int? trackedentityinstanceid,
+    int? programid,
+    DateTime? created,
+    String? reason,
+    required int programtempownershipauditid,
+  }) = _Programtempownershipaudit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ required int programtempownershipauditid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,25 +11,25 @@ part 'sqlview.g.dart';
 
 @freezed
 class Sqlview with _$Sqlview {
- Sqlview._();
-factory Sqlview({
-required int sqlviewid,
-String? uid,
-Object? attributevalues,
-required String name,
-bool? externalaccess,
-required String type,
-DateTime? created,
-required String cachestrategy,
-Object? sharing,
-int? lastupdatedby,
-DateTime? lastupdated,
-required String sqlquery,
-String? code,
-String? description,
-int? userid,
-String? publicaccess,
-}) = _Sqlview;
+  Sqlview._();
+  factory Sqlview({
+    required int sqlviewid,
+    String? uid,
+    Object? attributevalues,
+    required String name,
+    bool? externalaccess,
+    required String type,
+    DateTime? created,
+    required String cachestrategy,
+    Object? sharing,
+    int? lastupdatedby,
+    DateTime? lastupdated,
+    required String sqlquery,
+    String? code,
+    String? description,
+    int? userid,
+    String? publicaccess,
+  }) = _Sqlview;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -59,4 +59,5 @@ String? publicaccess,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

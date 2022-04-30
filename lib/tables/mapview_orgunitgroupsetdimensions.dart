@@ -11,18 +11,19 @@ part 'mapview_orgunitgroupsetdimensions.g.dart';
 
 @freezed
 class MapviewOrgunitgroupsetdimensions with _$MapviewOrgunitgroupsetdimensions {
- MapviewOrgunitgroupsetdimensions._();
-factory MapviewOrgunitgroupsetdimensions({
-required int orgunitgroupsetdimensionid,
-required int mapviewid,
-required int sortOrder,
-}) = _MapviewOrgunitgroupsetdimensions;
+  MapviewOrgunitgroupsetdimensions._();
+  factory MapviewOrgunitgroupsetdimensions({
+    required int orgunitgroupsetdimensionid,
+    required int mapviewid,
+    required int sortOrder,
+  }) = _MapviewOrgunitgroupsetdimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory MapviewOrgunitgroupsetdimensions.fromYaml(dynamic yaml) => yaml is String
+  factory MapviewOrgunitgroupsetdimensions.fromYaml(dynamic yaml) => yaml
+          is String
       ? MapviewOrgunitgroupsetdimensions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +34,8 @@ required int sortOrder,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MapviewOrgunitgroupsetdimensions.fromJson(Map<String, dynamic> json) =>
+  factory MapviewOrgunitgroupsetdimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$MapviewOrgunitgroupsetdimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [MapviewOrgunitgroupsetdimensions], accepts a
@@ -46,4 +48,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

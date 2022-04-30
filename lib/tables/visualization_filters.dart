@@ -11,12 +11,12 @@ part 'visualization_filters.g.dart';
 
 @freezed
 class VisualizationFilters with _$VisualizationFilters {
- VisualizationFilters._();
-factory VisualizationFilters({
-required int visualizationid,
-String? dimension,
-required int sortOrder,
-}) = _VisualizationFilters;
+  VisualizationFilters._();
+  factory VisualizationFilters({
+    required int visualizationid,
+    String? dimension,
+    required int sortOrder,
+  }) = _VisualizationFilters;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

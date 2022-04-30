@@ -10,21 +10,23 @@ part 'trackedentitydataelementdimension.freezed.dart';
 part 'trackedentitydataelementdimension.g.dart';
 
 @freezed
-class Trackedentitydataelementdimension with _$Trackedentitydataelementdimension {
- Trackedentitydataelementdimension._();
-factory Trackedentitydataelementdimension({
-int? dataelementid,
-int? programstageid,
-required int trackedentitydataelementdimensionid,
-String? filter,
-int? legendsetid,
-}) = _Trackedentitydataelementdimension;
+class Trackedentitydataelementdimension
+    with _$Trackedentitydataelementdimension {
+  Trackedentitydataelementdimension._();
+  factory Trackedentitydataelementdimension({
+    int? dataelementid,
+    int? programstageid,
+    required int trackedentitydataelementdimensionid,
+    String? filter,
+    int? legendsetid,
+  }) = _Trackedentitydataelementdimension;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Trackedentitydataelementdimension.fromYaml(dynamic yaml) => yaml is String
+  factory Trackedentitydataelementdimension.fromYaml(dynamic yaml) => yaml
+          is String
       ? Trackedentitydataelementdimension.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -35,7 +37,8 @@ int? legendsetid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Trackedentitydataelementdimension.fromJson(Map<String, dynamic> json) =>
+  factory Trackedentitydataelementdimension.fromJson(
+          Map<String, dynamic> json) =>
       _$TrackedentitydataelementdimensionFromJson(json);
 
   /// Acts like a constructor, returns a [Trackedentitydataelementdimension], accepts a
@@ -48,4 +51,5 @@ int? legendsetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

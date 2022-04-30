@@ -11,17 +11,18 @@ part 'categoryoptiongroupsetdimension.g.dart';
 
 @freezed
 class Categoryoptiongroupsetdimension with _$Categoryoptiongroupsetdimension {
- Categoryoptiongroupsetdimension._();
-factory Categoryoptiongroupsetdimension({
-required int categoryoptiongroupsetdimensionid,
-int? categoryoptiongroupsetid,
-}) = _Categoryoptiongroupsetdimension;
+  Categoryoptiongroupsetdimension._();
+  factory Categoryoptiongroupsetdimension({
+    required int categoryoptiongroupsetdimensionid,
+    int? categoryoptiongroupsetid,
+  }) = _Categoryoptiongroupsetdimension;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Categoryoptiongroupsetdimension.fromYaml(dynamic yaml) => yaml is String
+  factory Categoryoptiongroupsetdimension.fromYaml(dynamic yaml) => yaml
+          is String
       ? Categoryoptiongroupsetdimension.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -45,4 +46,5 @@ int? categoryoptiongroupsetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

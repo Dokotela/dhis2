@@ -11,12 +11,12 @@ part 'mapmapviews.g.dart';
 
 @freezed
 class Mapmapviews with _$Mapmapviews {
- Mapmapviews._();
-factory Mapmapviews({
-required int mapviewid,
-required int mapid,
-required int sortOrder,
-}) = _Mapmapviews;
+  Mapmapviews._();
+  factory Mapmapviews({
+    required int mapviewid,
+    required int mapid,
+    required int sortOrder,
+  }) = _Mapmapviews;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

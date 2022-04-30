@@ -11,18 +11,18 @@ part 'importdatavalue.g.dart';
 
 @freezed
 class Importdatavalue with _$Importdatavalue {
- Importdatavalue._();
-factory Importdatavalue({
-required int categoryoptioncomboid,
-String? storedby,
-DateTime? lastupdated,
-required int periodid,
-String? value,
-String? comment,
-required int sourceid,
-required int dataelementid,
-String? status,
-}) = _Importdatavalue;
+  Importdatavalue._();
+  factory Importdatavalue({
+    required int categoryoptioncomboid,
+    String? storedby,
+    DateTime? lastupdated,
+    required int periodid,
+    String? value,
+    String? comment,
+    required int sourceid,
+    required int dataelementid,
+    String? status,
+  }) = _Importdatavalue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ String? status,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

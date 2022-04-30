@@ -11,15 +11,15 @@ part 'expression.g.dart';
 
 @freezed
 class Expression with _$Expression {
- Expression._();
-factory Expression({
-required String missingvaluestrategy,
-Object? translations,
-required int expressionid,
-String? description,
-bool? slidingwindow,
-String? expression,
-}) = _Expression;
+  Expression._();
+  factory Expression({
+    required String missingvaluestrategy,
+    Object? translations,
+    required int expressionid,
+    String? description,
+    bool? slidingwindow,
+    String? expression,
+  }) = _Expression;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ String? expression,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

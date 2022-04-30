@@ -11,19 +11,19 @@ part 'indicatortype.g.dart';
 
 @freezed
 class Indicatortype with _$Indicatortype {
- Indicatortype._();
-factory Indicatortype({
-String? uid,
-DateTime? lastupdated,
-required int indicatortypeid,
-DateTime? created,
-required String name,
-Object? translations,
-bool? indicatornumber,
-int? lastupdatedby,
-required int indicatorfactor,
-String? code,
-}) = _Indicatortype;
+  Indicatortype._();
+  factory Indicatortype({
+    String? uid,
+    DateTime? lastupdated,
+    required int indicatortypeid,
+    DateTime? created,
+    required String name,
+    Object? translations,
+    bool? indicatornumber,
+    int? lastupdatedby,
+    required int indicatorfactor,
+    String? code,
+  }) = _Indicatortype;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ String? code,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

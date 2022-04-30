@@ -11,11 +11,11 @@ part 'messageattachments.g.dart';
 
 @freezed
 class Messageattachments with _$Messageattachments {
- Messageattachments._();
-factory Messageattachments({
-required int messageid,
-required int fileresourceid,
-}) = _Messageattachments;
+  Messageattachments._();
+  factory Messageattachments({
+    required int messageid,
+    required int fileresourceid,
+  }) = _Messageattachments;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int fileresourceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'visualization_yearlyseries.g.dart';
 
 @freezed
 class VisualizationYearlyseries with _$VisualizationYearlyseries {
- VisualizationYearlyseries._();
-factory VisualizationYearlyseries({
-required int visualizationid,
-required int sortOrder,
-String? yearlyseries,
-}) = _VisualizationYearlyseries;
+  VisualizationYearlyseries._();
+  factory VisualizationYearlyseries({
+    required int visualizationid,
+    required int sortOrder,
+    String? yearlyseries,
+  }) = _VisualizationYearlyseries;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? yearlyseries,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'dataelementoperand.g.dart';
 
 @freezed
 class Dataelementoperand with _$Dataelementoperand {
- Dataelementoperand._();
-factory Dataelementoperand({
-int? categoryoptioncomboid,
-int? dataelementid,
-required int dataelementoperandid,
-}) = _Dataelementoperand;
+  Dataelementoperand._();
+  factory Dataelementoperand({
+    int? categoryoptioncomboid,
+    int? dataelementid,
+    required int dataelementoperandid,
+  }) = _Dataelementoperand;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int dataelementoperandid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

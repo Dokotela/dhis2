@@ -11,20 +11,20 @@ part 'dataapproval.g.dart';
 
 @freezed
 class Dataapproval with _$Dataapproval {
- Dataapproval._();
-factory Dataapproval({
-required int attributeoptioncomboid,
-required int organisationunitid,
-DateTime? lastupdated,
-int? lastupdatedby,
-required int dataapprovallevelid,
-required int creator,
-required bool accepted,
-required int dataapprovalid,
-required DateTime created,
-required int periodid,
-required int workflowid,
-}) = _Dataapproval;
+  Dataapproval._();
+  factory Dataapproval({
+    required int attributeoptioncomboid,
+    required int organisationunitid,
+    DateTime? lastupdated,
+    int? lastupdatedby,
+    required int dataapprovallevelid,
+    required int creator,
+    required bool accepted,
+    required int dataapprovalid,
+    required DateTime created,
+    required int periodid,
+    required int workflowid,
+  }) = _Dataapproval;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ required int workflowid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'indicatorgroupsetmembers.g.dart';
 
 @freezed
 class Indicatorgroupsetmembers with _$Indicatorgroupsetmembers {
- Indicatorgroupsetmembers._();
-factory Indicatorgroupsetmembers({
-required int indicatorgroupsetid,
-required int sortOrder,
-required int indicatorgroupid,
-}) = _Indicatorgroupsetmembers;
+  Indicatorgroupsetmembers._();
+  factory Indicatorgroupsetmembers({
+    required int indicatorgroupsetid,
+    required int sortOrder,
+    required int indicatorgroupid,
+  }) = _Indicatorgroupsetmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int indicatorgroupid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

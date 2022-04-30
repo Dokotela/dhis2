@@ -11,23 +11,23 @@ part 'relationship.g.dart';
 
 @freezed
 class Relationship with _$Relationship {
- Relationship._();
-factory Relationship({
-required String key,
-String? code,
-int? fromRelationshipitemid,
-int? lastupdatedby,
-required int relationshiptypeid,
-required String uid,
-required int relationshipid,
-int? toRelationshipitemid,
-required DateTime created,
-required String invertedKey,
-Object? style,
-String? formname,
-required DateTime lastupdated,
-String? description,
-}) = _Relationship;
+  Relationship._();
+  factory Relationship({
+    required String key,
+    String? code,
+    int? fromRelationshipitemid,
+    int? lastupdatedby,
+    required int relationshiptypeid,
+    required String uid,
+    required int relationshipid,
+    int? toRelationshipitemid,
+    required DateTime created,
+    required String invertedKey,
+    Object? style,
+    String? formname,
+    required DateTime lastupdated,
+    String? description,
+  }) = _Relationship;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ String? description,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

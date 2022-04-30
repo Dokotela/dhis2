@@ -11,30 +11,30 @@ part 'validationrule.g.dart';
 
 @freezed
 class Validationrule with _$Validationrule {
- Validationrule._();
-factory Validationrule({
-int? leftexpressionid,
-Object? attributevalues,
-String? instruction,
-Object? translations,
-String? description,
-required int validationruleid,
-int? periodtypeid,
-String? uid,
-int? lastupdatedby,
-int? periodextent,
-DateTime? created,
-int? rightexpressionid,
-Object? sharing,
-required String name,
-String? code,
-required String operator,
-DateTime? lastupdated,
-int? userid,
-String? importance,
-String? publicaccess,
-bool? skipformvalidation,
-}) = _Validationrule;
+  Validationrule._();
+  factory Validationrule({
+    int? leftexpressionid,
+    Object? attributevalues,
+    String? instruction,
+    Object? translations,
+    String? description,
+    required int validationruleid,
+    int? periodtypeid,
+    String? uid,
+    int? lastupdatedby,
+    int? periodextent,
+    DateTime? created,
+    int? rightexpressionid,
+    Object? sharing,
+    required String name,
+    String? code,
+    required String operator,
+    DateTime? lastupdated,
+    int? userid,
+    String? importance,
+    String? publicaccess,
+    bool? skipformvalidation,
+  }) = _Validationrule;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -64,4 +64,5 @@ bool? skipformvalidation,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

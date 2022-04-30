@@ -11,15 +11,15 @@ part 'outbound_sms.g.dart';
 
 @freezed
 class OutboundSms with _$OutboundSms {
- OutboundSms._();
-factory OutboundSms({
-required int id,
-String? message,
-String? sender,
-required DateTime date,
-String? uid,
-required int status,
-}) = _OutboundSms;
+  OutboundSms._();
+  factory OutboundSms({
+    required int id,
+    String? message,
+    String? sender,
+    required DateTime date,
+    String? uid,
+    required int status,
+  }) = _OutboundSms;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ required int status,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

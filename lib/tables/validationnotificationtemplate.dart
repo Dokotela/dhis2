@@ -11,27 +11,28 @@ part 'validationnotificationtemplate.g.dart';
 
 @freezed
 class Validationnotificationtemplate with _$Validationnotificationtemplate {
- Validationnotificationtemplate._();
-factory Validationnotificationtemplate({
-String? code,
-int? lastupdatedby,
-Object? translations,
-required String uid,
-required DateTime lastupdated,
-String? messagetemplate,
-required DateTime created,
-String? subjecttemplate,
-required String name,
-required String sendstrategy,
-required int validationnotificationtemplateid,
-bool? notifyusersinhierarchyonly,
-}) = _Validationnotificationtemplate;
+  Validationnotificationtemplate._();
+  factory Validationnotificationtemplate({
+    String? code,
+    int? lastupdatedby,
+    Object? translations,
+    required String uid,
+    required DateTime lastupdated,
+    String? messagetemplate,
+    required DateTime created,
+    String? subjecttemplate,
+    required String name,
+    required String sendstrategy,
+    required int validationnotificationtemplateid,
+    bool? notifyusersinhierarchyonly,
+  }) = _Validationnotificationtemplate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Validationnotificationtemplate.fromYaml(dynamic yaml) => yaml is String
+  factory Validationnotificationtemplate.fromYaml(dynamic yaml) => yaml
+          is String
       ? Validationnotificationtemplate.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -55,4 +56,5 @@ bool? notifyusersinhierarchyonly,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

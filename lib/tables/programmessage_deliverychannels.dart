@@ -11,17 +11,18 @@ part 'programmessage_deliverychannels.g.dart';
 
 @freezed
 class ProgrammessageDeliverychannels with _$ProgrammessageDeliverychannels {
- ProgrammessageDeliverychannels._();
-factory ProgrammessageDeliverychannels({
-String? deliverychannel,
-required int programmessagedeliverychannelsid,
-}) = _ProgrammessageDeliverychannels;
+  ProgrammessageDeliverychannels._();
+  factory ProgrammessageDeliverychannels({
+    String? deliverychannel,
+    required int programmessagedeliverychannelsid,
+  }) = _ProgrammessageDeliverychannels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ProgrammessageDeliverychannels.fromYaml(dynamic yaml) => yaml is String
+  factory ProgrammessageDeliverychannels.fromYaml(dynamic yaml) => yaml
+          is String
       ? ProgrammessageDeliverychannels.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -45,4 +46,5 @@ required int programmessagedeliverychannelsid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

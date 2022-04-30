@@ -11,17 +11,17 @@ part 'i18nlocale.g.dart';
 
 @freezed
 class I18nlocale with _$I18nlocale {
- I18nlocale._();
-factory I18nlocale({
-int? lastupdatedby,
-required int i18nlocaleid,
-required String name,
-String? code,
-required String locale,
-DateTime? created,
-String? uid,
-DateTime? lastupdated,
-}) = _I18nlocale;
+  I18nlocale._();
+  factory I18nlocale({
+    int? lastupdatedby,
+    required int i18nlocaleid,
+    required String name,
+    String? code,
+    required String locale,
+    DateTime? created,
+    String? uid,
+    DateTime? lastupdated,
+  }) = _I18nlocale;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

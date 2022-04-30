@@ -11,19 +11,19 @@ part 'programvalidation.g.dart';
 
 @freezed
 class Programvalidation with _$Programvalidation {
- Programvalidation._();
-factory Programvalidation({
-String? code,
-String? uid,
-required int programid,
-DateTime? lastupdated,
-DateTime? created,
-String? name,
-String? operator,
-int? rightprogramexpressionid,
-required int programvalidationid,
-int? leftprogramexpressionid,
-}) = _Programvalidation;
+  Programvalidation._();
+  factory Programvalidation({
+    String? code,
+    String? uid,
+    required int programid,
+    DateTime? lastupdated,
+    DateTime? created,
+    String? name,
+    String? operator,
+    int? rightprogramexpressionid,
+    required int programvalidationid,
+    int? leftprogramexpressionid,
+  }) = _Programvalidation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ int? leftprogramexpressionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

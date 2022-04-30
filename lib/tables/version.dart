@@ -11,12 +11,12 @@ part 'version.g.dart';
 
 @freezed
 class Version with _$Version {
- Version._();
-factory Version({
-required int versionid,
-String? versionvalue,
-required String versionkey,
-}) = _Version;
+  Version._();
+  factory Version({
+    required int versionid,
+    String? versionvalue,
+    required String versionkey,
+  }) = _Version;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required String versionkey,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

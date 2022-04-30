@@ -11,17 +11,18 @@ part 'messageconversation_usermessages.g.dart';
 
 @freezed
 class MessageconversationUsermessages with _$MessageconversationUsermessages {
- MessageconversationUsermessages._();
-factory MessageconversationUsermessages({
-required int usermessageid,
-required int messageconversationid,
-}) = _MessageconversationUsermessages;
+  MessageconversationUsermessages._();
+  factory MessageconversationUsermessages({
+    required int usermessageid,
+    required int messageconversationid,
+  }) = _MessageconversationUsermessages;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory MessageconversationUsermessages.fromYaml(dynamic yaml) => yaml is String
+  factory MessageconversationUsermessages.fromYaml(dynamic yaml) => yaml
+          is String
       ? MessageconversationUsermessages.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -45,4 +46,5 @@ required int messageconversationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

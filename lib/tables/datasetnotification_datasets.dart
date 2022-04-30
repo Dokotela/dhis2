@@ -11,11 +11,11 @@ part 'datasetnotification_datasets.g.dart';
 
 @freezed
 class DatasetnotificationDatasets with _$DatasetnotificationDatasets {
- DatasetnotificationDatasets._();
-factory DatasetnotificationDatasets({
-required int datasetnotificationtemplateid,
-required int datasetid,
-}) = _DatasetnotificationDatasets;
+  DatasetnotificationDatasets._();
+  factory DatasetnotificationDatasets({
+    required int datasetnotificationtemplateid,
+    required int datasetid,
+  }) = _DatasetnotificationDatasets;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

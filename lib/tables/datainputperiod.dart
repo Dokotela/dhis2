@@ -11,14 +11,14 @@ part 'datainputperiod.g.dart';
 
 @freezed
 class Datainputperiod with _$Datainputperiod {
- Datainputperiod._();
-factory Datainputperiod({
-DateTime? openingdate,
-required int periodid,
-required int datainputperiodid,
-int? datasetid,
-DateTime? closingdate,
-}) = _Datainputperiod;
+  Datainputperiod._();
+  factory Datainputperiod({
+    DateTime? openingdate,
+    required int periodid,
+    required int datainputperiodid,
+    int? datasetid,
+    DateTime? closingdate,
+  }) = _Datainputperiod;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ DateTime? closingdate,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

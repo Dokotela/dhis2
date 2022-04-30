@@ -11,12 +11,12 @@ part 'dashboard_items.g.dart';
 
 @freezed
 class DashboardItems with _$DashboardItems {
- DashboardItems._();
-factory DashboardItems({
-required int dashboardid,
-required int sortOrder,
-required int dashboarditemid,
-}) = _DashboardItems;
+  DashboardItems._();
+  factory DashboardItems({
+    required int dashboardid,
+    required int sortOrder,
+    required int dashboarditemid,
+  }) = _DashboardItems;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int dashboarditemid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

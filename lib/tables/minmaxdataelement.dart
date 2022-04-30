@@ -11,16 +11,16 @@ part 'minmaxdataelement.g.dart';
 
 @freezed
 class Minmaxdataelement with _$Minmaxdataelement {
- Minmaxdataelement._();
-factory Minmaxdataelement({
-required int minmaxdataelementid,
-required int minimumvalue,
-required bool generatedvalue,
-required int maximumvalue,
-int? dataelementid,
-int? sourceid,
-int? categoryoptioncomboid,
-}) = _Minmaxdataelement;
+  Minmaxdataelement._();
+  factory Minmaxdataelement({
+    required int minmaxdataelementid,
+    required int minimumvalue,
+    required bool generatedvalue,
+    required int maximumvalue,
+    int? dataelementid,
+    int? sourceid,
+    int? categoryoptioncomboid,
+  }) = _Minmaxdataelement;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ int? categoryoptioncomboid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

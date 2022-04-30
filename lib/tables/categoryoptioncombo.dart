@@ -11,19 +11,19 @@ part 'categoryoptioncombo.g.dart';
 
 @freezed
 class Categoryoptioncombo with _$Categoryoptioncombo {
- Categoryoptioncombo._();
-factory Categoryoptioncombo({
-String? code,
-bool? ignoreapproval,
-DateTime? lastupdated,
-String? name,
-DateTime? created,
-Object? attributevalues,
-int? lastupdatedby,
-String? uid,
-required int categoryoptioncomboid,
-Object? translations,
-}) = _Categoryoptioncombo;
+  Categoryoptioncombo._();
+  factory Categoryoptioncombo({
+    String? code,
+    bool? ignoreapproval,
+    DateTime? lastupdated,
+    String? name,
+    DateTime? created,
+    Object? attributevalues,
+    int? lastupdatedby,
+    String? uid,
+    required int categoryoptioncomboid,
+    Object? translations,
+  }) = _Categoryoptioncombo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ Object? translations,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

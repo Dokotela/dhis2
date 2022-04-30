@@ -11,14 +11,14 @@ part 'spatial_ref_sys.g.dart';
 
 @freezed
 class SpatialRefSys with _$SpatialRefSys {
- SpatialRefSys._();
-factory SpatialRefSys({
-int? authSrid,
-String? proj4text,
-String? srtext,
-String? authName,
-required int srid,
-}) = _SpatialRefSys;
+  SpatialRefSys._();
+  factory SpatialRefSys({
+    int? authSrid,
+    String? proj4text,
+    String? srtext,
+    String? authName,
+    required int srid,
+  }) = _SpatialRefSys;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ required int srid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

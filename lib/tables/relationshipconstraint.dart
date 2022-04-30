@@ -11,15 +11,15 @@ part 'relationshipconstraint.g.dart';
 
 @freezed
 class Relationshipconstraint with _$Relationshipconstraint {
- Relationshipconstraint._();
-factory Relationshipconstraint({
-required int relationshipconstraintid,
-int? programstageid,
-int? programid,
-Object? dataview,
-String? entity,
-int? trackedentitytypeid,
-}) = _Relationshipconstraint;
+  Relationshipconstraint._();
+  factory Relationshipconstraint({
+    required int relationshipconstraintid,
+    int? programstageid,
+    int? programid,
+    Object? dataview,
+    String? entity,
+    int? trackedentitytypeid,
+  }) = _Relationshipconstraint;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ int? trackedentitytypeid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

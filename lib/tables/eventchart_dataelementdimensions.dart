@@ -11,18 +11,19 @@ part 'eventchart_dataelementdimensions.g.dart';
 
 @freezed
 class EventchartDataelementdimensions with _$EventchartDataelementdimensions {
- EventchartDataelementdimensions._();
-factory EventchartDataelementdimensions({
-required int trackedentitydataelementdimensionid,
-required int sortOrder,
-required int eventchartid,
-}) = _EventchartDataelementdimensions;
+  EventchartDataelementdimensions._();
+  factory EventchartDataelementdimensions({
+    required int trackedentitydataelementdimensionid,
+    required int sortOrder,
+    required int eventchartid,
+  }) = _EventchartDataelementdimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventchartDataelementdimensions.fromYaml(dynamic yaml) => yaml is String
+  factory EventchartDataelementdimensions.fromYaml(dynamic yaml) => yaml
+          is String
       ? EventchartDataelementdimensions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -46,4 +47,5 @@ required int eventchartid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

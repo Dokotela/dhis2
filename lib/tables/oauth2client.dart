@@ -11,18 +11,18 @@ part 'oauth2client.g.dart';
 
 @freezed
 class Oauth2client with _$Oauth2client {
- Oauth2client._();
-factory Oauth2client({
-String? code,
-required String secret,
-required int oauth2clientid,
-String? uid,
-required String name,
-int? lastupdatedby,
-required String cid,
-DateTime? lastupdated,
-DateTime? created,
-}) = _Oauth2client;
+  Oauth2client._();
+  factory Oauth2client({
+    String? code,
+    required String secret,
+    required int oauth2clientid,
+    String? uid,
+    required String name,
+    int? lastupdatedby,
+    required String cid,
+    DateTime? lastupdated,
+    DateTime? created,
+  }) = _Oauth2client;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ DateTime? created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

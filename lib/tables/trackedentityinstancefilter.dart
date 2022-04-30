@@ -11,25 +11,25 @@ part 'trackedentityinstancefilter.g.dart';
 
 @freezed
 class Trackedentityinstancefilter with _$Trackedentityinstancefilter {
- Trackedentityinstancefilter._();
-factory Trackedentityinstancefilter({
-required int programid,
-Object? translations,
-String? code,
-Object? style,
-Object? eventfilters,
-required int trackedentityinstancefilterid,
-int? sortorder,
-String? description,
-int? lastupdatedby,
-required DateTime created,
-required String uid,
-required String name,
-Object? entityquerycriteria,
-required DateTime lastupdated,
-Object? sharing,
-int? userid,
-}) = _Trackedentityinstancefilter;
+  Trackedentityinstancefilter._();
+  factory Trackedentityinstancefilter({
+    required int programid,
+    Object? translations,
+    String? code,
+    Object? style,
+    Object? eventfilters,
+    required int trackedentityinstancefilterid,
+    int? sortorder,
+    String? description,
+    int? lastupdatedby,
+    required DateTime created,
+    required String uid,
+    required String name,
+    Object? entityquerycriteria,
+    required DateTime lastupdated,
+    Object? sharing,
+    int? userid,
+  }) = _Trackedentityinstancefilter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -59,4 +59,5 @@ int? userid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

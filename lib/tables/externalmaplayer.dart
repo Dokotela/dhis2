@@ -11,28 +11,28 @@ part 'externalmaplayer.g.dart';
 
 @freezed
 class Externalmaplayer with _$Externalmaplayer {
- Externalmaplayer._();
-factory Externalmaplayer({
-String? publicaccess,
-required String uid,
-String? layers,
-required String name,
-String? attribution,
-Object? sharing,
-int? legendsetid,
-required String imageformat,
-required DateTime created,
-required DateTime lastupdated,
-int? lastupdatedby,
-required String mapservice,
-required int externalmaplayerid,
-String? code,
-Object? translations,
-String? legendseturl,
-required String url,
-int? userid,
-required String maplayerposition,
-}) = _Externalmaplayer;
+  Externalmaplayer._();
+  factory Externalmaplayer({
+    String? publicaccess,
+    required String uid,
+    String? layers,
+    required String name,
+    String? attribution,
+    Object? sharing,
+    int? legendsetid,
+    required String imageformat,
+    required DateTime created,
+    required DateTime lastupdated,
+    int? lastupdatedby,
+    required String mapservice,
+    required int externalmaplayerid,
+    String? code,
+    Object? translations,
+    String? legendseturl,
+    required String url,
+    int? userid,
+    required String maplayerposition,
+  }) = _Externalmaplayer;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -62,4 +62,5 @@ required String maplayerposition,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

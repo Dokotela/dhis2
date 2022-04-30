@@ -11,19 +11,19 @@ part 'datavalueaudit.g.dart';
 
 @freezed
 class Datavalueaudit with _$Datavalueaudit {
- Datavalueaudit._();
-factory Datavalueaudit({
-required int attributeoptioncomboid,
-required int periodid,
-required DateTime created,
-required int datavalueauditid,
-required int dataelementid,
-String? value,
-required int organisationunitid,
-required String audittype,
-required int categoryoptioncomboid,
-String? modifiedby,
-}) = _Datavalueaudit;
+  Datavalueaudit._();
+  factory Datavalueaudit({
+    required int attributeoptioncomboid,
+    required int periodid,
+    required DateTime created,
+    required int datavalueauditid,
+    required int dataelementid,
+    String? value,
+    required int organisationunitid,
+    required String audittype,
+    required int categoryoptioncomboid,
+    String? modifiedby,
+  }) = _Datavalueaudit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ String? modifiedby,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

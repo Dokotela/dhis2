@@ -11,12 +11,12 @@ part 'mapview_columns.g.dart';
 
 @freezed
 class MapviewColumns with _$MapviewColumns {
- MapviewColumns._();
-factory MapviewColumns({
-required int mapviewid,
-required int sortOrder,
-String? dimension,
-}) = _MapviewColumns;
+  MapviewColumns._();
+  factory MapviewColumns({
+    required int mapviewid,
+    required int sortOrder,
+    String? dimension,
+  }) = _MapviewColumns;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ String? dimension,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

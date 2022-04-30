@@ -11,12 +11,12 @@ part 'eventreport_organisationunits.g.dart';
 
 @freezed
 class EventreportOrganisationunits with _$EventreportOrganisationunits {
- EventreportOrganisationunits._();
-factory EventreportOrganisationunits({
-required int organisationunitid,
-required int sortOrder,
-required int eventreportid,
-}) = _EventreportOrganisationunits;
+  EventreportOrganisationunits._();
+  factory EventreportOrganisationunits({
+    required int organisationunitid,
+    required int sortOrder,
+    required int eventreportid,
+  }) = _EventreportOrganisationunits;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int eventreportid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

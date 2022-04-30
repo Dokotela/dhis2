@@ -11,24 +11,24 @@ part 'dataapprovallevel.g.dart';
 
 @freezed
 class Dataapprovallevel with _$Dataapprovallevel {
- Dataapprovallevel._();
-factory Dataapprovallevel({
-int? userid,
-required int orgunitlevel,
-required String name,
-required int level,
-required DateTime created,
-Object? translations,
-String? uid,
-Object? sharing,
-required int dataapprovallevelid,
-String? publicaccess,
-DateTime? updated,
-int? categoryoptiongroupsetid,
-DateTime? lastupdated,
-String? code,
-int? lastupdatedby,
-}) = _Dataapprovallevel;
+  Dataapprovallevel._();
+  factory Dataapprovallevel({
+    int? userid,
+    required int orgunitlevel,
+    required String name,
+    required int level,
+    required DateTime created,
+    Object? translations,
+    String? uid,
+    Object? sharing,
+    required int dataapprovallevelid,
+    String? publicaccess,
+    DateTime? updated,
+    int? categoryoptiongroupsetid,
+    DateTime? lastupdated,
+    String? code,
+    int? lastupdatedby,
+  }) = _Dataapprovallevel;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ int? lastupdatedby,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

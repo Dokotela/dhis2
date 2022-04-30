@@ -11,21 +11,21 @@ part 'datavalue.g.dart';
 
 @freezed
 class Datavalue with _$Datavalue {
- Datavalue._();
-factory Datavalue({
-String? storedby,
-DateTime? lastupdated,
-required int periodid,
-required bool deleted,
-String? value,
-bool? followup,
-required int attributeoptioncomboid,
-required int sourceid,
-required int categoryoptioncomboid,
-DateTime? created,
-required int dataelementid,
-String? comment,
-}) = _Datavalue;
+  Datavalue._();
+  factory Datavalue({
+    String? storedby,
+    DateTime? lastupdated,
+    required int periodid,
+    required bool deleted,
+    String? value,
+    bool? followup,
+    required int attributeoptioncomboid,
+    required int sourceid,
+    required int categoryoptioncomboid,
+    DateTime? created,
+    required int dataelementid,
+    String? comment,
+  }) = _Datavalue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ String? comment,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

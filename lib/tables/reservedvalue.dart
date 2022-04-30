@@ -11,16 +11,16 @@ part 'reservedvalue.g.dart';
 
 @freezed
 class Reservedvalue with _$Reservedvalue {
- Reservedvalue._();
-factory Reservedvalue({
-String? key,
-String? value,
-String? owneruid,
-required DateTime created,
-String? ownerobject,
-required int reservedvalueid,
-required DateTime expirydate,
-}) = _Reservedvalue;
+  Reservedvalue._();
+  factory Reservedvalue({
+    String? key,
+    String? value,
+    String? owneruid,
+    required DateTime created,
+    String? ownerobject,
+    required int reservedvalueid,
+    required DateTime expirydate,
+  }) = _Reservedvalue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ required DateTime expirydate,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

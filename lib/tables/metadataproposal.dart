@@ -11,22 +11,22 @@ part 'metadataproposal.g.dart';
 
 @freezed
 class Metadataproposal with _$Metadataproposal {
- Metadataproposal._();
-factory Metadataproposal({
-String? comment,
-int? finalisedby,
-String? targetuid,
-required String uid,
-required Object change,
-required String status,
-required int createdby,
-required String type,
-required DateTime created,
-required int proposalid,
-required String target,
-DateTime? finalised,
-String? reason,
-}) = _Metadataproposal;
+  Metadataproposal._();
+  factory Metadataproposal({
+    String? comment,
+    int? finalisedby,
+    String? targetuid,
+    required String uid,
+    required Object change,
+    required String status,
+    required int createdby,
+    required String type,
+    required DateTime created,
+    required int proposalid,
+    required String target,
+    DateTime? finalised,
+    String? reason,
+  }) = _Metadataproposal;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ String? reason,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

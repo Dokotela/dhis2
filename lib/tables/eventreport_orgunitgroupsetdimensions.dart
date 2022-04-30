@@ -10,19 +10,21 @@ part 'eventreport_orgunitgroupsetdimensions.freezed.dart';
 part 'eventreport_orgunitgroupsetdimensions.g.dart';
 
 @freezed
-class EventreportOrgunitgroupsetdimensions with _$EventreportOrgunitgroupsetdimensions {
- EventreportOrgunitgroupsetdimensions._();
-factory EventreportOrgunitgroupsetdimensions({
-required int eventreportid,
-required int orgunitgroupsetdimensionid,
-required int sortOrder,
-}) = _EventreportOrgunitgroupsetdimensions;
+class EventreportOrgunitgroupsetdimensions
+    with _$EventreportOrgunitgroupsetdimensions {
+  EventreportOrgunitgroupsetdimensions._();
+  factory EventreportOrgunitgroupsetdimensions({
+    required int eventreportid,
+    required int orgunitgroupsetdimensionid,
+    required int sortOrder,
+  }) = _EventreportOrgunitgroupsetdimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventreportOrgunitgroupsetdimensions.fromYaml(dynamic yaml) => yaml is String
+  factory EventreportOrgunitgroupsetdimensions.fromYaml(dynamic yaml) => yaml
+          is String
       ? EventreportOrgunitgroupsetdimensions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int sortOrder,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventreportOrgunitgroupsetdimensions.fromJson(Map<String, dynamic> json) =>
+  factory EventreportOrgunitgroupsetdimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$EventreportOrgunitgroupsetdimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [EventreportOrgunitgroupsetdimensions], accepts a
@@ -46,4 +49,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

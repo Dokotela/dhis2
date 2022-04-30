@@ -11,26 +11,26 @@ part 'relationshiptype.g.dart';
 
 @freezed
 class Relationshiptype with _$Relationshiptype {
- Relationshiptype._();
-factory Relationshiptype({
-int? fromRelationshipconstraintid,
-String? uid,
-String? description,
-String? tofromname,
-int? lastupdatedby,
-Object? translations,
-DateTime? created,
-Object? sharing,
-String? publicaccess,
-DateTime? lastupdated,
-int? userid,
-required String fromtoname,
-String? code,
-int? toRelationshipconstraintid,
-required bool bidirectional,
-required int relationshiptypeid,
-required String name,
-}) = _Relationshiptype;
+  Relationshiptype._();
+  factory Relationshiptype({
+    int? fromRelationshipconstraintid,
+    String? uid,
+    String? description,
+    String? tofromname,
+    int? lastupdatedby,
+    Object? translations,
+    DateTime? created,
+    Object? sharing,
+    String? publicaccess,
+    DateTime? lastupdated,
+    int? userid,
+    required String fromtoname,
+    String? code,
+    int? toRelationshipconstraintid,
+    required bool bidirectional,
+    required int relationshiptypeid,
+    required String name,
+  }) = _Relationshiptype;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -60,4 +60,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

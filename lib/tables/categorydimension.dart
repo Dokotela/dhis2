@@ -11,11 +11,11 @@ part 'categorydimension.g.dart';
 
 @freezed
 class Categorydimension with _$Categorydimension {
- Categorydimension._();
-factory Categorydimension({
-required int categorydimensionid,
-int? categoryid,
-}) = _Categorydimension;
+  Categorydimension._();
+  factory Categorydimension({
+    required int categorydimensionid,
+    int? categoryid,
+  }) = _Categorydimension;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ int? categoryid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

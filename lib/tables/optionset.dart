@@ -11,23 +11,23 @@ part 'optionset.g.dart';
 
 @freezed
 class Optionset with _$Optionset {
- Optionset._();
-factory Optionset({
-int? lastupdatedby,
-required String name,
-int? userid,
-String? valuetype,
-String? code,
-Object? sharing,
-int? version,
-required int optionsetid,
-Object? translations,
-String? publicaccess,
-DateTime? lastupdated,
-Object? attributevalues,
-String? uid,
-DateTime? created,
-}) = _Optionset;
+  Optionset._();
+  factory Optionset({
+    int? lastupdatedby,
+    required String name,
+    int? userid,
+    String? valuetype,
+    String? code,
+    Object? sharing,
+    int? version,
+    required int optionsetid,
+    Object? translations,
+    String? publicaccess,
+    DateTime? lastupdated,
+    Object? attributevalues,
+    String? uid,
+    DateTime? created,
+  }) = _Optionset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ DateTime? created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

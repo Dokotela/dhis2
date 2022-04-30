@@ -11,11 +11,11 @@ part 'sectiongreyedfields.g.dart';
 
 @freezed
 class Sectiongreyedfields with _$Sectiongreyedfields {
- Sectiongreyedfields._();
-factory Sectiongreyedfields({
-required int sectionid,
-required int dataelementoperandid,
-}) = _Sectiongreyedfields;
+  Sectiongreyedfields._();
+  factory Sectiongreyedfields({
+    required int sectionid,
+    required int dataelementoperandid,
+  }) = _Sectiongreyedfields;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int dataelementoperandid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

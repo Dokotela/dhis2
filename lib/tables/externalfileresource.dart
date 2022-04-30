@@ -11,18 +11,18 @@ part 'externalfileresource.g.dart';
 
 @freezed
 class Externalfileresource with _$Externalfileresource {
- Externalfileresource._();
-factory Externalfileresource({
-required int fileresourceid,
-DateTime? expires,
-required DateTime lastupdated,
-String? code,
-required String uid,
-String? accesstoken,
-int? lastupdatedby,
-required DateTime created,
-required int externalfileresourceid,
-}) = _Externalfileresource;
+  Externalfileresource._();
+  factory Externalfileresource({
+    required int fileresourceid,
+    DateTime? expires,
+    required DateTime lastupdated,
+    String? code,
+    required String uid,
+    String? accesstoken,
+    int? lastupdatedby,
+    required DateTime created,
+    required int externalfileresourceid,
+  }) = _Externalfileresource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ required int externalfileresourceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,20 +11,20 @@ part 'program_attribute_group.g.dart';
 
 @freezed
 class ProgramAttributeGroup with _$ProgramAttributeGroup {
- ProgramAttributeGroup._();
-factory ProgramAttributeGroup({
-required String name,
-required String uniqunessype,
-int? lastupdatedby,
-String? code,
-required DateTime created,
-Object? translations,
-String? description,
-required int programtrackedentityattributegroupid,
-String? shortname,
-required String uid,
-required DateTime lastupdated,
-}) = _ProgramAttributeGroup;
+  ProgramAttributeGroup._();
+  factory ProgramAttributeGroup({
+    required String name,
+    required String uniqunessype,
+    int? lastupdatedby,
+    String? code,
+    required DateTime created,
+    Object? translations,
+    String? description,
+    required int programtrackedentityattributegroupid,
+    String? shortname,
+    required String uid,
+    required DateTime lastupdated,
+  }) = _ProgramAttributeGroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -54,4 +54,5 @@ required DateTime lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,19 +11,19 @@ part 'orgunitlevel.g.dart';
 
 @freezed
 class Orgunitlevel with _$Orgunitlevel {
- Orgunitlevel._();
-factory Orgunitlevel({
-required int orgunitlevelid,
-int? offlinelevels,
-required int level,
-int? lastupdatedby,
-DateTime? lastupdated,
-String? uid,
-String? code,
-required String name,
-Object? translations,
-DateTime? created,
-}) = _Orgunitlevel;
+  Orgunitlevel._();
+  factory Orgunitlevel({
+    required int orgunitlevelid,
+    int? offlinelevels,
+    required int level,
+    int? lastupdatedby,
+    DateTime? lastupdated,
+    String? uid,
+    String? code,
+    required String name,
+    Object? translations,
+    DateTime? created,
+  }) = _Orgunitlevel;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ DateTime? created,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

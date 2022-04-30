@@ -11,12 +11,12 @@ part 'programsection_attributes.g.dart';
 
 @freezed
 class ProgramsectionAttributes with _$ProgramsectionAttributes {
- ProgramsectionAttributes._();
-factory ProgramsectionAttributes({
-required int programsectionid,
-required int trackedentityattributeid,
-required int sortOrder,
-}) = _ProgramsectionAttributes;
+  ProgramsectionAttributes._();
+  factory ProgramsectionAttributes({
+    required int programsectionid,
+    required int trackedentityattributeid,
+    required int sortOrder,
+  }) = _ProgramsectionAttributes;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

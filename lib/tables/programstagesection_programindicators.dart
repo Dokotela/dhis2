@@ -10,19 +10,21 @@ part 'programstagesection_programindicators.freezed.dart';
 part 'programstagesection_programindicators.g.dart';
 
 @freezed
-class ProgramstagesectionProgramindicators with _$ProgramstagesectionProgramindicators {
- ProgramstagesectionProgramindicators._();
-factory ProgramstagesectionProgramindicators({
-required int programstagesectionid,
-required int sortOrder,
-required int programindicatorid,
-}) = _ProgramstagesectionProgramindicators;
+class ProgramstagesectionProgramindicators
+    with _$ProgramstagesectionProgramindicators {
+  ProgramstagesectionProgramindicators._();
+  factory ProgramstagesectionProgramindicators({
+    required int programstagesectionid,
+    required int sortOrder,
+    required int programindicatorid,
+  }) = _ProgramstagesectionProgramindicators;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ProgramstagesectionProgramindicators.fromYaml(dynamic yaml) => yaml is String
+  factory ProgramstagesectionProgramindicators.fromYaml(dynamic yaml) => yaml
+          is String
       ? ProgramstagesectionProgramindicators.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int programindicatorid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProgramstagesectionProgramindicators.fromJson(Map<String, dynamic> json) =>
+  factory ProgramstagesectionProgramindicators.fromJson(
+          Map<String, dynamic> json) =>
       _$ProgramstagesectionProgramindicatorsFromJson(json);
 
   /// Acts like a constructor, returns a [ProgramstagesectionProgramindicators], accepts a
@@ -46,4 +49,5 @@ required int programindicatorid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

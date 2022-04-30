@@ -11,14 +11,14 @@ part 'attributevalue.g.dart';
 
 @freezed
 class Attributevalue with _$Attributevalue {
- Attributevalue._();
-factory Attributevalue({
-DateTime? lastupdated,
-String? value,
-required int attributeid,
-DateTime? created,
-required int attributevalueid,
-}) = _Attributevalue;
+  Attributevalue._();
+  factory Attributevalue({
+    DateTime? lastupdated,
+    String? value,
+    required int attributeid,
+    DateTime? created,
+    required int attributevalueid,
+  }) = _Attributevalue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ required int attributevalueid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,13 +11,13 @@ part 'datasetelement.g.dart';
 
 @freezed
 class Datasetelement with _$Datasetelement {
- Datasetelement._();
-factory Datasetelement({
-int? datasetid,
-int? categorycomboid,
-required int dataelementid,
-required int datasetelementid,
-}) = _Datasetelement;
+  Datasetelement._();
+  factory Datasetelement({
+    int? datasetid,
+    int? categorycomboid,
+    required int dataelementid,
+    required int datasetelementid,
+  }) = _Datasetelement;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -47,4 +47,5 @@ required int datasetelementid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

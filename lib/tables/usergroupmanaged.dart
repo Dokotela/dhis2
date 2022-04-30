@@ -11,11 +11,11 @@ part 'usergroupmanaged.g.dart';
 
 @freezed
 class Usergroupmanaged with _$Usergroupmanaged {
- Usergroupmanaged._();
-factory Usergroupmanaged({
-required int managedbygroupid,
-required int managedgroupid,
-}) = _Usergroupmanaged;
+  Usergroupmanaged._();
+  factory Usergroupmanaged({
+    required int managedbygroupid,
+    required int managedgroupid,
+  }) = _Usergroupmanaged;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int managedgroupid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

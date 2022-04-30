@@ -10,35 +10,39 @@ part 'eventvisualization_programindicatordimensions.freezed.dart';
 part 'eventvisualization_programindicatordimensions.g.dart';
 
 @freezed
-class EventvisualizationProgramindicatordimensions with _$EventvisualizationProgramindicatordimensions {
- EventvisualizationProgramindicatordimensions._();
-factory EventvisualizationProgramindicatordimensions({
-required int eventvisualizationid,
-required int sortOrder,
-required int trackedentityprogramindicatordimensionid,
-}) = _EventvisualizationProgramindicatordimensions;
+class EventvisualizationProgramindicatordimensions
+    with _$EventvisualizationProgramindicatordimensions {
+  EventvisualizationProgramindicatordimensions._();
+  factory EventvisualizationProgramindicatordimensions({
+    required int eventvisualizationid,
+    required int sortOrder,
+    required int trackedentityprogramindicatordimensionid,
+  }) = _EventvisualizationProgramindicatordimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventvisualizationProgramindicatordimensions.fromYaml(dynamic yaml) => yaml is String
-      ? EventvisualizationProgramindicatordimensions.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
+  factory EventvisualizationProgramindicatordimensions.fromYaml(dynamic yaml) =>
+      yaml is String
           ? EventvisualizationProgramindicatordimensions.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EventvisualizationProgramindicatordimensions cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+              jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          : yaml is YamlMap
+              ? EventvisualizationProgramindicatordimensions.fromJson(
+                  jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+              : throw ArgumentError(
+                  'EventvisualizationProgramindicatordimensions cannot be constructed from input provided,'
+                  ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventvisualizationProgramindicatordimensions.fromJson(Map<String, dynamic> json) =>
+  factory EventvisualizationProgramindicatordimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$EventvisualizationProgramindicatordimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [EventvisualizationProgramindicatordimensions], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory EventvisualizationProgramindicatordimensions.fromJsonString(String source) {
+  factory EventvisualizationProgramindicatordimensions.fromJsonString(
+      String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EventvisualizationProgramindicatordimensionsFromJson(json);
@@ -46,4 +50,5 @@ required int trackedentityprogramindicatordimensionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

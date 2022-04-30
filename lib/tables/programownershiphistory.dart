@@ -11,16 +11,16 @@ part 'programownershiphistory.g.dart';
 
 @freezed
 class Programownershiphistory with _$Programownershiphistory {
- Programownershiphistory._();
-factory Programownershiphistory({
-int? organisationunitid,
-int? programid,
-int? trackedentityinstanceid,
-required int programownershiphistoryid,
-String? createdby,
-DateTime? enddate,
-DateTime? startdate,
-}) = _Programownershiphistory;
+  Programownershiphistory._();
+  factory Programownershiphistory({
+    int? organisationunitid,
+    int? programid,
+    int? trackedentityinstanceid,
+    required int programownershiphistoryid,
+    String? createdby,
+    DateTime? enddate,
+    DateTime? startdate,
+  }) = _Programownershiphistory;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ DateTime? startdate,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

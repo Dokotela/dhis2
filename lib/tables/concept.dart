@@ -11,15 +11,15 @@ part 'concept.g.dart';
 
 @freezed
 class Concept with _$Concept {
- Concept._();
-factory Concept({
-required String name,
-DateTime? lastupdated,
-required int conceptid,
-String? uid,
-DateTime? created,
-String? code,
-}) = _Concept;
+  Concept._();
+  factory Concept({
+    required String name,
+    DateTime? lastupdated,
+    required int conceptid,
+    String? uid,
+    DateTime? created,
+    String? code,
+  }) = _Concept;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -49,4 +49,5 @@ String? code,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

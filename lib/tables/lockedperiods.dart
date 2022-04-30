@@ -11,11 +11,11 @@ part 'lockedperiods.g.dart';
 
 @freezed
 class Lockedperiods with _$Lockedperiods {
- Lockedperiods._();
-factory Lockedperiods({
-required int periodid,
-required int datasetid,
-}) = _Lockedperiods;
+  Lockedperiods._();
+  factory Lockedperiods({
+    required int periodid,
+    required int datasetid,
+  }) = _Lockedperiods;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

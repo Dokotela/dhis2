@@ -11,18 +11,19 @@ part 'programstagesection_dataelements.g.dart';
 
 @freezed
 class ProgramstagesectionDataelements with _$ProgramstagesectionDataelements {
- ProgramstagesectionDataelements._();
-factory ProgramstagesectionDataelements({
-required int sortOrder,
-required int dataelementid,
-required int programstagesectionid,
-}) = _ProgramstagesectionDataelements;
+  ProgramstagesectionDataelements._();
+  factory ProgramstagesectionDataelements({
+    required int sortOrder,
+    required int dataelementid,
+    required int programstagesectionid,
+  }) = _ProgramstagesectionDataelements;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ProgramstagesectionDataelements.fromYaml(dynamic yaml) => yaml is String
+  factory ProgramstagesectionDataelements.fromYaml(dynamic yaml) => yaml
+          is String
       ? ProgramstagesectionDataelements.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -46,4 +47,5 @@ required int programstagesectionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,36 +11,36 @@ part 'datastatistics.g.dart';
 
 @freezed
 class Datastatistics with _$Datastatistics {
- Datastatistics._();
-factory Datastatistics({
-int? users,
-double? eventvisualizations,
-double? datasetreportviews,
-int? activeUsers,
-DateTime? lastupdated,
-double? averageViews,
-double? totalviews,
-DateTime? created,
-double? dashboardviews,
-int? lastupdatedby,
-required int statisticsid,
-double? indicatorviews,
-double? mapviews,
-double? eventreports,
-String? code,
-double? visualizations,
-String? uid,
-double? indicators,
-double? datavalues,
-double? maps,
-double? visualizationviews,
-double? eventvisualizationviews,
-double? passivedashboardviews,
-double? dashboards,
-double? eventcharts,
-double? eventreportviews,
-double? eventchartviews,
-}) = _Datastatistics;
+  Datastatistics._();
+  factory Datastatistics({
+    int? users,
+    double? eventvisualizations,
+    double? datasetreportviews,
+    int? activeUsers,
+    DateTime? lastupdated,
+    double? averageViews,
+    double? totalviews,
+    DateTime? created,
+    double? dashboardviews,
+    int? lastupdatedby,
+    required int statisticsid,
+    double? indicatorviews,
+    double? mapviews,
+    double? eventreports,
+    String? code,
+    double? visualizations,
+    String? uid,
+    double? indicators,
+    double? datavalues,
+    double? maps,
+    double? visualizationviews,
+    double? eventvisualizationviews,
+    double? passivedashboardviews,
+    double? dashboards,
+    double? eventcharts,
+    double? eventreportviews,
+    double? eventchartviews,
+  }) = _Datastatistics;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -70,4 +70,5 @@ double? eventchartviews,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

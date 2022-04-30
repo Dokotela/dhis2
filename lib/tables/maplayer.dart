@@ -11,23 +11,23 @@ part 'maplayer.g.dart';
 
 @freezed
 class Maplayer with _$Maplayer {
- Maplayer._();
-factory Maplayer({
-String? url,
-double? fillopacity,
-String? strokecolor,
-int? strokewidth,
-String? uid,
-String? fillcolor,
-required int maplayerid,
-String? name,
-String? type,
-String? time,
-DateTime? created,
-String? layers,
-String? code,
-DateTime? lastupdated,
-}) = _Maplayer;
+  Maplayer._();
+  factory Maplayer({
+    String? url,
+    double? fillopacity,
+    String? strokecolor,
+    int? strokewidth,
+    String? uid,
+    String? fillcolor,
+    required int maplayerid,
+    String? name,
+    String? type,
+    String? time,
+    DateTime? created,
+    String? layers,
+    String? code,
+    DateTime? lastupdated,
+  }) = _Maplayer;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -57,4 +57,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

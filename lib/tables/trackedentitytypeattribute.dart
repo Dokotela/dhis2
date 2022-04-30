@@ -11,21 +11,21 @@ part 'trackedentitytypeattribute.g.dart';
 
 @freezed
 class Trackedentitytypeattribute with _$Trackedentitytypeattribute {
- Trackedentitytypeattribute._();
-factory Trackedentitytypeattribute({
-required int trackedentityattributeid,
-int? sortOrder,
-bool? displayinlist,
-required DateTime lastupdated,
-required int trackedentitytypeattributeid,
-String? code,
-bool? mandatory,
-bool? searchable,
-int? lastupdatedby,
-required String uid,
-required DateTime created,
-int? trackedentitytypeid,
-}) = _Trackedentitytypeattribute;
+  Trackedentitytypeattribute._();
+  factory Trackedentitytypeattribute({
+    required int trackedentityattributeid,
+    int? sortOrder,
+    bool? displayinlist,
+    required DateTime lastupdated,
+    required int trackedentitytypeattributeid,
+    String? code,
+    bool? mandatory,
+    bool? searchable,
+    int? lastupdatedby,
+    required String uid,
+    required DateTime created,
+    int? trackedentitytypeid,
+  }) = _Trackedentitytypeattribute;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -55,4 +55,5 @@ int? trackedentitytypeid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,17 +11,18 @@ part 'pushanalysisrecipientusergroups.g.dart';
 
 @freezed
 class Pushanalysisrecipientusergroups with _$Pushanalysisrecipientusergroups {
- Pushanalysisrecipientusergroups._();
-factory Pushanalysisrecipientusergroups({
-required int usergroupid,
-required int elt,
-}) = _Pushanalysisrecipientusergroups;
+  Pushanalysisrecipientusergroups._();
+  factory Pushanalysisrecipientusergroups({
+    required int usergroupid,
+    required int elt,
+  }) = _Pushanalysisrecipientusergroups;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Pushanalysisrecipientusergroups.fromYaml(dynamic yaml) => yaml is String
+  factory Pushanalysisrecipientusergroups.fromYaml(dynamic yaml) => yaml
+          is String
       ? Pushanalysisrecipientusergroups.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -45,4 +46,5 @@ required int elt,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

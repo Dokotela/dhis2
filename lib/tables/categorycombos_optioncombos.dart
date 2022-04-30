@@ -11,11 +11,11 @@ part 'categorycombos_optioncombos.g.dart';
 
 @freezed
 class CategorycombosOptioncombos with _$CategorycombosOptioncombos {
- CategorycombosOptioncombos._();
-factory CategorycombosOptioncombos({
-required int categorycomboid,
-required int categoryoptioncomboid,
-}) = _CategorycombosOptioncombos;
+  CategorycombosOptioncombos._();
+  factory CategorycombosOptioncombos({
+    required int categorycomboid,
+    required int categoryoptioncomboid,
+  }) = _CategorycombosOptioncombos;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int categoryoptioncomboid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

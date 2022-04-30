@@ -11,13 +11,13 @@ part 'sequentialnumbercounter.g.dart';
 
 @freezed
 class Sequentialnumbercounter with _$Sequentialnumbercounter {
- Sequentialnumbercounter._();
-factory Sequentialnumbercounter({
-required String owneruid,
-required int id,
-int? counter,
-required String key,
-}) = _Sequentialnumbercounter;
+  Sequentialnumbercounter._();
+  factory Sequentialnumbercounter({
+    required String owneruid,
+    required int id,
+    int? counter,
+    required String key,
+  }) = _Sequentialnumbercounter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -47,4 +47,5 @@ required String key,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

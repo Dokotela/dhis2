@@ -10,18 +10,20 @@ part 'datasetnotificationtemplate_deliverychannel.freezed.dart';
 part 'datasetnotificationtemplate_deliverychannel.g.dart';
 
 @freezed
-class DatasetnotificationtemplateDeliverychannel with _$DatasetnotificationtemplateDeliverychannel {
- DatasetnotificationtemplateDeliverychannel._();
-factory DatasetnotificationtemplateDeliverychannel({
-String? deliverychannel,
-required int datasetnotificationtemplateid,
-}) = _DatasetnotificationtemplateDeliverychannel;
+class DatasetnotificationtemplateDeliverychannel
+    with _$DatasetnotificationtemplateDeliverychannel {
+  DatasetnotificationtemplateDeliverychannel._();
+  factory DatasetnotificationtemplateDeliverychannel({
+    String? deliverychannel,
+    required int datasetnotificationtemplateid,
+  }) = _DatasetnotificationtemplateDeliverychannel;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory DatasetnotificationtemplateDeliverychannel.fromYaml(dynamic yaml) => yaml is String
+  factory DatasetnotificationtemplateDeliverychannel.fromYaml(dynamic yaml) => yaml
+          is String
       ? DatasetnotificationtemplateDeliverychannel.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -32,12 +34,14 @@ required int datasetnotificationtemplateid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DatasetnotificationtemplateDeliverychannel.fromJson(Map<String, dynamic> json) =>
+  factory DatasetnotificationtemplateDeliverychannel.fromJson(
+          Map<String, dynamic> json) =>
       _$DatasetnotificationtemplateDeliverychannelFromJson(json);
 
   /// Acts like a constructor, returns a [DatasetnotificationtemplateDeliverychannel], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory DatasetnotificationtemplateDeliverychannel.fromJsonString(String source) {
+  factory DatasetnotificationtemplateDeliverychannel.fromJsonString(
+      String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DatasetnotificationtemplateDeliverychannelFromJson(json);
@@ -45,4 +49,5 @@ required int datasetnotificationtemplateid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

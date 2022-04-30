@@ -11,19 +11,19 @@ part 'metadataversion.g.dart';
 
 @freezed
 class Metadataversion with _$Metadataversion {
- Metadataversion._();
-factory Metadataversion({
-required String name,
-required String uid,
-DateTime? importdate,
-required int versionid,
-DateTime? created,
-DateTime? lastupdated,
-required String hashcode,
-int? lastupdatedby,
-String? code,
-String? versiontype,
-}) = _Metadataversion;
+  Metadataversion._();
+  factory Metadataversion({
+    required String name,
+    required String uid,
+    DateTime? importdate,
+    required int versionid,
+    DateTime? created,
+    DateTime? lastupdated,
+    required String hashcode,
+    int? lastupdatedby,
+    String? code,
+    String? versiontype,
+  }) = _Metadataversion;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -53,4 +53,5 @@ String? versiontype,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

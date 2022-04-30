@@ -11,12 +11,12 @@ part 'eventvisualization_columns.g.dart';
 
 @freezed
 class EventvisualizationColumns with _$EventvisualizationColumns {
- EventvisualizationColumns._();
-factory EventvisualizationColumns({
-required int eventvisualizationid,
-String? dimension,
-required int sortOrder,
-}) = _EventvisualizationColumns;
+  EventvisualizationColumns._();
+  factory EventvisualizationColumns({
+    required int eventvisualizationid,
+    String? dimension,
+    required int sortOrder,
+  }) = _EventvisualizationColumns;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

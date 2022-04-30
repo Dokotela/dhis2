@@ -11,17 +11,17 @@ part 'trackedentityinstanceaudit.g.dart';
 
 @freezed
 class Trackedentityinstanceaudit with _$Trackedentityinstanceaudit {
- Trackedentityinstanceaudit._();
-factory Trackedentityinstanceaudit({
-DateTime? created,
-String? trackedentityinstance,
-required int trackedentityinstanceauditid,
-String? comment,
-String? modifiedby,
-required String audittype,
-String? accessedby,
-String? auditmessage,
-}) = _Trackedentityinstanceaudit;
+  Trackedentityinstanceaudit._();
+  factory Trackedentityinstanceaudit({
+    DateTime? created,
+    String? trackedentityinstance,
+    required int trackedentityinstanceauditid,
+    String? comment,
+    String? modifiedby,
+    required String audittype,
+    String? accessedby,
+    String? auditmessage,
+  }) = _Trackedentityinstanceaudit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ String? auditmessage,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

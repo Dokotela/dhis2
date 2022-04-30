@@ -10,18 +10,20 @@ part 'validationruleorganisationunitlevels.freezed.dart';
 part 'validationruleorganisationunitlevels.g.dart';
 
 @freezed
-class Validationruleorganisationunitlevels with _$Validationruleorganisationunitlevels {
- Validationruleorganisationunitlevels._();
-factory Validationruleorganisationunitlevels({
-required int validationruleid,
-int? organisationunitlevel,
-}) = _Validationruleorganisationunitlevels;
+class Validationruleorganisationunitlevels
+    with _$Validationruleorganisationunitlevels {
+  Validationruleorganisationunitlevels._();
+  factory Validationruleorganisationunitlevels({
+    required int validationruleid,
+    int? organisationunitlevel,
+  }) = _Validationruleorganisationunitlevels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Validationruleorganisationunitlevels.fromYaml(dynamic yaml) => yaml is String
+  factory Validationruleorganisationunitlevels.fromYaml(dynamic yaml) => yaml
+          is String
       ? Validationruleorganisationunitlevels.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -32,7 +34,8 @@ int? organisationunitlevel,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Validationruleorganisationunitlevels.fromJson(Map<String, dynamic> json) =>
+  factory Validationruleorganisationunitlevels.fromJson(
+          Map<String, dynamic> json) =>
       _$ValidationruleorganisationunitlevelsFromJson(json);
 
   /// Acts like a constructor, returns a [Validationruleorganisationunitlevels], accepts a
@@ -45,4 +48,5 @@ int? organisationunitlevel,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

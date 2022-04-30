@@ -11,13 +11,13 @@ part 'lockexception.g.dart';
 
 @freezed
 class Lockexception with _$Lockexception {
- Lockexception._();
-factory Lockexception({
-int? datasetid,
-int? organisationunitid,
-int? periodid,
-required int lockexceptionid,
-}) = _Lockexception;
+  Lockexception._();
+  factory Lockexception({
+    int? datasetid,
+    int? organisationunitid,
+    int? periodid,
+    required int lockexceptionid,
+  }) = _Lockexception;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -47,4 +47,5 @@ required int lockexceptionid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

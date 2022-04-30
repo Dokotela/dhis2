@@ -11,12 +11,12 @@ part 'programstageinstancecomments.g.dart';
 
 @freezed
 class Programstageinstancecomments with _$Programstageinstancecomments {
- Programstageinstancecomments._();
-factory Programstageinstancecomments({
-required int trackedentitycommentid,
-required int programstageinstanceid,
-required int sortOrder,
-}) = _Programstageinstancecomments;
+  Programstageinstancecomments._();
+  factory Programstageinstancecomments({
+    required int trackedentitycommentid,
+    required int programstageinstanceid,
+    required int sortOrder,
+  }) = _Programstageinstancecomments;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

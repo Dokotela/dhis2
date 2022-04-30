@@ -10,19 +10,21 @@ part 'eventchart_programindicatordimensions.freezed.dart';
 part 'eventchart_programindicatordimensions.g.dart';
 
 @freezed
-class EventchartProgramindicatordimensions with _$EventchartProgramindicatordimensions {
- EventchartProgramindicatordimensions._();
-factory EventchartProgramindicatordimensions({
-required int trackedentityprogramindicatordimensionid,
-required int sortOrder,
-required int eventchartid,
-}) = _EventchartProgramindicatordimensions;
+class EventchartProgramindicatordimensions
+    with _$EventchartProgramindicatordimensions {
+  EventchartProgramindicatordimensions._();
+  factory EventchartProgramindicatordimensions({
+    required int trackedentityprogramindicatordimensionid,
+    required int sortOrder,
+    required int eventchartid,
+  }) = _EventchartProgramindicatordimensions;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EventchartProgramindicatordimensions.fromYaml(dynamic yaml) => yaml is String
+  factory EventchartProgramindicatordimensions.fromYaml(dynamic yaml) => yaml
+          is String
       ? EventchartProgramindicatordimensions.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
@@ -33,7 +35,8 @@ required int eventchartid,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventchartProgramindicatordimensions.fromJson(Map<String, dynamic> json) =>
+  factory EventchartProgramindicatordimensions.fromJson(
+          Map<String, dynamic> json) =>
       _$EventchartProgramindicatordimensionsFromJson(json);
 
   /// Acts like a constructor, returns a [EventchartProgramindicatordimensions], accepts a
@@ -46,4 +49,5 @@ required int eventchartid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

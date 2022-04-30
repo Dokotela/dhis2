@@ -11,10 +11,10 @@ part 'parent.g.dart';
 
 @freezed
 class Parent with _$Parent {
- Parent._();
-factory Parent({
-required int id,
-}) = _Parent;
+  Parent._();
+  factory Parent({
+    required int id,
+  }) = _Parent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -31,8 +31,7 @@ required int id,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Parent.fromJson(Map<String, dynamic> json) =>
-      _$ParentFromJson(json);
+  factory Parent.fromJson(Map<String, dynamic> json) => _$ParentFromJson(json);
 
   /// Acts like a constructor, returns a [Parent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -44,4 +43,5 @@ required int id,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

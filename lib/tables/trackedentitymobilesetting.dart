@@ -11,16 +11,16 @@ part 'trackedentitymobilesetting.g.dart';
 
 @freezed
 class Trackedentitymobilesetting with _$Trackedentitymobilesetting {
- Trackedentitymobilesetting._();
-factory Trackedentitymobilesetting({
-double? versiontoupdate,
-required bool registrationdate,
-required bool dobtype,
-required bool gender,
-required int trackedentitymobilesettingid,
-bool? autoupdateclient,
-required bool birthdate,
-}) = _Trackedentitymobilesetting;
+  Trackedentitymobilesetting._();
+  factory Trackedentitymobilesetting({
+    double? versiontoupdate,
+    required bool registrationdate,
+    required bool dobtype,
+    required bool gender,
+    required int trackedentitymobilesettingid,
+    bool? autoupdateclient,
+    required bool birthdate,
+  }) = _Trackedentitymobilesetting;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ required bool birthdate,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

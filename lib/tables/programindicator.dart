@@ -11,34 +11,34 @@ part 'programindicator.g.dart';
 
 @freezed
 class Programindicator with _$Programindicator {
- Programindicator._();
-factory Programindicator({
-String? publicaccess,
-int? userid,
-String? code,
-String? filter,
-DateTime? created,
-int? lastupdatedby,
-Object? translations,
-String? description,
-Object? sharing,
-DateTime? lastupdated,
-Object? style,
-String? expression,
-String? uid,
-String? aggregateexportcategoryoptioncombo,
-String? aggregateexportattributeoptioncombo,
-required String name,
-String? formname,
-String? aggregationtype,
-required String analyticstype,
-Object? attributevalues,
-bool? displayinform,
-required int programindicatorid,
-String? shortname,
-int? programid,
-int? decimals,
-}) = _Programindicator;
+  Programindicator._();
+  factory Programindicator({
+    String? publicaccess,
+    int? userid,
+    String? code,
+    String? filter,
+    DateTime? created,
+    int? lastupdatedby,
+    Object? translations,
+    String? description,
+    Object? sharing,
+    DateTime? lastupdated,
+    Object? style,
+    String? expression,
+    String? uid,
+    String? aggregateexportcategoryoptioncombo,
+    String? aggregateexportattributeoptioncombo,
+    required String name,
+    String? formname,
+    String? aggregationtype,
+    required String analyticstype,
+    Object? attributevalues,
+    bool? displayinform,
+    required int programindicatorid,
+    String? shortname,
+    int? programid,
+    int? decimals,
+  }) = _Programindicator;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -68,4 +68,5 @@ int? decimals,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

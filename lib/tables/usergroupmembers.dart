@@ -11,11 +11,11 @@ part 'usergroupmembers.g.dart';
 
 @freezed
 class Usergroupmembers with _$Usergroupmembers {
- Usergroupmembers._();
-factory Usergroupmembers({
-required int userid,
-required int usergroupid,
-}) = _Usergroupmembers;
+  Usergroupmembers._();
+  factory Usergroupmembers({
+    required int userid,
+    required int usergroupid,
+  }) = _Usergroupmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int usergroupid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

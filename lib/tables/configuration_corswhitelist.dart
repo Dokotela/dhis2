@@ -11,11 +11,11 @@ part 'configuration_corswhitelist.g.dart';
 
 @freezed
 class ConfigurationCorswhitelist with _$ConfigurationCorswhitelist {
- ConfigurationCorswhitelist._();
-factory ConfigurationCorswhitelist({
-String? corswhitelist,
-required int configurationid,
-}) = _ConfigurationCorswhitelist;
+  ConfigurationCorswhitelist._();
+  factory ConfigurationCorswhitelist({
+    String? corswhitelist,
+    required int configurationid,
+  }) = _ConfigurationCorswhitelist;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int configurationid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

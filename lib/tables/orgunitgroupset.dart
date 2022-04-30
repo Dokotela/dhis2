@@ -11,27 +11,27 @@ part 'orgunitgroupset.g.dart';
 
 @freezed
 class Orgunitgroupset with _$Orgunitgroupset {
- Orgunitgroupset._();
-factory Orgunitgroupset({
-String? description,
-required bool datadimension,
-bool? compulsory,
-required int orgunitgroupsetid,
-Object? translations,
-DateTime? created,
-Object? attributevalues,
-String? code,
-bool? includesubhierarchyinanalytics,
-int? lastupdatedby,
-bool? exclusive,
-int? userid,
-Object? sharing,
-String? uid,
-required String name,
-required String shortname,
-String? publicaccess,
-DateTime? lastupdated,
-}) = _Orgunitgroupset;
+  Orgunitgroupset._();
+  factory Orgunitgroupset({
+    String? description,
+    required bool datadimension,
+    bool? compulsory,
+    required int orgunitgroupsetid,
+    Object? translations,
+    DateTime? created,
+    Object? attributevalues,
+    String? code,
+    bool? includesubhierarchyinanalytics,
+    int? lastupdatedby,
+    bool? exclusive,
+    int? userid,
+    Object? sharing,
+    String? uid,
+    required String name,
+    required String shortname,
+    String? publicaccess,
+    DateTime? lastupdated,
+  }) = _Orgunitgroupset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ DateTime? lastupdated,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'programindicatorlegendsets.g.dart';
 
 @freezed
 class Programindicatorlegendsets with _$Programindicatorlegendsets {
- Programindicatorlegendsets._();
-factory Programindicatorlegendsets({
-required int sortOrder,
-required int legendsetid,
-required int programindicatorid,
-}) = _Programindicatorlegendsets;
+  Programindicatorlegendsets._();
+  factory Programindicatorlegendsets({
+    required int sortOrder,
+    required int legendsetid,
+    required int programindicatorid,
+  }) = _Programindicatorlegendsets;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int programindicatorid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

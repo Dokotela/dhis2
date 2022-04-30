@@ -11,22 +11,22 @@ part 'categorycombo.g.dart';
 
 @freezed
 class Categorycombo with _$Categorycombo {
- Categorycombo._();
-factory Categorycombo({
-required String name,
-String? uid,
-String? code,
-Object? translations,
-required int categorycomboid,
-int? lastupdatedby,
-bool? skiptotal,
-DateTime? lastupdated,
-int? userid,
-String? publicaccess,
-String? datadimensiontype,
-DateTime? created,
-Object? sharing,
-}) = _Categorycombo;
+  Categorycombo._();
+  factory Categorycombo({
+    required String name,
+    String? uid,
+    String? code,
+    Object? translations,
+    required int categorycomboid,
+    int? lastupdatedby,
+    bool? skiptotal,
+    DateTime? lastupdated,
+    int? userid,
+    String? publicaccess,
+    String? datadimensiontype,
+    DateTime? created,
+    Object? sharing,
+  }) = _Categorycombo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ Object? sharing,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

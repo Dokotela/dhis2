@@ -11,11 +11,11 @@ part 'compulsorydatasetmembers.g.dart';
 
 @freezed
 class Compulsorydatasetmembers with _$Compulsorydatasetmembers {
- Compulsorydatasetmembers._();
-factory Compulsorydatasetmembers({
-required int dataelementid,
-required int datasetid,
-}) = _Compulsorydatasetmembers;
+  Compulsorydatasetmembers._();
+  factory Compulsorydatasetmembers({
+    required int dataelementid,
+    required int datasetid,
+  }) = _Compulsorydatasetmembers;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int datasetid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,12 +11,12 @@ part 'caseaggregation.g.dart';
 
 @freezed
 class Caseaggregation with _$Caseaggregation {
- Caseaggregation._();
-factory Caseaggregation({
-String? expression,
-required int dataelementid,
-required int optioncomboid,
-}) = _Caseaggregation;
+  Caseaggregation._();
+  factory Caseaggregation({
+    String? expression,
+    required int dataelementid,
+    required int optioncomboid,
+  }) = _Caseaggregation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int optioncomboid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

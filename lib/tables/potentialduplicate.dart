@@ -11,18 +11,18 @@ part 'potentialduplicate.g.dart';
 
 @freezed
 class Potentialduplicate with _$Potentialduplicate {
- Potentialduplicate._();
-factory Potentialduplicate({
-required DateTime lastupdated,
-required DateTime created,
-required String teia,
-required String createdbyusername,
-required String status,
-required String uid,
-required String lastupdatebyusername,
-required int potentialduplicateid,
-required String teib,
-}) = _Potentialduplicate;
+  Potentialduplicate._();
+  factory Potentialduplicate({
+    required DateTime lastupdated,
+    required DateTime created,
+    required String teia,
+    required String createdbyusername,
+    required String status,
+    required String uid,
+    required String lastupdatebyusername,
+    required int potentialduplicateid,
+    required String teib,
+  }) = _Potentialduplicate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ required String teib,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

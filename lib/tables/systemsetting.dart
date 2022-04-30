@@ -11,13 +11,13 @@ part 'systemsetting.g.dart';
 
 @freezed
 class Systemsetting with _$Systemsetting {
- Systemsetting._();
-factory Systemsetting({
-Object? translations,
-required int systemsettingid,
-String? value,
-required String name,
-}) = _Systemsetting;
+  Systemsetting._();
+  factory Systemsetting({
+    Object? translations,
+    required int systemsettingid,
+    String? value,
+    required String name,
+  }) = _Systemsetting;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -47,4 +47,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'smscommandcodes.g.dart';
 
 @freezed
 class Smscommandcodes with _$Smscommandcodes {
- Smscommandcodes._();
-factory Smscommandcodes({
-required int id,
-required int codeid,
-}) = _Smscommandcodes;
+  Smscommandcodes._();
+  factory Smscommandcodes({
+    required int id,
+    required int codeid,
+  }) = _Smscommandcodes;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int codeid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

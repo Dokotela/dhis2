@@ -11,12 +11,12 @@ part 'dataelementaggregationlevels.g.dart';
 
 @freezed
 class Dataelementaggregationlevels with _$Dataelementaggregationlevels {
- Dataelementaggregationlevels._();
-factory Dataelementaggregationlevels({
-required int dataelementid,
-required int sortOrder,
-int? aggregationlevel,
-}) = _Dataelementaggregationlevels;
+  Dataelementaggregationlevels._();
+  factory Dataelementaggregationlevels({
+    required int dataelementid,
+    required int sortOrder,
+    int? aggregationlevel,
+  }) = _Dataelementaggregationlevels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ int? aggregationlevel,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

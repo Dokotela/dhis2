@@ -11,18 +11,18 @@ part 'completenesstarget.g.dart';
 
 @freezed
 class Completenesstarget with _$Completenesstarget {
- Completenesstarget._();
-factory Completenesstarget({
-required String ds,
-String? Bpx0589u8y0,
-String? uidlevel1,
-String? uidlevel4,
-String? Cbuj0VCyDjL,
-String? uidlevel2,
-String? uidlevel3,
-double? value,
-String? J5jldMd8OHv,
-}) = _Completenesstarget;
+  Completenesstarget._();
+  factory Completenesstarget({
+    required String ds,
+    String? Bpx0589u8y0,
+    String? uidlevel1,
+    String? uidlevel4,
+    String? Cbuj0VCyDjL,
+    String? uidlevel2,
+    String? uidlevel3,
+    double? value,
+    String? J5jldMd8OHv,
+  }) = _Completenesstarget;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ String? J5jldMd8OHv,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

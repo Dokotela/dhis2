@@ -11,17 +11,17 @@ part 'message.g.dart';
 
 @freezed
 class Message with _$Message {
- Message._();
-factory Message({
-required int messageid,
-String? metadata,
-String? messagetext,
-DateTime? created,
-int? userid,
-String? uid,
-DateTime? lastupdated,
-bool? internal,
-}) = _Message;
+  Message._();
+  factory Message({
+    required int messageid,
+    String? metadata,
+    String? messagetext,
+    DateTime? created,
+    int? userid,
+    String? uid,
+    DateTime? lastupdated,
+    bool? internal,
+  }) = _Message;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -51,4 +51,5 @@ bool? internal,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

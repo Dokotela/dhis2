@@ -11,12 +11,12 @@ part 'programinstance_outboundsms.g.dart';
 
 @freezed
 class PrograminstanceOutboundsms with _$PrograminstanceOutboundsms {
- PrograminstanceOutboundsms._();
-factory PrograminstanceOutboundsms({
-required int programinstanceid,
-required int sortOrder,
-required int outboundsmsid,
-}) = _PrograminstanceOutboundsms;
+  PrograminstanceOutboundsms._();
+  factory PrograminstanceOutboundsms({
+    required int programinstanceid,
+    required int sortOrder,
+    required int outboundsmsid,
+  }) = _PrograminstanceOutboundsms;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int outboundsmsid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

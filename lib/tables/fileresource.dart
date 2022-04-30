@@ -11,24 +11,24 @@ part 'fileresource.g.dart';
 
 @freezed
 class Fileresource with _$Fileresource {
- Fileresource._();
-factory Fileresource({
-String? code,
-required bool isassigned,
-int? lastupdatedby,
-int? userid,
-required String contentmd5,
-DateTime? created,
-required String name,
-DateTime? lastupdated,
-String? domain,
-required String storagekey,
-String? uid,
-required int contentlength,
-required String contenttype,
-bool? hasmultiplestoragefiles,
-required int fileresourceid,
-}) = _Fileresource;
+  Fileresource._();
+  factory Fileresource({
+    String? code,
+    required bool isassigned,
+    int? lastupdatedby,
+    int? userid,
+    required String contentmd5,
+    DateTime? created,
+    required String name,
+    DateTime? lastupdated,
+    String? domain,
+    required String storagekey,
+    String? uid,
+    required int contentlength,
+    required String contenttype,
+    bool? hasmultiplestoragefiles,
+    required int fileresourceid,
+  }) = _Fileresource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ required int fileresourceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

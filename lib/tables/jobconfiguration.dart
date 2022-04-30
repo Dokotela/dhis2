@@ -11,27 +11,27 @@ part 'jobconfiguration.g.dart';
 
 @freezed
 class Jobconfiguration with _$Jobconfiguration {
- Jobconfiguration._();
-factory Jobconfiguration({
-required String uid,
-required bool enabled,
-Object? jsonbjobparameters,
-String? cronexpression,
-required int jobconfigurationid,
-DateTime? lastexecuted,
-String? lastruntimeexecution,
-String? code,
-required DateTime lastupdated,
-DateTime? nextexecutiontime,
-required DateTime created,
-String? jobstatus,
-String? jobtype,
-String? lastexecutedstatus,
-int? lastupdatedby,
-required bool leaderonlyjob,
-int? delay,
-required String name,
-}) = _Jobconfiguration;
+  Jobconfiguration._();
+  factory Jobconfiguration({
+    required String uid,
+    required bool enabled,
+    Object? jsonbjobparameters,
+    String? cronexpression,
+    required int jobconfigurationid,
+    DateTime? lastexecuted,
+    String? lastruntimeexecution,
+    String? code,
+    required DateTime lastupdated,
+    DateTime? nextexecutiontime,
+    required DateTime created,
+    String? jobstatus,
+    String? jobtype,
+    String? lastexecutedstatus,
+    int? lastupdatedby,
+    required bool leaderonlyjob,
+    int? delay,
+    required String name,
+  }) = _Jobconfiguration;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -61,4 +61,5 @@ required String name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

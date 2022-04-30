@@ -11,16 +11,16 @@ part 'trackedentityprogramowner.g.dart';
 
 @freezed
 class Trackedentityprogramowner with _$Trackedentityprogramowner {
- Trackedentityprogramowner._();
-factory Trackedentityprogramowner({
-required String createdby,
-required DateTime lastupdated,
-required DateTime created,
-required int programid,
-int? organisationunitid,
-required int trackedentityprogramownerid,
-int? trackedentityinstanceid,
-}) = _Trackedentityprogramowner;
+  Trackedentityprogramowner._();
+  factory Trackedentityprogramowner({
+    required String createdby,
+    required DateTime lastupdated,
+    required DateTime created,
+    required int programid,
+    int? organisationunitid,
+    required int trackedentityprogramownerid,
+    int? trackedentityinstanceid,
+  }) = _Trackedentityprogramowner;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -50,4 +50,5 @@ int? trackedentityinstanceid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,33 +11,33 @@ part 'programstageinstance.g.dart';
 
 @freezed
 class Programstageinstance with _$Programstageinstance {
- Programstageinstance._();
-factory Programstageinstance({
-int? attributeoptioncomboid,
-DateTime? completeddate,
-DateTime? executiondate,
-String? code,
-DateTime? duedate,
-DateTime? createdatclient,
-Object? createdbyuserinfo,
-required int programstageid,
-required Object eventdatavalues,
-required int programinstanceid,
-String? status,
-Object? geometry,
-required DateTime lastsynchronized,
-DateTime? lastupdatedatclient,
-Object? lastupdatedbyuserinfo,
-required bool deleted,
-String? completedby,
-String? storedby,
-int? organisationunitid,
-DateTime? created,
-DateTime? lastupdated,
-int? assigneduserid,
-required int programstageinstanceid,
-String? uid,
-}) = _Programstageinstance;
+  Programstageinstance._();
+  factory Programstageinstance({
+    int? attributeoptioncomboid,
+    DateTime? completeddate,
+    DateTime? executiondate,
+    String? code,
+    DateTime? duedate,
+    DateTime? createdatclient,
+    Object? createdbyuserinfo,
+    required int programstageid,
+    required Object eventdatavalues,
+    required int programinstanceid,
+    String? status,
+    Object? geometry,
+    required DateTime lastsynchronized,
+    DateTime? lastupdatedatclient,
+    Object? lastupdatedbyuserinfo,
+    required bool deleted,
+    String? completedby,
+    String? storedby,
+    int? organisationunitid,
+    DateTime? created,
+    DateTime? lastupdated,
+    int? assigneduserid,
+    required int programstageinstanceid,
+    String? uid,
+  }) = _Programstageinstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -67,4 +67,5 @@ String? uid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

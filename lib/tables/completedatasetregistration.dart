@@ -11,18 +11,18 @@ part 'completedatasetregistration.g.dart';
 
 @freezed
 class Completedatasetregistration with _$Completedatasetregistration {
- Completedatasetregistration._();
-factory Completedatasetregistration({
-DateTime? lastupdated,
-String? storedby,
-String? lastupdatedby,
-DateTime? date,
-required int sourceid,
-required int periodid,
-required int datasetid,
-required bool completed,
-required int attributeoptioncomboid,
-}) = _Completedatasetregistration;
+  Completedatasetregistration._();
+  factory Completedatasetregistration({
+    DateTime? lastupdated,
+    String? storedby,
+    String? lastupdatedby,
+    DateTime? date,
+    required int sourceid,
+    required int periodid,
+    required int datasetid,
+    required bool completed,
+    required int attributeoptioncomboid,
+  }) = _Completedatasetregistration;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -52,4 +52,5 @@ required int attributeoptioncomboid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,22 +11,22 @@ part 'programrule.g.dart';
 
 @freezed
 class Programrule with _$Programrule {
- Programrule._();
-factory Programrule({
-DateTime? lastupdated,
-int? priority,
-int? lastupdatedby,
-int? programstageid,
-Object? translations,
-DateTime? created,
-String? name,
-String? description,
-int? programid,
-String? code,
-required int programruleid,
-String? uid,
-String? rulecondition,
-}) = _Programrule;
+  Programrule._();
+  factory Programrule({
+    DateTime? lastupdated,
+    int? priority,
+    int? lastupdatedby,
+    int? programstageid,
+    Object? translations,
+    DateTime? created,
+    String? name,
+    String? description,
+    int? programid,
+    String? code,
+    required int programruleid,
+    String? uid,
+    String? rulecondition,
+  }) = _Programrule;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ String? rulecondition,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

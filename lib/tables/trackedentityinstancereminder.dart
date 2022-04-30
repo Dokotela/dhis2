@@ -11,24 +11,24 @@ part 'trackedentityinstancereminder.g.dart';
 
 @freezed
 class Trackedentityinstancereminder with _$Trackedentityinstancereminder {
- Trackedentityinstancereminder._();
-factory Trackedentityinstancereminder({
-String? uid,
-DateTime? lastupdated,
-int? daysallowedsendmessage,
-required int trackedentityinstancereminderid,
-int? sendto,
-int? usergroupid,
-int? programstageid,
-int? messagetype,
-DateTime? created,
-int? programid,
-int? whentosend,
-String? code,
-String? templatemessage,
-String? datetocompare,
-String? name,
-}) = _Trackedentityinstancereminder;
+  Trackedentityinstancereminder._();
+  factory Trackedentityinstancereminder({
+    String? uid,
+    DateTime? lastupdated,
+    int? daysallowedsendmessage,
+    required int trackedentityinstancereminderid,
+    int? sendto,
+    int? usergroupid,
+    int? programstageid,
+    int? messagetype,
+    DateTime? created,
+    int? programid,
+    int? whentosend,
+    String? code,
+    String? templatemessage,
+    String? datetocompare,
+    String? name,
+  }) = _Trackedentityinstancereminder;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -58,4 +58,5 @@ String? name,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

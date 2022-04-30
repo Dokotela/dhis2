@@ -11,12 +11,12 @@ part 'visualization_axis.g.dart';
 
 @freezed
 class VisualizationAxis with _$VisualizationAxis {
- VisualizationAxis._();
-factory VisualizationAxis({
-required int sortOrder,
-required int visualizationid,
-required int axisid,
-}) = _VisualizationAxis;
+  VisualizationAxis._();
+  factory VisualizationAxis({
+    required int sortOrder,
+    required int visualizationid,
+    required int axisid,
+  }) = _VisualizationAxis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int axisid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,22 +11,22 @@ part 'programnotificationinstance.g.dart';
 
 @freezed
 class Programnotificationinstance with _$Programnotificationinstance {
- Programnotificationinstance._();
-factory Programnotificationinstance({
-Object? programnotificationtemplatesnapshot,
-int? programnotificationtemplateid,
-required DateTime created,
-int? programinstanceid,
-required String name,
-String? code,
-DateTime? sentat,
-DateTime? scheduledat,
-required DateTime lastupdated,
-int? programstageinstanceid,
-required String uid,
-required int programnotificationinstanceid,
-int? lastupdatedby,
-}) = _Programnotificationinstance;
+  Programnotificationinstance._();
+  factory Programnotificationinstance({
+    Object? programnotificationtemplatesnapshot,
+    int? programnotificationtemplateid,
+    required DateTime created,
+    int? programinstanceid,
+    required String name,
+    String? code,
+    DateTime? sentat,
+    DateTime? scheduledat,
+    required DateTime lastupdated,
+    int? programstageinstanceid,
+    required String uid,
+    required int programnotificationinstanceid,
+    int? lastupdatedby,
+  }) = _Programnotificationinstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -56,4 +56,5 @@ int? lastupdatedby,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

@@ -11,11 +11,11 @@ part 'dataapprovalworkflowlevels.g.dart';
 
 @freezed
 class Dataapprovalworkflowlevels with _$Dataapprovalworkflowlevels {
- Dataapprovalworkflowlevels._();
-factory Dataapprovalworkflowlevels({
-required int dataapprovallevelid,
-required int workflowid,
-}) = _Dataapprovalworkflowlevels;
+  Dataapprovalworkflowlevels._();
+  factory Dataapprovalworkflowlevels({
+    required int dataapprovallevelid,
+    required int workflowid,
+  }) = _Dataapprovalworkflowlevels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -45,4 +45,5 @@ required int workflowid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

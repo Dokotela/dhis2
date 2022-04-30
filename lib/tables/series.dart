@@ -11,12 +11,12 @@ part 'series.g.dart';
 
 @freezed
 class Series with _$Series {
- Series._();
-factory Series({
-required String series,
-required int seriesid,
-required int axis,
-}) = _Series;
+  Series._();
+  factory Series({
+    required String series,
+    required int seriesid,
+    required int axis,
+  }) = _Series;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -33,8 +33,7 @@ required int axis,
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Series.fromJson(Map<String, dynamic> json) =>
-      _$SeriesFromJson(json);
+  factory Series.fromJson(Map<String, dynamic> json) => _$SeriesFromJson(json);
 
   /// Acts like a constructor, returns a [Series], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -46,4 +45,5 @@ required int axis,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

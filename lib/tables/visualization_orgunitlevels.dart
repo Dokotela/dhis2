@@ -11,12 +11,12 @@ part 'visualization_orgunitlevels.g.dart';
 
 @freezed
 class VisualizationOrgunitlevels with _$VisualizationOrgunitlevels {
- VisualizationOrgunitlevels._();
-factory VisualizationOrgunitlevels({
-required int visualizationid,
-int? orgunitlevel,
-required int sortOrder,
-}) = _VisualizationOrgunitlevels;
+  VisualizationOrgunitlevels._();
+  factory VisualizationOrgunitlevels({
+    required int visualizationid,
+    int? orgunitlevel,
+    required int sortOrder,
+  }) = _VisualizationOrgunitlevels;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int sortOrder,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

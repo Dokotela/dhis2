@@ -11,12 +11,12 @@ part 'dataelementlegendsets.g.dart';
 
 @freezed
 class Dataelementlegendsets with _$Dataelementlegendsets {
- Dataelementlegendsets._();
-factory Dataelementlegendsets({
-required int legendsetid,
-required int sortOrder,
-required int dataelementid,
-}) = _Dataelementlegendsets;
+  Dataelementlegendsets._();
+  factory Dataelementlegendsets({
+    required int legendsetid,
+    required int sortOrder,
+    required int dataelementid,
+  }) = _Dataelementlegendsets;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -46,4 +46,5 @@ required int dataelementid,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

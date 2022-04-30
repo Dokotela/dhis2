@@ -11,14 +11,14 @@ part 'feature.g.dart';
 
 @freezed
 class Feature with _$Feature {
- Feature._();
-factory Feature({
-required int featureid,
-String? svg,
-String? featurecode,
-required int organisationunitid,
-String? comment,
-}) = _Feature;
+  Feature._();
+  factory Feature({
+    required int featureid,
+    String? svg,
+    String? featurecode,
+    required int organisationunitid,
+    String? comment,
+  }) = _Feature;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -48,4 +48,5 @@ String? comment,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}

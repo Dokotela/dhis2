@@ -11,33 +11,33 @@ part 'smscommands.g.dart';
 
 @freezed
 class Smscommands with _$Smscommands {
- Smscommands._();
-factory Smscommands({
-required DateTime lastupdated,
-String? codeseperator,
-int? parsertype,
-int? programid,
-String? nousermessage,
-String? morethanoneorgunitmessage,
-int? programstageid,
-String? completenessmethod,
-String? parser,
-String? separatorkey,
-int? usergroupid,
-String? codeseparator,
-String? successmessage,
-String? separator,
-String? name,
-required int smscommandid,
-bool? currentperiodusedforreporting,
-String? wrongformatmessage,
-String? receivedmessage,
-int? datasetid,
-required String uid,
-required DateTime created,
-String? defaultmessage,
-String? seperator,
-}) = _Smscommands;
+  Smscommands._();
+  factory Smscommands({
+    required DateTime lastupdated,
+    String? codeseperator,
+    int? parsertype,
+    int? programid,
+    String? nousermessage,
+    String? morethanoneorgunitmessage,
+    int? programstageid,
+    String? completenessmethod,
+    String? parser,
+    String? separatorkey,
+    int? usergroupid,
+    String? codeseparator,
+    String? successmessage,
+    String? separator,
+    String? name,
+    required int smscommandid,
+    bool? currentperiodusedforreporting,
+    String? wrongformatmessage,
+    String? receivedmessage,
+    int? datasetid,
+    required String uid,
+    required DateTime created,
+    String? defaultmessage,
+    String? seperator,
+  }) = _Smscommands;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -67,4 +67,5 @@ String? seperator,
       throw FormatException('FormatException: \nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
-  }}
+  }
+}
